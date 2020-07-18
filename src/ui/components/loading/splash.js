@@ -19,7 +19,7 @@ class LoadingScreen extends Component{
 
     render() {
         return (
-            <View style={[{ flex: 1, alignItems: 'center', justifyContent: 'center' }, styles.root]}>
+            <View style={[{ flex: 1, alignItems: 'center', justifyContent: 'center' }, styles.loading]}>
                 <Text>{loadingMessages.loading}</Text>
             </View>
         )

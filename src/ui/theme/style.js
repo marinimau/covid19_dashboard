@@ -13,6 +13,9 @@ export const styles = StyleSheet.create({
     root : {
         backgroundColor: Colors.basicTransparent,
     },
+    loading: {
+        backgroundColor: Colors.basicElevation,
+    },
     container: {
         flex: 1,
         backgroundColor: Colors.basicElevation,
