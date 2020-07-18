@@ -5,6 +5,12 @@
  * Location: Baratili San Pietro
  */
 
+export const appInfo = {
+    name: 'Covid19 Dashboard',
+    version: '1.0.0 beta'
+};
+
+
 export const screenTitles = {
     home: 'Home',
     latestUpdateResume: 'Resoconto giornaliero',

@@ -6,12 +6,16 @@
  */
 
 import {StyleSheet} from "react-native";
+import Colors from "./colors";
 
 
 export const styles = StyleSheet.create({
+    root : {
+        backgroundColor: Colors.basicTransparent,
+    },
     container: {
         flex: 1,
-        backgroundColor: '#fff',
+        backgroundColor: Colors.basicElevation,
         alignItems: 'center',
         justifyContent: 'center',
     },

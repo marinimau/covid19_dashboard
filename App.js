@@ -7,11 +7,12 @@
 
 import {StatusBar} from 'expo-status-bar';
 import React from 'react';
-import {Button, Dimensions, Text, View} from 'react-native';
+import {Dimensions} from 'react-native';
 import {createDrawerNavigator} from '@react-navigation/drawer';
-import {NavigationContainer} from '@react-navigation/native';
+import {NavigationContainer, useNavigation, DrawerActions} from '@react-navigation/native';
 import {dimens} from "./src/theme/dimens";
 import {styles} from "./src/theme/style";
+import Colors from "./src/theme/colors";
 import {screenTitles} from "./src/contents/strings";
 
 /* Screens Import */
@@ -23,13 +24,6 @@ import DiedScreen from "./src/screens/diedScreen";
 import CurrentPositiveScreen from "./src/screens/currentPositiveScreen";
 import SwabsResumeScreen from "./src/screens/swabsScreen";
 
-function NotificationsScreen({navigation}) {
-    return (
-        <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-            <Button onPress={() => navigation.goBack()} title="Go back home"/>
-        </View>
-    );
-}
 
 const Drawer = createDrawerNavigator();
 
@@ -40,17 +34,21 @@ export default function App() {
     const isLargeScreen = dimensions >= dimens.largeScreen;
 
     return (
-        <NavigationContainer>
+        <NavigationContainer style={styles.root}>
             <Drawer.Navigator
                 initialRouteName="Home"
                 openByDefault
+                drawerContentOptions={{
+                    activeTintColor: Colors.main,
+                    activeBackgroundColor: Colors.mainTransparent,
+                }}
                 drawerType={isLargeScreen ? 'permanent' : 'back'}
                 drawerStyle={isLargeScreen ? null : {width: '100%'}}
                 overlayColor="transparent">
-                <Drawer.Screen name={screenTitles.home} component={HomeScreen}/>
 
+                <Drawer.Screen name={screenTitles.home} component={HomeScreen}/>
                 <Drawer.Screen name={screenTitles.latestUpdateResume} component={LatestUpdateResumeScreen}/>
-                <Drawer.Screen name={screenTitles.newCases} component={NewCasesScreen}/>
+                <Drawer.Screen name={screenTitles.newCases}  component={NewCasesScreen}/>
                 <Drawer.Screen name={screenTitles.recovered} component={RecoveredScreen}/>
                 <Drawer.Screen name={screenTitles.died} component={DiedScreen} />
                 <Drawer.Screen name={screenTitles.currentPositive} component={CurrentPositiveScreen}/>

@@ -5,17 +5,44 @@
  * Location: Baratili San Pietro
  */
 
-import {Button, View} from "react-native";
+import {Button, Text, View} from "react-native";
 import React from "react";
+import {createStackNavigator} from "@react-navigation/stack";
+import {DrawerActions, useNavigation} from "@react-navigation/native";
+import {TouchableOpacity} from "react-native-gesture-handler";
+import {screenTitles} from "../contents/strings";
+import HomeComponents from "../components/home/homeComponents";
+
+const Stack = createStackNavigator();
 
 function HomeScreen({ navigation }) {
+
+
+    const HeaderLeft = () => {
+        const navigation = useNavigation();
+        return (
+            <View style={{flexDirection: 'row'}}>
+                <TouchableOpacity
+                    onPress={() => {
+                        navigation.dispatch(DrawerActions.openDrawer());
+                    }}>
+                    <Text>Open</Text>
+                    {/* <Image source={require('./assets/images/icons/drawer.png')} /> */}
+                </TouchableOpacity>
+            </View>
+        );
+    };
+
     return (
-        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-            <Button
-                onPress={() => navigation.navigate('Notifications')}
-                title="Go to notifications"
+        <Stack.Navigator>
+            <Stack.Screen
+                options={{
+                    headerLeft: ({}) => <HeaderLeft />
+                }}
+                component={({}) => <HomeComponents />}
+                name={screenTitles.home}
             />
-        </View>
+        </Stack.Navigator>
     );
 }
 
