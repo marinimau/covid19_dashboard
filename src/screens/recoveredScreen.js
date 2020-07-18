@@ -6,17 +6,29 @@
  */
 
 
-import {Button, View} from "react-native";
+import {Dimensions} from "react-native";
 import React from "react";
+import {createStackNavigator} from "@react-navigation/stack";
+import {dimens} from "../theme/dimens";
+import HeaderLeft from "../components/headerMenuButton";
+import HomeComponents from "../components/home/homeComponents";
+import {screenTitles} from "../contents/strings";
+
+const Stack = createStackNavigator();
+const dimensions = Dimensions.get('window').width;
 
 function RecoveredScreen({ navigation }) {
+
     return (
-        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-            <Button
-                onPress={() => navigation.navigate('Home')}
-                title="Go to home"
+        <Stack.Navigator>
+            <Stack.Screen
+                options={{
+                    headerLeft: dimensions < dimens.largeScreen ? ({}) => <HeaderLeft /> : null
+                }}
+                component={({}) => <HomeComponents />}
+                name={screenTitles.recovered}
             />
-        </View>
+        </Stack.Navigator>
     );
 }
 

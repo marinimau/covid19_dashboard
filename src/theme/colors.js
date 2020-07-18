@@ -11,7 +11,7 @@ Colors = {
 
     main: '#1479FF',
     mainTransparent: 'rgba(20,121,255,0.1)',
-    basic: '#193B68',
+    basic: '#1C1C1E',
     basicTransparent: 'rgba(25,59,104,0.1)',
     basicElevation: '#FFF',
     accent1: '#14D2FF',

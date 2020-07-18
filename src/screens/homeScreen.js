@@ -5,39 +5,24 @@
  * Location: Baratili San Pietro
  */
 
-import {Button, Text, View} from "react-native";
+import {Dimensions} from "react-native";
 import React from "react";
 import {createStackNavigator} from "@react-navigation/stack";
-import {DrawerActions, useNavigation} from "@react-navigation/native";
-import {TouchableOpacity} from "react-native-gesture-handler";
 import {screenTitles} from "../contents/strings";
 import HomeComponents from "../components/home/homeComponents";
+import HeaderLeft from "../components/headerMenuButton";
+import {dimens} from "../theme/dimens";
 
 const Stack = createStackNavigator();
+const dimensions = Dimensions.get('window').width;
 
 function HomeScreen({ navigation }) {
-
-
-    const HeaderLeft = () => {
-        const navigation = useNavigation();
-        return (
-            <View style={{flexDirection: 'row'}}>
-                <TouchableOpacity
-                    onPress={() => {
-                        navigation.dispatch(DrawerActions.openDrawer());
-                    }}>
-                    <Text>Open</Text>
-                    {/* <Image source={require('./assets/images/icons/drawer.png')} /> */}
-                </TouchableOpacity>
-            </View>
-        );
-    };
 
     return (
         <Stack.Navigator>
             <Stack.Screen
                 options={{
-                    headerLeft: ({}) => <HeaderLeft />
+                    headerLeft: dimensions < dimens.largeScreen ? ({}) => <HeaderLeft /> : null
                 }}
                 component={({}) => <HomeComponents />}
                 name={screenTitles.home}
