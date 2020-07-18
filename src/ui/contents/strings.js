@@ -10,6 +10,10 @@ export const appInfo = {
     version: '1.0.0 beta'
 };
 
+export const loadingMessages = {
+    loading: 'Caricamento...',
+    error: 'Qualcosa è andato storto, ricarica la pagina'
+};
 
 export const screenTitles = {
     home: 'Home',

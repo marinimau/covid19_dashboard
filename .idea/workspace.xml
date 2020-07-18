@@ -2,18 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/headerMenuButton.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logic/retrieveData.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ui/components/loading/error.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ui/components/loading/splash.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/home/homeComponents.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/homeComponents.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/currentPositiveScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/currentPositiveScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/diedScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/diedScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/homeScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/homeScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/latestUpdateResumeScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/latestUpdateResumeScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/newCasesScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/newCasesScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/recoveredScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/recoveredScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/swabsScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/swabsScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/theme/colors.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme/colors.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/drawer/drawerHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/drawer/drawerHeader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/headerMenuButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/header/headerMenuButton.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/home/homeComponents.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/home/homeComponents.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/contents/strings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/contents/strings.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/currentPositiveScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/screens/currentPositiveScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/diedScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/screens/diedScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/homeScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/screens/homeScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/latestUpdateResumeScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/screens/latestUpdateResumeScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/newCasesScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/screens/newCasesScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/recoveredScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/screens/recoveredScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/swabsScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/screens/swabsScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/theme/colors.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/theme/colors.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/theme/dimens.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/theme/dimens.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/theme/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/theme/style.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +53,9 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/ui/components/header" />
+      <recent name="$PROJECT_DIR$/src/ui/components/loading" />
+      <recent name="$PROJECT_DIR$/src/ui" />
       <recent name="$PROJECT_DIR$/src/components/drawer" />
     </key>
   </component>
@@ -69,7 +81,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1595075662595</updated>
-      <workItem from="1595075664402" duration="7964000" />
+      <workItem from="1595075664402" duration="11532000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1595078622516</created>
@@ -85,7 +97,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595082159705</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="screens sistemati, header e menu funzionante in tutti">
+      <created>1595083956352</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1595083956352</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -94,24 +113,25 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
     <MESSAGE value="header in home" />
-    <option name="LAST_COMMIT_MESSAGE" value="header in home" />
+    <MESSAGE value="screens sistemati, header e menu funzionante in tutti" />
+    <option name="LAST_COMMIT_MESSAGE" value="screens sistemati, header e menu funzionante in tutti" />
   </component>
   <component name="WindowStateProjectService">
     <state x="458" y="188" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1595080474201">
       <screen x="0" y="23" width="1440" height="820" />
     </state>
     <state x="458" y="188" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.820@0.23.1440.820" timestamp="1595080474201" />
-    <state x="300" y="38" key="CommitChangelistDialog2" timestamp="1595082089998">
+    <state x="300" y="38" key="CommitChangelistDialog2" timestamp="1595083955707">
       <screen x="0" y="23" width="1440" height="820" />
     </state>
-    <state x="300" y="38" key="CommitChangelistDialog2/0.23.1440.820@0.23.1440.820" timestamp="1595082089998" />
+    <state x="300" y="38" key="CommitChangelistDialog2/0.23.1440.820@0.23.1440.820" timestamp="1595083955707" />
     <state x="558" y="338" key="Github.ShareDialog" timestamp="1595078313212">
       <screen x="0" y="23" width="1440" height="820" />
     </state>
     <state x="558" y="338" key="Github.ShareDialog/0.23.1440.820@0.23.1440.820" timestamp="1595078313212" />
-    <state x="320" y="174" key="Vcs.Push.Dialog.v2" timestamp="1595082161891">
+    <state x="320" y="174" key="Vcs.Push.Dialog.v2" timestamp="1595083960749">
       <screen x="0" y="23" width="1440" height="820" />
     </state>
-    <state x="320" y="174" key="Vcs.Push.Dialog.v2/0.23.1440.820@0.23.1440.820" timestamp="1595082161891" />
+    <state x="320" y="174" key="Vcs.Push.Dialog.v2/0.23.1440.820@0.23.1440.820" timestamp="1595083960749" />
   </component>
 </project>

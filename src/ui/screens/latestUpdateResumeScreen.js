@@ -9,14 +9,14 @@ import {Dimensions} from "react-native";
 import React from "react";
 import {createStackNavigator} from "@react-navigation/stack";
 import {dimens} from "../theme/dimens";
-import HeaderLeft from "../components/headerMenuButton";
+import HeaderLeft from "../components/header/headerMenuButton";
 import HomeComponents from "../components/home/homeComponents";
 import {screenTitles} from "../contents/strings";
 
 const Stack = createStackNavigator();
 const dimensions = Dimensions.get('window').width;
 
-function CurrentPositiveScreen({ navigation }) {
+function LatestUpdateResumeScreen({ navigation }) {
 
     return (
         <Stack.Navigator>
@@ -25,10 +25,10 @@ function CurrentPositiveScreen({ navigation }) {
                     headerLeft: dimensions < dimens.largeScreen ? ({}) => <HeaderLeft /> : null
                 }}
                 component={({}) => <HomeComponents />}
-                name={screenTitles.currentPositive}
+                name={screenTitles.latestUpdateResume}
             />
         </Stack.Navigator>
     );
 }
 
-export default CurrentPositiveScreen;
+export default LatestUpdateResumeScreen;

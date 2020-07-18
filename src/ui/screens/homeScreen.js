@@ -5,19 +5,18 @@
  * Location: Baratili San Pietro
  */
 
-
 import {Dimensions} from "react-native";
 import React from "react";
 import {createStackNavigator} from "@react-navigation/stack";
-import {dimens} from "../theme/dimens";
-import HeaderLeft from "../components/headerMenuButton";
-import HomeComponents from "../components/home/homeComponents";
 import {screenTitles} from "../contents/strings";
+import HomeComponents from "../components/home/homeComponents";
+import HeaderLeft from "../components/header/headerMenuButton";
+import {dimens} from "../theme/dimens";
 
 const Stack = createStackNavigator();
 const dimensions = Dimensions.get('window').width;
 
-function NewCasesScreen({ navigation }) {
+function HomeScreen({ navigation }) {
 
     return (
         <Stack.Navigator>
@@ -26,10 +25,11 @@ function NewCasesScreen({ navigation }) {
                     headerLeft: dimensions < dimens.largeScreen ? ({}) => <HeaderLeft /> : null
                 }}
                 component={({}) => <HomeComponents />}
-                name={screenTitles.newCases}
+                name={screenTitles.home}
             />
         </Stack.Navigator>
     );
 }
 
-export default NewCasesScreen;
+export default HomeScreen;
+

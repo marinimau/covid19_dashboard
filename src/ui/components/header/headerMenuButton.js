@@ -10,7 +10,7 @@ import {DrawerActions, useNavigation} from "@react-navigation/native";
 import {View} from "react-native";
 import {TouchableOpacity} from "react-native-gesture-handler";
 import { Ionicons } from '@expo/vector-icons';
-import Colors from "../theme/colors";
+import Colors from "../../theme/colors";
 
 const HeaderLeft = () => {
     const navigation = useNavigation();

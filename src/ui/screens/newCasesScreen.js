@@ -10,14 +10,14 @@ import {Dimensions} from "react-native";
 import React from "react";
 import {createStackNavigator} from "@react-navigation/stack";
 import {dimens} from "../theme/dimens";
-import HeaderLeft from "../components/headerMenuButton";
+import HeaderLeft from "../components/header/headerMenuButton";
 import HomeComponents from "../components/home/homeComponents";
 import {screenTitles} from "../contents/strings";
 
 const Stack = createStackNavigator();
 const dimensions = Dimensions.get('window').width;
 
-function SwabsResumeScreen({ navigation }) {
+function NewCasesScreen({ navigation }) {
 
     return (
         <Stack.Navigator>
@@ -26,10 +26,10 @@ function SwabsResumeScreen({ navigation }) {
                     headerLeft: dimensions < dimens.largeScreen ? ({}) => <HeaderLeft /> : null
                 }}
                 component={({}) => <HomeComponents />}
-                name={screenTitles.swab}
+                name={screenTitles.newCases}
             />
         </Stack.Navigator>
     );
 }
 
-export default SwabsResumeScreen;
+export default NewCasesScreen;
