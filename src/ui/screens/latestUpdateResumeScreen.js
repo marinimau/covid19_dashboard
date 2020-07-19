@@ -11,7 +11,7 @@ import {createStackNavigator} from "@react-navigation/stack";
 import {dimens} from "../theme/dimens";
 import HeaderLeft from "../components/header/headerMenuButton";
 import {screenTitles} from "../contents/strings";
-import LatestUpdateMainCard from "../components/latest_updates/latestUpateMainCard";
+import LatestUpdateComponent from "../components/latest_updates/latestUpateComponent";
 
 const Stack = createStackNavigator();
 const dimensions = Dimensions.get('window').width;
@@ -24,7 +24,7 @@ function LatestUpdateResumeScreen({ navigation }) {
                 options={{
                     headerLeft: dimensions < dimens.largeScreen ? ({}) => <HeaderLeft /> : null
                 }}
-                component={({}) => <LatestUpdateMainCard />}
+                component={({}) => <LatestUpdateComponent />}
                 name={screenTitles.latestUpdateResume}
             />
         </Stack.Navigator>

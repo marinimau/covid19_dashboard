@@ -7,6 +7,7 @@
 
 import {StyleSheet} from "react-native";
 import Colors from "./colors";
+import {dimens} from "./dimens";
 
 
 export const styles = StyleSheet.create({
@@ -15,10 +16,15 @@ export const styles = StyleSheet.create({
     },
     rootContainer : {
         flex: 1,
-        padding: 20,
         alignItems: 'left',
+        alignContent: 'space-around',
         justifyContent: 'left',
         backgroundColor: Colors.basicTransparent,
+    },
+    scrollableContainer: {
+        flex: 1,
+        flexDirection: 'row',
+        flexWrap: 'wrap'
     },
     loading: {
         backgroundColor: Colors.basicElevation,
@@ -37,9 +43,34 @@ export const styles = StyleSheet.create({
      *      - small
      */
     cardGeneric: {
-        borderRadius: 20,
-        background: Colors.basicElevation,
+        position: 'relative',
+        borderRadius: 10,
+        width: '100%',
+        margin: 7,
+        height: 'auto',
+        padding: 20,
+        backgroundColor: Colors.basicElevation,
         border: Colors.mainTransparent,
         elevation: 20,
+        positionZ: 20,
+    },
+    cardShadow: {
+        shadowColor: Colors.basicShadow,
+        shadowOffset: {
+            width: 0,
+            height: 10,
+        },
+        shadowOpacity: 0.51,
+        shadowRadius: 13.16,
+        elevation: 20,
+    },
+    cardBig: {
+        maxWidth: dimens.cardBig
+    },
+    cardMedium: {
+        maxWidth: dimens.cardMedium
+    },
+    cardSmall: {
+        maxWidth: dimens.cardSmall
     }
 });

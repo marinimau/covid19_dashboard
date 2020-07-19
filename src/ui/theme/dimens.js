@@ -9,4 +9,7 @@ export const dimens = {
     largeScreen: 768,
     drawerWidth: 280,
     headerHeight: 74,
+    cardBig: '100%',
+    cardMedium: 450,
+    cardSmall: 250,
 };

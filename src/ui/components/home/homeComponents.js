@@ -6,7 +6,7 @@
  */
 
 import React, {Component} from 'react';
-import {Button, View} from "react-native";
+import {Text, View} from "react-native";
 import {styles} from "../../theme/style";
 
 class HomeComponents extends Component{
@@ -18,10 +18,7 @@ class HomeComponents extends Component{
     render() {
         return (
             <View style={[{ flex: 1, alignItems: 'center', justifyContent: 'center' }, styles.root]}>
-                <Button
-                    onPress={() => navigation.navigate('Home')}
-                    title="Go to home"
-                />
+                <Text>under construction</Text>
             </View>
         )
     }

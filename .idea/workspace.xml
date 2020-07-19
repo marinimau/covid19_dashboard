@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="aggiunto il loader">
-      <change afterPath="$PROJECT_DIR$/src/logic/latestUpdateData.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/components/latest_updates/latestUpateMainCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.expo/packager-info.json" beforeDir="false" afterPath="$PROJECT_DIR$/.expo/packager-info.json" afterDir="false" />
+    <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/ui/components/latest_updates/latestUpateComponent.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ui/components/mainScrollableContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ui/components/new_cases/newCasesComponent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/components/loading/splash.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/loading/splash.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/contents/strings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/contents/strings.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/components/home/homeComponents.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/home/homeComponents.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/components/latest_updates/latestUpateMainCard.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/screens/latestUpdateResumeScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/screens/latestUpdateResumeScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/screens/newCasesScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/screens/newCasesScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/theme/colors.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/theme/colors.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/theme/dimens.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/theme/dimens.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/theme/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/theme/style.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -69,7 +73,7 @@
       <option name="presentableId" value="Default" />
       <updated>1595075662595</updated>
       <workItem from="1595075664402" duration="12582000" />
-      <workItem from="1595145766116" duration="2854000" />
+      <workItem from="1595145766116" duration="6439000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1595078622516</created>
@@ -106,7 +110,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595090642764</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="aggiunto il loader">
+      <created>1595148795949</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1595148795949</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -125,17 +136,21 @@
       <screen x="0" y="23" width="1440" height="820" />
     </state>
     <state x="458" y="188" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.820@0.23.1440.820" timestamp="1595080474201" />
-    <state x="27" y="38" key="CommitChangelistDialog2" timestamp="1595100099140">
+    <state x="27" y="38" key="CommitChangelistDialog2" timestamp="1595148795169">
       <screen x="0" y="23" width="1440" height="820" />
     </state>
-    <state x="27" y="38" key="CommitChangelistDialog2/0.23.1440.820@0.23.1440.820" timestamp="1595100099140" />
+    <state x="27" y="38" key="CommitChangelistDialog2/0.23.1440.820@0.23.1440.820" timestamp="1595148795169" />
     <state x="558" y="338" key="Github.ShareDialog" timestamp="1595078313212">
       <screen x="0" y="23" width="1440" height="820" />
     </state>
     <state x="558" y="338" key="Github.ShareDialog/0.23.1440.820@0.23.1440.820" timestamp="1595078313212" />
-    <state x="320" y="174" key="Vcs.Push.Dialog.v2" timestamp="1595090644329">
+    <state x="320" y="174" key="Vcs.Push.Dialog.v2" timestamp="1595148801486">
       <screen x="0" y="23" width="1440" height="820" />
     </state>
-    <state x="320" y="174" key="Vcs.Push.Dialog.v2/0.23.1440.820@0.23.1440.820" timestamp="1595090644329" />
+    <state x="320" y="174" key="Vcs.Push.Dialog.v2/0.23.1440.820@0.23.1440.820" timestamp="1595148801486" />
+    <state x="385" y="167" width="670" height="676" key="search.everywhere.popup" timestamp="1595150088481">
+      <screen x="0" y="23" width="1440" height="820" />
+    </state>
+    <state x="385" y="167" width="670" height="676" key="search.everywhere.popup/0.23.1440.820@0.23.1440.820" timestamp="1595150088481" />
   </component>
 </project>

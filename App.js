@@ -52,6 +52,7 @@ export default function App() {
                                 drawerContentOptions={{
                                     activeTintColor: Colors.main,
                                     activeBackgroundColor: Colors.mainTransparent,
+
                                 }}
                                 drawerType={isLargeScreen ? 'permanent' : 'back'}
                                 drawerStyle={isLargeScreen ? null : {width: dimens.drawerWidth}}
