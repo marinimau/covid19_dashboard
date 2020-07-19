@@ -1,17 +1,15 @@
 /**
  * covid19_dashboard copyright © 2020
- * Created by mauromarini on 18/07/2020
+ * Created by mauromarini on 19/07/2020
  * Repository: http://github.com/marinimau/covid19_dashboard
  * Location: Baratili San Pietro
  */
 
 import React, {Component} from 'react';
-import {View, Text} from "react-native";
+import {Text, View} from "react-native";
 import {styles} from "../../theme/style";
-import {loadingMessages} from "../../contents/strings";
 
-
-class LoadingScreen extends Component{
+class LatestUpdateMainCard extends Component{
 
     constructor() {
         super();
@@ -19,13 +17,14 @@ class LoadingScreen extends Component{
 
     render() {
         return (
-            <View style={[{ flex: 1, alignItems: 'center', justifyContent: 'center' }, styles.loading]}>
+            <View style={[styles.rootContainer]}>
                 <View style={[styles.cardGeneric]}>
-                    <Text>{loadingMessages.loading}</Text>
+                    <Text>Resoconto pagina dati</Text>
                 </View>
             </View>
         )
     }
+
 }
 
-export default LoadingScreen;
+export default LatestUpdateMainCard;

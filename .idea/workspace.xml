@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="">
+    <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="aggiunto il loader">
+      <change afterPath="$PROJECT_DIR$/src/logic/latestUpdateData.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ui/components/latest_updates/latestUpateMainCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.expo/packager-info.json" beforeDir="false" afterPath="$PROJECT_DIR$/.expo/packager-info.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/components/loading/error.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/loading/error.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/components/loading/splash.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/loading/splash.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/contents/strings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/contents/strings.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/screens/latestUpdateResumeScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/screens/latestUpdateResumeScreen.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/theme/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/theme/style.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -64,7 +68,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1595075662595</updated>
-      <workItem from="1595075664402" duration="11673000" />
+      <workItem from="1595075664402" duration="12582000" />
+      <workItem from="1595145766116" duration="2854000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1595078622516</created>
@@ -94,7 +99,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595090447936</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="aggiunto il loader">
+      <created>1595090642764</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1595090642764</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -105,24 +117,25 @@
     <MESSAGE value="header in home" />
     <MESSAGE value="screens sistemati, header e menu funzionante in tutti" />
     <MESSAGE value="data retrieving funzionante" />
-    <option name="LAST_COMMIT_MESSAGE" value="data retrieving funzionante" />
+    <MESSAGE value="aggiunto il loader" />
+    <option name="LAST_COMMIT_MESSAGE" value="aggiunto il loader" />
   </component>
   <component name="WindowStateProjectService">
     <state x="458" y="188" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1595080474201">
       <screen x="0" y="23" width="1440" height="820" />
     </state>
     <state x="458" y="188" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.820@0.23.1440.820" timestamp="1595080474201" />
-    <state x="27" y="38" key="CommitChangelistDialog2" timestamp="1595090447215">
+    <state x="27" y="38" key="CommitChangelistDialog2" timestamp="1595100099140">
       <screen x="0" y="23" width="1440" height="820" />
     </state>
-    <state x="27" y="38" key="CommitChangelistDialog2/0.23.1440.820@0.23.1440.820" timestamp="1595090447215" />
+    <state x="27" y="38" key="CommitChangelistDialog2/0.23.1440.820@0.23.1440.820" timestamp="1595100099140" />
     <state x="558" y="338" key="Github.ShareDialog" timestamp="1595078313212">
       <screen x="0" y="23" width="1440" height="820" />
     </state>
     <state x="558" y="338" key="Github.ShareDialog/0.23.1440.820@0.23.1440.820" timestamp="1595078313212" />
-    <state x="320" y="174" key="Vcs.Push.Dialog.v2" timestamp="1595090449597">
+    <state x="320" y="174" key="Vcs.Push.Dialog.v2" timestamp="1595090644329">
       <screen x="0" y="23" width="1440" height="820" />
     </state>
-    <state x="320" y="174" key="Vcs.Push.Dialog.v2/0.23.1440.820@0.23.1440.820" timestamp="1595090449597" />
+    <state x="320" y="174" key="Vcs.Push.Dialog.v2/0.23.1440.820@0.23.1440.820" timestamp="1595090644329" />
   </component>
 </project>

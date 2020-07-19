@@ -13,6 +13,13 @@ export const styles = StyleSheet.create({
     root : {
         backgroundColor: Colors.basicTransparent,
     },
+    rootContainer : {
+        flex: 1,
+        padding: 20,
+        alignItems: 'left',
+        justifyContent: 'left',
+        backgroundColor: Colors.basicTransparent,
+    },
     loading: {
         backgroundColor: Colors.basicElevation,
     },
@@ -22,4 +29,17 @@ export const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
     },
+    /*
+     *  Card items
+     *  3 sizes:
+     *      - big
+     *      - medium
+     *      - small
+     */
+    cardGeneric: {
+        borderRadius: 20,
+        background: Colors.basicElevation,
+        border: Colors.mainTransparent,
+        elevation: 20,
+    }
 });

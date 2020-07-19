@@ -21,6 +21,6 @@ export const screenTitles = {
     newCases: 'Nuovi casi',
     recovered: 'Guariti',
     died: 'Deceduti',
-    currentPositive: 'Attualmente positivi',
+    currentPositive: 'Ripartizione positivi',
     swab: 'Andamento tamponi'
 };
