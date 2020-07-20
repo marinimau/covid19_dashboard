@@ -16,9 +16,9 @@ export const styles = StyleSheet.create({
     },
     rootContainer : {
         flex: 1,
-        alignItems: 'left',
+        alignItems: 'flex-start',
         alignContent: 'space-around',
-        justifyContent: 'left',
+        justifyContent: 'flex-start',
         backgroundColor: Colors.basicTransparent,
     },
     scrollableContainer: {
@@ -50,9 +50,9 @@ export const styles = StyleSheet.create({
         height: 'auto',
         padding: 20,
         backgroundColor: Colors.basicElevation,
-        border: Colors.mainTransparent,
+        borderColor: Colors.mainTransparent,
+        borderWidth: 0.5,
         elevation: 20,
-        positionZ: 20,
     },
     cardShadow: {
         shadowColor: Colors.basicShadow,

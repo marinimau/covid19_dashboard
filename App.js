@@ -45,6 +45,8 @@ export default function App() {
 
                 if (data)
                     return (
+                        <>
+                        <StatusBar/>
                         <NavigationContainer style={styles.root}>
                             <Drawer.Navigator
                                 initialRouteName="Home"
@@ -68,6 +70,7 @@ export default function App() {
 
                             </Drawer.Navigator>
                         </NavigationContainer>
+                        </>
                     )
             }}
         </Async>
