@@ -13,6 +13,7 @@ import {dimens} from "../theme/dimens";
 import HeaderLeft from "../components/header/headerMenuButton";
 import HomeComponents from "../components/home/homeComponents";
 import {screenTitles} from "../contents/strings";
+import SwabsComponent from "../components/swabs/swabsComponent";
 
 const Stack = createStackNavigator();
 const dimensions = Dimensions.get('window').width;
@@ -25,7 +26,7 @@ function SwabsResumeScreen({ navigation }) {
                 options={{
                     headerLeft: dimensions < dimens.largeScreen ? ({}) => <HeaderLeft /> : null
                 }}
-                component={({}) => <HomeComponents />}
+                component={({}) => <SwabsComponent />}
                 name={screenTitles.swab}
             />
         </Stack.Navigator>

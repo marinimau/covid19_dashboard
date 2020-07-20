@@ -11,8 +11,8 @@ import React from "react";
 import {createStackNavigator} from "@react-navigation/stack";
 import {dimens} from "../theme/dimens";
 import HeaderLeft from "../components/header/headerMenuButton";
-import HomeComponents from "../components/home/homeComponents";
 import {screenTitles} from "../contents/strings";
+import DiedComponent from "../components/died/diedComponent";
 
 const Stack = createStackNavigator();
 const dimensions = Dimensions.get('window').width;
@@ -25,7 +25,7 @@ function DiedScreen({ navigation }) {
                 options={{
                     headerLeft: dimensions < dimens.largeScreen ? ({}) => <HeaderLeft /> : null
                 }}
-                component={({}) => <HomeComponents />}
+                component={({}) => <DiedComponent />}
                 name={screenTitles.died}
             />
         </Stack.Navigator>

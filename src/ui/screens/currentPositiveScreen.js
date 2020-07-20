@@ -10,8 +10,8 @@ import React from "react";
 import {createStackNavigator} from "@react-navigation/stack";
 import {dimens} from "../theme/dimens";
 import HeaderLeft from "../components/header/headerMenuButton";
-import HomeComponents from "../components/home/homeComponents";
 import {screenTitles} from "../contents/strings";
+import CurrentPositiveComponent from "../components/current_positive/currentPositiveComponent";
 
 const Stack = createStackNavigator();
 const dimensions = Dimensions.get('window').width;
@@ -24,7 +24,7 @@ function CurrentPositiveScreen({ navigation }) {
                 options={{
                     headerLeft: dimensions < dimens.largeScreen ? ({}) => <HeaderLeft /> : null
                 }}
-                component={({}) => <HomeComponents />}
+                component={({}) => <CurrentPositiveComponent />}
                 name={screenTitles.currentPositive}
             />
         </Stack.Navigator>
