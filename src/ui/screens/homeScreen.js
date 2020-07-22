@@ -16,18 +16,27 @@ import {dimens} from "../theme/dimens";
 const Stack = createStackNavigator();
 const dimensions = Dimensions.get('window').width;
 
-function HomeScreen({ navigation }) {
+function renderContent() {
+}
+
+function renderHeader() {
+
+}
+
+function HomeScreen({navigation}) {
 
     return (
+
         <Stack.Navigator>
             <Stack.Screen
                 options={{
-                    headerLeft: dimensions < dimens.largeScreen ? ({}) => <HeaderLeft /> : null
+                    headerLeft: dimensions < dimens.largeScreen ? ({}) => <HeaderLeft/> : null
                 }}
-                component={({}) => <HomeComponents />}
+                component={({}) => <HomeComponents/>}
                 name={screenTitles.home}
             />
         </Stack.Navigator>
+
     );
 }
 

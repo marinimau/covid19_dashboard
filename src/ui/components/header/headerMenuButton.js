@@ -23,7 +23,6 @@ const HeaderLeft = () => {
                 }}
                 style={{marginLeft:25}}>
                 <Ionicons name="ios-menu" size={32} color={Colors.basic} />
-                {/* <Image source={require('./assets/images/icons/drawer.png')} /> */}
             </TouchableOpacity>
         </View>
     );
