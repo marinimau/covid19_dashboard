@@ -19,9 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/README.MD" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.expo/packager-info.json" beforeDir="false" afterPath="$PROJECT_DIR$/.expo/packager-info.json" afterDir="false" />
+    <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="aggiunto README.MD">
+      <change afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -74,7 +73,7 @@
       <workItem from="1595075664402" duration="12582000" />
       <workItem from="1595145766116" duration="7630000" />
       <workItem from="1595253539475" duration="2709000" />
-      <workItem from="1595514505997" duration="4453000" />
+      <workItem from="1595514505997" duration="5132000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1595078622516</created>
@@ -125,7 +124,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595152526190</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="aggiunto README.MD">
+      <created>1595525127699</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1595525127699</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,9 +156,14 @@
     <MESSAGE value="data retrieving funzionante" />
     <MESSAGE value="aggiunto il loader" />
     <MESSAGE value="iniziato a organizzare i grafici" />
-    <option name="LAST_COMMIT_MESSAGE" value="iniziato a organizzare i grafici" />
+    <MESSAGE value="aggiunto README.MD" />
+    <option name="LAST_COMMIT_MESSAGE" value="aggiunto README.MD" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="445" y="238" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1595525015201">
+      <screen x="0" y="25" width="1440" height="814" />
+    </state>
+    <state x="445" y="238" key="#com.intellij.fileTypes.FileTypeChooser/0.25.1440.814@0.25.1440.814" timestamp="1595525015201" />
     <state x="458" y="188" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1595080474201">
       <screen x="0" y="23" width="1440" height="820" />
     </state>
@@ -165,10 +176,11 @@
       <screen x="0" y="23" width="1440" height="820" />
     </state>
     <state x="558" y="338" key="Github.ShareDialog/0.23.1440.820@0.23.1440.820" timestamp="1595078313212" />
-    <state x="320" y="174" key="Vcs.Push.Dialog.v2" timestamp="1595152527908">
-      <screen x="0" y="23" width="1440" height="820" />
+    <state x="320" y="175" key="Vcs.Push.Dialog.v2" timestamp="1595525135961">
+      <screen x="0" y="25" width="1440" height="814" />
     </state>
     <state x="320" y="174" key="Vcs.Push.Dialog.v2/0.23.1440.820@0.23.1440.820" timestamp="1595152527908" />
+    <state x="320" y="175" key="Vcs.Push.Dialog.v2/0.25.1440.814@0.25.1440.814" timestamp="1595525135961" />
     <state x="385" y="167" width="670" height="676" key="search.everywhere.popup" timestamp="1595150088481">
       <screen x="0" y="23" width="1440" height="820" />
     </state>
