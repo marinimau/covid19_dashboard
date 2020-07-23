@@ -12,6 +12,7 @@ import {screenTitles} from "../contents/strings";
 import HomeComponents from "../components/home/homeComponents";
 import HeaderLeft from "../components/header/headerMenuButton";
 import {dimens} from "../theme/dimens";
+import ExampleComponent from "../components/example/exampleComponent";
 
 const Stack = createStackNavigator();
 const dimensions = Dimensions.get('window').width;
@@ -32,7 +33,7 @@ function HomeScreen({navigation}) {
                 options={{
                     headerLeft: dimensions < dimens.largeScreen ? ({}) => <HeaderLeft/> : null
                 }}
-                component={({}) => <HomeComponents/>}
+                component={({}) => <ExampleComponent/>}
                 name={screenTitles.home}
             />
         </Stack.Navigator>

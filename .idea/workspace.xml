@@ -19,9 +19,19 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="aggiunto README.MD">
-      <change afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
+    <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="aggiunto LICENSE">
+      <change afterPath="$PROJECT_DIR$/src/drawings/general/axis.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ui/components/example/exampleComponent.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/dimensionsUtils.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.MD" beforeDir="false" afterPath="$PROJECT_DIR$/README.MD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/components/latest_updates/latestUpateComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/latest_updates/latestUpateComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/screens/homeScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/screens/homeScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/theme/dimens.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/theme/dimens.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/theme/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/theme/style.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +61,7 @@
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -73,7 +84,7 @@
       <workItem from="1595075664402" duration="12582000" />
       <workItem from="1595145766116" duration="7630000" />
       <workItem from="1595253539475" duration="2709000" />
-      <workItem from="1595514505997" duration="5132000" />
+      <workItem from="1595514505997" duration="12183000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1595078622516</created>
@@ -131,7 +142,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595525127699</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="aggiunto LICENSE">
+      <created>1595526006928</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1595526006928</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -157,7 +175,8 @@
     <MESSAGE value="aggiunto il loader" />
     <MESSAGE value="iniziato a organizzare i grafici" />
     <MESSAGE value="aggiunto README.MD" />
-    <option name="LAST_COMMIT_MESSAGE" value="aggiunto README.MD" />
+    <MESSAGE value="aggiunto LICENSE" />
+    <option name="LAST_COMMIT_MESSAGE" value="aggiunto LICENSE" />
   </component>
   <component name="WindowStateProjectService">
     <state x="445" y="238" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1595525015201">
@@ -176,14 +195,23 @@
       <screen x="0" y="23" width="1440" height="820" />
     </state>
     <state x="558" y="338" key="Github.ShareDialog/0.23.1440.820@0.23.1440.820" timestamp="1595078313212" />
-    <state x="320" y="175" key="Vcs.Push.Dialog.v2" timestamp="1595525135961">
+    <state x="229" y="68" key="SettingsEditor" timestamp="1595526758629">
+      <screen x="0" y="25" width="1440" height="814" />
+    </state>
+    <state x="229" y="68" key="SettingsEditor/0.25.1440.814@0.25.1440.814" timestamp="1595526758629" />
+    <state x="320" y="175" key="Vcs.Push.Dialog.v2" timestamp="1595526008298">
       <screen x="0" y="25" width="1440" height="814" />
     </state>
     <state x="320" y="174" key="Vcs.Push.Dialog.v2/0.23.1440.820@0.23.1440.820" timestamp="1595152527908" />
-    <state x="320" y="175" key="Vcs.Push.Dialog.v2/0.25.1440.814@0.25.1440.814" timestamp="1595525135961" />
-    <state x="385" y="167" width="670" height="676" key="search.everywhere.popup" timestamp="1595150088481">
-      <screen x="0" y="23" width="1440" height="820" />
+    <state x="320" y="175" key="Vcs.Push.Dialog.v2/0.25.1440.814@0.25.1440.814" timestamp="1595526008298" />
+    <state x="511" y="350" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1595525769196">
+      <screen x="0" y="25" width="1440" height="814" />
+    </state>
+    <state x="511" y="350" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.25.1440.814@0.25.1440.814" timestamp="1595525769196" />
+    <state x="385" y="168" width="670" height="672" key="search.everywhere.popup" timestamp="1595529574995">
+      <screen x="0" y="25" width="1440" height="814" />
     </state>
     <state x="385" y="167" width="670" height="676" key="search.everywhere.popup/0.23.1440.820@0.23.1440.820" timestamp="1595150088481" />
+    <state x="385" y="168" width="670" height="672" key="search.everywhere.popup/0.25.1440.814@0.25.1440.814" timestamp="1595529574995" />
   </component>
 </project>

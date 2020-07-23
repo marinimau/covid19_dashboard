@@ -7,10 +7,20 @@
 
 import {StyleSheet} from "react-native";
 import Colors from "./colors";
-import {dimens} from "./dimens";
+import {dimens, dynamicDimens} from "./dimens";
 
 
 export const styles = StyleSheet.create({
+    drawerShadow: {
+        shadowColor: Colors.basicShadow,
+        shadowOffset: {
+            width: 10,
+            height: 0,
+        },
+        shadowOpacity: 0.51,
+        shadowRadius: 13.16,
+        elevation: 20,
+    },
     root : {
         backgroundColor: Colors.basicTransparent,
     },
@@ -65,12 +75,19 @@ export const styles = StyleSheet.create({
         elevation: 20,
     },
     cardBig: {
-        maxWidth: dimens.cardBig
+        maxWidth: dynamicDimens.cardBig
     },
     cardMedium: {
         maxWidth: dimens.cardMedium
     },
     cardSmall: {
         maxWidth: dimens.cardSmall
+    },
+    /*
+     *  Chart
+     */
+    chartTitle: {
+        fontSize: 18,
+        fontWeight: "700",
     }
 });

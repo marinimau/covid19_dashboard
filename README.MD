@@ -47,7 +47,7 @@ If you have the iOS simulator installed, just click on **'run on iOS simulator'*
     
  2. connect the phone to the same network of the computer where you launched the Expo;
  
- 3. Scan the QR code using the Expo app integrated scanner. 
+ 3. Scan the QR code (using the Expo app integrated scanner on Android; for iOS use the system integrated scanner). 
 
 
 ## Technologies

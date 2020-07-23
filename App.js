@@ -57,8 +57,8 @@ export default function App() {
 
                                 }}
                                 drawerType={isLargeScreen ? 'permanent' : 'back'}
-                                drawerStyle={isLargeScreen ? null : {width: dimens.drawerWidth}}
-                                overlayColor="transparent">
+                                drawerStyle={isLargeScreen ? null : [{width: dimens.drawerWidth}, styles.drawerShadow]}
+                                overlayColor={isLargeScreen ? "transparent" : Colors.basicTransparent}>
 
                                 <Drawer.Screen name={screenTitles.home} component={HomeScreen}/>
                                 <Drawer.Screen name={screenTitles.latestUpdateResume} component={LatestUpdateResumeScreen}/>
