@@ -2,6 +2,7 @@
 
 A cross-platform (Android, iOS, Web) dashboard to represent the trend of the Covid-19 pandemic in Italy.
 
+
 ## Instructions
 
 #### 1. Install Expo globally
@@ -22,6 +23,7 @@ and then:
 
 ```source ~/.bash_profile```
 
+
 #### 2. Launch expo-cli
 
 Simply go to the project path and write:
@@ -34,6 +36,7 @@ the Metro Bundler web page should appear in seconds.
 #### 3. Launch the web app
 
 Simply click on **'run in web browser'** from the Metro Boundler web page.
+
 
 #### 3. Try the mobile app (without building the standalone)
 
@@ -49,9 +52,9 @@ If you have the iOS simulator installed, just click on **'run on iOS simulator'*
 
 ## Technologies
 
-* [React-Native]('https://reactnative.dev')
-* [D3.js]('http://d3js.org')
-* [Expo]('https://expo.io')
+* [React-Native](https://reactnative.dev)
+* [D3.js](http://d3js.org)
+* [Expo](https://expo.io)
 
 
 ## Data
@@ -62,5 +65,6 @@ Source:
 
 
 ## Authors
- * [Mauro Marini]('https://github.com/marinimau')
- * [Alberto Pes]('https://github.com/scambuilds')
+
+ * [Mauro Marini](https://github.com/marinimau)
+ * [Alberto Pes](https://github.com/scambuilds)
