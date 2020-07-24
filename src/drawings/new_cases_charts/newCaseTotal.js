@@ -13,11 +13,11 @@ import {getChartFullWidth} from "../../utils/dimensionsUtils";
 import {dataset} from "../../logic/GLOBAL";
 import Records from "../../logic/dataset";
 
-const GRAPH_MARGIN = 20
+const GRAPH_MARGIN = 10
 const GRAPH_BAR_WIDTH = 10
 const colors = {
     axis: '#E4E4E4',
-    bars: Colors.main
+    bars: Colors.accent1
 }
 
 export default class NewCasTotalChart extends PureComponent {
@@ -50,7 +50,7 @@ export default class NewCasTotalChart extends PureComponent {
             .padding(1)
 
         // Y scale linear
-        const maxValue = d3.max(data, d => d.totale_positivi)
+        const maxValue = d3.max(data, d => d.totale_casi)
         const topValue = Math.ceil(maxValue / round) * round
         const yDomain = [0, topValue]
         const yRange = [0, graphHeight]
@@ -70,7 +70,7 @@ export default class NewCasTotalChart extends PureComponent {
                     {indices.map((i) => (
                         <>
                             <Text
-                                x={graphWidth}
+                                x={graphWidth + 20}
                                 textAnchor="end"
                                 y={y(maxValue / numLines * i) * -1 - 5}
                                 fontSize={12}
@@ -82,7 +82,7 @@ export default class NewCasTotalChart extends PureComponent {
                             <Line
                                 x1="0"
                                 y1={y(maxValue / numLines * i) * -1}
-                                x2={graphWidth + 20}
+                                x2={graphWidth}
                                 y2={y(maxValue / numLines * i) * -1}
                                 stroke={Colors.axis}
                                 strokeDasharray={[3, 3]}
@@ -97,10 +97,10 @@ export default class NewCasTotalChart extends PureComponent {
                         <Rect
                             key={'bar' + item.data}
                             x={x(item.data) - (GRAPH_BAR_WIDTH / 2)}
-                            y={y(item.totale_positivi) * -1}
+                            y={y(item.totale_casi) * -1}
                             rx={2.5}
                             width={GRAPH_BAR_WIDTH}
-                            height={y(item.totale_positivi)}
+                            height={y(item.totale_casi)}
                             fill={colors.bars}
                         />
                     ))}

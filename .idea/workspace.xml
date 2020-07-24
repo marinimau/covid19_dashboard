@@ -19,10 +19,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="inziato a implementare un grafico usabile">
+    <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="aggiornata la fetch">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/drawings/new_cases_charts/newCaseTotal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/drawings/new_cases_charts/newCaseTotal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/retrieveData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/retrieveData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/components/new_cases/newCasesComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/new_cases/newCasesComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/contents/strings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/contents/strings.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/theme/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/theme/style.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +79,7 @@
       <workItem from="1595145766116" duration="7630000" />
       <workItem from="1595253539475" duration="2709000" />
       <workItem from="1595514505997" duration="12237000" />
-      <workItem from="1595579165372" duration="11870000" />
+      <workItem from="1595579165372" duration="13105000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1595078622516</created>
@@ -162,7 +165,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595596798373</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="aggiornata la fetch">
+      <created>1595597534134</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1595597534134</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -192,7 +202,8 @@
     <MESSAGE value="aggiornata UI e creato primo tipo di grafico, lavorato sul responsive" />
     <MESSAGE value="inizio scomposizione grafici in parti riusabili" />
     <MESSAGE value="inziato a implementare un grafico usabile" />
-    <option name="LAST_COMMIT_MESSAGE" value="inziato a implementare un grafico usabile" />
+    <MESSAGE value="aggiornata la fetch" />
+    <option name="LAST_COMMIT_MESSAGE" value="aggiornata la fetch" />
   </component>
   <component name="WindowStateProjectService">
     <state x="445" y="238" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1595525015201">
@@ -215,11 +226,11 @@
       <screen x="0" y="25" width="1440" height="814" />
     </state>
     <state x="229" y="68" key="SettingsEditor/0.25.1440.814@0.25.1440.814" timestamp="1595526758629" />
-    <state x="320" y="175" key="Vcs.Push.Dialog.v2" timestamp="1595596800116">
+    <state x="320" y="175" key="Vcs.Push.Dialog.v2" timestamp="1595597535950">
       <screen x="0" y="25" width="1440" height="814" />
     </state>
     <state x="320" y="174" key="Vcs.Push.Dialog.v2/0.23.1440.820@0.23.1440.820" timestamp="1595152527908" />
-    <state x="320" y="175" key="Vcs.Push.Dialog.v2/0.25.1440.814@0.25.1440.814" timestamp="1595596800116" />
+    <state x="320" y="175" key="Vcs.Push.Dialog.v2/0.25.1440.814@0.25.1440.814" timestamp="1595597535950" />
     <state x="511" y="350" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1595589309124">
       <screen x="0" y="25" width="1440" height="814" />
     </state>
