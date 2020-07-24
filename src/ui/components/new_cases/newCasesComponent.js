@@ -10,6 +10,7 @@ import {Text, View} from "react-native";
 import {styles} from "../../theme/style";
 import MainScrollableContents from "../mainScrollableContainer";
 import NewCasTotalChart from "../../../drawings/new_cases_charts/newCaseTotal";
+import {chartTitles, dataDescription} from "../../contents/strings";
 
 class NewCasesComponent extends Component {
 
@@ -27,8 +28,9 @@ class NewCasesComponent extends Component {
                         </View>
 
                         <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
-                            <Text style={styles.chartTitle}>Grafico andamento contagi</Text>
+                            <Text style={styles.chartTitle}>{chartTitles.totalCasesCurve}</Text>
                             <NewCasTotalChart />
+                            <Text style={styles.chartDescription}>{dataDescription.totalCases}</Text>
                         </View>
                     </>
                 }

@@ -24,3 +24,17 @@ export const screenTitles = {
     currentPositive: 'Ripartizione positivi',
     swab: 'Andamento tamponi'
 };
+
+
+export const chartTitles = {
+    totalCasesCurve: 'Andamento casi totali',
+    newCasesCurve: 'Andamento contagi giornalieri'
+}
+
+
+export const dataDescription = {
+    totalCases: 'I casi totali tengono il conto delle persone che hanno contratto il virus dall\'inizio della pandemia. ' +
+        'I nuovi contagi fanno incrementare questo parametro, nessun valore lo fa decrementare',
+    newCases: 'I nuovi casi sono i contagi che vengono registrati per la prima volta, in questo grafico vengono mostrati, ' +
+        'per ciascun giorno, quanti contagi sono avvenuti.'
+}

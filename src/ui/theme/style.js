@@ -79,5 +79,11 @@ export const styles = StyleSheet.create({
     chartTitle: {
         fontSize: 18,
         fontWeight: "700",
+    },
+    chartDescription: {
+        fontSize: 12,
+        fontStyle: 'italic',
+        textAlign: 'center',
+        marginTop: 20,
     }
 });
