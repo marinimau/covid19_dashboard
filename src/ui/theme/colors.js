@@ -18,7 +18,8 @@ Colors = {
     accent1: '#14D2FF',
     accent2: '#14A5FF',
     accent3: '#14EBFF',
-
+    axis: '#E4E4E4',
+    bars: '#1479FF'
 };
 
 export default Colors;

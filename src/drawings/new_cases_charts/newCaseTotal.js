@@ -5,20 +5,32 @@
  * Location: Baratili San Pietro
  */
 
-import React, { PureComponent } from 'react'
-import { Svg, G, Line, Rect, Text } from 'react-native-svg'
+import React, {PureComponent} from 'react'
+import {Svg, G, Line, Rect, Text} from 'react-native-svg'
 import * as d3 from 'd3'
 import Colors from "../../ui/theme/colors";
 import {getChartFullWidth} from "../../utils/dimensionsUtils";
+import {dataset} from "../../logic/GLOBAL";
+import Records from "../../logic/dataset";
+import retrieveData from "../../logic/retrieveData";
 
-const GRAPH_MARGIN = 20
-const GRAPH_BAR_WIDTH = 10
+const GRAPH_MARGIN = 40
+const GRAPH_BAR_WIDTH = 5
 const colors = {
     axis: '#E4E4E4',
     bars: Colors.main
 }
 
 export default class NewCasTotalChart extends PureComponent {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            records: dataset
+        }
+    }
+
+
     render() {
         // Dimensions
         const SVGHeight = 450
@@ -26,24 +38,12 @@ export default class NewCasTotalChart extends PureComponent {
         const SVGFlex = 1
         const graphHeight = SVGHeight - 2 * GRAPH_MARGIN
         const graphWidth = SVGWidth - 2 * GRAPH_MARGIN
-        const data = [
-            { label: 'Jan', value: 500 },
-            { label: 'Feb', value: 312 },
-            { label: 'Mar', value: 424 },
-            { label: 'Apr', value: 745 },
-            { label: 'May', value: 89 },
-            { label: 'Jun', value: 434 },
-            { label: 'Jul', value: 650 },
-            { label: 'Aug', value: 980 },
-            { label: 'Sep', value: 123 },
-            { label: 'Oct', value: 186 },
-            { label: 'Nov', value: 689 },
-            { label: 'Dec', value: 643 }
-        ]
+        const data = retrieveData()
+        console.log(data);
         const round = 1000
 
         // X scale point
-        const xDomain = data.map(item => item.label)
+        const xDomain = data.map(item => item.data)
         const xRange = [0, graphWidth]
         const x = d3.scalePoint()
             .domain(xDomain)
@@ -51,7 +51,7 @@ export default class NewCasTotalChart extends PureComponent {
             .padding(1)
 
         // Y scale linear
-        const maxValue = d3.max(data, d => d.value)
+        const maxValue = d3.max(data, d => d.totale_positivi)
         const topValue = Math.ceil(maxValue / round) * round
         const yDomain = [0, topValue]
         const yRange = [0, graphHeight]
@@ -60,160 +60,61 @@ export default class NewCasTotalChart extends PureComponent {
             .range(yRange)
 
         // top axis and middle axis
-        const oneOfFive = topValue/5
-        const middleValue = topValue / 2
+        const indices = [0, 1, 2, 3, 4, 5]
+        const numLines = indices.length - 1;
 
         return (
             <Svg width={SVGWidth} height={SVGHeight}>
                 <G y={graphHeight + GRAPH_MARGIN}>
-                    {/* Top value label */}
-                    <Text
-                        x={graphWidth}
-                        textAnchor="end"
-                        y={y(topValue) * -1 - 5}
-                        fontSize={12}
-                        fill={Colors.basic}
-                        fillOpacity={0.4}>
-                        {topValue}
-                    </Text>
 
-                    {/* top axis */}
-                    <Line
-                        x1="0"
-                        y1={y(topValue) * -1}
-                        x2={graphWidth}
-                        y2={y(topValue) * -1}
-                        stroke={colors.axis}
-                        strokeDasharray={[3, 3]}
-                        strokeWidth="0.5"
-                    />
+                    {/* Horizontal Lines */}
+                    {indices.map((i) => (
+                        <>
+                            <Text
+                                x={graphWidth+10}
+                                textAnchor="end"
+                                y={y(maxValue / numLines * i) * -1 - 5}
+                                fontSize={12}
+                                fill={Colors.basic}
+                                fillOpacity={0.4}>
+                                {Math.round(maxValue / numLines * i)}
+                            </Text>
 
-                    {/* 4/5 */}
-                    <Text
-                        x={graphWidth}
-                        textAnchor="end"
-                        y={y(oneOfFive*4) * -1 - 5}
-                        fontSize={12}
-                        fill={Colors.basic}
-                        fillOpacity={0.4}>
-                        {oneOfFive*4}
-                    </Text>
+                            <Line
+                                x1="0"
+                                y1={y(maxValue / numLines * i) * -1}
+                                x2={graphWidth}
+                                y2={y(maxValue / numLines * i) * -1}
+                                stroke={Colors.axis}
+                                strokeDasharray={[3, 3]}
+                                strokeWidth="0.5"
+                            />
+                        </>
+                    ))}
 
-                    <Line
-                        x1="0"
-                        y1={y(oneOfFive*4) * -1}
-                        x2={graphWidth}
-                        y2={y(oneOfFive*4) * -1}
-                        stroke={colors.axis}
-                        strokeDasharray={[3, 3]}
-                        strokeWidth="0.5"
-                    />
-
-                    {/* 3/5 */}
-                    <Line
-                        x1="0"
-                        y1={y(oneOfFive*3) * -1}
-                        x2={graphWidth}
-                        y2={y(oneOfFive*3) * -1}
-                        stroke={colors.axis}
-                        strokeDasharray={[3, 3]}
-                        strokeWidth="0.5"
-                    />
-
-                    <Text
-                        x={graphWidth}
-                        textAnchor="end"
-                        y={y(oneOfFive*3) * -1 - 5}
-                        fontSize={12}
-                        fill={Colors.basic}
-                        fillOpacity={0.4}>
-                        {oneOfFive*3}
-                    </Text>
-
-                    {/* 2/5 */}
-                    <Line
-                        x1="0"
-                        y1={y(oneOfFive*2) * -1}
-                        x2={graphWidth}
-                        y2={y(oneOfFive*2) * -1}
-                        stroke={colors.axis}
-                        strokeDasharray={[3, 3]}
-                        strokeWidth="0.5"
-                    />
-
-                    <Text
-                        x={graphWidth}
-                        textAnchor="end"
-                        y={y(oneOfFive*2) * -1 - 5}
-                        fontSize={12}
-                        fill={Colors.basic}
-                        fillOpacity={0.4}>
-                        {oneOfFive*2}
-                    </Text>
-
-                    {/* 1/5 */}
-                    <Line
-                        x1="0"
-                        y1={y(oneOfFive) * -1}
-                        x2={graphWidth}
-                        y2={y(oneOfFive) * -1}
-                        stroke={colors.axis}
-                        strokeDasharray={[3, 3]}
-                        strokeWidth="0.5"
-                    />
-
-                    <Text
-                        x={graphWidth}
-                        textAnchor="end"
-                        y={y(oneOfFive) * -1 - 5}
-                        fontSize={12}
-                        fill={Colors.basic}
-                        fillOpacity={0.4}>
-                        {oneOfFive}
-                    </Text>
-
-                    {/* bottom axis */}
-                    <Line
-                        x1="0"
-                        y1="2"
-                        x2={graphWidth}
-                        y2="2"
-                        stroke={colors.axis}
-                        strokeWidth="0.5"
-                    />
-
-                    <Text
-                        x={graphWidth}
-                        textAnchor="end"
-                        y={y(2) * -1 - 5}
-                        fontSize={12}
-                        fill={Colors.basic}
-                        fillOpacity={0.4}>
-                        {0}
-                    </Text>
 
                     {/* bars */}
                     {data.map(item => (
                         <Rect
-                            key={'bar' + item.label}
-                            x={x(item.label) - (GRAPH_BAR_WIDTH / 2)}
-                            y={y(item.value) * -1}
+                            key={'bar' + item.data}
+                            x={x(item.data) - (GRAPH_BAR_WIDTH / 2)}
+                            y={y(item.totale_positivi) * -1}
                             rx={2.5}
                             width={GRAPH_BAR_WIDTH}
-                            height={y(item.value)}
+                            height={y(item.totale_positivi)}
                             fill={colors.bars}
                         />
                     ))}
 
-                    {/* labels */}
+                    {/* labels
                     {data.map(item => (
                         <Text
-                            key={'label' + item.label}
+                            key={'label' + item.data}
                             fontSize="8"
-                            x={x(item.label)}
+                            x={x(item.data)}
                             y="10"
-                            textAnchor="middle">{item.label}</Text>
-                    ))}
+                            textAnchor="middle">{item.data}</Text>
+                    ))} */}
                 </G>
             </Svg>
         )
