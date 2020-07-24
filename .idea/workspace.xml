@@ -19,19 +19,16 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="aggiunto LICENSE">
-      <change afterPath="$PROJECT_DIR$/src/drawings/general/axis.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/components/example/exampleComponent.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/dimensionsUtils.js" afterDir="false" />
+    <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="aggiornata UI e creato primo tipo di grafico, lavorato sul responsive">
+      <change beforePath="$PROJECT_DIR$/.expo/packager-info.json" beforeDir="false" afterPath="$PROJECT_DIR$/.expo/packager-info.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.MD" beforeDir="false" afterPath="$PROJECT_DIR$/README.MD" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/components/latest_updates/latestUpateComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/latest_updates/latestUpateComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/screens/homeScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/screens/homeScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/drawings/new_cases_charts/newCaseTotal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/drawings/new_cases_charts/newCaseTotal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/components/new_cases/newCasesComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/new_cases/newCasesComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/screens/newCasesScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/screens/newCasesScreen.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/theme/dimens.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/theme/dimens.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/theme/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/theme/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/dimensionsUtils.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/dimensionsUtils.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +81,8 @@
       <workItem from="1595075664402" duration="12582000" />
       <workItem from="1595145766116" duration="7630000" />
       <workItem from="1595253539475" duration="2709000" />
-      <workItem from="1595514505997" duration="12183000" />
+      <workItem from="1595514505997" duration="12237000" />
+      <workItem from="1595579165372" duration="3443000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1595078622516</created>
@@ -149,7 +147,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595526006928</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="aggiornata UI e creato primo tipo di grafico, lavorato sul responsive">
+      <created>1595536721666</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1595536721666</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -176,7 +181,8 @@
     <MESSAGE value="iniziato a organizzare i grafici" />
     <MESSAGE value="aggiunto README.MD" />
     <MESSAGE value="aggiunto LICENSE" />
-    <option name="LAST_COMMIT_MESSAGE" value="aggiunto LICENSE" />
+    <MESSAGE value="aggiornata UI e creato primo tipo di grafico, lavorato sul responsive" />
+    <option name="LAST_COMMIT_MESSAGE" value="aggiornata UI e creato primo tipo di grafico, lavorato sul responsive" />
   </component>
   <component name="WindowStateProjectService">
     <state x="445" y="238" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1595525015201">
@@ -199,11 +205,11 @@
       <screen x="0" y="25" width="1440" height="814" />
     </state>
     <state x="229" y="68" key="SettingsEditor/0.25.1440.814@0.25.1440.814" timestamp="1595526758629" />
-    <state x="320" y="175" key="Vcs.Push.Dialog.v2" timestamp="1595526008298">
+    <state x="320" y="175" key="Vcs.Push.Dialog.v2" timestamp="1595536725347">
       <screen x="0" y="25" width="1440" height="814" />
     </state>
     <state x="320" y="174" key="Vcs.Push.Dialog.v2/0.23.1440.820@0.23.1440.820" timestamp="1595152527908" />
-    <state x="320" y="175" key="Vcs.Push.Dialog.v2/0.25.1440.814@0.25.1440.814" timestamp="1595526008298" />
+    <state x="320" y="175" key="Vcs.Push.Dialog.v2/0.25.1440.814@0.25.1440.814" timestamp="1595536725347" />
     <state x="511" y="350" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1595525769196">
       <screen x="0" y="25" width="1440" height="814" />
     </state>

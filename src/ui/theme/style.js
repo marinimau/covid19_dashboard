@@ -11,16 +11,6 @@ import {dimens, dynamicDimens} from "./dimens";
 
 
 export const styles = StyleSheet.create({
-    drawerShadow: {
-        shadowColor: Colors.basicShadow,
-        shadowOffset: {
-            width: 10,
-            height: 0,
-        },
-        shadowOpacity: 0.51,
-        shadowRadius: 13.16,
-        elevation: 20,
-    },
     root : {
         backgroundColor: Colors.basicTransparent,
     },
@@ -78,10 +68,10 @@ export const styles = StyleSheet.create({
         maxWidth: dynamicDimens.cardBig
     },
     cardMedium: {
-        maxWidth: dimens.cardMedium
+        maxWidth: dynamicDimens.cardMedium
     },
     cardSmall: {
-        maxWidth: dimens.cardSmall
+        maxWidth: dynamicDimens.cardSmall
     },
     /*
      *  Chart

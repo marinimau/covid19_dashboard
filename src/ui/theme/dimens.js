@@ -6,21 +6,22 @@
  */
 
 
-import {getCardBigWidth, getChartFullWidth} from "../../utils/dimensionsUtils";
+import {getCardBigWidth, getCardMediumWidth, getCardSmallWidth, getChartFullWidth} from "../../utils/dimensionsUtils";
 
 export const dimens = {
     largeScreen: 768,
     drawerWidth: 250,
     chartMargin: 70,
     headerHeight: 74,
-    cardMargin: 30,
+    cardMargin: 8,
     cardMarginSmallScreen: 20,
-    cardMedium: 768,
-    cardSmall: 250,
+
 
 };
 
 export const dynamicDimens = {
+    cardSmall: getCardSmallWidth(),
+    cardMedium: getCardMediumWidth(),
     cardBig: getCardBigWidth(),
     chartFullWidth: getChartFullWidth(),
 }

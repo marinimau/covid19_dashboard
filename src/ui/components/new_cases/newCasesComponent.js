@@ -9,11 +9,12 @@ import React, {Component} from 'react';
 import {Text, View} from "react-native";
 import {styles} from "../../theme/style";
 import MainScrollableContents from "../mainScrollableContainer";
+import NewCasTotalChart from "../../../drawings/new_cases_charts/newCaseTotal";
 
 class NewCasesComponent extends Component {
 
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
     }
 
     render() {
@@ -26,7 +27,8 @@ class NewCasesComponent extends Component {
                         </View>
 
                         <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
-                            <Text>Grafico andamento contagi</Text>
+                            <Text style={styles.chartTitle}>Grafico andamento contagi</Text>
+                            <NewCasTotalChart />
                         </View>
                     </>
                 }

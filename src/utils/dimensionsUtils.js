@@ -10,14 +10,24 @@ import {dimens} from "../ui/theme/dimens";
 
 export function getCardBigWidth() {
     return Dimensions.get('window').width >= dimens.largeScreen ?
-        ( Dimensions.get('window').width - dimens.drawerWidth - dimens.cardMargin * 2 ) :
+        (Dimensions.get('window').width - dimens.drawerWidth - dimens.cardMargin * 2) :
         (Dimensions.get('window').width - dimens.cardMarginSmallScreen)
 
 }
 
+export function getCardSmallWidth() {
+    return Dimensions.get('window').width >= dimens.largeScreen ?
+        250 : (Dimensions.get('window').width - dimens.cardMarginSmallScreen)
+}
+
+export function getCardMediumWidth() {
+    return Dimensions.get('window').width >= dimens.largeScreen ?
+        768 : (Dimensions.get('window').width - dimens.cardMarginSmallScreen)
+}
+
 export function getChartFullWidth() {
     return Dimensions.get('window').width > dimens.largeScreen ?
-        ( Dimensions.get('window').width - dimens.drawerWidth - dimens.chartMargin ) :
+        (Dimensions.get('window').width - dimens.drawerWidth - dimens.chartMargin) :
         (Dimensions.get('window').width - dimens.chartMargin)
 }
 

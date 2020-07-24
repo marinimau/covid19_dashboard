@@ -13,6 +13,7 @@ import {dimens} from "../theme/dimens";
 import HeaderLeft from "../components/header/headerMenuButton";
 import {screenTitles} from "../contents/strings";
 import NewCasesComponent from "../components/new_cases/newCasesComponent";
+import ExampleComponent from "../components/example/exampleComponent";
 
 const Stack = createStackNavigator();
 const dimensions = Dimensions.get('window').width;
@@ -23,9 +24,9 @@ function NewCasesScreen({ navigation }) {
         <Stack.Navigator>
             <Stack.Screen
                 options={{
-                    headerLeft: dimensions < dimens.largeScreen ? ({}) => <HeaderLeft /> : null
+                    headerLeft: dimensions < dimens.largeScreen ? ({}) => <HeaderLeft/> : null
                 }}
-                component={({}) => <NewCasesComponent />}
+                component={({}) => <NewCasesComponent/>}
                 name={screenTitles.newCases}
             />
         </Stack.Navigator>
