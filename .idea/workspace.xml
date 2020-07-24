@@ -19,16 +19,16 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="aggiornata UI e creato primo tipo di grafico, lavorato sul responsive">
-      <change beforePath="$PROJECT_DIR$/.expo/packager-info.json" beforeDir="false" afterPath="$PROJECT_DIR$/.expo/packager-info.json" afterDir="false" />
+    <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="inizio scomposizione grafici in parti riusabili">
+      <change afterPath="$PROJECT_DIR$/src/drawings/general/horizontalLines.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logic/GLOBAL.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logic/dataset.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.MD" beforeDir="false" afterPath="$PROJECT_DIR$/README.MD" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/drawings/new_cases_charts/newCaseTotal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/drawings/new_cases_charts/newCaseTotal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/components/new_cases/newCasesComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/new_cases/newCasesComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/screens/newCasesScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/screens/newCasesScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/theme/dimens.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/theme/dimens.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/theme/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/theme/style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/dimensionsUtils.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/dimensionsUtils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/retrieveData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/retrieveData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/theme/colors.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/theme/colors.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +82,7 @@
       <workItem from="1595145766116" duration="7630000" />
       <workItem from="1595253539475" duration="2709000" />
       <workItem from="1595514505997" duration="12237000" />
-      <workItem from="1595579165372" duration="3443000" />
+      <workItem from="1595579165372" duration="11165000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1595078622516</created>
@@ -154,7 +154,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595536721666</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="inizio scomposizione grafici in parti riusabili">
+      <created>1595586284222</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1595586284222</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -182,7 +189,8 @@
     <MESSAGE value="aggiunto README.MD" />
     <MESSAGE value="aggiunto LICENSE" />
     <MESSAGE value="aggiornata UI e creato primo tipo di grafico, lavorato sul responsive" />
-    <option name="LAST_COMMIT_MESSAGE" value="aggiornata UI e creato primo tipo di grafico, lavorato sul responsive" />
+    <MESSAGE value="inizio scomposizione grafici in parti riusabili" />
+    <option name="LAST_COMMIT_MESSAGE" value="inizio scomposizione grafici in parti riusabili" />
   </component>
   <component name="WindowStateProjectService">
     <state x="445" y="238" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1595525015201">
@@ -205,15 +213,15 @@
       <screen x="0" y="25" width="1440" height="814" />
     </state>
     <state x="229" y="68" key="SettingsEditor/0.25.1440.814@0.25.1440.814" timestamp="1595526758629" />
-    <state x="320" y="175" key="Vcs.Push.Dialog.v2" timestamp="1595536725347">
+    <state x="320" y="175" key="Vcs.Push.Dialog.v2" timestamp="1595586288619">
       <screen x="0" y="25" width="1440" height="814" />
     </state>
     <state x="320" y="174" key="Vcs.Push.Dialog.v2/0.23.1440.820@0.23.1440.820" timestamp="1595152527908" />
-    <state x="320" y="175" key="Vcs.Push.Dialog.v2/0.25.1440.814@0.25.1440.814" timestamp="1595536725347" />
-    <state x="511" y="350" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1595525769196">
+    <state x="320" y="175" key="Vcs.Push.Dialog.v2/0.25.1440.814@0.25.1440.814" timestamp="1595586288619" />
+    <state x="511" y="350" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1595589309124">
       <screen x="0" y="25" width="1440" height="814" />
     </state>
-    <state x="511" y="350" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.25.1440.814@0.25.1440.814" timestamp="1595525769196" />
+    <state x="511" y="350" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.25.1440.814@0.25.1440.814" timestamp="1595589309124" />
     <state x="385" y="168" width="670" height="672" key="search.everywhere.popup" timestamp="1595529574995">
       <screen x="0" y="25" width="1440" height="814" />
     </state>

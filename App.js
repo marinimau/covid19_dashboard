@@ -27,6 +27,8 @@ import SwabsResumeScreen from "./src/ui/screens/swabsScreen";
 import retrieveData from "./src/logic/retrieveData";
 import LoadingScreen from "./src/ui/components/loading/splash";
 import ErrorScreen from "./src/ui/components/loading/error";
+import {set} from './src/logic/GLOBAL'
+import Records from "./src/logic/dataset";
 
 
 const Drawer = createDrawerNavigator();
@@ -44,6 +46,7 @@ export default function App() {
                 if (err) return <ErrorScreen />
 
                 if (data)
+                    Records.setRecords(data)
                     return (
                         <>
                         <StatusBar/>
