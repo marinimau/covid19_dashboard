@@ -12,10 +12,9 @@ import Colors from "../../ui/theme/colors";
 import {getChartFullWidth} from "../../utils/dimensionsUtils";
 import {dataset} from "../../logic/GLOBAL";
 import Records from "../../logic/dataset";
-import retrieveData from "../../logic/retrieveData";
 
-const GRAPH_MARGIN = 40
-const GRAPH_BAR_WIDTH = 5
+const GRAPH_MARGIN = 20
+const GRAPH_BAR_WIDTH = 10
 const colors = {
     axis: '#E4E4E4',
     bars: Colors.main
@@ -38,7 +37,7 @@ export default class NewCasTotalChart extends PureComponent {
         const SVGFlex = 1
         const graphHeight = SVGHeight - 2 * GRAPH_MARGIN
         const graphWidth = SVGWidth - 2 * GRAPH_MARGIN
-        const data = retrieveData()
+        const data = Records.getRecords()
         console.log(data);
         const round = 1000
 
@@ -71,7 +70,7 @@ export default class NewCasTotalChart extends PureComponent {
                     {indices.map((i) => (
                         <>
                             <Text
-                                x={graphWidth+10}
+                                x={graphWidth}
                                 textAnchor="end"
                                 y={y(maxValue / numLines * i) * -1 - 5}
                                 fontSize={12}
@@ -83,7 +82,7 @@ export default class NewCasTotalChart extends PureComponent {
                             <Line
                                 x1="0"
                                 y1={y(maxValue / numLines * i) * -1}
-                                x2={graphWidth}
+                                x2={graphWidth + 20}
                                 y2={y(maxValue / numLines * i) * -1}
                                 stroke={Colors.axis}
                                 strokeDasharray={[3, 3]}
@@ -111,7 +110,7 @@ export default class NewCasTotalChart extends PureComponent {
                         <Text
                             key={'label' + item.data}
                             fontSize="8"
-                            x={x(item.data)}
+                            x={x(item.Object.data)}
                             y="10"
                             textAnchor="middle">{item.data}</Text>
                     ))} */}
