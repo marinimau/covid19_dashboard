@@ -24,27 +24,27 @@ export default class LineChartAxis extends PureComponent {
     render() {
 
         return (
-            <Svg width={props.params.SVGWidth} height={props.params.SVGHeight}>
-                <G y={props.params.graphHeight + props.params.GRAPH_MARGIN}>
+            <Svg width={this.props.params.SVGWidth} height={this.props.params.SVGHeight}>
+                <G y={this.props.params.graphHeight + this.props.params.GRAPH_MARGIN}>
 
                     {/* Horizontal Lines */}
-                    {props.params.indices.map((i) => (
+                    {this.props.params.indices.map((i) => (
                         <>
                             <Text
-                                x={props.params.graphWidth + 20}
+                                x={this.props.params.graphWidth + 20}
                                 textAnchor="end"
-                                y={y(props.params.maxValue / props.params.numLines * i) * -1 - 5}
+                                y={this.props.params.y(this.props.params.maxValue / this.props.params.numLines * i) * -1 - 5}
                                 fontSize={12}
                                 fill={Colors.basic}
                                 fillOpacity={0.4}>
-                                {Math.round(props.params.maxValue / props.params.numLines * i)}
+                                {Math.round(this.props.params.maxValue / this.props.params.numLines * i)}
                             </Text>
 
                             <Line
                                 x1="0"
-                                y1={y(props.params.maxValue / props.params.numLines * i) * -1}
-                                x2={props.params.graphWidth}
-                                y2={y(props.params.maxValue / props.params.numLines * i) * -1}
+                                y1={this.props.params.y(this.props.params.maxValue / this.props.params.numLines * i) * -1}
+                                x2={this.props.params.graphWidth}
+                                y2={this.props.params.y(this.props.params.maxValue / this.props.params.numLines * i) * -1}
                                 stroke={Colors.axis}
                                 strokeDasharray={[3, 3]}
                                 strokeWidth="0.5"
@@ -52,8 +52,8 @@ export default class LineChartAxis extends PureComponent {
                         </>
                     ))}
 
-                    {data.map(item => (
-                        props.chart
+                    {this.props.params.records.map(item => (
+                        this.props.chart
                     ))}
 
                 </G>
