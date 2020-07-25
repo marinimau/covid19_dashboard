@@ -11,6 +11,7 @@ import {styles} from "../../theme/style";
 import MainScrollableContents from "../mainScrollableContainer";
 import {chartTitles, dataDescription} from "../../contents/strings";
 import SvgExample from "../../../drawings/new_cases_charts/newCaseLine";
+import LineChartExample from "../../../drawings/example/lineChartExample";
 
 class ExampleComponent extends Component {
 
@@ -34,6 +35,7 @@ class ExampleComponent extends Component {
 
                         <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
                             <Text>Curve</Text>
+                            {/*<LineChartExample />*/}
                         </View>
 
                         <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
