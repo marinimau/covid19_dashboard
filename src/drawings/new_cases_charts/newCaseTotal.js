@@ -10,22 +10,17 @@ import {Svg, G, Line, Rect, Text} from 'react-native-svg'
 import * as d3 from 'd3'
 import Colors from "../../ui/theme/colors";
 import {getChartFullWidth} from "../../utils/dimensionsUtils";
-import {dataset} from "../../logic/GLOBAL";
 import Records from "../../logic/dataset";
 
 const GRAPH_MARGIN = 10
 const GRAPH_BAR_WIDTH = 10
-const colors = {
-    axis: '#E4E4E4',
-    bars: Colors.accent1
-}
 
 export default class NewCasTotalChart extends PureComponent {
 
     constructor(props) {
         super(props);
         this.state = {
-            records: dataset
+
         }
     }
 
@@ -101,7 +96,7 @@ export default class NewCasTotalChart extends PureComponent {
                             rx={2.5}
                             width={GRAPH_BAR_WIDTH}
                             height={y(item.totale_casi)}
-                            fill={colors.bars}
+                            fill={Colors.bars}
                         />
                     ))}
 

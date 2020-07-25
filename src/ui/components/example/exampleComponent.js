@@ -9,7 +9,8 @@ import React, {Component} from 'react';
 import {Text, View} from "react-native";
 import {styles} from "../../theme/style";
 import MainScrollableContents from "../mainScrollableContainer";
-import BarChart from "../../../drawings/general/axis";
+import {chartTitles, dataDescription} from "../../contents/strings";
+import SvgExample from "../../../drawings/new_cases_charts/newCaseLine";
 
 class ExampleComponent extends Component {
 
@@ -18,21 +19,6 @@ class ExampleComponent extends Component {
     }
 
     render() {
-
-        const data = [
-            { label: 'Jan', value: 500 },
-            { label: 'Feb', value: 312 },
-            { label: 'Mar', value: 424 },
-            { label: 'Apr', value: 745 },
-            { label: 'May', value: 89 },
-            { label: 'Jun', value: 434 },
-            { label: 'Jul', value: 650 },
-            { label: 'Aug', value: 980 },
-            { label: 'Sep', value: 123 },
-            { label: 'Oct', value: 186 },
-            { label: 'Nov', value: 689 },
-            { label: 'Dec', value: 643 }
-        ]
 
         return (
             <MainScrollableContents
@@ -58,9 +44,11 @@ class ExampleComponent extends Component {
                             <Text>Aree sottese assoluto</Text>
                         </View>
 
+
                         <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
-                            <Text style={styles.chartTitle}>Bar chart example</Text>
-                            <BarChart data={data} round={100} unit="" />
+                            <Text style={styles.chartTitle}>{chartTitles.totalCasesCurve}</Text>
+                            <SvgExample />
+                            <Text style={styles.chartDescription}>{dataDescription.totalCases}</Text>
                         </View>
                     </>
                 }

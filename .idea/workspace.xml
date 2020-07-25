@@ -19,13 +19,18 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="aggiornata la fetch">
+    <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="spsotate le descrizioni e i titoli dei grafici in resources">
+      <change afterPath="$PROJECT_DIR$/src/drawings/general/lineChartAxis.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/drawings/new_cases_charts/newCaseLine.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/dateToString.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.expo/packager-info.json" beforeDir="false" afterPath="$PROJECT_DIR$/.expo/packager-info.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/drawings/general/axis.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/drawings/general/axis.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/drawings/general/horizontalLines.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/drawings/new_cases_charts/newCaseTotal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/drawings/new_cases_charts/newCaseTotal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/components/new_cases/newCasesComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/new_cases/newCasesComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/contents/strings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/contents/strings.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/theme/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/theme/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/components/example/exampleComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/example/exampleComponent.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +84,8 @@
       <workItem from="1595145766116" duration="7630000" />
       <workItem from="1595253539475" duration="2709000" />
       <workItem from="1595514505997" duration="12237000" />
-      <workItem from="1595579165372" duration="13105000" />
+      <workItem from="1595579165372" duration="13664000" />
+      <workItem from="1595658030404" duration="5226000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1595078622516</created>
@@ -172,7 +178,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595597534134</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="spsotate le descrizioni e i titoli dei grafici in resources">
+      <created>1595598781093</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1595598781093</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,17 +216,19 @@
     <MESSAGE value="inizio scomposizione grafici in parti riusabili" />
     <MESSAGE value="inziato a implementare un grafico usabile" />
     <MESSAGE value="aggiornata la fetch" />
-    <option name="LAST_COMMIT_MESSAGE" value="aggiornata la fetch" />
+    <MESSAGE value="spsotate le descrizioni e i titoli dei grafici in resources" />
+    <option name="LAST_COMMIT_MESSAGE" value="spsotate le descrizioni e i titoli dei grafici in resources" />
   </component>
   <component name="WindowStateProjectService">
     <state x="445" y="238" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1595525015201">
       <screen x="0" y="25" width="1440" height="814" />
     </state>
     <state x="445" y="238" key="#com.intellij.fileTypes.FileTypeChooser/0.25.1440.814@0.25.1440.814" timestamp="1595525015201" />
-    <state x="458" y="188" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1595080474201">
-      <screen x="0" y="23" width="1440" height="820" />
+    <state x="458" y="189" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1595661348672">
+      <screen x="0" y="25" width="1440" height="814" />
     </state>
     <state x="458" y="188" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.820@0.23.1440.820" timestamp="1595080474201" />
+    <state x="458" y="189" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.25.1440.814@0.25.1440.814" timestamp="1595661348672" />
     <state x="27" y="38" key="CommitChangelistDialog2" timestamp="1595152525607">
       <screen x="0" y="23" width="1440" height="820" />
     </state>
@@ -226,19 +241,19 @@
       <screen x="0" y="25" width="1440" height="814" />
     </state>
     <state x="229" y="68" key="SettingsEditor/0.25.1440.814@0.25.1440.814" timestamp="1595526758629" />
-    <state x="320" y="175" key="Vcs.Push.Dialog.v2" timestamp="1595597535950">
+    <state x="320" y="175" key="Vcs.Push.Dialog.v2" timestamp="1595598790354">
       <screen x="0" y="25" width="1440" height="814" />
     </state>
     <state x="320" y="174" key="Vcs.Push.Dialog.v2/0.23.1440.820@0.23.1440.820" timestamp="1595152527908" />
-    <state x="320" y="175" key="Vcs.Push.Dialog.v2/0.25.1440.814@0.25.1440.814" timestamp="1595597535950" />
+    <state x="320" y="175" key="Vcs.Push.Dialog.v2/0.25.1440.814@0.25.1440.814" timestamp="1595598790354" />
     <state x="511" y="350" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1595589309124">
       <screen x="0" y="25" width="1440" height="814" />
     </state>
     <state x="511" y="350" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.25.1440.814@0.25.1440.814" timestamp="1595589309124" />
-    <state x="385" y="168" width="670" height="672" key="search.everywhere.popup" timestamp="1595529574995">
+    <state x="385" y="168" width="670" height="672" key="search.everywhere.popup" timestamp="1595662030615">
       <screen x="0" y="25" width="1440" height="814" />
     </state>
     <state x="385" y="167" width="670" height="676" key="search.everywhere.popup/0.23.1440.820@0.23.1440.820" timestamp="1595150088481" />
-    <state x="385" y="168" width="670" height="672" key="search.everywhere.popup/0.25.1440.814@0.25.1440.814" timestamp="1595529574995" />
+    <state x="385" y="168" width="670" height="672" key="search.everywhere.popup/0.25.1440.814@0.25.1440.814" timestamp="1595662030615" />
   </component>
 </project>
