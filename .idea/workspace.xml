@@ -20,15 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/drawings/example/lineChartExample.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/drawings/example/pieChartExample.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ui/theme/legendColors.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.expo/packager-info.json" beforeDir="false" afterPath="$PROJECT_DIR$/.expo/packager-info.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/drawings/example/lineChartExample.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/drawings/example/lineChartExample.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/drawings/general/lineChartAxis.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/drawings/general/lineChartAxis.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/drawings/new_cases_charts/newCaseLine.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/drawings/new_cases_charts/newCaseLine.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/latestUpdateData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/latestUpdateData.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/components/example/exampleComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/example/exampleComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/contents/strings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/contents/strings.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/theme/dimens.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/theme/dimens.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/theme/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/theme/style.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,6 +74,7 @@
       <recent name="$PROJECT_DIR$/src/components/drawer" />
     </key>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -85,6 +88,8 @@
       <workItem from="1595075664402" duration="12582000" />
       <workItem from="1595145766116" duration="7630000" />
       <workItem from="1595253539475" duration="2709000" />
+      <workItem from="1595866318277" duration="798000" />
+      <workItem from="1595867529057" duration="3838000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1595078622516</created>
@@ -139,7 +144,7 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -175,6 +180,22 @@
       <screen x="0" y="23" width="1440" height="820" />
     </state>
     <state x="558" y="338" key="Github.ShareDialog/0.23.1440.820@0.23.1440.820" timestamp="1595078313212" />
+    <state width="1419" height="208" key="GridCell.Tab.0.bottom" timestamp="1595867257530">
+      <screen x="0" y="25" width="1440" height="814" />
+    </state>
+    <state width="1419" height="208" key="GridCell.Tab.0.bottom/0.25.1440.814@0.25.1440.814" timestamp="1595867257530" />
+    <state width="1419" height="208" key="GridCell.Tab.0.center" timestamp="1595867257529">
+      <screen x="0" y="25" width="1440" height="814" />
+    </state>
+    <state width="1419" height="208" key="GridCell.Tab.0.center/0.25.1440.814@0.25.1440.814" timestamp="1595867257529" />
+    <state width="1419" height="208" key="GridCell.Tab.0.left" timestamp="1595867257529">
+      <screen x="0" y="25" width="1440" height="814" />
+    </state>
+    <state width="1419" height="208" key="GridCell.Tab.0.left/0.25.1440.814@0.25.1440.814" timestamp="1595867257529" />
+    <state width="1419" height="208" key="GridCell.Tab.0.right" timestamp="1595867257530">
+      <screen x="0" y="25" width="1440" height="814" />
+    </state>
+    <state width="1419" height="208" key="GridCell.Tab.0.right/0.25.1440.814@0.25.1440.814" timestamp="1595867257530" />
     <state x="320" y="174" key="Vcs.Push.Dialog.v2" timestamp="1595152527908">
       <screen x="0" y="23" width="1440" height="820" />
     </state>

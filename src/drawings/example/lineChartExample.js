@@ -19,13 +19,12 @@ import {
 } from 'd3-scale';
 import {getChartFullWidth} from "../../utils/dimensionsUtils";
 import Colors from "../../ui/theme/colors";
-
+/*
 const {
     Path, Defs, LinearGradient, Stop,
 } = Svg;
 const d3 = {
     shape,
-    svg,
 };
 
 const height = 200;
@@ -57,8 +56,9 @@ const line = d3.shape
     .curve(d3.shape.curveBasis)(data);
 const properties = path.svgPathProperties(line);
 const lineLength = properties.getTotalLength();
-
+*/
 export default class LineChartExample extends Component {
+    /*
     cursor = React.createRef();
 
     label = React.createRef();
@@ -124,9 +124,9 @@ export default class LineChartExample extends Component {
             </View>
 
         );
-    }
+    }*/
 }
-
+/*
 const styles = StyleSheet.create({
     cursor: {
         width: cursorRadius * 2,
@@ -143,4 +143,4 @@ const styles = StyleSheet.create({
         backgroundColor: 'lightgray',
         width: labelWidth,
     },
-});
+});*/

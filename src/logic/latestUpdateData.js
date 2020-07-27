@@ -4,7 +4,8 @@
  * Repository: http://github.com/marinimau/covid19_dashboard
  * Location: Baratili San Pietro
  */
-import retrieveData from "./retrieveData";
+
+import Records from "./dataset";
 
 let dataToReturn = {
     lastUpdateDate: 'undefined',
@@ -20,31 +21,31 @@ let dataToReturn = {
 
 const latestUpdateData = (data) => {
 
-    if(data === null){
-        data = retrieveData;
+    if(data === undefined){
+        data = Records.getRecords();
     }
 
     if(data !== null){
         let d = data[data.length - 1];
 
         /* Date */
-        dataToReturn.lastUpdateDate = d.get('data').replace('T', ' ');
+        dataToReturn.lastUpdateDate = d['data'].replace('T', ' ');
 
         /* All Cases */
-        dataToReturn.newCases = d.get('nuovi_positivi');
-        dataToReturn.totalCases = d.get('totale_casi');
+        dataToReturn.newCases = d['nuovi_positivi'];
+        dataToReturn.totalCases = d['totale_casi'];
 
         /* Current cases */
-        dataToReturn.totalCurrentCases = d.get('totale_positivi');
-        dataToReturn.currentCasesVariation = d.get('variazione_totale_positivi');
+        dataToReturn.totalCurrentCases = d['totale_positivi'];
+        dataToReturn.currentCasesVariation = d['variazione_totale_positivi'];
 
         /* Recovered */
-        dataToReturn.totalRecovered = d.get('dimessi_guariti');
-        dataToReturn.recoveredVariation =  data[data.length - 2].get('dimessi_guariti') - d.get('dimessi_guariti');
+        dataToReturn.totalRecovered = d['dimessi_guariti'];
+        dataToReturn.recoveredVariation =  data[data.length - 2]['dimessi_guariti'] - d['dimessi_guariti'];
 
         /* Deaths */
-        dataToReturn.totalDeaths = d.get('deceduti');
-        dataToReturn.deathsVariation = data[data.length - 2].get('deceduti') - d.get('deceduti');
+        dataToReturn.totalDeaths = d['deceduti'];
+        dataToReturn.deathsVariation = data[data.length - 2]['deceduti'] - d['deceduti'];
     }
     return dataToReturn;
 };
