@@ -24,3 +24,13 @@ export const screenTitles = {
     currentPositive: 'Ripartizione positivi',
     swab: 'Andamento tamponi'
 };
+
+export const indicatorsTitles = {
+    actualCases: 'Attuali positivi',
+    totalCases: 'Casi totali',
+    newCases: 'Nuovi casi',
+    recovered: 'Guariti',
+    died: 'Deceduti',
+
+}
+

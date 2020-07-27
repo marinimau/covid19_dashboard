@@ -10,6 +10,8 @@ import {Text, View} from "react-native";
 import {styles} from "../../theme/style";
 import MainScrollableContents from "../mainScrollableContainer";
 import BarChart from "../../../drawings/general/axis";
+import SimplePieChart from "../../../drawings/pie_chart/pie_chart";
+import {indicatorsTitles} from "../../contents/strings";
 
 class ExampleComponent extends Component {
 
@@ -39,27 +41,28 @@ class ExampleComponent extends Component {
                 content={
                     <>
                         <View style={[styles.cardGeneric, styles.cardShadow, styles.cardSmall]}>
-                            <Text style={[styles.indicatorTitle, styles.indicatorOrange]}>Attuali positivi</Text>
+                            <Text style={[styles.indicatorTitle, styles.indicatorOrange]}>{indicatorsTitles.actualCases}</Text>
                             <Text style={[styles.indicatorValue, styles.indicatorOrange]}>12.565</Text>
                         </View>
 
                         <View style={[styles.cardGeneric, styles.cardShadow, styles.cardSmall]}>
-                            <Text style={[styles.indicatorTitle, styles.indicatorGreen]}>Guariti</Text>
+                            <Text style={[styles.indicatorTitle, styles.indicatorGreen]}>{indicatorsTitles.recovered}</Text>
                             <Text style={[styles.indicatorValue, styles.indicatorGreen]}>198.446</Text>
                         </View>
 
                         <View style={[styles.cardGeneric, styles.cardShadow, styles.cardSmall]}>
-                            <Text style={[styles.indicatorTitle, styles.indicatorGrey]}>Deceduti</Text>
+                            <Text style={[styles.indicatorTitle, styles.indicatorGrey]}>{indicatorsTitles.died}</Text>
                             <Text style={[styles.indicatorValue, styles.indicatorGrey]}>35.107</Text>
                         </View>
 
                         <View style={[styles.cardGeneric, styles.cardShadow, styles.cardSmall]}>
-                            <Text style={[styles.indicatorTitle, styles.indicatorRed]}>Casi totali</Text>
+                            <Text style={[styles.indicatorTitle, styles.indicatorRed]}>{indicatorsTitles.totalCases}</Text>
                             <Text style={[styles.indicatorValue, styles.indicatorRed]}>246.118</Text>
                         </View>
 
-                        <View style={[styles.cardGeneric, styles.cardShadow, styles.cardSmall]}>
-                            <Text>Card torta</Text>
+                        <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
+                            <Text style={styles.chartTitle}>Pie chart example</Text>
+                            <SimplePieChart data={data} round={100} unit="" />
                         </View>
 
                         <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
