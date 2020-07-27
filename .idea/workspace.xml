@@ -19,17 +19,27 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/drawings/example/pieChartExample.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/theme/legendColors.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.expo/packager-info.json" beforeDir="false" afterPath="$PROJECT_DIR$/.expo/packager-info.json" afterDir="false" />
+    <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="integrata la logica nelle card nella home">
+      <change afterPath="$PROJECT_DIR$/src/drawings/resume_cards/cardCurrentPositive.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/drawings/resume_cards/cardDate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/drawings/resume_cards/cardDied.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/drawings/resume_cards/cardRecovered.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/drawings/resume_cards/cardTotalCases.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/drawings/example/lineChartExample.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/drawings/example/lineChartExample.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/drawings/general/lineChartAxis.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/drawings/general/lineChartAxis.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/expo-linear-gradient/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/expo-linear-gradient/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/logic/latestUpdateData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/latestUpdateData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/components/current_positive/currentPositiveComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/current_positive/currentPositiveComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/components/died/diedComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/died/diedComponent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/components/example/exampleComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/example/exampleComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/components/latest_updates/latestUpateComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/latest_updates/latestUpateComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/components/new_cases/newCasesComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/new_cases/newCasesComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/components/recovered/recoveredComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/recovered/recoveredComponent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/contents/strings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/contents/strings.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/theme/dimens.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/theme/dimens.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/screens/homeScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/screens/homeScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/screens/latestUpdateResumeScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/screens/latestUpdateResumeScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/theme/colors.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/theme/colors.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/theme/legendColors.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/theme/legendColors.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/theme/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/theme/style.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -89,7 +99,7 @@
       <workItem from="1595145766116" duration="7630000" />
       <workItem from="1595253539475" duration="2709000" />
       <workItem from="1595866318277" duration="798000" />
-      <workItem from="1595867529057" duration="3838000" />
+      <workItem from="1595867529057" duration="9511000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1595078622516</created>
@@ -140,7 +150,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595152526190</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="integrata la logica nelle card nella home">
+      <created>1595871517481</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1595871517481</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -165,9 +182,14 @@
     <MESSAGE value="data retrieving funzionante" />
     <MESSAGE value="aggiunto il loader" />
     <MESSAGE value="iniziato a organizzare i grafici" />
-    <option name="LAST_COMMIT_MESSAGE" value="iniziato a organizzare i grafici" />
+    <MESSAGE value="integrata la logica nelle card nella home" />
+    <option name="LAST_COMMIT_MESSAGE" value="integrata la logica nelle card nella home" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="184" y="91" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1595879970955">
+      <screen x="0" y="25" width="1440" height="814" />
+    </state>
+    <state x="184" y="91" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1440.814@0.25.1440.814" timestamp="1595879970955" />
     <state x="458" y="188" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1595080474201">
       <screen x="0" y="23" width="1440" height="820" />
     </state>
@@ -196,10 +218,11 @@
       <screen x="0" y="25" width="1440" height="814" />
     </state>
     <state width="1419" height="208" key="GridCell.Tab.0.right/0.25.1440.814@0.25.1440.814" timestamp="1595867257530" />
-    <state x="320" y="174" key="Vcs.Push.Dialog.v2" timestamp="1595152527908">
-      <screen x="0" y="23" width="1440" height="820" />
+    <state x="320" y="175" key="Vcs.Push.Dialog.v2" timestamp="1595871519377">
+      <screen x="0" y="25" width="1440" height="814" />
     </state>
     <state x="320" y="174" key="Vcs.Push.Dialog.v2/0.23.1440.820@0.23.1440.820" timestamp="1595152527908" />
+    <state x="320" y="175" key="Vcs.Push.Dialog.v2/0.25.1440.814@0.25.1440.814" timestamp="1595871519377" />
     <state x="385" y="167" width="670" height="676" key="search.everywhere.popup" timestamp="1595150088481">
       <screen x="0" y="23" width="1440" height="820" />
     </state>

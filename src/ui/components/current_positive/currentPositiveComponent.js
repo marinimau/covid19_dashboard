@@ -9,6 +9,7 @@ import React, {Component} from 'react';
 import {Text, View} from "react-native";
 import {styles} from "../../theme/style";
 import MainScrollableContents from "../mainScrollableContainer";
+import CardCurrentPositive from "../../../drawings/resume_cards/cardCurrentPositive";
 
 class CurrentPositiveComponent extends Component {
 
@@ -21,9 +22,7 @@ class CurrentPositiveComponent extends Component {
             <MainScrollableContents
                 content={
                     <>
-                        <View style={[styles.cardGeneric, styles.cardShadow, styles.cardSmall]}>
-                            <Text>Incemento sui positivi correnti e totale positivi correnti</Text>
-                        </View>
+                        <CardCurrentPositive />
 
                         <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
                             <Text>Grafico andamento incremento positivi</Text>
