@@ -32,7 +32,7 @@ const Slice = props => {
 
     let arc = d3.arc()
         .innerRadius(0)
-        .outerRadius(100);
+        .outerRadius(150);
 
     let interpolate = d3.interpolateRgb("#eaaf79", "#bc3358");
 
