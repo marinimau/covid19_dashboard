@@ -7,14 +7,15 @@
 
 import {StyleSheet} from "react-native";
 import Colors from "./colors";
+import LegendColors from "./legendColors"
 import {dimens, dynamicDimens} from "./dimens";
 
 
 export const styles = StyleSheet.create({
-    root : {
+    root: {
         backgroundColor: Colors.basicTransparent,
     },
-    rootContainer : {
+    rootContainer: {
         flex: 1,
         alignItems: 'flex-start',
         alignContent: 'space-around',
@@ -72,6 +73,40 @@ export const styles = StyleSheet.create({
     },
     cardSmall: {
         maxWidth: dynamicDimens.cardSmall
+    },
+    /*
+     *  Indicators
+     */
+    indicatorTitle: {
+        fontSize: 22,
+        fontWeight: "700",
+    },
+    indicatorValue: {
+        textAlign: 'center',
+        display: 'inline'
+    },
+    indicatorValueBold: {
+        marginTop:20,
+        fontSize: 22,
+        fontWeight: "900",
+    },
+    indicatorValueIncr: {
+        marginTop: 5,
+        marginBottom: 10,
+        fontSize: 14,
+        fontStyle: 'italic',
+    },
+    indicatorOrange: {
+        color: LegendColors.yellow
+    },
+    indicatorGreen: {
+        color: LegendColors.green
+    },
+    indicatorGrey: {
+        color: LegendColors.grey
+    },
+    indicatorRed: {
+        color: LegendColors.red
     },
     /*
      *  Chart

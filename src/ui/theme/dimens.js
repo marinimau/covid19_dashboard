@@ -15,6 +15,7 @@ export const dimens = {
     headerHeight: 74,
     cardMargin: 8,
     cardMarginSmallScreen: 20,
+    pieChartRadius: 200,
 
 
 };

@@ -6,10 +6,8 @@
  */
 
 import React, {PureComponent} from 'react'
-import {Svg, G, Line, Rect, Text} from 'react-native-svg'
-import * as d3 from 'd3'
+import {Svg, G, Line, Text} from 'react-native-svg'
 import Colors from "../../ui/theme/colors";
-import {getChartFullWidth} from "../../utils/dimensionsUtils";
 
 
 export default class LineChartAxis extends PureComponent {
@@ -52,7 +50,7 @@ export default class LineChartAxis extends PureComponent {
                         </>
                     ))}
 
-                    {this.props.params.records.map(item => (
+                    {this.props.params.records.map(() => (
                         this.props.chart
                     ))}
 

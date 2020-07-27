@@ -28,7 +28,13 @@ export const screenTitles = {
 
 export const chartTitles = {
     totalCasesCurve: 'Andamento casi totali',
-    newCasesCurve: 'Andamento contagi giornalieri'
+    newCasesCurve: 'Andamento contagi giornalieri',
+    currentPositive: 'Positivi Attuali',
+    recovered: 'Guariti',
+    died: 'Deceduti',
+    totalCases: 'Casi totali',
+    placeholderValue: 'N/D',
+    placeholderValueIncr: ' (+N/D)'
 }
 
 
