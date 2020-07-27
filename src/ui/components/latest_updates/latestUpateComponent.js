@@ -9,33 +9,32 @@ import React, {Component} from 'react';
 import {Text, View} from "react-native";
 import {styles} from "../../theme/style";
 import MainScrollableContents from "../mainScrollableContainer";
+import CardTotalCases from "../../../drawings/resume_cards/cardTotalCases";
+import CardRecovered from "../../../drawings/resume_cards/cardRecovered";
+import CardDied from "../../../drawings/resume_cards/cardDied";
+import CardCurrentPositive from "../../../drawings/resume_cards/cardCurrentPositive";
 
 class LatestUpdateComponent extends Component {
 
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
     }
 
     render() {
+
         return (
             <MainScrollableContents
                 content={
-                        <>
-                            <View style={[styles.cardGeneric, styles.cardShadow, styles.cardSmall]}>
-                                <Text>Nuovi Contagi e casi totali</Text>
-                            </View>
+                    <>
+                            {/*<CardDate />*/}
 
-                            <View style={[styles.cardGeneric, styles.cardShadow, styles.cardSmall]}>
-                                <Text>Nuovi guariti e guariti totali</Text>
-                            </View>
+                            <CardTotalCases />
 
-                            <View style={[styles.cardGeneric, styles.cardShadow, styles.cardSmall]}>
-                                <Text>Nuovi decessi e decessi totali</Text>
-                            </View>
+                            <CardRecovered />
 
-                            <View style={[styles.cardGeneric, styles.cardShadow, styles.cardSmall]}>
-                                <Text>Posivi attuali e incremento</Text>
-                            </View>
+                            <CardDied />
+
+                            <CardCurrentPositive />
                         </>
                 }
             />

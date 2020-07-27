@@ -9,7 +9,6 @@ import {Dimensions} from "react-native";
 import React from "react";
 import {createStackNavigator} from "@react-navigation/stack";
 import {screenTitles} from "../contents/strings";
-import HomeComponents from "../components/home/homeComponents";
 import HeaderLeft from "../components/header/headerMenuButton";
 import {dimens} from "../theme/dimens";
 import ExampleComponent from "../components/example/exampleComponent";
@@ -17,12 +16,6 @@ import ExampleComponent from "../components/example/exampleComponent";
 const Stack = createStackNavigator();
 const dimensions = Dimensions.get('window').width;
 
-function renderContent() {
-}
-
-function renderHeader() {
-
-}
 
 function HomeScreen({navigation}) {
 

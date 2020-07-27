@@ -9,7 +9,7 @@ let Colors;
 
 Colors = {
 
-    main: '#1479FF',
+    main: '#1479FF',//'#1479FF',
     mainTransparent: 'rgba(20,121,255,0.1)',
     basic: '#1C1C1E',
     basicTransparent: 'rgba(25,59,104,0.1)',

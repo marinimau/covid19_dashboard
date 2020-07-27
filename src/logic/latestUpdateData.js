@@ -29,23 +29,25 @@ const latestUpdateData = (data) => {
         let d = data[data.length - 1];
 
         /* Date */
-        dataToReturn.lastUpdateDate = d['data'].replace('T', ' ');
+        dataToReturn.lastUpdateDate = d['data'].replaceAll('T', ' ').split(' ')[0].replaceAll('-','/');
 
         /* All Cases */
-        dataToReturn.newCases = d['nuovi_positivi'];
+        dataToReturn.newCases = '+ ' + Math.abs(d['nuovi_positivi']);
         dataToReturn.totalCases = d['totale_casi'];
 
         /* Current cases */
         dataToReturn.totalCurrentCases = d['totale_positivi'];
-        dataToReturn.currentCasesVariation = d['variazione_totale_positivi'];
+        dataToReturn.currentCasesVariation = d['variazione_totale_positivi'] > 0 ?
+            '+ ' + d['variazione_totale_positivi'] :
+            '- ' + d['variazione_totale_positivi'];
 
         /* Recovered */
         dataToReturn.totalRecovered = d['dimessi_guariti'];
-        dataToReturn.recoveredVariation =  data[data.length - 2]['dimessi_guariti'] - d['dimessi_guariti'];
+        dataToReturn.recoveredVariation =  '+ '+Math.abs(data[data.length - 2]['dimessi_guariti'] - d['dimessi_guariti']);
 
         /* Deaths */
         dataToReturn.totalDeaths = d['deceduti'];
-        dataToReturn.deathsVariation = data[data.length - 2]['deceduti'] - d['deceduti'];
+        dataToReturn.deathsVariation = '+ ' + Math.abs(data[data.length - 2]['deceduti'] - d['deceduti']);
     }
     return dataToReturn;
 };

@@ -6,9 +6,13 @@
  */
 
 let LegendColors = {
+    lightgreen: '#64DD17',
     green: '#00C853',
+    lightyellow: '#ffb700',
     yellow: '#FFAB00',
+    lightred: '#DD2C00',
     red: '#D32F2F',
+    lightgrey: '#455A64',
     grey: '#616161'
 }
 

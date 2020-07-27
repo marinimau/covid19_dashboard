@@ -11,6 +11,7 @@ import {styles} from "../../theme/style";
 import MainScrollableContents from "../mainScrollableContainer";
 import NewCasTotalChart from "../../../drawings/new_cases_charts/newCaseTotal";
 import {chartTitles, dataDescription} from "../../contents/strings";
+import CardTotalCases from "../../../drawings/resume_cards/cardTotalCases";
 
 class NewCasesComponent extends Component {
 
@@ -23,9 +24,7 @@ class NewCasesComponent extends Component {
             <MainScrollableContents
                 content={
                     <>
-                        <View style={[styles.cardGeneric, styles.cardShadow, styles.cardSmall]}>
-                            <Text>Nuovi Contagi e casi totali</Text>
-                        </View>
+                        <CardTotalCases />
 
                         <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
                             <Text style={styles.chartTitle}>{chartTitles.totalCasesCurve}</Text>

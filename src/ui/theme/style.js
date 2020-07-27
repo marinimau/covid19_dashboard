@@ -80,10 +80,10 @@ export const styles = StyleSheet.create({
     indicatorTitle: {
         fontSize: 22,
         fontWeight: "700",
+        color: '#fff'
     },
     indicatorValue: {
         textAlign: 'center',
-        display: 'inline'
     },
     indicatorValueBold: {
         marginTop:20,
@@ -96,11 +96,14 @@ export const styles = StyleSheet.create({
         fontSize: 14,
         fontStyle: 'italic',
     },
+    indicatorLight: {
+        color: '#fff'
+    },
     indicatorOrange: {
         color: LegendColors.yellow
     },
     indicatorGreen: {
-        color: LegendColors.green
+        backgroundColor: LegendColors.green
     },
     indicatorGrey: {
         color: LegendColors.grey

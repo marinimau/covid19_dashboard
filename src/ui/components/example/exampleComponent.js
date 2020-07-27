@@ -11,7 +11,10 @@ import {styles} from "../../theme/style";
 import MainScrollableContents from "../mainScrollableContainer";
 import {chartTitles, dataDescription} from "../../contents/strings";
 import SvgExample from "../../../drawings/new_cases_charts/newCaseLine";
-import latestUpdateData from "../../../logic/latestUpdateData";
+import CardTotalCases from "../../../drawings/resume_cards/cardTotalCases";
+import CardRecovered from "../../../drawings/resume_cards/cardRecovered";
+import CardDied from "../../../drawings/resume_cards/cardDied";
+import CardCurrentPositive from "../../../drawings/resume_cards/cardCurrentPositive";
 
 class ExampleComponent extends Component {
 
@@ -25,31 +28,17 @@ class ExampleComponent extends Component {
             <MainScrollableContents
                 content={
                     <>
-                        <View style={[styles.cardGeneric, styles.cardShadow, styles.cardSmall]}>
-                            <Text style={[styles.chartTitle, styles.indicatorOrange]}>{chartTitles.currentPositive}</Text>
-                            <Text style={[styles.indicatorValue, styles.indicatorValueBold, styles.indicatorOrange]}>{latestUpdateData().totalCurrentCases}</Text>
-                            <Text style={[styles.indicatorValue, styles.indicatorValueIncr,  styles.indicatorOrange]}>{latestUpdateData().currentCasesVariation}</Text>
-                        </View>
+                        {/*<CardDate />*/}
 
-                        <View style={[styles.cardGeneric, styles.cardShadow, styles.cardSmall]}>
-                            <Text style={[styles.chartTitle, styles.indicatorGreen]}>{chartTitles.recovered}</Text>
-                            <Text style={[styles.indicatorValue, styles.indicatorValueBold, styles.indicatorGreen]}>{latestUpdateData().totalRecovered}</Text>
-                            <Text style={[styles.indicatorValue, styles.indicatorValueIncr, styles.indicatorGreen]}>{latestUpdateData().recoveredVariation}</Text>
-                        </View>
+                        <CardTotalCases />
 
-                        <View style={[styles.cardGeneric, styles.cardShadow, styles.cardSmall]}>
-                            <Text style={[styles.chartTitle, styles.indicatorGrey]}>{chartTitles.died}</Text>
-                            <Text style={[styles.indicatorValue, styles.indicatorValueBold, styles.indicatorGrey]}>{latestUpdateData().totalDeaths}</Text>
-                            <Text style={[styles.indicatorValue, styles.indicatorValueIncr,  styles.indicatorGrey]}>{latestUpdateData().deathsVariation}</Text>
-                        </View>
+                        <CardRecovered />
 
-                        <View style={[styles.cardGeneric, styles.cardShadow, styles.cardSmall]}>
-                            <Text style={[styles.chartTitle, styles.indicatorRed]}>{chartTitles.totalCases}</Text>
-                            <Text style={[styles.indicatorValue, styles.indicatorValueBold, styles.indicatorRed]}>{latestUpdateData().totalCases}</Text>
-                            <Text style={[styles.indicatorValue, styles.indicatorValueIncr,  styles.indicatorRed]}>{latestUpdateData().newCases}</Text>
-                        </View>
+                        <CardDied />
 
-                        <View style={[styles.cardGeneric, styles.cardShadow, styles.cardSmall]}>
+                        <CardCurrentPositive />
+
+                        <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
                             <Text>Card torta</Text>
                         </View>
 
