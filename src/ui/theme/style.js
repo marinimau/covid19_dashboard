@@ -74,10 +74,33 @@ export const styles = StyleSheet.create({
         maxWidth: dynamicDimens.cardSmall
     },
     /*
+     *  Indicators
+     */
+    indicatorTitle: {
+        fontSize: 22,
+        fontWeight: "700",
+    },
+    indicatorValue: {
+        fontSize: 32,
+        fontWeight: "700",
+    },
+    indicatorOrange: {
+        color: '#ffaa00'
+    },
+    indicatorGreen: {
+        color: '#4ce600'
+    },
+    indicatorGrey: {
+        color: '#c2c2c2'
+    },
+    indicatorRed: {
+        color: '#ff0000'
+    },
+    /*
      *  Chart
      */
     chartTitle: {
         fontSize: 18,
         fontWeight: "700",
-    }
+    },
 });

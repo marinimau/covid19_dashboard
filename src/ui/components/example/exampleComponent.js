@@ -39,7 +39,23 @@ class ExampleComponent extends Component {
                 content={
                     <>
                         <View style={[styles.cardGeneric, styles.cardShadow, styles.cardSmall]}>
-                            <Text>Card numero</Text>
+                            <Text style={[styles.indicatorTitle, styles.indicatorOrange]}>Attuali positivi</Text>
+                            <Text style={[styles.indicatorValue, styles.indicatorOrange]}>12.565</Text>
+                        </View>
+
+                        <View style={[styles.cardGeneric, styles.cardShadow, styles.cardSmall]}>
+                            <Text style={[styles.indicatorTitle, styles.indicatorGreen]}>Guariti</Text>
+                            <Text style={[styles.indicatorValue, styles.indicatorGreen]}>198.446</Text>
+                        </View>
+
+                        <View style={[styles.cardGeneric, styles.cardShadow, styles.cardSmall]}>
+                            <Text style={[styles.indicatorTitle, styles.indicatorGrey]}>Deceduti</Text>
+                            <Text style={[styles.indicatorValue, styles.indicatorGrey]}>35.107</Text>
+                        </View>
+
+                        <View style={[styles.cardGeneric, styles.cardShadow, styles.cardSmall]}>
+                            <Text style={[styles.indicatorTitle, styles.indicatorRed]}>Casi totali</Text>
+                            <Text style={[styles.indicatorValue, styles.indicatorRed]}>246.118</Text>
                         </View>
 
                         <View style={[styles.cardGeneric, styles.cardShadow, styles.cardSmall]}>
