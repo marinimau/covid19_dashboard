@@ -46,7 +46,6 @@ export const styles = StyleSheet.create({
     cardGeneric: {
         position: 'relative',
         borderRadius: 10,
-        width: '100%',
         margin: 7,
         height: 'auto',
         padding: 20,
@@ -66,13 +65,13 @@ export const styles = StyleSheet.create({
         elevation: 20,
     },
     cardBig: {
-        maxWidth: dynamicDimens.cardBig
+        width: dynamicDimens.cardBig
     },
     cardMedium: {
-        maxWidth: dynamicDimens.cardMedium
+        width: dynamicDimens.cardMedium
     },
     cardSmall: {
-        maxWidth: dynamicDimens.cardSmall
+        width: dynamicDimens.cardSmall
     },
     /*
      *  Indicators

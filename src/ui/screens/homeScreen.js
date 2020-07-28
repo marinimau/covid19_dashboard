@@ -5,13 +5,14 @@
  * Location: Baratili San Pietro
  */
 
-import {Dimensions, Platform} from "react-native";
+import {Dimensions, Platform, ScrollView} from "react-native";
 import React from "react";
 import {createStackNavigator} from "@react-navigation/stack";
 import {screenTitles} from "../contents/strings";
 import HeaderLeft from "../components/header/headerMenuButton";
 import {dimens} from "../theme/dimens";
 import ExampleComponent from "../components/example/exampleComponent";
+import HeaderScrollView from 'react-native-header-scroll-view';
 
 const Stack = createStackNavigator();
 const dimensions = Dimensions.get('window').width;
@@ -24,10 +25,13 @@ function HomeScreen({navigation}) {
         <Stack.Navigator>
             <Stack.Screen
                 options={{
+                    headerLeft: dimensions < dimens.largeScreen ? ({}) => <HeaderLeft/> : null,
 
-                    headerLeft: dimensions < dimens.largeScreen ? ({}) => <HeaderLeft/> : null
                 }}
-                component={({}) => <ExampleComponent/>}
+                component={({}) =>
+                    <ScrollView><ExampleComponent/></ScrollView>
+
+                }
                 name={screenTitles.home}
             />
         </Stack.Navigator>

@@ -6,15 +6,16 @@
  */
 
 import React, {Component} from 'react';
-import {Text, View} from "react-native";
+import {Text, TouchableOpacity, View} from "react-native";
 import {styles} from "../../theme/style";
 import MainScrollableContents from "../mainScrollableContainer";
-import {chartTitles, dataDescription} from "../../contents/strings";
+import {chartTitles, dataDescription, screenTitles} from "../../contents/strings";
 import SvgExample from "../../../drawings/new_cases_charts/newCaseLine";
 import CardTotalCases from "../../../drawings/resume_cards/cardTotalCases";
 import CardRecovered from "../../../drawings/resume_cards/cardRecovered";
 import CardDied from "../../../drawings/resume_cards/cardDied";
 import CardCurrentPositive from "../../../drawings/resume_cards/cardCurrentPositive";
+import {navigate} from "../../../utils/rootNavigationRef";
 
 class ExampleComponent extends Component {
 
@@ -28,15 +29,33 @@ class ExampleComponent extends Component {
             <MainScrollableContents
                 content={
                     <>
-                        {/*<CardDate />*/}
+                        <>
+                            {/*<CardDate />*/}
 
-                        <CardTotalCases />
+                            <TouchableOpacity onPress={() => {
+                                navigate(screenTitles.newCases);
+                            }} >
+                                <CardTotalCases/>
+                            </TouchableOpacity>
 
-                        <CardRecovered />
+                            <TouchableOpacity onPress={() => {
+                                navigate(screenTitles.recovered);
+                            }}>
+                                <CardRecovered/>
+                            </TouchableOpacity>
 
-                        <CardDied />
+                            <TouchableOpacity onPress={() => {
+                                navigate(screenTitles.died);
+                            }}>
+                                <CardDied/>
+                            </TouchableOpacity>
 
-                        <CardCurrentPositive />
+                            <TouchableOpacity onPress={() => {
+                                navigate(screenTitles.currentPositive);
+                            }}>
+                                <CardCurrentPositive/>
+                            </TouchableOpacity>
+                        </>
 
                         <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
                             <Text>Card torta</Text>

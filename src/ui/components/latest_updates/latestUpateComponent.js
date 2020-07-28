@@ -6,13 +6,14 @@
  */
 
 import React, {Component} from 'react';
-import {Text, View} from "react-native";
-import {styles} from "../../theme/style";
+import {TouchableOpacity} from "react-native";
 import MainScrollableContents from "../mainScrollableContainer";
 import CardTotalCases from "../../../drawings/resume_cards/cardTotalCases";
 import CardRecovered from "../../../drawings/resume_cards/cardRecovered";
 import CardDied from "../../../drawings/resume_cards/cardDied";
 import CardCurrentPositive from "../../../drawings/resume_cards/cardCurrentPositive";
+import {navigate} from "../../../utils/rootNavigationRef";
+import {screenTitles} from "../../contents/strings";
 
 class LatestUpdateComponent extends Component {
 
@@ -26,16 +27,24 @@ class LatestUpdateComponent extends Component {
             <MainScrollableContents
                 content={
                     <>
-                            {/*<CardDate />*/}
+                        {/*<CardDate />*/}
 
-                            <CardTotalCases />
+                        <TouchableOpacity onPress={() => {navigate(screenTitles.newCases);}}>
+                            <CardTotalCases/>
+                        </TouchableOpacity>
 
-                            <CardRecovered />
+                        <TouchableOpacity onPress={() => {navigate(screenTitles.recovered);}}>
+                            <CardRecovered/>
+                        </TouchableOpacity>
 
-                            <CardDied />
+                        <TouchableOpacity onPress={() => {navigate(screenTitles.died);}}>
+                            <CardDied/>
+                        </TouchableOpacity>
 
-                            <CardCurrentPositive />
-                        </>
+                        <TouchableOpacity onPress={() => {navigate(screenTitles.currentPositive);}}>
+                            <CardCurrentPositive/>
+                        </TouchableOpacity>
+                    </>
                 }
             />
         )
