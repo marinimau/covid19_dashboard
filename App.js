@@ -67,7 +67,7 @@ export default function App() {
                                 }}
                                 drawerType={isLargeScreen ? 'permanent' : 'back'}
                                 drawerStyle={isLargeScreen ? {width: dimens.drawerWidth} : [{width: dimens.drawerWidth}]}
-                                overlayColor={Platform.OS === 'android' ? Colors.basicTransparent: "transparent"}>
+                                overlayColor={Platform.OS === 'Android' ? Colors.basicTransparent: "transparent"}>
 
                                 <Drawer.Screen name={screenTitles.home} component={HomeScreen}/>
                                 <Drawer.Screen name={screenTitles.latestUpdateResume} component={LatestUpdateResumeScreen}/>

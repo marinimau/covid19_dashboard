@@ -32,10 +32,13 @@ export const chartTitles = {
     newCasesCurve: 'Andamento contagi giornalieri',
     currentPositive: 'Positivi Attuali',
     recovered: 'Guariti',
+    recoveredPercentage: 'Percentuale guariti',
     died: 'Deceduti',
+    deathsRatio: 'Mortalità',
     totalCases: 'Casi totali',
     placeholderValue: 'N/D',
     placeholderValueIncr: ' (+N/D)'
+
 }
 
 

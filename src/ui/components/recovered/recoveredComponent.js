@@ -10,6 +10,10 @@ import {Text, View} from "react-native";
 import {styles} from "../../theme/style";
 import MainScrollableContents from "../mainScrollableContainer";
 import CardRecovered from "../../../drawings/resume_cards/cardRecovered";
+import {chartTitles} from "../../contents/strings";
+import MyProgressCircle from "../../../drawings/example/progressCircle";
+import LegendColors from "../../theme/legendColors";
+import RecoveredData from "../../../logic/recoveredData";
 
 class RecoveredComponent extends Component {
 
@@ -25,7 +29,8 @@ class RecoveredComponent extends Component {
                         <CardRecovered />
 
                         <View style={[styles.cardGeneric, styles.cardShadow, styles.cardSmall]}>
-                            <Text>Percentuale guariti sui casi totali</Text>
+                            <Text style={[styles.chartTitle]}>{chartTitles.recoveredPercentage}</Text>
+                            <MyProgressCircle value={RecoveredData().recoveredRatio} color={LegendColors.green}/>
                         </View>
 
                         <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>

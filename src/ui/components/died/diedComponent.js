@@ -10,6 +10,12 @@ import {Text, View} from "react-native";
 import {styles} from "../../theme/style";
 import MainScrollableContents from "../mainScrollableContainer";
 import CardDied from "../../../drawings/resume_cards/cardDied";
+import MyProgressCircle from "../../../drawings/example/progressCircle";
+import LegendColors from "../../theme/legendColors";
+import {chartTitles} from "../../contents/strings";
+import { AnimatedCircularProgress } from 'react-native-circular-progress';
+import Colors from "../../theme/colors";
+import DeathsData from "../../../logic/deathData";
 
 class DiedComponent extends Component {
 
@@ -25,7 +31,8 @@ class DiedComponent extends Component {
                         <CardDied />
 
                         <View style={[styles.cardGeneric, styles.cardShadow, styles.cardSmall]}>
-                            <Text>Percentuale morti sui casi totali</Text>
+                            <Text style={[styles.chartTitle]}>{chartTitles.deathsRatio}</Text>
+                            <MyProgressCircle value={DeathsData().deathsRatio} color={LegendColors.grey}/>
                         </View>
 
                         <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>

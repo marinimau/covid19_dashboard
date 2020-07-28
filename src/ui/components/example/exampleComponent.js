@@ -16,6 +16,7 @@ import CardRecovered from "../../../drawings/resume_cards/cardRecovered";
 import CardDied from "../../../drawings/resume_cards/cardDied";
 import CardCurrentPositive from "../../../drawings/resume_cards/cardCurrentPositive";
 import {navigate} from "../../../utils/rootNavigationRef";
+import SimplePieChart from "../../../drawings/example/pieChart";
 
 class ExampleComponent extends Component {
 
@@ -59,6 +60,7 @@ class ExampleComponent extends Component {
 
                         <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
                             <Text>Card torta</Text>
+                            {/*<SimplePieChart/>*/}
                         </View>
 
                         <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
@@ -77,7 +79,7 @@ class ExampleComponent extends Component {
 
                         <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
                             <Text style={styles.chartTitle}>{chartTitles.totalCasesCurve}</Text>
-                            <SvgExample />
+                            {/*<SvgExample />*/}
                             <Text style={styles.chartDescription}>{dataDescription.totalCases}</Text>
                         </View>
                     </>
