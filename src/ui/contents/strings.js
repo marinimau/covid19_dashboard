@@ -17,12 +17,12 @@ export const loadingMessages = {
 
 export const screenTitles = {
     home: 'Home',
-    latestUpdateResume: 'Resoconto giornaliero',
+    latestUpdateResume: 'Resoconto',
     newCases: 'Nuovi casi',
     recovered: 'Guariti',
     died: 'Deceduti',
-    currentPositive: 'Ripartizione positivi',
-    swab: 'Andamento tamponi'
+    currentPositive: 'Positivi',
+    swab: 'Tamponi'
 };
 
 export const indicatorsTitles = {

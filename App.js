@@ -30,6 +30,7 @@ import LoadingScreen from "./src/ui/components/loading/splash";
 import ErrorScreen from "./src/ui/components/loading/error";
 import Records from "./src/logic/dataset";
 import { enableScreens } from 'react-native-screens';
+import {Platform} from "react-native-web";
 
 enableScreens();
 
@@ -66,7 +67,7 @@ export default function App() {
                                 }}
                                 drawerType={isLargeScreen ? 'permanent' : 'back'}
                                 drawerStyle={isLargeScreen ? {width: dimens.drawerWidth} : [{width: dimens.drawerWidth}]}
-                                overlayColor={isLargeScreen ? "transparent" : Colors.basicTransparent}>
+                                overlayColor={Platform.OS === 'android' ? Colors.basicTransparent: "transparent"}>
 
                                 <Drawer.Screen name={screenTitles.home} component={HomeScreen}/>
                                 <Drawer.Screen name={screenTitles.latestUpdateResume} component={LatestUpdateResumeScreen}/>

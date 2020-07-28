@@ -28,8 +28,8 @@ const latestUpdateData = (data) => {
     if(data !== null){
         let d = data[data.length - 1];
 
-        /* Date */
-        dataToReturn.lastUpdateDate = d['data'].replaceAll('T', ' ').split(' ')[0].replaceAll('-','/');
+        /* Date - do not use replaceAll, it make issues on android */
+        dataToReturn.lastUpdateDate = d['data'].replace('T', ' ').split(' ')[0].replace('-','/',).replace('-','/',);
 
         /* All Cases */
         dataToReturn.newCases = '+ ' + Math.abs(d['nuovi_positivi']);
