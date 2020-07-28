@@ -9,7 +9,9 @@ A cross-platform (Android, iOS, Web) dashboard to represent the trend of the Cov
 
 ```npm install -g expo-cli```
 
-if the command above generates errors try with sudo. After installing it's common to see:
+if the command above generates errors try with sudo. 
+
+After installing it's common to see:
 
 ```zsh: command not found: expo``` 
 
@@ -28,9 +30,13 @@ and then:
 
 Simply go to the project path and write:
 
+```npm install```
+
+and after
+
 ```npm start```
 
-the Metro Bundler web page should appear in seconds.
+The Metro Bundler web page should appear in seconds.
 
 
 #### 3. Launch the web app

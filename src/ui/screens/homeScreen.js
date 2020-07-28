@@ -5,7 +5,7 @@
  * Location: Baratili San Pietro
  */
 
-import {Dimensions} from "react-native";
+import {Dimensions, Platform} from "react-native";
 import React from "react";
 import {createStackNavigator} from "@react-navigation/stack";
 import {screenTitles} from "../contents/strings";
@@ -24,6 +24,7 @@ function HomeScreen({navigation}) {
         <Stack.Navigator>
             <Stack.Screen
                 options={{
+
                     headerLeft: dimensions < dimens.largeScreen ? ({}) => <HeaderLeft/> : null
                 }}
                 component={({}) => <ExampleComponent/>}

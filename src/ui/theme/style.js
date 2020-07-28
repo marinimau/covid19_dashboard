@@ -20,7 +20,7 @@ export const styles = StyleSheet.create({
         alignItems: 'flex-start',
         alignContent: 'space-around',
         justifyContent: 'flex-start',
-        backgroundColor: Colors.basicTransparent,
+        backgroundColor: Colors.basicElevation,
     },
     scrollableContainer: {
         flex: 1,
