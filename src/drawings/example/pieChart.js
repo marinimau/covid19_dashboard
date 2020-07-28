@@ -13,7 +13,7 @@ import Colors from "../../ui/theme/colors";
 
 const data = [1, 2, 3, 4];
 
-export default class SimplePieChart extends PureComponent {
+export default class PieChart extends PureComponent {
     render() {
 
         const height = dimens.pieChartRadius*2;
