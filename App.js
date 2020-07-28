@@ -9,12 +9,13 @@ import {StatusBar} from 'expo-status-bar';
 import React from 'react';
 import {Dimensions} from 'react-native';
 import {createDrawerNavigator} from '@react-navigation/drawer';
-import {NavigationContainer, useNavigation, DrawerActions} from '@react-navigation/native';
+import {NavigationContainer} from '@react-navigation/native';
 import {dimens} from "./src/ui/theme/dimens";
 import {styles} from "./src/ui/theme/style";
 import Colors from "./src/ui/theme/colors";
 import {screenTitles} from "./src/ui/contents/strings";
 import Async from 'react-async';
+import {navigationRef} from './src/utils/rootNavigationRef';
 
 /* Screens Import */
 import HomeScreen from "./src/ui/screens/homeScreen";
@@ -28,6 +29,9 @@ import retrieveData from "./src/logic/retrieveData";
 import LoadingScreen from "./src/ui/components/loading/splash";
 import ErrorScreen from "./src/ui/components/loading/error";
 import Records from "./src/logic/dataset";
+import { enableScreens } from 'react-native-screens';
+
+enableScreens();
 
 
 const Drawer = createDrawerNavigator();
@@ -49,7 +53,9 @@ export default function App() {
                     return (
                         <>
                         <StatusBar/>
-                        <NavigationContainer style={styles.root}>
+                        <NavigationContainer
+                            ref={navigationRef}
+                            style={styles.root}>
                             <Drawer.Navigator
                                 initialRouteName="Home"
                                 openByDefault
