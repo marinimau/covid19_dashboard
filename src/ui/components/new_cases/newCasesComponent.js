@@ -28,8 +28,12 @@ class NewCasesComponent extends Component {
 
                         <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
                             <Text style={styles.chartTitle}>{chartTitles.totalCasesCurve}</Text>
-                            <NewCasTotalChart />
                             <Text style={styles.chartDescription}>{dataDescription.totalCases}</Text>
+                        </View>
+
+                        <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
+                            <Text style={styles.chartTitle}>{chartTitles.newCasesCurve}</Text>
+                            <Text style={styles.chartDescription}>{dataDescription.newCases}</Text>
                         </View>
                     </>
                 }

@@ -27,7 +27,7 @@ export const screenTitles = {
 
 
 export const chartTitles = {
-    lastUpdateDate: 'Ultimo aggiornamento',
+    lastUpdateDate: 'Dati del ',
     totalCasesCurve: 'Andamento casi totali',
     newCasesCurve: 'Andamento contagi giornalieri',
     currentPositive: 'Positivi Attuali',
@@ -51,7 +51,7 @@ export const chartTitles = {
 
 
 export const dataDescription = {
-    lastUpdate: '* gli incrementi sono calcolati rispetto al giorno precedente',
+    lastUpdate: '* tutti gli incrementi sono calcolati rispetto al giorno precedente',
     totalCases: 'I casi totali tengono il conto delle persone che hanno contratto il virus dall\'inizio della pandemia. ' +
         'I nuovi contagi fanno incrementare questo parametro, nessun valore lo fa decrementare',
     newCases: 'I nuovi casi sono i contagi che vengono registrati per la prima volta, in questo grafico vengono mostrati, ' +
