@@ -27,6 +27,11 @@ class NewCasesComponent extends Component {
                         <CardTotalCases />
 
                         <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
+                            <Text style={styles.chartTitle}>Area sottesa ripartizione casi</Text>
+                            <Text style={styles.chartDescription}>Ancora positivi, guariti, deceduti</Text>
+                        </View>
+
+                        <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
                             <Text style={styles.chartTitle}>{chartTitles.totalCasesCurve}</Text>
                             <Text style={styles.chartDescription}>{dataDescription.totalCases}</Text>
                         </View>

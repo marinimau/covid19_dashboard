@@ -9,6 +9,7 @@ import {StyleSheet} from "react-native";
 import Colors from "./colors";
 import LegendColors from "./legendColors"
 import {dimens, dynamicDimens} from "./dimens";
+import {Dimensions} from "react-native-web";
 
 
 export const styles = StyleSheet.create({
@@ -37,6 +38,31 @@ export const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     /*
+     *  HeaderStyle
+     *
+     */
+    header: {
+        borderBottomColor: 'transparent',
+        height: Dimensions.get('window').width > dimens.largeScreen ? dimens.headerLargeHeight : dimens.headerHeight,
+    },
+
+    headerTitle: {
+        fontSize: Dimensions.get('window').width > dimens.largeScreen ? 35 : 18,
+        marginVertical:  Dimensions.get('window').width > dimens.largeScreen ? dimens.headerLargeHeight + 40 : dimens.headerHeight,
+        fontWeight: Dimensions.get('window').width > dimens.largeScreen ? '800' : null,
+    },
+    headerShadow: {
+        shadowColor: Colors.basicShadow,
+        shadowOffset: {
+            width: 0,
+            height: 10,
+        },
+        shadowOpacity: Dimensions.get('window').width > dimens.largeScreen ? 0 : 0.4,
+        shadowRadius: 13.16,
+        elevation: 20,
+    },
+
+    /*
      *  Card items
      *  3 sizes:
      *      - big
@@ -45,7 +71,11 @@ export const styles = StyleSheet.create({
      */
     cardGeneric: {
         position: 'relative',
-        borderRadius: 10,
+        borderRadius:20,
+        borderTopLeftRadius: 5,
+        borderTopRightRadius: 20,
+        borderBottomRightRadius: 20,
+        borderBottomLeftRadius: 20,
         margin: 7,
         height: 'auto',
         padding: 20,

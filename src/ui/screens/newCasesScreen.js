@@ -14,6 +14,7 @@ import HeaderLeft from "../components/header/headerMenuButton";
 import {screenTitles} from "../contents/strings";
 import NewCasesComponent from "../components/new_cases/newCasesComponent";
 import ExampleComponent from "../components/example/exampleComponent";
+import {styles} from "../theme/style";
 
 const Stack = createStackNavigator();
 const dimensions = Dimensions.get('window').width;
@@ -24,6 +25,7 @@ function NewCasesScreen({ navigation }) {
         <Stack.Navigator>
             <Stack.Screen
                 options={{
+                    headerStyle: [styles.header, styles.headerShadow],
                     headerLeft: dimensions < dimens.largeScreen ? ({}) => <HeaderLeft/> : null
                 }}
                 component={({}) => <NewCasesComponent/>}

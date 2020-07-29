@@ -13,6 +13,7 @@ export const dimens = {
     drawerWidth: 250,
     chartMargin: 70,
     headerHeight: 74,
+    headerLargeHeight: 90,
     cardMargin: 8,
     cardMarginSmallScreen: 20,
     pieChartRadius: 100,

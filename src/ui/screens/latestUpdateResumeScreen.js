@@ -12,6 +12,7 @@ import {dimens} from "../theme/dimens";
 import HeaderLeft from "../components/header/headerMenuButton";
 import {screenTitles} from "../contents/strings";
 import LatestUpdateComponent from "../components/latest_updates/latestUpateComponent";
+import {styles} from "../theme/style";
 import ExampleComponent from "../components/example/exampleComponent";
 
 const Stack = createStackNavigator();
@@ -24,6 +25,7 @@ function LatestUpdateResumeScreen({ navigation }) {
         <Stack.Navigator>
             <Stack.Screen
                 options={{
+                    headerStyle: [styles.header, styles.headerShadow],
                     headerLeft: dimensions < dimens.largeScreen ? ({}) => <HeaderLeft/> : null
                 }}
                 component={({}) => <LatestUpdateComponent/>}

@@ -14,6 +14,7 @@ import HeaderLeft from "../components/header/headerMenuButton";
 import HomeComponents from "../components/home/homeComponents";
 import {screenTitles} from "../contents/strings";
 import RecoveredComponent from "../components/recovered/recoveredComponent";
+import {styles} from "../theme/style";
 
 const Stack = createStackNavigator();
 const dimensions = Dimensions.get('window').width;
@@ -24,6 +25,7 @@ function RecoveredScreen({ navigation }) {
         <Stack.Navigator>
             <Stack.Screen
                 options={{
+                    headerStyle: [styles.header, styles.headerShadow],
                     headerLeft: dimensions < dimens.largeScreen ? ({}) => <HeaderLeft /> : null
                 }}
                 component={({}) => <RecoveredComponent />}
