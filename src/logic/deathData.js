@@ -8,7 +8,10 @@
 import Records from "./dataset";
 
 let dataToReturn = {
-    deathsRatio: 0
+    deathsRatio: 0,
+    diedTrendAbsolute: [],
+    diedTrendDayValue: [],
+    diedTrendProportional: [],
 };
 
 const DeathsData = (data) => {
@@ -21,6 +24,14 @@ const DeathsData = (data) => {
         let d = data[data.length - 1];
 
         dataToReturn.deathsRatio = (Math.round(d['deceduti'] / d['totale_casi'] * 100 * 100) / 100).toFixed(2);
+
+        if( dataToReturn.diedTrendAbsolute.length === 0){
+            for (let i=1; i< data.length; i+=20){
+                dataToReturn.diedTrendAbsolute.push(data[i]['deceduti']);
+                dataToReturn.diedTrendDayValue.push(data[i]['deceduti'] - data[i - 1]['deceduti']);
+                dataToReturn.diedTrendProportional.push((data[i]['deceduti'] - data[i - 1]['deceduti']) / data[i]['nuovi_positivi'] * 100);
+            }
+        }
 
     }
     return dataToReturn;

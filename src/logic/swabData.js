@@ -8,7 +8,10 @@
 import Records from "./dataset";
 
 let dataToReturn = {
-    deathsRatio: 0
+    deathsRatio: 0,
+    swabTrendAbsolute: [],
+    testedCasesTrendAbsolute: [],
+    percentagePositiveTrend: [],
 };
 
 const SwabData = (data) => {
@@ -21,6 +24,14 @@ const SwabData = (data) => {
         let d = data[data.length - 1];
 
         dataToReturn.positiveRatio = (Math.round(d['totale_casi'] / d['casi_testati'] * 100 * 100) / 100).toFixed(2);
+
+        if( dataToReturn.swabTrendAbsolute.length === 0){
+            for (let i=1; i< data.length; i+=20){
+                dataToReturn.swabTrendAbsolute.push(data[i]['tamponi']);
+                dataToReturn.testedCasesTrendAbsolute.push(data[i]['casi_testati'] === 'null' ? 0 : data[i]['casi_testati']);
+                dataToReturn.percentagePositiveTrend.push( data[i]['nuovi_positivi'] / ((data[i]['casi_testati'] === 'null' ? 0 : data[i]['casi_testati']) - (data[i-1]['casi_testati'] === 'null' ? 0 : data[i-1]['casi_testati'])) * 100);
+            }
+        }
 
     }
     return dataToReturn;

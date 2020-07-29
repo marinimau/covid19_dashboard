@@ -15,6 +15,7 @@ import {chartTitles} from "../../contents/strings";
 import MyProgressCircle from "../../../drawings/example/progressCircle";
 import LegendColors from "../../theme/legendColors";
 import SwabData from "../../../logic/swabData";
+import MyLineChart from "../../../drawings/example/lineChart";
 
 class SwabsComponent extends Component {
 
@@ -44,16 +45,22 @@ class SwabsComponent extends Component {
 
 
                         <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
-                            <Text>Grafico andamento tamponi</Text>
+                            <Text style={[styles.chartTitle]}>{chartTitles.swabTrend}</Text>
+                            <MyLineChart color={LegendColors.blue} data={SwabData().swabTrendAbsolute} />
+                        </View>
+                        {/*
+                        <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
+                            <Text style={[styles.chartTitle]}>{chartTitles.testedCaseTrend}</Text>
+                            <MyLineChart color={LegendColors.blue} data={SwabData().testedCasesTrendAbsolute} />
                         </View>
 
                         <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
-                            <Text>Grafico andamento casi testati</Text>
+                            <Text style={[styles.chartTitle]}>{chartTitles.testedAndPositive}</Text>
+                            <MyLineChart color={LegendColors.blue} data={SwabData().percentagePositiveTrend} />
                         </View>
 
-                        <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
-                            <Text>Grafico andamento percentuale positivi</Text>
-                        </View>
+                        */}
+
                     </>
                 }
             />

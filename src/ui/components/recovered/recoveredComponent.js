@@ -14,6 +14,7 @@ import {chartTitles} from "../../contents/strings";
 import MyProgressCircle from "../../../drawings/example/progressCircle";
 import LegendColors from "../../theme/legendColors";
 import RecoveredData from "../../../logic/recoveredData";
+import MyLineChart from "../../../drawings/example/lineChart";
 
 class RecoveredComponent extends Component {
 
@@ -35,15 +36,18 @@ class RecoveredComponent extends Component {
                         </View>
 
                         <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
-                            <Text>Grafico andamento guariti (valore assoluto)</Text>
+                            <Text style={[styles.chartTitle]}>{chartTitles.recoveredTrend}</Text>
+                            <MyLineChart color={LegendColors.green} data={RecoveredData().recoveredTrendAbsolute} />
                         </View>
 
                         <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
-                            <Text>Grafico andamento guariti (valore giornaliero)</Text>
+                            <Text style={[styles.chartTitle]}>{chartTitles.recoveredTrendDay}</Text>
+                            <MyLineChart color={LegendColors.green} data={RecoveredData().recoveredTrendDayValue} />
                         </View>
 
                         <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
-                            <Text>Grafico andamento percentuale guariti rispetto ai casi totali</Text>
+                            <Text style={[styles.chartTitle]}>{chartTitles.recoveredTrendProportional}</Text>
+                            <MyLineChart color={LegendColors.green} data={RecoveredData().recoveredTrendProportional} />
                         </View>
                     </>
                 }
