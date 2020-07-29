@@ -15,6 +15,7 @@ import CardCurrentPositive from "../../../drawings/resume_cards/cardCurrentPosit
 import {navigate} from "../../../utils/rootNavigationRef";
 import {screenTitles} from "../../contents/strings";
 import CardSwab from "../../../drawings/resume_cards/cardSwab";
+import CardDate from "../../../drawings/resume_cards/cardDate";
 
 class LatestUpdateComponent extends Component {
 
@@ -28,8 +29,6 @@ class LatestUpdateComponent extends Component {
             <MainScrollableContents
                 content={
                     <>
-                        {/*<CardDate />*/}
-
                         <TouchableOpacity onPress={() => {navigate(screenTitles.newCases);}}>
                             <CardTotalCases/>
                         </TouchableOpacity>
@@ -49,6 +48,8 @@ class LatestUpdateComponent extends Component {
                         <TouchableOpacity onPress={() => {navigate(screenTitles.swab);}}>
                             <CardSwab/>
                         </TouchableOpacity>
+
+                        <CardDate />
                     </>
                 }
             />
