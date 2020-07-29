@@ -8,7 +8,10 @@
 import Records from "./dataset";
 
 let dataToReturn = {
-    recoveredRatio: 0
+    recoveredRatio: 0,
+    recoveredTrendAbsolute: [],
+    recoveredTrendDayValue: [],
+    recoveredTrendProportional: [],
 };
 
 const RecoveredData = (data) => {
@@ -22,6 +25,13 @@ const RecoveredData = (data) => {
 
         dataToReturn.recoveredRatio = (Math.round(d['dimessi_guariti'] / d['totale_casi'] * 100 * 100) / 100).toFixed(2);
 
+        if( dataToReturn.recoveredTrendAbsolute.length === 0){
+            for (let i=1; i< data.length; i+=20){
+                dataToReturn.recoveredTrendAbsolute.push(data[i]['dimessi_guariti']);
+                dataToReturn.recoveredTrendDayValue.push(data[i]['dimessi_guariti'] - data[i - 1]['dimessi_guariti']);
+                dataToReturn.recoveredTrendProportional.push((data[i]['dimessi_guariti'] - data[i - 1]['dimessi_guariti']) / data[i]['nuovi_positivi'] * 100);
+            }
+        }
     }
     return dataToReturn;
 };

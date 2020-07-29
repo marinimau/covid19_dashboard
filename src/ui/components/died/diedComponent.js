@@ -16,6 +16,8 @@ import {chartTitles} from "../../contents/strings";
 import { AnimatedCircularProgress } from 'react-native-circular-progress';
 import Colors from "../../theme/colors";
 import DeathsData from "../../../logic/deathData";
+import RecoveredData from "../../../logic/recoveredData";
+import MyLineChart from "../../../drawings/example/lineChart";
 
 class DiedComponent extends Component {
 
@@ -37,15 +39,18 @@ class DiedComponent extends Component {
                         </View>
 
                         <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
-                            <Text>Grafico andamento morti (valore assoluto)</Text>
+                            <Text style={[styles.chartTitle]}>{chartTitles.deathTrend}</Text>
+                            <MyLineChart color={LegendColors.grey} data={DeathsData().diedTrendAbsolute} />
                         </View>
 
                         <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
-                            <Text>Grafico andamento morti (valore giornaliero)</Text>
+                            <Text style={[styles.chartTitle]}>{chartTitles.deathTrendDay}</Text>
+                            <MyLineChart color={LegendColors.grey} data={DeathsData().diedTrendDayValue} />
                         </View>
 
                         <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
-                            <Text>Grafico andamento percentuale morti rispetto ai casi totali</Text>
+                            <Text style={[styles.chartTitle]}>{chartTitles.deathTrendProportional}</Text>
+                            <MyLineChart color={LegendColors.grey} data={DeathsData().diedTrendProportional} />
                         </View>
                     </>
                 }

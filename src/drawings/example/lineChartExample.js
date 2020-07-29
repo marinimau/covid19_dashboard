@@ -4,7 +4,7 @@
  * Repository: http://github.com/marinimau/covid19_dashboard
  * Location: Baratili San Pietro
  */
-
+/*
 import React, {Component} from 'react';
 import {StyleSheet, View, Animated, TextInput,} from 'react-native';
 import { Svg } from 'react-native-svg';
@@ -144,4 +144,4 @@ const styles = StyleSheet.create({
         backgroundColor: 'lightgray',
         width: labelWidth,
     },
-});
+});*/
