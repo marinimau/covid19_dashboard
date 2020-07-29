@@ -16,7 +16,11 @@ let dataToReturn = {
     totalRecovered: 0,
     recoveredVariation: 0,
     totalDeaths: 0,
-    deathsVariation: 0
+    deathsVariation: 0,
+    swab: 0,
+    swabVariation: 0,
+    testedCases: 0,
+    testedCasesVariation: 0,
 };
 
 const latestUpdateData = (data) => {
@@ -48,6 +52,14 @@ const latestUpdateData = (data) => {
         /* Deaths */
         dataToReturn.totalDeaths = d['deceduti'];
         dataToReturn.deathsVariation = '+ ' + Math.abs(data[data.length - 2]['deceduti'] - d['deceduti']);
+
+        /* Swab */
+        dataToReturn.swab = d['tamponi'];
+        dataToReturn.swabVariation = '+ ' + Math.abs(data[data.length - 2]['tamponi'] - d['tamponi']);
+
+        /* Tested Cases */
+        dataToReturn.testedCases = d['casi_testati'];
+        dataToReturn.testedCasesVariation = '+ ' + Math.abs(data[data.length - 2]['casi_testati'] - d['casi_testati']);
     }
     return dataToReturn;
 };

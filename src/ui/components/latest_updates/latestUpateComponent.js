@@ -14,6 +14,7 @@ import CardDied from "../../../drawings/resume_cards/cardDied";
 import CardCurrentPositive from "../../../drawings/resume_cards/cardCurrentPositive";
 import {navigate} from "../../../utils/rootNavigationRef";
 import {screenTitles} from "../../contents/strings";
+import CardSwab from "../../../drawings/resume_cards/cardSwab";
 
 class LatestUpdateComponent extends Component {
 
@@ -43,6 +44,10 @@ class LatestUpdateComponent extends Component {
 
                         <TouchableOpacity onPress={() => {navigate(screenTitles.currentPositive);}}>
                             <CardCurrentPositive/>
+                        </TouchableOpacity>
+
+                        <TouchableOpacity onPress={() => {navigate(screenTitles.swab);}}>
+                            <CardSwab/>
                         </TouchableOpacity>
                     </>
                 }

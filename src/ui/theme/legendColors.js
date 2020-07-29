@@ -13,7 +13,9 @@ let LegendColors = {
     lightred: '#DD2C00',
     red: '#D32F2F',
     lightgrey: '#455A64',
-    grey: '#616161'
+    grey: '#616161',
+    lightblue: '#00B8D4',
+    blue: '#0091EA'
 }
 
 export default LegendColors;
