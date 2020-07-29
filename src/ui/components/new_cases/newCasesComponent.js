@@ -12,6 +12,7 @@ import MainScrollableContents from "../mainScrollableContainer";
 import NewCasTotalChart from "../../../drawings/new_cases_charts/newCaseTotal";
 import {chartTitles, dataDescription} from "../../contents/strings";
 import CardTotalCases from "../../../drawings/resume_cards/cardTotalCases";
+import LineChartExample from "../../../drawings/example/lineChartExample";
 
 class NewCasesComponent extends Component {
 
@@ -33,6 +34,7 @@ class NewCasesComponent extends Component {
 
                         <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
                             <Text style={styles.chartTitle}>{chartTitles.totalCasesCurve}</Text>
+
                             <Text style={styles.chartDescription}>{dataDescription.totalCases}</Text>
                         </View>
 

@@ -8,8 +8,7 @@
 import {StyleSheet} from "react-native";
 import Colors from "./colors";
 import LegendColors from "./legendColors"
-import {dimens, dynamicDimens} from "./dimens";
-import {Dimensions} from "react-native-web";
+import {dynamicDimens} from "./dimens";
 
 
 export const styles = StyleSheet.create({
@@ -44,7 +43,6 @@ export const styles = StyleSheet.create({
     header: {
         borderBottomColor: 'transparent',
     },
-
     headerTitle: {
         color: '#fff'
     },
@@ -52,13 +50,12 @@ export const styles = StyleSheet.create({
         shadowColor: Colors.basicShadow,
         shadowOffset: {
             width: 0,
-            height: 10,
+            height: 5,
         },
         shadowOpacity: 0.4,
         shadowRadius: 13.16,
         elevation: 20,
     },
-
     /*
      *  Card items
      *  3 sizes:
