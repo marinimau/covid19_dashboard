@@ -5,34 +5,17 @@
  * Location: Baratili San Pietro
  */
 
-import {Dimensions} from "react-native";
 import React from "react";
-import {createStackNavigator} from "@react-navigation/stack";
-import {dimens} from "../theme/dimens";
-import HeaderLeft from "../components/header/headerMenuButton";
 import {screenTitles} from "../contents/strings";
 import LatestUpdateComponent from "../components/latest_updates/latestUpateComponent";
-import {styles} from "../theme/style";
-import ExampleComponent from "../components/example/exampleComponent";
+import ScreenContainer from "../components/screenContainer";
 
-const Stack = createStackNavigator();
-const dimensions = Dimensions.get('window').width;
+
 
 function LatestUpdateResumeScreen({ navigation }) {
 
     return (
-
-        <Stack.Navigator>
-            <Stack.Screen
-                options={{
-                    headerStyle: [styles.header, styles.headerShadow],
-                    headerLeft: dimensions < dimens.largeScreen ? ({}) => <HeaderLeft/> : null
-                }}
-                component={({}) => <LatestUpdateComponent/>}
-                name={screenTitles.latestUpdateResume}
-            />
-        </Stack.Navigator>
-
+        <ScreenContainer title={screenTitles.latestUpdateResume} component={<LatestUpdateComponent/>} />
     );
 }
 

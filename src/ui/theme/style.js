@@ -42,13 +42,10 @@ export const styles = StyleSheet.create({
      */
     header: {
         borderBottomColor: 'transparent',
-        height: Dimensions.get('window').width > dimens.largeScreen ? dimens.headerLargeHeight : dimens.headerHeight,
     },
 
     headerTitle: {
-        fontSize: Dimensions.get('window').width > dimens.largeScreen ? 35 : 18,
-        marginVertical:  Dimensions.get('window').width > dimens.largeScreen ? dimens.headerLargeHeight + 40 : dimens.headerHeight,
-        fontWeight: Dimensions.get('window').width > dimens.largeScreen ? '800' : null,
+        color: '#fff'
     },
     headerShadow: {
         shadowColor: Colors.basicShadow,
@@ -56,7 +53,7 @@ export const styles = StyleSheet.create({
             width: 0,
             height: 10,
         },
-        shadowOpacity: Dimensions.get('window').width > dimens.largeScreen ? 0 : 0.4,
+        shadowOpacity: 0.4,
         shadowRadius: 13.16,
         elevation: 20,
     },

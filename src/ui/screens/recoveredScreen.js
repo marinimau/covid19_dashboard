@@ -5,34 +5,17 @@
  * Location: Baratili San Pietro
  */
 
-
-import {Dimensions} from "react-native";
 import React from "react";
-import {createStackNavigator} from "@react-navigation/stack";
-import {dimens} from "../theme/dimens";
-import HeaderLeft from "../components/header/headerMenuButton";
-import HomeComponents from "../components/home/homeComponents";
 import {screenTitles} from "../contents/strings";
 import RecoveredComponent from "../components/recovered/recoveredComponent";
-import {styles} from "../theme/style";
-
-const Stack = createStackNavigator();
-const dimensions = Dimensions.get('window').width;
+import ScreenContainer from "../components/screenContainer";
 
 function RecoveredScreen({ navigation }) {
 
     return (
-        <Stack.Navigator>
-            <Stack.Screen
-                options={{
-                    headerStyle: [styles.header, styles.headerShadow],
-                    headerLeft: dimensions < dimens.largeScreen ? ({}) => <HeaderLeft /> : null
-                }}
-                component={({}) => <RecoveredComponent />}
-                name={screenTitles.recovered}
-            />
-        </Stack.Navigator>
+        <ScreenContainer title={screenTitles.recovered} component={<RecoveredComponent/>} />
     );
+
 }
 
 export default RecoveredScreen;

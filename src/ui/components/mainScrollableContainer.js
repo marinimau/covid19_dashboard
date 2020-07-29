@@ -7,11 +7,11 @@
 
 import React from 'react'
 import {styles} from "../theme/style";
-import {ScrollView, View} from "react-native";
+import {ScrollView, View, Platform} from "react-native";
 
 function MainScrollableContents(props) {
     return (
-        <View style={[styles.rootContainer]}>
+        <View style={[styles.rootContainer, {position: 'relative'}]}>
             <ScrollView>
                 <View style={[styles.scrollableContainer]}>
 
