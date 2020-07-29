@@ -26,7 +26,7 @@ class RecoveredComponent extends Component {
             <MainScrollableContents
                 content={
                     <>
-                        <CardRecovered />
+                        <CardRecovered light={true} />
 
                         <View style={[styles.cardGeneric, styles.cardShadow, styles.cardSmall]}>
                             <Text style={[styles.chartTitle]}>{chartTitles.recoveredPercentage}</Text>

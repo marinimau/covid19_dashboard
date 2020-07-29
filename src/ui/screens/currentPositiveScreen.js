@@ -5,31 +5,17 @@
  * Location: Baratili San Pietro
  */
 
-import {Dimensions} from "react-native";
 import React from "react";
-import {createStackNavigator} from "@react-navigation/stack";
-import {dimens} from "../theme/dimens";
-import HeaderLeft from "../components/header/headerMenuButton";
 import {screenTitles} from "../contents/strings";
+import ScreenContainer from "../components/screenContainer";
 import CurrentPositiveComponent from "../components/current_positive/currentPositiveComponent";
-import {styles} from "../theme/style";
 
-const Stack = createStackNavigator();
-const dimensions = Dimensions.get('window').width;
+
 
 function CurrentPositiveScreen({ navigation }) {
 
     return (
-        <Stack.Navigator>
-            <Stack.Screen
-                options={{
-                    headerStyle: [styles.header, styles.headerShadow],
-                    headerLeft: dimensions < dimens.largeScreen ? ({}) => <HeaderLeft /> : null
-                }}
-                component={({}) => <CurrentPositiveComponent />}
-                name={screenTitles.currentPositive}
-            />
-        </Stack.Navigator>
+        <ScreenContainer title={screenTitles.currentPositive} component={<CurrentPositiveComponent/>} />
     );
 }
 

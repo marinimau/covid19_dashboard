@@ -7,7 +7,7 @@
 
 import React from 'react';
 import {DrawerActions, useNavigation} from "@react-navigation/native";
-import {View} from "react-native";
+import {View, Platform} from "react-native";
 import {TouchableOpacity} from "react-native-gesture-handler";
 import { Ionicons } from '@expo/vector-icons';
 import Colors from "../../theme/colors";
@@ -21,7 +21,7 @@ const HeaderLeft = () => {
                 onPress={() => {
                     navigation.dispatch(DrawerActions.openDrawer());
                 }}
-                style={{marginLeft:25}}>
+                style={{marginLeft: Platform.OS === 'ios' ? 0 : 25}}>
                 <Ionicons name="ios-menu" size={32} color={Colors.basic} />
             </TouchableOpacity>
         </View>

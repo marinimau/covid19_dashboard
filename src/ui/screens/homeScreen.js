@@ -5,40 +5,15 @@
  * Location: Baratili San Pietro
  */
 
-import {Dimensions, Platform, ScrollView} from "react-native";
 import React from "react";
-import {createStackNavigator} from "@react-navigation/stack";
 import {screenTitles} from "../contents/strings";
-import HeaderLeft from "../components/header/headerMenuButton";
-import {dimens} from "../theme/dimens";
 import ExampleComponent from "../components/example/exampleComponent";
-import HeaderScrollView from 'react-native-header-scroll-view';
-import {styles} from "../theme/style";
-
-const Stack = createStackNavigator();
-const dimensions = Dimensions.get('window').width;
-
+import ScreenContainer from "../components/screenContainer";
 
 function HomeScreen({navigation}) {
 
     return (
-
-        <Stack.Navigator>
-            <Stack.Screen
-                options={{
-                    headerStyle: [styles.header, styles.headerShadow],
-                    headerTitleStyle: styles.headerTitle,
-                    headerLeft: dimensions < dimens.largeScreen ? ({}) => <HeaderLeft/> : null,
-
-                }}
-                component={({}) =>
-                    <ScrollView><ExampleComponent/></ScrollView>
-
-                }
-                name={screenTitles.home}
-            />
-        </Stack.Navigator>
-
+        <ScreenContainer title={screenTitles.home} component={<ExampleComponent/>} />
     );
 }
 
