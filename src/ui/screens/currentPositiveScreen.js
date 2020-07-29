@@ -12,6 +12,7 @@ import {dimens} from "../theme/dimens";
 import HeaderLeft from "../components/header/headerMenuButton";
 import {screenTitles} from "../contents/strings";
 import CurrentPositiveComponent from "../components/current_positive/currentPositiveComponent";
+import {styles} from "../theme/style";
 
 const Stack = createStackNavigator();
 const dimensions = Dimensions.get('window').width;
@@ -22,6 +23,7 @@ function CurrentPositiveScreen({ navigation }) {
         <Stack.Navigator>
             <Stack.Screen
                 options={{
+                    headerStyle: [styles.header, styles.headerShadow],
                     headerLeft: dimensions < dimens.largeScreen ? ({}) => <HeaderLeft /> : null
                 }}
                 component={({}) => <CurrentPositiveComponent />}

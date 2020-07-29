@@ -13,6 +13,7 @@ import HeaderLeft from "../components/header/headerMenuButton";
 import {dimens} from "../theme/dimens";
 import ExampleComponent from "../components/example/exampleComponent";
 import HeaderScrollView from 'react-native-header-scroll-view';
+import {styles} from "../theme/style";
 
 const Stack = createStackNavigator();
 const dimensions = Dimensions.get('window').width;
@@ -25,6 +26,8 @@ function HomeScreen({navigation}) {
         <Stack.Navigator>
             <Stack.Screen
                 options={{
+                    headerStyle: [styles.header, styles.headerShadow],
+                    headerTitleStyle: styles.headerTitle,
                     headerLeft: dimensions < dimens.largeScreen ? ({}) => <HeaderLeft/> : null,
 
                 }}
