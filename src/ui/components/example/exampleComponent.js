@@ -17,6 +17,7 @@ import CardDied from "../../../drawings/resume_cards/cardDied";
 import CardCurrentPositive from "../../../drawings/resume_cards/cardCurrentPositive";
 import {navigate} from "../../../utils/rootNavigationRef";
 import SimplePieChart from "../../../drawings/example/pieChart";
+import CardSwab from "../../../drawings/resume_cards/cardSwab";
 
 class ExampleComponent extends Component {
 
@@ -55,6 +56,10 @@ class ExampleComponent extends Component {
                                 navigate(screenTitles.currentPositive);
                             }}>
                                 <CardCurrentPositive/>
+                            </TouchableOpacity>
+
+                            <TouchableOpacity onPress={() => {navigate(screenTitles.swab);}}>
+                                <CardSwab/>
                             </TouchableOpacity>
                         </>
 

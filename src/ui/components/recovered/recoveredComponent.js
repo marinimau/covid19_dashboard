@@ -31,6 +31,7 @@ class RecoveredComponent extends Component {
                         <View style={[styles.cardGeneric, styles.cardShadow, styles.cardSmall]}>
                             <Text style={[styles.chartTitle]}>{chartTitles.recoveredPercentage}</Text>
                             <MyProgressCircle value={RecoveredData().recoveredRatio} color={LegendColors.green}/>
+                            <Text style={styles.chartDescription}>{chartTitles.recoveredPercentageDescription}</Text>
                         </View>
 
                         <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>

@@ -10,6 +10,10 @@ import {Text, View} from "react-native";
 import {styles} from "../../theme/style";
 import MainScrollableContents from "../mainScrollableContainer";
 import CardCurrentPositive from "../../../drawings/resume_cards/cardCurrentPositive";
+import {chartTitles} from "../../contents/strings";
+import MyProgressCircle from "../../../drawings/example/progressCircle";
+import LegendColors from "../../theme/legendColors";
+import CurrentPositiveData from "../../../logic/currentPositiveData";
 
 class CurrentPositiveComponent extends Component {
 
@@ -23,6 +27,12 @@ class CurrentPositiveComponent extends Component {
                 content={
                     <>
                         <CardCurrentPositive />
+
+                        <View style={[styles.cardGeneric, styles.cardShadow, styles.cardSmall]}>
+                            <Text style={[styles.chartTitle]}>{chartTitles.currentPositivePercentage}</Text>
+                            <MyProgressCircle value={CurrentPositiveData().positiveRatio} color={LegendColors.yellow}/>
+                            <Text style={styles.chartDescription}>{chartTitles.positivePercentageDescription}</Text>
+                        </View>
 
                         <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
                             <Text>Grafico andamento incremento positivi</Text>

@@ -33,6 +33,7 @@ class DiedComponent extends Component {
                         <View style={[styles.cardGeneric, styles.cardShadow, styles.cardSmall]}>
                             <Text style={[styles.chartTitle]}>{chartTitles.deathsRatio}</Text>
                             <MyProgressCircle value={DeathsData().deathsRatio} color={LegendColors.grey}/>
+                            <Text style={styles.chartDescription}>{chartTitles.deathRatioDescription}</Text>
                         </View>
 
                         <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
