@@ -14,6 +14,8 @@ import {chartTitles} from "../../contents/strings";
 import MyProgressCircle from "../../../drawings/example/progressCircle";
 import LegendColors from "../../theme/legendColors";
 import CurrentPositiveData from "../../../logic/currentPositiveData";
+import MyLineChart from "../../../drawings/example/lineChart";
+import PositiveDeltaData from "../../../logic/positiveDeltaData";
 
 class CurrentPositiveComponent extends Component {
 
@@ -35,7 +37,13 @@ class CurrentPositiveComponent extends Component {
                         </View>
 
                         <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
-                            <Text>Grafico andamento incremento positivi</Text>
+                            <Text style={styles.chartTitle}>{chartTitles.positiveTrendAbsolute}</Text>
+                            <MyLineChart color={LegendColors.yellow} data={PositiveDeltaData().deltaTrendAbsolute} />
+                        </View>
+
+                        <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
+                            <Text style={styles.chartTitle}>{chartTitles.positiveTrendVariation}</Text>
+                            <MyLineChart color={LegendColors.yellow} data={PositiveDeltaData().deltaTrendDayVariation} />
                         </View>
 
                         <View style={[styles.cardGeneric, styles.cardShadow, styles.cardSmall]}>

@@ -33,6 +33,8 @@ export const chartTitles = {
     currentPositive: 'Positivi Attuali',
     currentPositivePercentage: 'Percentuale positivi',
     positivePercentageDescription: 'Percentuale di pazienti ancora positivi rispetto ai casi totali',
+    positiveTrendAbsolute: 'Andamento positivi (totale)',
+    positiveTrendVariation: 'Andamento positivi (varizione giornaliera)',
     recovered: 'Guariti',
     recoveredPercentage: 'Percentuale guariti',
     recoveredPercentageDescription: 'Percentuale pazienti guariti rispetto ai casi totali',
