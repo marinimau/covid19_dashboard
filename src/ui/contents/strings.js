@@ -45,7 +45,7 @@ export const chartTitles = {
     deathsRatio: 'Mortalità',
     deathRatioDescription: 'Percentuale pazienti deceduti rispetto ai casi totali',
     deathTrend: 'Andamento decessi (totale)',
-    deathTrendDay: 'Andamento decessi (variazione giornaliera',
+    deathTrendDay: 'Andamento decessi (variazione giornaliera)',
     deathTrendProportional: 'Andamento decessi (in proporzione ai positivi)',
     totalCases: 'Casi totali',
     swab: 'Tamponi',
