@@ -26,7 +26,7 @@ const DeathsData = (data) => {
         dataToReturn.deathsRatio = (Math.round(d['deceduti'] / d['totale_casi'] * 100 * 100) / 100).toFixed(2);
 
         if( dataToReturn.diedTrendAbsolute.length === 0){
-            for (let i=1; i< data.length; i+=5){
+            for (let i=1; i< data.length; i+=1){
                 dataToReturn.diedTrendAbsolute.push(data[i]['deceduti']);
                 dataToReturn.diedTrendDayValue.push(data[i]['deceduti'] - data[i - 1]['deceduti']);
                 dataToReturn.diedTrendProportional.push((data[i]['deceduti'] - data[i - 1]['deceduti']) / data[i]['totale_positivi'] * 100);

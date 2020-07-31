@@ -11,12 +11,13 @@ import {getCardBigWidth, getCardMediumWidth, getCardSmallWidth, getChartFullWidt
 export const dimens = {
     largeScreen: 768,
     drawerWidth: 250,
-    chartMargin: 70,
+    chartMargin: 55,
     headerHeight: 74,
     headerLargeHeight: 90,
     cardMargin: 8,
     cardMarginSmallScreen: 20,
     pieChartRadius: 100,
+    lineChartHeight: 220,
 
 };
 

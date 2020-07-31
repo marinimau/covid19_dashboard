@@ -23,7 +23,7 @@ const PositiveDeltaData = (data) => {
 
 
         if( dataToReturn.deltaTrendAbsolute.length === 0){
-            for (let i=1; i< data.length; i+=5){
+            for (let i=1; i< data.length; i+=1){
                 dataToReturn.deltaTrendAbsolute.push(data[i]['totale_positivi']);
                 dataToReturn.deltaTrendDayVariation.push(data[i]['totale_positivi']-data[i-1]['totale_positivi']);
             }
