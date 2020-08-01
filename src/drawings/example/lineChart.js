@@ -22,12 +22,27 @@ export default class MyLineChart extends Component{
             _1W: false,
             _1M: false,
             _MAX: true,
+            data: this.props.data,
+            filter: 7
         };
     }
 
     activateFilter(filter){
         this.setState({_1W: false, _1M: false, _MAX: false});
-        this.setState({[filter]: true});
+        this.setState({[filter.state]: true}, function() {
+
+            this.setState({filter: filter.field }, function () {
+                if(this.state.filter === -1){
+                    this.setState({data: this.props.data});
+                } else {
+                    this.setState({data: this.props.data.slice(Math.max(this.props.data.length - this.state.filter, 0))});
+                }
+            });
+
+
+
+        });
+
     }
 
     returnState(stateString){
@@ -54,8 +69,8 @@ export default class MyLineChart extends Component{
                         data={intervalSelectorFilter}
                         renderItem={({item}) => (
                             <Chip
-                                onPress={() => this.activateFilter(item.state)}
-                                selected={this.returnState(item.state)}
+                                onPress={() => this.activateFilter(item)}
+                                selected={this.state.filter === item.state.field}
                                 textStyle={{
                                     color: this.returnState(item.state) ? '#fff' : Colors.basic,
                                     fontWeight:  this.returnState(item.state) ? '700' :'400'
@@ -80,7 +95,7 @@ export default class MyLineChart extends Component{
                         labels: [0,1,2,3,4],
                         datasets: [
                             {
-                                data: this.props.data
+                                data: this.state.data
                             }
                         ]
                     }}

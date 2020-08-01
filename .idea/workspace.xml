@@ -19,23 +19,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="aggiunti altri line chart">
-      <change afterPath="$PROJECT_DIR$/src/ui/contents/intervalSelectorData.js" afterDir="false" />
+    <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="rivisto grafico (lineChart) e aggiunti fitri per intervallo">
       <change beforePath="$PROJECT_DIR$/.expo/packager-info.json" beforeDir="false" afterPath="$PROJECT_DIR$/.expo/packager-info.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/@react-navigation/core/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@react-navigation/core/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/@react-navigation/native/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@react-navigation/native/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/nanoid/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/nanoid/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/react-native-screens/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/react-native-screens/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/drawings/example/lineChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/drawings/example/lineChart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/deathData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/deathData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/positiveDeltaData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/positiveDeltaData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/recoveredData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/recoveredData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/swabData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/swabData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/contents/strings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/contents/strings.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/theme/dimens.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/theme/dimens.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +86,8 @@
       <workItem from="1595253539475" duration="2709000" />
       <workItem from="1595866318277" duration="798000" />
       <workItem from="1595867529057" duration="9511000" />
-      <workItem from="1596223618365" duration="3909000" />
+      <workItem from="1596223618365" duration="4279000" />
+      <workItem from="1596265752485" duration="1429000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1595078622516</created>
@@ -160,7 +152,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596098137466</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="rivisto grafico (lineChart) e aggiunti fitri per intervallo">
+      <created>1596228479054</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1596228479055</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -187,7 +186,8 @@
     <MESSAGE value="iniziato a organizzare i grafici" />
     <MESSAGE value="integrata la logica nelle card nella home" />
     <MESSAGE value="aggiunti altri line chart" />
-    <option name="LAST_COMMIT_MESSAGE" value="aggiunti altri line chart" />
+    <MESSAGE value="rivisto grafico (lineChart) e aggiunti fitri per intervallo" />
+    <option name="LAST_COMMIT_MESSAGE" value="rivisto grafico (lineChart) e aggiunti fitri per intervallo" />
   </component>
   <component name="WindowStateProjectService">
     <state x="184" y="91" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1595879970955">
@@ -222,11 +222,11 @@
       <screen x="0" y="25" width="1440" height="814" />
     </state>
     <state width="1419" height="208" key="GridCell.Tab.0.right/0.25.1440.814@0.25.1440.814" timestamp="1596099797777" />
-    <state x="320" y="175" key="Vcs.Push.Dialog.v2" timestamp="1596098138881">
+    <state x="320" y="175" key="Vcs.Push.Dialog.v2" timestamp="1596228756769">
       <screen x="0" y="25" width="1440" height="814" />
     </state>
     <state x="320" y="174" key="Vcs.Push.Dialog.v2/0.23.1440.820@0.23.1440.820" timestamp="1595152527908" />
-    <state x="320" y="175" key="Vcs.Push.Dialog.v2/0.25.1440.814@0.25.1440.814" timestamp="1596098138881" />
+    <state x="320" y="175" key="Vcs.Push.Dialog.v2/0.25.1440.814@0.25.1440.814" timestamp="1596228756769" />
     <state x="385" y="167" width="670" height="676" key="search.everywhere.popup" timestamp="1595150088481">
       <screen x="0" y="23" width="1440" height="820" />
     </state>
