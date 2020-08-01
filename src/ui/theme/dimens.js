@@ -9,6 +9,7 @@
 import {getCardBigWidth, getCardMediumWidth, getCardSmallWidth, getChartFullWidth} from "../../utils/dimensionsUtils";
 
 export const dimens = {
+    verySmallScreen: 400,
     largeScreen: 768,
     drawerWidth: 250,
     chartMargin: 55,
