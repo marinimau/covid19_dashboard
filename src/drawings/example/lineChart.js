@@ -13,17 +13,19 @@ import {dimens, dynamicDimens} from "../../ui/theme/dimens";
 import Colors from "../../ui/theme/colors";
 import {hexToRgb} from "../../utils/colorConverter";
 import intervalSelectorFilter from "../../ui/contents/intervalSelectorData";
+import DateLabels from "../../logic/retrieveTimeLabels";
 
 export default class MyLineChart extends Component{
 
     constructor(props) {
         super(props);
         this.state = {
-            _1W: false,
+            _1W: true,
             _1M: false,
-            _MAX: true,
-            data: this.props.data,
-            filter: 7
+            _MAX: false,
+            data: this.props.data.slice(Math.max(this.props.data.length - 7, 0)),
+            filter: 7,
+            labels: DateLabels(7).dateLabels
         };
     }
 
@@ -33,16 +35,16 @@ export default class MyLineChart extends Component{
 
             this.setState({filter: filter.field }, function () {
                 if(this.state.filter === -1){
-                    this.setState({data: this.props.data});
+                    this.setState({data: this.props.data}, function () {
+                        this.setState({labels: DateLabels(this.state.filter).dateLabels});
+                    });
                 } else {
-                    this.setState({data: this.props.data.slice(Math.max(this.props.data.length - this.state.filter, 0))});
+                    this.setState({data: this.props.data.slice(Math.max(this.props.data.length - this.state.filter, 0))}, function () {
+                        this.setState({labels: DateLabels(this.state.filter).dateLabels});
+                    });
                 }
             });
-
-
-
         });
-
     }
 
     returnState(stateString){
@@ -92,7 +94,7 @@ export default class MyLineChart extends Component{
 
                 <LineChart
                     data={{
-                        labels: [0,1,2,3,4],
+                        labels: this.state.labels,
                         datasets: [
                             {
                                 data: this.state.data
