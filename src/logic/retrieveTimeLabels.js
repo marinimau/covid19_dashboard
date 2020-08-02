@@ -14,7 +14,7 @@
 
 import Records from "./dataset";
 import dateToString from "../utils/dateToString";
-import {lineChartParams} from "../ui/contents/params";
+import {lineChartNumLabels} from "../ui/contents/params";
 
 let dataToReturn = {
     dateLabels: [],
@@ -31,7 +31,7 @@ const DateLabels = (range) => {
 
         if( dataToReturn){
             let start = range === -1 || range === undefined ? 1 : data.length - range;
-            let incr = Math.round(((data.length - start)) / lineChartParams.numLabels);
+            let incr = Math.round(((data.length - start)) / lineChartNumLabels(range));
             for (let i = start; i < data.length; i+=incr){
                 i = Math.round(i)
                 dataToReturn.dateLabels.push(dateToString(data[i]['data']));

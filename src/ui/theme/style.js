@@ -146,5 +146,12 @@ export const styles = StyleSheet.create({
         fontStyle: 'italic',
         textAlign: 'center',
         marginTop: 20,
+    },
+    chartBigValue: {
+        width: '100%',
+        textAlign: 'center',
+        fontSize: 30,
+        marginTop: 30,
+        marginBottom: 30,
     }
 });

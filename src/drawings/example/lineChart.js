@@ -17,6 +17,7 @@ import DateLabels from "../../logic/retrieveTimeLabels";
 
 export default class MyLineChart extends Component{
 
+
     constructor(props) {
         super(props);
         this.state = {
@@ -45,6 +46,7 @@ export default class MyLineChart extends Component{
                 }
             });
         });
+        this.forceUpdate();
     }
 
     returnState(stateString){
@@ -111,7 +113,7 @@ export default class MyLineChart extends Component{
                         backgroundColor: Colors.basicElevation,
                         backgroundGradientFrom: Colors.basicElevation,
                         backgroundGradientTo: Colors.basicElevation,
-                        decimalPlaces: 0, // optional, defaults to 2dp
+                        decimalPlaces: this.props.decimalPlaces === undefined ? 0 : this.props.decimalPlaces, // optional, defaults to 2dp
                         color: (opacity = 1) => `rgba(${colorRGB.r}, ${colorRGB.g}, ${colorRGB.b}, ${opacity})`,
                         labelColor: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
                         style: {
@@ -123,7 +125,7 @@ export default class MyLineChart extends Component{
                             stroke: Colors.basicElevation
                         }
                     }}
-                    bezier
+                    //bezier
                     style={{
                         marginVertical: 8,
                         borderRadius: 16

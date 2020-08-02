@@ -9,10 +9,11 @@ import React, {Component} from 'react';
 import {Text, View} from "react-native";
 import {styles} from "../../theme/style";
 import MainScrollableContents from "../mainScrollableContainer";
-import NewCasTotalChart from "../../../drawings/new_cases_charts/newCaseTotal";
 import {chartTitles, dataDescription} from "../../contents/strings";
 import CardTotalCases from "../../../drawings/resume_cards/cardTotalCases";
-import LineChartExample from "../../../drawings/example/lineChartExample";
+import LegendColors from "../../theme/legendColors";
+import NewCasesData from "../../../logic/newCasesData";
+import MyLineChart from "../../../drawings/example/lineChart";
 
 class NewCasesComponent extends Component {
 
@@ -27,20 +28,34 @@ class NewCasesComponent extends Component {
                     <>
                         <CardTotalCases />
 
-                        <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
-                            <Text style={styles.chartTitle}>Area sottesa ripartizione casi</Text>
-                            <Text style={styles.chartDescription}>Ancora positivi, guariti, deceduti</Text>
+                        <View style={[styles.cardGeneric, styles.cardShadow, styles.cardSmall]}>
+                            <Text style={[styles.chartTitle]}>{chartTitles.r0value}</Text>
+                            <Text style={[styles.chartTitle, styles.chartBigValue]}>{NewCasesData().r0}</Text>
+                            <Text style={styles.chartDescription}>{dataDescription.r0}</Text>
                         </View>
+
 
                         <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
                             <Text style={styles.chartTitle}>{chartTitles.totalCasesCurve}</Text>
-
+                            <MyLineChart color={LegendColors.red} data={NewCasesData().newCasesTrendAbsolute} />
                             <Text style={styles.chartDescription}>{dataDescription.totalCases}</Text>
                         </View>
 
                         <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
                             <Text style={styles.chartTitle}>{chartTitles.newCasesCurve}</Text>
+                            <MyLineChart color={LegendColors.red} data={NewCasesData().newCasesTrendDayValue} />
                             <Text style={styles.chartDescription}>{dataDescription.newCases}</Text>
+                        </View>
+
+                        <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
+                            <Text style={styles.chartTitle}>{chartTitles.r0Curve}</Text>
+                            <MyLineChart color={LegendColors.red} data={NewCasesData().r0Trend} />
+                            <Text style={styles.chartDescription}>{dataDescription.r0}</Text>
+                        </View>
+
+                        <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
+                            <Text style={styles.chartTitle}>Area sottesa ripartizione casi</Text>
+                            <Text style={styles.chartDescription}>Ancora positivi, guariti, deceduti</Text>
                         </View>
                     </>
                 }

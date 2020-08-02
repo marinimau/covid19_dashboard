@@ -30,6 +30,8 @@ export const chartTitles = {
     lastUpdateDate: 'Dati del ',
     totalCasesCurve: 'Andamento casi totali',
     newCasesCurve: 'Andamento contagi giornalieri',
+    r0value: 'Valore R0',
+    r0Curve: 'Andamento parametro R0',
     currentPositive: 'Positivi Attuali',
     currentPositivePercentage: 'Percentuale positivi',
     positivePercentageDescription: 'Percentuale di pazienti ancora positivi rispetto ai casi totali',
@@ -66,5 +68,6 @@ export const dataDescription = {
     totalCases: 'I casi totali tengono il conto delle persone che hanno contratto il virus dall\'inizio della pandemia. ' +
         'I nuovi contagi fanno incrementare questo parametro, nessun valore lo fa decrementare',
     newCases: 'I nuovi casi sono i contagi che vengono registrati per la prima volta, in questo grafico vengono mostrati, ' +
-        'per ciascun giorno, quanti contagi sono avvenuti.'
+        'per ciascun giorno, quanti contagi sono avvenuti.',
+    r0: 'Il parametro R0 indica il numero medio di persone che ogni positivo contagia a sua volta.'
 }

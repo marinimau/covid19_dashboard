@@ -56,7 +56,7 @@ class SwabsComponent extends Component {
 
                         <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
                             <Text style={[styles.chartTitle]}>{chartTitles.testedAndPositive}</Text>
-                            <MyLineChart color={LegendColors.blue} data={SwabData().percentagePositiveTrend} />
+                            <MyLineChart color={LegendColors.blue} decimalPlaces={3} data={SwabData().percentagePositiveTrend} />
                         </View>
 
 
