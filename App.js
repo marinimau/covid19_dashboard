@@ -58,18 +58,17 @@ export default function App() {
                             ref={navigationRef}
                             style={styles.root}>
                             <Drawer.Navigator
-                                initialRouteName="Home"
+                                initialRouteName="Resume"
                                 openByDefault
                                 drawerContentOptions={{
-                                    activeTintColor: Colors.main,
-                                    activeBackgroundColor: Colors.mainTransparent,
+                                    activeTintColor: Colors.drawerSelectedText,
+                                    activeBackgroundColor: Colors.drawerSelectedBackground,
 
                                 }}
                                 drawerType={isLargeScreen ? 'permanent' : 'front'}
                                 drawerStyle={isLargeScreen ? {width: dimens.drawerWidth} : [{width: dimens.drawerWidth}]}
                                 overlayColor={isLargeScreen ? "transparent" : Colors.basicTransparent}>
 
-                                <Drawer.Screen name={screenTitles.home} component={HomeScreen}/>
                                 <Drawer.Screen name={screenTitles.latestUpdateResume} component={LatestUpdateResumeScreen}/>
                                 <Drawer.Screen name={screenTitles.newCases}  component={NewCasesScreen}/>
                                 <Drawer.Screen name={screenTitles.recovered} component={RecoveredScreen}/>

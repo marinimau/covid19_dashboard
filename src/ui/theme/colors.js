@@ -19,7 +19,9 @@ Colors = {
     accent2: '#14A5FF',
     accent3: '#14EBFF',
     axis: '#E4E4E4',
-    bars: '#1479FF'
+    bars: '#1479FF',
+    drawerSelectedText: '#1C1C1E',
+    drawerSelectedBackground: 'rgba(25,59,104,0.1)',
 };
 
 export default Colors;

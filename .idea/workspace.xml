@@ -19,13 +19,19 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="intervall selector funzionante, i chip però non si aggiornano sul browser (solo su iOS e android)">
-      <change afterPath="$PROJECT_DIR$/src/logic/retrieveTimeLabels.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/contents/params.js" afterDir="false" />
+    <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="labels funzionanti">
+      <change afterPath="$PROJECT_DIR$/src/logic/newCasesData.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/drawings/example/lineChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/drawings/example/lineChart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/theme/dimens.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/theme/dimens.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/dateToString.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/dateToString.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/retrieveTimeLabels.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/retrieveTimeLabels.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/swabData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/swabData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/components/new_cases/newCasesComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/new_cases/newCasesComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/components/swabs/swabsComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/swabs/swabsComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/contents/params.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/contents/params.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/contents/strings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/contents/strings.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/theme/colors.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/theme/colors.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/theme/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/theme/style.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +92,7 @@
       <workItem from="1595866318277" duration="798000" />
       <workItem from="1595867529057" duration="9511000" />
       <workItem from="1596223618365" duration="4279000" />
-      <workItem from="1596265752485" duration="5774000" />
+      <workItem from="1596265752485" duration="10749000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1595078622516</created>
@@ -165,7 +171,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596267454899</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="labels funzionanti">
+      <created>1596272025264</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1596272025264</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -194,7 +207,8 @@
     <MESSAGE value="aggiunti altri line chart" />
     <MESSAGE value="rivisto grafico (lineChart) e aggiunti fitri per intervallo" />
     <MESSAGE value="intervall selector funzionante, i chip però non si aggiornano sul browser (solo su iOS e android)" />
-    <option name="LAST_COMMIT_MESSAGE" value="intervall selector funzionante, i chip però non si aggiornano sul browser (solo su iOS e android)" />
+    <MESSAGE value="labels funzionanti" />
+    <option name="LAST_COMMIT_MESSAGE" value="labels funzionanti" />
   </component>
   <component name="WindowStateProjectService">
     <state x="184" y="91" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1595879970955">
@@ -229,14 +243,15 @@
       <screen x="0" y="25" width="1440" height="814" />
     </state>
     <state width="1419" height="208" key="GridCell.Tab.0.right/0.25.1440.814@0.25.1440.814" timestamp="1596099797777" />
-    <state x="320" y="175" key="Vcs.Push.Dialog.v2" timestamp="1596267460104">
+    <state x="320" y="175" key="Vcs.Push.Dialog.v2" timestamp="1596272115653">
       <screen x="0" y="25" width="1440" height="814" />
     </state>
     <state x="320" y="174" key="Vcs.Push.Dialog.v2/0.23.1440.820@0.23.1440.820" timestamp="1595152527908" />
-    <state x="320" y="175" key="Vcs.Push.Dialog.v2/0.25.1440.814@0.25.1440.814" timestamp="1596267460104" />
-    <state x="385" y="167" width="670" height="676" key="search.everywhere.popup" timestamp="1595150088481">
-      <screen x="0" y="23" width="1440" height="820" />
+    <state x="320" y="175" key="Vcs.Push.Dialog.v2/0.25.1440.814@0.25.1440.814" timestamp="1596272115653" />
+    <state x="385" y="168" width="670" height="672" key="search.everywhere.popup" timestamp="1596357605283">
+      <screen x="0" y="25" width="1440" height="814" />
     </state>
     <state x="385" y="167" width="670" height="676" key="search.everywhere.popup/0.23.1440.820@0.23.1440.820" timestamp="1595150088481" />
+    <state x="385" y="168" width="670" height="672" key="search.everywhere.popup/0.25.1440.814@0.25.1440.814" timestamp="1596357605283" />
   </component>
 </project>

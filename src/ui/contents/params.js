@@ -10,6 +10,13 @@ import {Dimensions} from 'react-native';
 import {dimens} from "../theme/dimens";
 
 
-export const lineChartParams = {
-    numLabels:  Dimensions.get('window').width <= dimens.verySmallScreen ? 4 : 7,
+export function lineChartNumLabels(range) {
+    switch (range) {
+        case 7:
+        case -1:
+            return (Dimensions.get('window').width <= dimens.verySmallScreen ? 4 : 7)
+        case 30:
+            return 4;
+    }
+
 }
