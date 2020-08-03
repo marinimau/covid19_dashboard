@@ -31,7 +31,7 @@ const SwabData = (data) => {
             for (let i=1; i< data.length; i+=1){
                 dataToReturn.swabTrendAbsolute.push(data[i]['tamponi']);
                 dataToReturn.testedCasesTrendAbsolute.push(data[i]['casi_testati']);
-                dataToReturn.percentagePositiveTrend.push( data[i]['casi_testati'] === null ? null : ((data[i]['nuovi_positivi'] / data[i]['casi_testati']) * 100));
+                dataToReturn.percentagePositiveTrend.push( data[i]['casi_testati'] === null ? null : ((data[i]['totale_casi'] / data[i]['casi_testati']) * 100));
             }
         }
 

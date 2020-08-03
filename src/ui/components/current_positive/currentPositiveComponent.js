@@ -11,14 +11,15 @@ import {styles} from "../../theme/style";
 import MainScrollableContents from "../mainScrollableContainer";
 import CardCurrentPositive from "../../../drawings/resume_cards/cardCurrentPositive";
 import {chartTitles} from "../../contents/strings";
-import MyProgressCircle from "../../../drawings/example/progressCircle";
+import MyProgressCircle from "../../../drawings/charts/progressCircle";
 import LegendColors from "../../theme/legendColors";
 import CurrentPositiveData from "../../../logic/currentPositiveData";
-import MyLineChart from "../../../drawings/example/lineChart";
+import MyLineChart from "../../../drawings/charts/lineChart";
 import PositiveDeltaData from "../../../logic/positiveDeltaData";
 import CardHomeQuarantine from "../../../drawings/resume_cards/cardHomeQuarantine";
 import CardHospitalizedWithSymptoms from "../../../drawings/resume_cards/cardHospitalizedWithSymptoms";
 import CardCritical from "../../../drawings/resume_cards/cardCritical";
+import MyStackedBarChart from "../../../drawings/charts/stackedAreaChart";
 
 class CurrentPositiveComponent extends Component {
 
@@ -56,8 +57,17 @@ class CurrentPositiveComponent extends Component {
                         <CardCritical />
 
                         <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
-                            <Text>Area sottesa delle 3 categorie (valore percentuale)</Text>
+                            <Text style={styles.chartTitle}>{chartTitles.positiveRepartition}</Text>
+                            <MyStackedBarChart
+                                data={[
+                                    PositiveDeltaData().criticalPercentage,
+                                    PositiveDeltaData().hospitalizedPercentage,
+                                    PositiveDeltaData().homeQuarantinePercentage,
+                                ]}
+                                legend={[chartTitles.critical, chartTitles.hospitalizedWithSymptoms, chartTitles.positiveHomeQuarantine]}
+                                color={LegendColors.yellow} />
                         </View>
+
                     </>
                 }
             />

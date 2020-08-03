@@ -12,10 +12,10 @@ import MainScrollableContents from "../mainScrollableContainer";
 import CardSwab from "../../../drawings/resume_cards/cardSwab";
 import CardTestedCases from "../../../drawings/resume_cards/cardTestedCases";
 import {chartTitles, dataDescription} from "../../contents/strings";
-import MyProgressCircle from "../../../drawings/example/progressCircle";
+import MyProgressCircle from "../../../drawings/charts/progressCircle";
 import LegendColors from "../../theme/legendColors";
 import SwabData from "../../../logic/swabData";
-import MyLineChart from "../../../drawings/example/lineChart";
+import MyLineChart from "../../../drawings/charts/lineChart";
 
 class SwabsComponent extends Component {
 

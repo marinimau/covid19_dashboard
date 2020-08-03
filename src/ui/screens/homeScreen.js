@@ -7,13 +7,13 @@
 
 import React from "react";
 import {screenTitles} from "../contents/strings";
-import ExampleComponent from "../components/example/exampleComponent";
 import ScreenContainer from "../components/screenContainer";
+import LatestUpdateResumeScreen from "./latestUpdateResumeScreen";
 
 function HomeScreen({navigation}) {
 
     return (
-        <ScreenContainer title={screenTitles.home} component={<ExampleComponent/>} />
+        <ScreenContainer title={screenTitles.home} component={<LatestUpdateResumeScreen/>} />
     );
 }
 

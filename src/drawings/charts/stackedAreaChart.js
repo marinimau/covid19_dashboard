@@ -1,6 +1,6 @@
 /**
  * covid19_dashboard copyright © 2020
- * Created by mauromarini on 23/07/20
+ * Created by mauromarini on 03/08/20
  * Repository: http://github.com/marinimau/covid19_dashboard
  * Location: Baratili San Pietro
  */
@@ -8,15 +8,14 @@
 import React, {Component} from 'react';
 import {FlatList, View} from 'react-native';
 import { Chip } from 'react-native-paper';
-import {LineChart} from "react-native-chart-kit";
+import {StackedBarChart} from "react-native-chart-kit";
 import {dimens, dynamicDimens} from "../../ui/theme/dimens";
 import Colors from "../../ui/theme/colors";
 import {hexToRgb} from "../../utils/colorConverter";
 import intervalSelectorFilter from "../../ui/contents/intervalSelectorData";
 import DateLabels from "../../logic/retrieveTimeLabels";
 
-export default class MyLineChart extends Component{
-
+export default class MyStackedBarChart extends Component{
 
     constructor(props) {
         super(props);
@@ -70,6 +69,7 @@ export default class MyLineChart extends Component{
 
                 <View style={{marginTop: 8}}>
                     <FlatList
+                        style={{marginBottom: 20}}
                         data={intervalSelectorFilter}
                         renderItem={({item}) => (
                             <Chip
@@ -94,43 +94,47 @@ export default class MyLineChart extends Component{
                     />
                 </View>
 
-                <LineChart
+                <StackedBarChart
+                    width={dynamicDimens.chartFullWidth}
                     data={{
                         labels: this.state.labels,
-                        datasets: [
-                            {
-                                data: this.state.data
-                            }
+                        legend: this.props.legend,
+                        data: [
+                            [60, 60, 60],
+                            [60, 60, 60],
+                            [60, 60, 60],
+                            [60, 60, 60],
+                            [60, 60, 60],
+                            [30, 30, 60]
+
+                        ],
+                        barColors: [
+                            `rgba(${colorRGB.r}, ${colorRGB.g}, ${colorRGB.b}, 0.9)`,
+                            `rgba(${colorRGB.r}, ${colorRGB.g}, ${colorRGB.b}, 0.6)`,
+                            `rgba(${colorRGB.r}, ${colorRGB.g}, ${colorRGB.b}, 0.3)`,
                         ]
                     }}
-                    width={dynamicDimens.chartFullWidth} // from react-native
                     height={dimens.lineChartHeight}
-                    yAxisLabel=""
-                    yAxisSuffix=""
-                    withVerticalLines={false}
-                    yAxisInterval={1} // optional, defaults to 1
                     chartConfig={{
                         backgroundColor: Colors.basicElevation,
                         backgroundGradientFrom: Colors.basicElevation,
                         backgroundGradientTo: Colors.basicElevation,
-                        decimalPlaces: this.props.decimalPlaces === undefined ? 0 : this.props.decimalPlaces, // optional, defaults to 2dp
+                        decimalPlaces: this.props.decimalPlaces === undefined ? 0 : this.props.decimalPlaces,
                         color: (opacity = 1) => `rgba(${colorRGB.r}, ${colorRGB.g}, ${colorRGB.b}, ${opacity})`,
                         labelColor: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
                         style: {
-                            borderRadius: 16
+                            borderRadius: 16,
                         },
                         propsForDots: {
-                            r: "0",
+                            r: "2",
                             strokeWidth: "0",
                             stroke: Colors.basicElevation
                         }
                     }}
-                    //bezier
-                    style={{
-                        marginVertical: 8,
-                        borderRadius: 16
-                    }}
+                    yAxisLabel=""
+                    yAxisSuffix="%"
                 />
+
 
             </View>
 
