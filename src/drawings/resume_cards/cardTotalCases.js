@@ -22,7 +22,7 @@ export default class CardTotalCases extends Component{
             <LinearGradient  colors={[LegendColors.red, LegendColors.lightred]}  style={[styles.cardGeneric, styles.cardShadow, styles.cardSmall, {shadowColor: LegendColors.lightred}]}>
                 <Text style={[styles.chartTitle, styles.indicatorLight]}>{chartTitles.totalCases}</Text>
                 <Text style={[styles.indicatorValue, styles.indicatorValueBold, styles.indicatorLight]}>{latestUpdateData().totalCases}</Text>
-                <Text style={[styles.indicatorValue, styles.indicatorValueIncr,  styles.indicatorLight]}>{latestUpdateData().newCases}</Text>
+                <Text style={[styles.indicatorValue, styles.indicatorValueIncr,  styles.indicatorLight]}>{latestUpdateData().newCases} ({latestUpdateData().totalCasesVariationPercentage}%)</Text>
             </LinearGradient>
         );
     }

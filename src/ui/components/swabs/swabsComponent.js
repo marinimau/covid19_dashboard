@@ -10,8 +10,8 @@ import {Text, View} from "react-native";
 import {styles} from "../../theme/style";
 import MainScrollableContents from "../mainScrollableContainer";
 import CardSwab from "../../../drawings/resume_cards/cardSwab";
-import CardTestedCases from "../../../drawings/swabs/cardTestedCases";
-import {chartTitles} from "../../contents/strings";
+import CardTestedCases from "../../../drawings/resume_cards/cardTestedCases";
+import {chartTitles, dataDescription} from "../../contents/strings";
 import MyProgressCircle from "../../../drawings/example/progressCircle";
 import LegendColors from "../../theme/legendColors";
 import SwabData from "../../../logic/swabData";
@@ -40,7 +40,9 @@ class SwabsComponent extends Component {
 
 
                         <View style={[styles.cardGeneric, styles.cardShadow, styles.cardSmall]}>
-                            <Text>Percentuale positivi individuati per sospetto vs screening</Text>
+                            <Text style={[styles.chartTitle]}>{chartTitles.positiveByScreening}</Text>
+                            <MyProgressCircle value={SwabData().positiveByScreening} color={LegendColors.blue}/>
+                            <Text style={styles.chartDescription}>{dataDescription.screening}</Text>
                         </View>
 
 

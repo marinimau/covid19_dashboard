@@ -20,7 +20,7 @@ export default class CardRecovered extends Component{
             <LinearGradient colors={[LegendColors.lightgreen, LegendColors.green]} style={[styles.cardGeneric, styles.cardShadow, styles.cardSmall, {shadowColor: LegendColors.lightgreen}]}>
                 <Text style={[styles.chartTitle, styles.indicatorLight]}>{chartTitles.recovered}</Text>
                 <Text style={[styles.indicatorValue, styles.indicatorValueBold, styles.indicatorLight]}>{latestUpdateData().totalRecovered}</Text>
-                <Text style={[styles.indicatorValue, styles.indicatorValueIncr, styles.indicatorLight]}>{latestUpdateData().recoveredVariation}</Text>
+                <Text style={[styles.indicatorValue, styles.indicatorValueIncr, styles.indicatorLight]}>{latestUpdateData().recoveredVariation} ({latestUpdateData().recoveredVariationPercentage}%)</Text>
             </LinearGradient>
         );
     }

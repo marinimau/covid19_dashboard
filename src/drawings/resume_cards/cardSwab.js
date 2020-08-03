@@ -22,7 +22,7 @@ export default class CardSwab extends Component{
             <LinearGradient  colors={[LegendColors.blue, LegendColors.lightblue]}  style={[styles.cardGeneric, styles.cardShadow, styles.cardSmall, {shadowColor: LegendColors.lightblue}]}>
                 <Text style={[styles.chartTitle, styles.indicatorLight]}>{chartTitles.swab}</Text>
                 <Text style={[styles.indicatorValue, styles.indicatorValueBold, styles.indicatorLight]}>{latestUpdateData().swab}</Text>
-                <Text style={[styles.indicatorValue, styles.indicatorValueIncr,  styles.indicatorLight]}>{latestUpdateData().swabVariation}</Text>
+                <Text style={[styles.indicatorValue, styles.indicatorValueIncr,  styles.indicatorLight]}>{latestUpdateData().swabVariation} ({latestUpdateData().swabVariationPercentage}%)</Text>
             </LinearGradient>
         );
     }
