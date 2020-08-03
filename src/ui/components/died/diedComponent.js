@@ -10,14 +10,14 @@ import {Text, View} from "react-native";
 import {styles} from "../../theme/style";
 import MainScrollableContents from "../mainScrollableContainer";
 import CardDied from "../../../drawings/resume_cards/cardDied";
-import MyProgressCircle from "../../../drawings/example/progressCircle";
+import MyProgressCircle from "../../../drawings/charts/progressCircle";
 import LegendColors from "../../theme/legendColors";
 import {chartTitles} from "../../contents/strings";
 import { AnimatedCircularProgress } from 'react-native-circular-progress';
 import Colors from "../../theme/colors";
 import DeathsData from "../../../logic/deathData";
 import RecoveredData from "../../../logic/recoveredData";
-import MyLineChart from "../../../drawings/example/lineChart";
+import MyLineChart from "../../../drawings/charts/lineChart";
 
 class DiedComponent extends Component {
 
@@ -50,7 +50,7 @@ class DiedComponent extends Component {
 
                         <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
                             <Text style={[styles.chartTitle]}>{chartTitles.deathTrendProportional}</Text>
-                            <MyLineChart color={LegendColors.grey} data={DeathsData().diedTrendProportional} />
+                            <MyLineChart color={LegendColors.grey} decimalPlaces={2} data={DeathsData().diedTrendProportional} />
                         </View>
                     </>
                 }

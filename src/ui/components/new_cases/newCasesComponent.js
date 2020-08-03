@@ -13,7 +13,7 @@ import {chartTitles, dataDescription} from "../../contents/strings";
 import CardTotalCases from "../../../drawings/resume_cards/cardTotalCases";
 import LegendColors from "../../theme/legendColors";
 import NewCasesData from "../../../logic/newCasesData";
-import MyLineChart from "../../../drawings/example/lineChart";
+import MyLineChart from "../../../drawings/charts/lineChart";
 
 class NewCasesComponent extends Component {
 

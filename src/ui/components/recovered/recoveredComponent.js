@@ -11,10 +11,10 @@ import {styles} from "../../theme/style";
 import MainScrollableContents from "../mainScrollableContainer";
 import CardRecovered from "../../../drawings/resume_cards/cardRecovered";
 import {chartTitles} from "../../contents/strings";
-import MyProgressCircle from "../../../drawings/example/progressCircle";
+import MyProgressCircle from "../../../drawings/charts/progressCircle";
 import LegendColors from "../../theme/legendColors";
 import RecoveredData from "../../../logic/recoveredData";
-import MyLineChart from "../../../drawings/example/lineChart";
+import MyLineChart from "../../../drawings/charts/lineChart";
 
 class RecoveredComponent extends Component {
 
