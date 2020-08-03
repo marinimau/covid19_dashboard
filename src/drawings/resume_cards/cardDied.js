@@ -20,7 +20,7 @@ export default class CardDied extends Component{
             <LinearGradient colors={[LegendColors.grey, LegendColors.lightgrey]}  style={[styles.cardGeneric, styles.cardShadow, styles.cardSmall, {shadowColor: LegendColors.grey}]}>
                 <Text style={[styles.chartTitle, styles.indicatorLight]}>{chartTitles.died}</Text>
                 <Text style={[styles.indicatorValue, styles.indicatorValueBold, styles.indicatorLight]}>{latestUpdateData().totalDeaths}</Text>
-                <Text style={[styles.indicatorValue, styles.indicatorValueIncr,  styles.indicatorLight]}>{latestUpdateData().deathsVariation}</Text>
+                <Text style={[styles.indicatorValue, styles.indicatorValueIncr,  styles.indicatorLight]}>{latestUpdateData().deathsVariation} ({latestUpdateData().deathsVariationPercentage}%)</Text>
             </LinearGradient>
         );
     }

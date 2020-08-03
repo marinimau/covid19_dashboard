@@ -7,7 +7,8 @@
 
 export const appInfo = {
     name: 'Covid19 Dashboard',
-    version: '1.0.0 beta'
+    version: '1.0.0 beta',
+    author: 'Mauro Marini'
 };
 
 export const loadingMessages = {
@@ -42,7 +43,7 @@ export const chartTitles = {
     recoveredPercentageDescription: 'Percentuale pazienti guariti rispetto ai casi totali',
     recoveredTrend: 'Andamento guariti (totale)',
     recoveredTrendDay: 'Andamento guariti (variazione giornaliera)',
-    recoveredTrendProportional: 'Andamento guariti (in proporzione ai positivi)',
+    recoveredTrendProportional: 'Andamento guariti (ogni 100 positivi)',
     died: 'Deceduti',
     deathsRatio: 'Mortalità',
     deathRatioDescription: 'Percentuale pazienti deceduti rispetto ai casi totali',
@@ -52,13 +53,17 @@ export const chartTitles = {
     totalCases: 'Casi totali',
     swab: 'Tamponi',
     testedCases: 'Casi testati',
+    positiveByScreening: 'Individuati con screening',
     swabPositiveRatio: 'Percentuale positivi',
     swabPositiveRatioDescription: 'Percentuale di pazienti positivi rispetto ai casi testati',
     swabTrend: 'Andamento tamponi (totale)',
     testedCaseTrend: 'Andamento casi testati (totale)',
     testedAndPositive: 'Percentuale positivi rispetto ai testati',
     placeholderValue: 'N/D',
-    placeholderValueIncr: ' (+N/D)'
+    placeholderValueIncr: ' (+N/D)',
+    positiveHomeQuarantine: 'Isolamento domiciliare',
+    hospitalizedWithSymptoms: 'Ricoverati con sintomi',
+    critical: 'Terapia intensiva',
 
 }
 
@@ -69,5 +74,7 @@ export const dataDescription = {
         'I nuovi contagi fanno incrementare questo parametro, nessun valore lo fa decrementare',
     newCases: 'I nuovi casi sono i contagi che vengono registrati per la prima volta, in questo grafico vengono mostrati, ' +
         'per ciascun giorno, quanti contagi sono avvenuti.',
-    r0: 'Il parametro R0 indica il numero medio di persone che ogni positivo contagia a sua volta.'
+    r0: 'Il parametro R0 indica il numero medio di persone che ogni positivo contagia a sua volta.',
+    screening: 'Percentuale positivi individuati tramite screening, i restanti sono stati individuati per sospetto diagnostico'
+
 }

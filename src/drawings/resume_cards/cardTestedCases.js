@@ -16,13 +16,12 @@ import Colors from "../../ui/theme/colors";
 
 export default class CardTestedCases extends Component{
 
-
     render() {
         return (
             <View  style={[styles.cardGeneric, styles.cardShadow, styles.cardSmall]}>
                 <Text style={[styles.chartTitle]}>{chartTitles.testedCases}</Text>
                 <Text style={[styles.indicatorValue, styles.indicatorValueBold]}>{latestUpdateData().testedCases}</Text>
-                <Text style={[styles.indicatorValue, styles.indicatorValueIncr]}>{latestUpdateData().testedCasesVariation}</Text>
+                <Text style={[styles.indicatorValue, styles.indicatorValueIncr]}>{latestUpdateData().testedCasesVariation} ({latestUpdateData().testedCasesVariationPercentage}%)</Text>
             </View>
         );
     }

@@ -12,6 +12,7 @@ let dataToReturn = {
     swabTrendAbsolute: [],
     testedCasesTrendAbsolute: [],
     percentagePositiveTrend: [],
+    positiveByScreening: 0,
 };
 
 const SwabData = (data) => {
@@ -24,6 +25,7 @@ const SwabData = (data) => {
         let d = data[data.length - 1];
 
         dataToReturn.positiveRatio = (Math.round(d['totale_casi'] / d['casi_testati'] * 100 * 100) / 100).toFixed(2);
+        dataToReturn.positiveByScreening = (Math.round(d['casi_da_screening'] / d['totale_casi'] * 100)).toFixed(2);
 
         if( dataToReturn.swabTrendAbsolute.length === 0){
             for (let i=1; i< data.length; i+=1){

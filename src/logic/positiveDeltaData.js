@@ -10,6 +10,24 @@ import Records from "./dataset";
 let dataToReturn = {
     deltaTrendAbsolute: [],
     deltaTrendDayVariation: [],
+
+    /* Home Quarantine */
+    homeQuarantine: 0,
+    homeQuarantinePercentage: 0,
+    homeQuarantineVariation: 0,
+    homeQuarantineVariationPercentage: 0,
+
+    /* Hospitalized with Symptoms */
+    hospitalized: 0,
+    hospitalizedPercentage: 0,
+    hospitalizedVariation: 0,
+    hospitalizedVariationPercentage: 0,
+
+    /* Critical */
+    critical: 0,
+    criticalPercentage: 0,
+    criticalVariation: 0,
+    criticalVariationPercentage: 0,
 };
 
 const PositiveDeltaData = (data) => {
@@ -20,6 +38,24 @@ const PositiveDeltaData = (data) => {
 
     if(data !== null){
         let d = data[data.length - 1];
+
+        /* Home Quarantine */
+        dataToReturn.homeQuarantine = d['isolamento_domiciliare'];
+        dataToReturn.homeQuarantinePercentage = Math.round(Math.abs(d['isolamento_domiciliare'] / d['totale_positivi'])* 100 * 100 / 100).toFixed(2);
+        dataToReturn.homeQuarantineVariation = data[data.length - 2]['isolamento_domiciliare'] - d['isolamento_domiciliare'];
+        dataToReturn.homeQuarantineVariationPercentage = Math.round((data[data.length - 2]['isolamento_domiciliare'] - d['isolamento_domiciliare']) / d['isolamento_domiciliare'] * 100 * 100 / 100).toFixed(2);
+
+        /* Hospitalized with Symptoms */
+        dataToReturn.hospitalized = d['totale_ospedalizzati'];
+        dataToReturn.hospitalizedPercentage = Math.round(Math.abs(d['totale_ospedalizzati'] / d['totale_positivi'])* 100 * 100 / 100).toFixed(2);
+        dataToReturn.hospitalizedVariation = data[data.length - 2]['totale_ospedalizzati'] - d['totale_ospedalizzati'];
+        dataToReturn.hospitalizedVariationPercentage = Math.round((data[data.length - 2]['totale_ospedalizzati'] - d['totale_ospedalizzati']) / d['totale_ospedalizzati'] * 100 * 100 / 100).toFixed(2);
+
+        /* Critical */
+        dataToReturn.critical = d['terapia_intensiva'];
+        dataToReturn.criticalPercentage = Math.round(Math.abs(d['terapia_intensiva'] / d['totale_positivi'])* 100 * 100 / 100).toFixed(2);
+        dataToReturn.criticalVariation = data[data.length - 2]['terapia_intensiva'] - d['terapia_intensiva'];
+        dataToReturn.criticalVariationPercentage = Math.round((data[data.length - 2]['terapia_intensiva'] - d['terapia_intensiva']) / d['terapia_intensiva'] * 100 * 100 / 100).toFixed(2);
 
 
         if( dataToReturn.deltaTrendAbsolute.length === 0){

@@ -12,15 +12,21 @@ let dataToReturn = {
     newCases: 0,
     totalCases: 0,
     totalCurrentCases: 0,
+    totalCasesVariationPercentage: 0,
     currentCasesVariation: 0,
+    currentCasesVariationPercentage: 0,
     totalRecovered: 0,
     recoveredVariation: 0,
+    recoveredVariationPercentage: 0,
     totalDeaths: 0,
     deathsVariation: 0,
+    deathsVariationPercentage: 0,
     swab: 0,
     swabVariation: 0,
+    swabVariationPercentage: 0,
     testedCases: 0,
     testedCasesVariation: 0,
+    testedCasesVariationPercentage: 0
 };
 
 const latestUpdateData = (data) => {
@@ -38,28 +44,35 @@ const latestUpdateData = (data) => {
         /* All Cases */
         dataToReturn.newCases = '+ ' + Math.abs(d['nuovi_positivi']);
         dataToReturn.totalCases = d['totale_casi'];
+        dataToReturn.totalCasesVariationPercentage = '+' + ((Math.round(Math.abs(d['nuovi_positivi']) / d['totale_casi'] * 100 * 100) / 100).toFixed(2));
 
         /* Current cases */
         dataToReturn.totalCurrentCases = d['totale_positivi'];
-        dataToReturn.currentCasesVariation = d['variazione_totale_positivi'] > 0 ?
+        dataToReturn.currentCasesVariation = d['variazione_totale_positivi'] >= 0 ?
             '+ ' + d['variazione_totale_positivi'] :
-            '- ' + d['variazione_totale_positivi'];
+            d['variazione_totale_positivi'];
+        dataToReturn.currentCasesVariationPercentage = (Math.round( d['variazione_totale_positivi'] / d['totale_positivi'] * 100 * 100) / 100).toFixed(2);
+
 
         /* Recovered */
         dataToReturn.totalRecovered = d['dimessi_guariti'];
         dataToReturn.recoveredVariation =  '+ '+Math.abs(data[data.length - 2]['dimessi_guariti'] - d['dimessi_guariti']);
+        dataToReturn.recoveredVariationPercentage = '+' + Math.round((Math.abs(Math.abs(data[data.length - 2]['dimessi_guariti'] - d['dimessi_guariti']) / d['dimessi_guariti'] * 100) * 100) / 100).toFixed(2);
 
         /* Deaths */
         dataToReturn.totalDeaths = d['deceduti'];
         dataToReturn.deathsVariation = '+ ' + Math.abs(data[data.length - 2]['deceduti'] - d['deceduti']);
+        dataToReturn.deathsVariationPercentage = '+' + Math.round((Math.abs(data[data.length - 2]['deceduti'] - d['deceduti']) /d['deceduti'] * 100 * 100) / 100).toFixed(2);
 
         /* Swab */
         dataToReturn.swab = d['tamponi'];
         dataToReturn.swabVariation = '+ ' + Math.abs(data[data.length - 2]['tamponi'] - d['tamponi']);
+        dataToReturn.swabVariationPercentage =  '+' +  Math.round(Math.abs(data[data.length - 2]['tamponi'] - d['tamponi']) /d['tamponi'] * 100  * 100 / 100).toFixed(2);
 
         /* Tested Cases */
         dataToReturn.testedCases = d['casi_testati'];
         dataToReturn.testedCasesVariation = '+ ' + Math.abs(data[data.length - 2]['casi_testati'] - d['casi_testati']);
+        dataToReturn.testedCasesVariationPercentage = '+' + Math.round(Math.abs(data[data.length - 2]['casi_testati'] - d['casi_testati']) /d['casi_testati'] * 100  * 100 / 100).toFixed(2);
     }
     return dataToReturn;
 };

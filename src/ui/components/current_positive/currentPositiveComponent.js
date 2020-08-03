@@ -16,6 +16,9 @@ import LegendColors from "../../theme/legendColors";
 import CurrentPositiveData from "../../../logic/currentPositiveData";
 import MyLineChart from "../../../drawings/example/lineChart";
 import PositiveDeltaData from "../../../logic/positiveDeltaData";
+import CardHomeQuarantine from "../../../drawings/resume_cards/cardHomeQuarantine";
+import CardHospitalizedWithSymptoms from "../../../drawings/resume_cards/cardHospitalizedWithSymptoms";
+import CardCritical from "../../../drawings/resume_cards/cardCritical";
 
 class CurrentPositiveComponent extends Component {
 
@@ -46,21 +49,11 @@ class CurrentPositiveComponent extends Component {
                             <MyLineChart color={LegendColors.yellow} data={PositiveDeltaData().deltaTrendDayVariation} />
                         </View>
 
-                        <View style={[styles.cardGeneric, styles.cardShadow, styles.cardSmall]}>
-                            <Text>Isolamento domiciliare, valore incremento e percentuale</Text>
-                        </View>
+                        <CardHomeQuarantine />
 
-                        <View style={[styles.cardGeneric, styles.cardShadow, styles.cardSmall]}>
-                            <Text>ricoverati con sintomi, valore, incremento e percentuale</Text>
-                        </View>
+                        <CardHospitalizedWithSymptoms />
 
-                        <View style={[styles.cardGeneric, styles.cardShadow, styles.cardSmall]}>
-                            <Text>terapia intensiva, valore incremento e percentuale</Text>
-                        </View>
-
-                        <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
-                            <Text>Area sottesa delle 3 categorie (valore assoluto)</Text>
-                        </View>
+                        <CardCritical />
 
                         <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
                             <Text>Area sottesa delle 3 categorie (valore percentuale)</Text>
