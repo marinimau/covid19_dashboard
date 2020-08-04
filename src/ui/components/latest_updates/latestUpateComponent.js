@@ -33,20 +33,21 @@ class LatestUpdateComponent extends Component {
                             <CardTotalCases/>
                         </TouchableOpacity>
 
-                        <TouchableOpacity onPress={() => {navigate(screenTitles.recovered);}}>
-                            <CardRecovered/>
-                        </TouchableOpacity>
-
-                        <TouchableOpacity onPress={() => {navigate(screenTitles.died);}}>
-                            <CardDied/>
-                        </TouchableOpacity>
-
                         <TouchableOpacity onPress={() => {navigate(screenTitles.currentPositive);}}>
                             <CardCurrentPositive/>
                         </TouchableOpacity>
 
+
+                        <TouchableOpacity onPress={() => {navigate(screenTitles.recovered);}}>
+                            <CardRecovered/>
+                        </TouchableOpacity>
+
                         <TouchableOpacity onPress={() => {navigate(screenTitles.swab);}}>
                             <CardSwab/>
+                        </TouchableOpacity>
+
+                        <TouchableOpacity onPress={() => {navigate(screenTitles.died);}}>
+                            <CardDied/>
                         </TouchableOpacity>
 
                         <CardDate />
