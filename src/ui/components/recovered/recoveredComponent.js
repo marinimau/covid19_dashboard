@@ -10,7 +10,7 @@ import {Text, View} from "react-native";
 import {styles} from "../../theme/style";
 import MainScrollableContents from "../mainScrollableContainer";
 import CardRecovered from "../../../drawings/resume_cards/cardRecovered";
-import {chartTitles} from "../../contents/strings";
+import {chartTitles, dataDescription} from "../../contents/strings";
 import MyProgressCircle from "../../../drawings/charts/progressCircle";
 import LegendColors from "../../theme/legendColors";
 import RecoveredData from "../../../logic/recoveredData";
@@ -38,16 +38,19 @@ class RecoveredComponent extends Component {
                         <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
                             <Text style={[styles.chartTitle]}>{chartTitles.recoveredTrend}</Text>
                             <MyLineChart color={LegendColors.green} data={RecoveredData().recoveredTrendAbsolute} />
+                            <Text style={styles.chartDescription}>{dataDescription.recoveredTotal}</Text>
                         </View>
 
                         <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
                             <Text style={[styles.chartTitle]}>{chartTitles.recoveredTrendDay}</Text>
                             <MyLineChart color={LegendColors.green} data={RecoveredData().recoveredTrendDayValue} />
+                            <Text style={styles.chartDescription}>{dataDescription.recoveredVariation}</Text>
                         </View>
 
                         <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
                             <Text style={[styles.chartTitle]}>{chartTitles.recoveredTrendProportional}</Text>
                             <MyLineChart color={LegendColors.green} data={RecoveredData().recoveredTrendProportional} />
+                            <Text style={styles.chartDescription}>{dataDescription.recoveredTrendProportional}</Text>
                         </View>
                     </>
                 }

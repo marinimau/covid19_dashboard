@@ -19,16 +19,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="sistemata UI">
-      <change afterPath="$PROJECT_DIR$/src/logic/totalCasesRepartitionData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.expo/packager-info.json" beforeDir="false" afterPath="$PROJECT_DIR$/.expo/packager-info.json" afterDir="false" />
+    <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="adattato il grafico e inserita stackedAreaChart.js anche per la ripartizione dei casi totali">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/drawings/charts/lineChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/drawings/charts/lineChart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/drawings/charts/stackedAreaChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/drawings/charts/stackedAreaChart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/positiveRepartitionData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/positiveRepartitionData.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/components/current_positive/currentPositiveComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/current_positive/currentPositiveComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/components/died/diedComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/died/diedComponent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/components/new_cases/newCasesComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/new_cases/newCasesComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/components/recovered/recoveredComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/recovered/recoveredComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/components/swabs/swabsComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/swabs/swabsComponent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/contents/strings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/contents/strings.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -149,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595926195216</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="adattato il grafico e inserita stackedAreaChart.js anche per la ripartizione dei casi totali">
+      <created>1596654268978</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1596654268978</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -175,7 +179,8 @@
     <MESSAGE value="aggiunto il loader" />
     <MESSAGE value="iniziato a organizzare i grafici" />
     <MESSAGE value="sistemata UI" />
-    <option name="LAST_COMMIT_MESSAGE" value="sistemata UI" />
+    <MESSAGE value="adattato il grafico e inserita stackedAreaChart.js anche per la ripartizione dei casi totali" />
+    <option name="LAST_COMMIT_MESSAGE" value="adattato il grafico e inserita stackedAreaChart.js anche per la ripartizione dei casi totali" />
   </component>
   <component name="WindowStateProjectService">
     <state x="814" y="295" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1596474192548">
@@ -215,11 +220,11 @@
       <screen x="0" y="23" width="2560" height="1352" />
     </state>
     <state x="513" y="408" key="RollbackChangesDialog/0.23.2560.1352@0.23.2560.1352" timestamp="1596652988315" />
-    <state x="569" y="272" key="Vcs.Push.Dialog.v2" timestamp="1595926198036">
+    <state x="569" y="272" key="Vcs.Push.Dialog.v2" timestamp="1596654343747">
       <screen x="0" y="23" width="2560" height="1352" />
     </state>
     <state x="320" y="174" key="Vcs.Push.Dialog.v2/0.23.1440.820@0.23.1440.820" timestamp="1595152527908" />
-    <state x="569" y="272" key="Vcs.Push.Dialog.v2/0.23.2560.1352@0.23.2560.1352" timestamp="1595926198036" />
+    <state x="569" y="272" key="Vcs.Push.Dialog.v2/0.23.2560.1352@0.23.2560.1352" timestamp="1596654343747" />
     <state x="571" y="619" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1596653001048">
       <screen x="0" y="23" width="2560" height="1352" />
     </state>
@@ -228,5 +233,17 @@
       <screen x="0" y="23" width="1440" height="820" />
     </state>
     <state x="385" y="167" width="670" height="676" key="search.everywhere.popup/0.23.1440.820@0.23.1440.820" timestamp="1595150088481" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/ui/contents/strings.js</url>
+          <line>47</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
