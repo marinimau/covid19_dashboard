@@ -30,6 +30,7 @@ export const screenTitles = {
 export const chartTitles = {
     lastUpdateDate: 'Dati del ',
     totalCasesCurve: 'Andamento casi totali',
+    totalCasesRepartion: 'Ripartizione casi totali nel tempo',
     newCasesCurve: 'Andamento contagi giornalieri',
     r0value: 'Valore R0',
     r0Curve: 'Andamento parametro R0',

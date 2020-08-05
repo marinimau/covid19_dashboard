@@ -59,7 +59,11 @@ class CurrentPositiveComponent extends Component {
 
                         <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
                             <Text style={styles.chartTitle}>{chartTitles.positiveRepartition}</Text>
-                            <StackedAreaChart color={LegendColors.yellow} data={PositiveRepartitionData().repartition}/>
+                            <StackedAreaChart
+                                color={LegendColors.yellow}
+                                keyValues={['critical', 'hospitalized', 'homeQuarantine']}
+                                legend={[chartTitles.positiveHomeQuarantine, chartTitles.hospitalizedWithSymptoms, chartTitles.critical]}
+                                data={PositiveRepartitionData().repartition}/>
                         </View>
 
                     </>

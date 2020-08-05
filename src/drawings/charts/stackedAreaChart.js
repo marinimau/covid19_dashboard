@@ -73,7 +73,7 @@ class MyStackAreaChart extends React.PureComponent {
 
         const colorRGB = hexToRgb(this.props.color);
         const colors = [`rgba(${colorRGB.r}, ${colorRGB.g}, ${colorRGB.b}, 0.9)`, `rgba(${colorRGB.r}, ${colorRGB.g}, ${colorRGB.b}, 0.6)`, `rgba(${colorRGB.r}, ${colorRGB.g}, ${colorRGB.b}, 0.3)`]
-        const keys = ['critical', 'hospitalized', 'homeQuarantine'];
+        const keys = this.props.keyValues
         const axesSvg = {fontSize: 12, fill: Colors.basic};
         const gridSvg = {
             fill: `rgba(${colorRGB.r}, ${colorRGB.g}, ${colorRGB.b}, 0.3)`,
@@ -154,15 +154,15 @@ class MyStackAreaChart extends React.PureComponent {
                 {/* Legend */}
                 <View style={styles.legendExternalContainer}>
                     <ChartColorLegend
-                        title={chartTitles.positiveHomeQuarantine}
+                        title={this.props.legend[0]}
                         color={`rgba(${colorRGB.r}, ${colorRGB.g}, ${colorRGB.b}, 0.3)`}/>
 
                     <ChartColorLegend
-                        title={chartTitles.hospitalizedWithSymptoms}
+                        title={this.props.legend[1]}
                         color={`rgba(${colorRGB.r}, ${colorRGB.g}, ${colorRGB.b}, 0.6)`}/>
 
                     <ChartColorLegend
-                        title={chartTitles.critical}
+                        title={this.props.legend[2]}
                         color={`rgba(${colorRGB.r}, ${colorRGB.g}, ${colorRGB.b}, 0.9)`}/>
 
                 </View>
