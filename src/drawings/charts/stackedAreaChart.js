@@ -5,17 +5,23 @@
  * Location: Baratili San Pietro
  */
 
-import React, {Component} from 'react';
-import {FlatList, View} from 'react-native';
-import { Chip } from 'react-native-paper';
-import {StackedBarChart} from "react-native-chart-kit";
-import {dimens, dynamicDimens} from "../../ui/theme/dimens";
-import Colors from "../../ui/theme/colors";
+
+import React from 'react'
+import {StackedAreaChart, YAxis, XAxis, Grid} from 'react-native-svg-charts'
+import * as shape from 'd3-shape'
+import {FlatList, Text, View} from 'react-native'
 import {hexToRgb} from "../../utils/colorConverter";
 import intervalSelectorFilter from "../../ui/contents/intervalSelectorData";
+import {Chip} from "react-native-paper";
+import Colors from "../../ui/theme/colors";
 import DateLabels from "../../logic/retrieveTimeLabels";
+import {Rect} from "react-native-svg";
+import {chartTitles} from "../../ui/contents/strings";
+import {styles} from "../../ui/theme/style";
+import ChartColorLegend from "./chartColorLegend";
 
-export default class MyStackedBarChart extends Component{
+class MyStackAreaChart extends React.PureComponent {
+
 
     constructor(props) {
         super(props);
@@ -25,16 +31,20 @@ export default class MyStackedBarChart extends Component{
             _MAX: false,
             data: this.props.data.slice(Math.max(this.props.data.length - 7, 0)),
             filter: 7,
-            labels: DateLabels(7).dateLabels
+            labels: DateLabels(7).dateLabels,
+            x: 0,
+            y: 0,
+            visible: false,
+            value: 0
         };
     }
 
-    activateFilter(filter){
-        this.setState({_1W: false, _1M: false, _MAX: false});
-        this.setState({[filter.state]: true}, function() {
+    activateFilter(filter) {
+        this.setState({_1W: false, _1M: false, _MAX: false, visible: false});
+        this.setState({[filter.state]: true}, function () {
 
-            this.setState({filter: filter.field }, function () {
-                if(this.state.filter === -1){
+            this.setState({filter: filter.field}, function () {
+                if (this.state.filter === -1) {
                     this.setState({data: this.props.data}, function () {
                         this.setState({labels: DateLabels(this.state.filter).dateLabels});
                     });
@@ -48,7 +58,7 @@ export default class MyStackedBarChart extends Component{
         this.forceUpdate();
     }
 
-    returnState(stateString){
+    returnState(stateString) {
         switch (stateString) {
             case '_1W':
                 return this.state._1W;
@@ -59,15 +69,21 @@ export default class MyStackedBarChart extends Component{
         }
     }
 
-
-
     render() {
 
         const colorRGB = hexToRgb(this.props.color);
-        return (
-            <View style={{marginTop: 20}}>
+        const colors = [`rgba(${colorRGB.r}, ${colorRGB.g}, ${colorRGB.b}, 0.9)`, `rgba(${colorRGB.r}, ${colorRGB.g}, ${colorRGB.b}, 0.6)`, `rgba(${colorRGB.r}, ${colorRGB.g}, ${colorRGB.b}, 0.3)`]
+        const keys = ['critical', 'hospitalized', 'homeQuarantine'];
+        const axesSvg = {fontSize: 12, fill: Colors.basic};
+        const gridSvg = {
+            fill: `rgba(${colorRGB.r}, ${colorRGB.g}, ${colorRGB.b}, 0.3)`,
+            strokeDasharray: [5, 8],
+            strokeOpacity: 0.6
+        }
 
-                <View style={{marginTop: 8}}>
+        return (
+            <View>
+                <View style={{marginTop: 20}}>
                     <FlatList
                         style={{marginBottom: 20}}
                         data={intervalSelectorFilter}
@@ -77,7 +93,7 @@ export default class MyStackedBarChart extends Component{
                                 selected={this.state.filter === item.state.field}
                                 textStyle={{
                                     color: this.returnState(item.state) ? '#fff' : Colors.basic,
-                                    fontWeight:  this.returnState(item.state) ? '700' :'400'
+                                    fontWeight: this.returnState(item.state) ? '700' : '400'
                                 }}
                                 style={[
                                     {
@@ -93,51 +109,67 @@ export default class MyStackedBarChart extends Component{
                         keyExtractor={(item, index) => index.toString()}
                     />
                 </View>
-
-                <StackedBarChart
-                    width={dynamicDimens.chartFullWidth}
-                    data={{
-                        labels: this.state.labels,
-                        legend: this.props.legend,
-                        data: [
-                            [60, 60, 60],
-                            [60, 60, 60],
-                            [60, 60, 60],
-                            [60, 60, 60],
-                            [60, 60, 60],
-                            [30, 30, 60]
-
-                        ],
-                        barColors: [
-                            `rgba(${colorRGB.r}, ${colorRGB.g}, ${colorRGB.b}, 0.9)`,
-                            `rgba(${colorRGB.r}, ${colorRGB.g}, ${colorRGB.b}, 0.6)`,
-                            `rgba(${colorRGB.r}, ${colorRGB.g}, ${colorRGB.b}, 0.3)`,
-                        ]
-                    }}
-                    height={dimens.lineChartHeight}
-                    chartConfig={{
-                        backgroundColor: Colors.basicElevation,
-                        backgroundGradientFrom: Colors.basicElevation,
-                        backgroundGradientTo: Colors.basicElevation,
-                        decimalPlaces: this.props.decimalPlaces === undefined ? 0 : this.props.decimalPlaces,
-                        color: (opacity = 1) => `rgba(${colorRGB.r}, ${colorRGB.g}, ${colorRGB.b}, ${opacity})`,
-                        labelColor: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
-                        style: {
-                            borderRadius: 16,
-                        },
-                        propsForDots: {
-                            r: "2",
-                            strokeWidth: "0",
-                            stroke: Colors.basicElevation
-                        }
-                    }}
-                    yAxisLabel=""
-                    yAxisSuffix="%"
+                <View style={{flexDirection: 'row', marginTop: 10, height: 220}}>
+                    <View style={{flex: 1, marginLeft: 50}}>
+                        <StackedAreaChart
+                            style={{flex: 1}}
+                            verticalContentInset={{top: 20, bottom: 20}}
+                            data={this.state.data}
+                            keys={keys}
+                            colors={colors}
+                            curve={shape.curveLinear}
+                            animationDuration={200}
+                            numberOfTicks={5}
+                            svg={gridSvg}
+                        >
+                            <Grid
+                                direction={Grid.Direction.HORIZONTAL}
+                                belowChart={true}
+                                svg={gridSvg}
+                            />
+                        </StackedAreaChart>
+                    </View>
+                    <YAxis
+                        style={{position: 'absolute', top: 0, bottom: 0}}
+                        data={StackedAreaChart.extractDataPoints(this.state.data, keys)}
+                        contentInset={{top: 10, bottom: 10}}
+                        numberOfTicks={5}
+                        svg={{
+                            fontSize: 12,
+                            fill: Colors.basic,
+                            alignmentBaseline: 'baseline',
+                            baselineShift: '3',
+                        }}
+                    />
+                </View>
+                <XAxis
+                    style={{marginLeft: 50, marginTop: 10, height: 10}}
+                    data={this.state.data}
+                    numberOfTicks={4}
+                    formatLabel={(index) => this.state.data[index].date}
+                    contentInset={{left: 10, right: 10}}
+                    svg={axesSvg}
                 />
 
+                {/* Legend */}
+                <View style={styles.legendExternalContainer}>
+                    <ChartColorLegend
+                        title={chartTitles.positiveHomeQuarantine}
+                        color={`rgba(${colorRGB.r}, ${colorRGB.g}, ${colorRGB.b}, 0.3)`}/>
+
+                    <ChartColorLegend
+                        title={chartTitles.hospitalizedWithSymptoms}
+                        color={`rgba(${colorRGB.r}, ${colorRGB.g}, ${colorRGB.b}, 0.6)`}/>
+
+                    <ChartColorLegend
+                        title={chartTitles.critical}
+                        color={`rgba(${colorRGB.r}, ${colorRGB.g}, ${colorRGB.b}, 0.9)`}/>
+
+                </View>
 
             </View>
-
-        );
+        )
     }
 }
+
+export default MyStackAreaChart;

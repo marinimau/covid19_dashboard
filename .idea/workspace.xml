@@ -19,12 +19,22 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="finiti i line chart in tutte le sezioni">
+    <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="aggiunto cursore ai line chart">
+      <change afterPath="$PROJECT_DIR$/src/drawings/charts/chartColorLegend.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logic/positiveRepartitionData.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.expo/packager-info.json" beforeDir="false" afterPath="$PROJECT_DIR$/.expo/packager-info.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lodash/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/lodash/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/drawings/charts/lineChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/drawings/charts/lineChart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/components/latest_updates/latestUpateComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/latest_updates/latestUpateComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/drawings/charts/stackedAreaChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/drawings/charts/stackedAreaChart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/components/current_positive/currentPositiveComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/current_positive/currentPositiveComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/components/loading/splash.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/loading/splash.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/contents/strings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/contents/strings.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/theme/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/theme/style.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,6 +97,8 @@
       <workItem from="1595867529057" duration="9511000" />
       <workItem from="1596223618365" duration="4279000" />
       <workItem from="1596265752485" duration="17874000" />
+      <workItem from="1596570733818" duration="1285000" />
+      <workItem from="1596607524184" duration="13507000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1595078622516</created>
@@ -179,7 +191,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596360325717</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="aggiunto cursore ai line chart">
+      <created>1596562793545</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1596562793545</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -210,7 +229,8 @@
     <MESSAGE value="intervall selector funzionante, i chip però non si aggiornano sul browser (solo su iOS e android)" />
     <MESSAGE value="labels funzionanti" />
     <MESSAGE value="finiti i line chart in tutte le sezioni" />
-    <option name="LAST_COMMIT_MESSAGE" value="finiti i line chart in tutte le sezioni" />
+    <MESSAGE value="aggiunto cursore ai line chart" />
+    <option name="LAST_COMMIT_MESSAGE" value="aggiunto cursore ai line chart" />
   </component>
   <component name="WindowStateProjectService">
     <state x="184" y="91" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1595879970955">
@@ -229,27 +249,27 @@
       <screen x="0" y="23" width="1440" height="820" />
     </state>
     <state x="558" y="338" key="Github.ShareDialog/0.23.1440.820@0.23.1440.820" timestamp="1595078313212" />
-    <state width="1419" height="208" key="GridCell.Tab.0.bottom" timestamp="1596099797777">
+    <state width="1419" height="208" key="GridCell.Tab.0.bottom" timestamp="1596564246397">
       <screen x="0" y="25" width="1440" height="814" />
     </state>
-    <state width="1419" height="208" key="GridCell.Tab.0.bottom/0.25.1440.814@0.25.1440.814" timestamp="1596099797777" />
-    <state width="1419" height="208" key="GridCell.Tab.0.center" timestamp="1596099797777">
+    <state width="1419" height="208" key="GridCell.Tab.0.bottom/0.25.1440.814@0.25.1440.814" timestamp="1596564246397" />
+    <state width="1419" height="208" key="GridCell.Tab.0.center" timestamp="1596564246396">
       <screen x="0" y="25" width="1440" height="814" />
     </state>
-    <state width="1419" height="208" key="GridCell.Tab.0.center/0.25.1440.814@0.25.1440.814" timestamp="1596099797777" />
-    <state width="1419" height="208" key="GridCell.Tab.0.left" timestamp="1596099797776">
+    <state width="1419" height="208" key="GridCell.Tab.0.center/0.25.1440.814@0.25.1440.814" timestamp="1596564246396" />
+    <state width="1419" height="208" key="GridCell.Tab.0.left" timestamp="1596564246395">
       <screen x="0" y="25" width="1440" height="814" />
     </state>
-    <state width="1419" height="208" key="GridCell.Tab.0.left/0.25.1440.814@0.25.1440.814" timestamp="1596099797776" />
-    <state width="1419" height="208" key="GridCell.Tab.0.right" timestamp="1596099797777">
+    <state width="1419" height="208" key="GridCell.Tab.0.left/0.25.1440.814@0.25.1440.814" timestamp="1596564246395" />
+    <state width="1419" height="208" key="GridCell.Tab.0.right" timestamp="1596564246396">
       <screen x="0" y="25" width="1440" height="814" />
     </state>
-    <state width="1419" height="208" key="GridCell.Tab.0.right/0.25.1440.814@0.25.1440.814" timestamp="1596099797777" />
-    <state x="320" y="175" key="Vcs.Push.Dialog.v2" timestamp="1596360327335">
+    <state width="1419" height="208" key="GridCell.Tab.0.right/0.25.1440.814@0.25.1440.814" timestamp="1596564246396" />
+    <state x="320" y="175" key="Vcs.Push.Dialog.v2" timestamp="1596562795042">
       <screen x="0" y="25" width="1440" height="814" />
     </state>
     <state x="320" y="174" key="Vcs.Push.Dialog.v2/0.23.1440.820@0.23.1440.820" timestamp="1595152527908" />
-    <state x="320" y="175" key="Vcs.Push.Dialog.v2/0.25.1440.814@0.25.1440.814" timestamp="1596360327335" />
+    <state x="320" y="175" key="Vcs.Push.Dialog.v2/0.25.1440.814@0.25.1440.814" timestamp="1596562795042" />
     <state x="385" y="168" width="670" height="672" key="search.everywhere.popup" timestamp="1596357605283">
       <screen x="0" y="25" width="1440" height="814" />
     </state>
