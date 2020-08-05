@@ -153,5 +153,29 @@ export const styles = StyleSheet.create({
         fontSize: 30,
         marginTop: 30,
         marginBottom: 30,
+    },
+    /*
+     *  Chart legend
+     *
+     */
+    legendExternalContainer: {
+        flex: 1,
+        margin: 10,
+        flexDirection: 'row',
+        flexWrap: 'wrap'
+    },
+    legendContainer: {
+        margin: 10,
+        position: 'relative',
+        flexDirection: 'row'
+    },
+    legendColorSquare: {
+        width: 20,
+        height:20,
+        borderRadius: 5,
+    },
+    legendTitle: {
+        display: 'inline',
+        marginLeft: 10
     }
 });

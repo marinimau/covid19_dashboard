@@ -14,7 +14,7 @@ import Colors from "../../ui/theme/colors";
 import {hexToRgb} from "../../utils/colorConverter";
 import intervalSelectorFilter from "../../ui/contents/intervalSelectorData";
 import DateLabels from "../../logic/retrieveTimeLabels";
-import {Rect, Line, Text as TextSVG, Svg, Circle} from "react-native-svg";
+import {Line, Text as TextSVG, Svg, Circle} from "react-native-svg";
 
 export default class MyLineChart extends Component {
 
@@ -74,15 +74,15 @@ export default class MyLineChart extends Component {
             <View style={{marginTop: 20}}>
 
                 <View style={{marginTop: 8}}>
-                    <FlatList
-                        style={{marginBottom: 20}}
-                        data={intervalSelectorFilter}
-                        renderItem={({item}) => (
-                            <Chip
-                                onPress={() => this.activateFilter(item)}
-                                selected={this.state.filter === item.state.field}
-                                textStyle={{
-                                    color: this.returnState(item.state) ? '#fff' : Colors.basic,
+                                    <FlatList
+                                    style={{marginBottom: 20}}
+                                    data={intervalSelectorFilter}
+                                    renderItem={({item}) => (
+                                        <Chip
+                                            onPress={() => this.activateFilter(item)}
+                                            selected={this.state.filter === item.state.field}
+                                            textStyle={{
+                                                color: this.returnState(item.state) ? '#fff' : Colors.basic,
                                     fontWeight: this.returnState(item.state) ? '700' : '400'
                                 }}
                                 style={[
@@ -119,14 +119,14 @@ export default class MyLineChart extends Component {
                         backgroundColor: Colors.basicElevation,
                         backgroundGradientFrom: Colors.basicElevation,
                         backgroundGradientTo: Colors.basicElevation,
-                        decimalPlaces: this.props.decimalPlaces === undefined ? 0 : this.props.decimalPlaces, // optional, defaults to 2dp
+                        decimalPlaces: this.props.decimalPlaces === undefined ? 0 : this.props.decimalPlaces,
                         color: (opacity = 1) => `rgba(${colorRGB.r}, ${colorRGB.g}, ${colorRGB.b}, ${opacity})`,
                         labelColor: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
                         style: {
                             borderRadius: 16
                         },
                         propsForDots: {
-                            r: "2",
+                            r: "0",
                             strokeWidth: "0",
                             stroke: Colors.basicElevation
                         }
@@ -153,14 +153,9 @@ export default class MyLineChart extends Component {
                                         cy={this.state.y}
                                         r="5"
                                         fill={this.props.color}/>
-                                    <Rect x={this.state.x - 15}
-                                          y={this.state.y + 10}
-                                          width="40"
-                                          height="30"
-                                          fill="white"/>
                                     <TextSVG
-                                        x={this.state.x + 5}
-                                        y={this.state.y + 30}
+                                        x={this.state.x - 20}
+                                        y={this.state.y - 5 }
                                         fill="black"
                                         fontSize="14"
                                         fontWeight="bold"

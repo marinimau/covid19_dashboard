@@ -19,7 +19,8 @@ import PositiveDeltaData from "../../../logic/positiveDeltaData";
 import CardHomeQuarantine from "../../../drawings/resume_cards/cardHomeQuarantine";
 import CardHospitalizedWithSymptoms from "../../../drawings/resume_cards/cardHospitalizedWithSymptoms";
 import CardCritical from "../../../drawings/resume_cards/cardCritical";
-import MyStackedBarChart from "../../../drawings/charts/stackedAreaChart";
+import StackedAreaChart from "../../../drawings/charts/stackedAreaChart";
+import PositiveRepartitionData from "../../../logic/positiveRepartitionData";
 
 class CurrentPositiveComponent extends Component {
 
@@ -58,14 +59,7 @@ class CurrentPositiveComponent extends Component {
 
                         <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
                             <Text style={styles.chartTitle}>{chartTitles.positiveRepartition}</Text>
-                            <MyStackedBarChart
-                                data={[
-                                    PositiveDeltaData().criticalPercentage,
-                                    PositiveDeltaData().hospitalizedPercentage,
-                                    PositiveDeltaData().homeQuarantinePercentage,
-                                ]}
-                                legend={[chartTitles.critical, chartTitles.hospitalizedWithSymptoms, chartTitles.positiveHomeQuarantine]}
-                                color={LegendColors.yellow} />
+                            <StackedAreaChart color={LegendColors.yellow} data={PositiveRepartitionData().repartition}/>
                         </View>
 
                     </>

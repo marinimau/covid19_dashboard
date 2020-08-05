@@ -16,9 +16,10 @@ import Colors from "./src/ui/theme/colors";
 import {screenTitles} from "./src/ui/contents/strings";
 import Async from 'react-async';
 import {navigationRef} from './src/utils/rootNavigationRef';
+import Records from "./src/logic/dataset";
+import { enableScreens } from 'react-native-screens';
 
 /* Screens Import */
-import HomeScreen from "./src/ui/screens/homeScreen";
 import LatestUpdateResumeScreen from "./src/ui/screens/latestUpdateResumeScreen";
 import NewCasesScreen from "./src/ui/screens/newCasesScreen";
 import RecoveredScreen from "./src/ui/screens/recoveredScreen";
@@ -28,9 +29,7 @@ import SwabsResumeScreen from "./src/ui/screens/swabsScreen";
 import retrieveData from "./src/logic/retrieveData";
 import LoadingScreen from "./src/ui/components/loading/splash";
 import ErrorScreen from "./src/ui/components/loading/error";
-import Records from "./src/logic/dataset";
-import { enableScreens } from 'react-native-screens';
-import {Platform} from "react-native-web";
+
 
 enableScreens();
 

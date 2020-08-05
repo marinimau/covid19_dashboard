@@ -54,7 +54,7 @@ export const chartTitles = {
     totalCases: 'Casi totali',
     swab: 'Tamponi',
     testedCases: 'Casi testati',
-    positiveByScreening: 'Individuati con screening',
+    positiveByScreening: 'Positivi da screening',
     swabPositiveRatio: 'Percentuale positivi',
     swabPositiveRatioDescription: 'Percentuale di pazienti positivi rispetto ai casi testati',
     swabTrend: 'Andamento tamponi (totale)',

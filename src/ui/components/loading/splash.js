@@ -6,7 +6,7 @@
  */
 
 import React, {Component} from 'react';
-import {View, Text} from "react-native";
+import {View, Text, ActivityIndicator} from "react-native";
 import {styles} from "../../theme/style";
 import {loadingMessages} from "../../contents/strings";
 
@@ -20,8 +20,8 @@ class LoadingScreen extends Component{
     render() {
         return (
             <View style={[{ flex: 1, alignItems: 'center', justifyContent: 'center' }, styles.loading]}>
-                <View style={[styles.cardGeneric]}>
-                    <Text>{loadingMessages.loading}</Text>
+                <View>
+                    <ActivityIndicator />
                 </View>
             </View>
         )
