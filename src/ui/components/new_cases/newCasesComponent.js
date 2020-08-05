@@ -62,7 +62,7 @@ class NewCasesComponent extends Component {
                                 keyValues={['death', 'current', 'recovered']}
                                 legend={[chartTitles.recovered, chartTitles.currentPositive, chartTitles.died]}
                                 data={TotalCasesRepartitionData().repartition}/>
-                            <Text style={styles.chartDescription}>Ancora positivi, guariti, deceduti</Text>
+                            <Text style={styles.chartDescription}>{dataDescription.totalCasesRepartition}</Text>
                         </View>
                     </>
                 }

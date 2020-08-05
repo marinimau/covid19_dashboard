@@ -49,16 +49,19 @@ class SwabsComponent extends Component {
                         <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
                             <Text style={[styles.chartTitle]}>{chartTitles.swabTrend}</Text>
                             <MyLineChart color={LegendColors.blue} data={SwabData().swabTrendAbsolute} />
+                            <Text style={styles.chartDescription}>{dataDescription.swapTrend}</Text>
                         </View>
 
                         <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
                             <Text style={[styles.chartTitle]}>{chartTitles.testedCaseTrend}</Text>
                             <MyLineChart color={LegendColors.blue} data={SwabData().testedCasesTrendAbsolute} />
+                            <Text style={styles.chartDescription}>{dataDescription.testedCaseTrend}</Text>
                         </View>
 
                         <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
                             <Text style={[styles.chartTitle]}>{chartTitles.testedAndPositive}</Text>
                             <MyLineChart color={LegendColors.blue} decimalPlaces={3} data={SwabData().percentagePositiveTrend} />
+                            <Text style={styles.chartDescription}>{dataDescription.percentagePositiveTrend}</Text>
                         </View>
 
 

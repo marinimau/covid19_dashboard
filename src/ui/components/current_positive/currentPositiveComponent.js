@@ -10,7 +10,7 @@ import {Text, View} from "react-native";
 import {styles} from "../../theme/style";
 import MainScrollableContents from "../mainScrollableContainer";
 import CardCurrentPositive from "../../../drawings/resume_cards/cardCurrentPositive";
-import {chartTitles} from "../../contents/strings";
+import {chartTitles, dataDescription} from "../../contents/strings";
 import MyProgressCircle from "../../../drawings/charts/progressCircle";
 import LegendColors from "../../theme/legendColors";
 import CurrentPositiveData from "../../../logic/currentPositiveData";
@@ -44,11 +44,13 @@ class CurrentPositiveComponent extends Component {
                         <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
                             <Text style={styles.chartTitle}>{chartTitles.positiveTrendAbsolute}</Text>
                             <MyLineChart color={LegendColors.yellow} data={PositiveDeltaData().deltaTrendAbsolute} />
+                            <Text style={styles.chartDescription}>{dataDescription.positiveTotal}</Text>
                         </View>
 
                         <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
                             <Text style={styles.chartTitle}>{chartTitles.positiveTrendVariation}</Text>
                             <MyLineChart color={LegendColors.yellow} data={PositiveDeltaData().deltaTrendDayVariation} />
+                            <Text style={styles.chartDescription}>{dataDescription.positiveVariation}</Text>
                         </View>
 
                         <CardHomeQuarantine />
@@ -64,6 +66,7 @@ class CurrentPositiveComponent extends Component {
                                 keyValues={['critical', 'hospitalized', 'homeQuarantine']}
                                 legend={[chartTitles.positiveHomeQuarantine, chartTitles.hospitalizedWithSymptoms, chartTitles.critical]}
                                 data={PositiveRepartitionData().repartition}/>
+                            <Text style={styles.chartDescription}>{dataDescription.positiveRepartition}</Text>
                         </View>
 
                     </>

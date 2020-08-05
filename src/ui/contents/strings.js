@@ -39,7 +39,7 @@ export const chartTitles = {
     positivePercentageDescription: 'Percentuale di pazienti ancora positivi rispetto ai casi totali',
     positiveTrendAbsolute: 'Andamento positivi (totale)',
     positiveTrendVariation: 'Andamento positivi (varizione giornaliera)',
-    positiveRepartition: 'Ripartizione attualmente positivi',
+    positiveRepartition: 'Ripartizione attualmente positivi nel tempo',
     recovered: 'Guariti',
     recoveredPercentage: 'Percentuale guariti',
     recoveredPercentageDescription: 'Percentuale pazienti guariti rispetto ai casi totali',
@@ -77,6 +77,22 @@ export const dataDescription = {
     newCases: 'I nuovi casi sono i contagi che vengono registrati per la prima volta, in questo grafico vengono mostrati, ' +
         'per ciascun giorno, quanti contagi sono avvenuti.',
     r0: 'Il parametro R0 indica il numero medio di persone che ogni positivo contagia a sua volta.',
-    screening: 'Percentuale positivi individuati tramite screening, i restanti sono stati individuati per sospetto diagnostico'
-
+    screening: 'Percentuale positivi individuati tramite screening, i restanti sono stati individuati per sospetto diagnostico',
+    totalCasesRepartition: 'Ripartizione (in percentuale) dei casi totali',
+    recoveredTotal: 'Andamento del valore totale dei guariti nel corso del tempo',
+    recoveredVariation: 'Andamento della variazione giornaliera (incremento) dei guariti nel corso del tempo',
+    recoveredTrendProportional: 'Andamento della variazione giornaliera (incremento) dei guariti normalizzata sul numero dei ' +
+        'positivi correnti. ',
+    diedTotal: 'Andamento del valore totale dei decessi nel corso del tempo',
+    diedVariation: 'Andamento della variazione giornaliera (incremento) dei decessi nel corso del tempo',
+    diedTrendProportional: 'Andamento della variazione giornaliera (incremento) dei decessi normalizzata sul numero dei ' +
+        'positivi correnti. ',
+    positiveTotal: 'Andamento del valore totale dei positivi attuali nel corso del tempo.',
+    positiveVariation: 'Andamento della variazione giornaliera del numero di positivi correnti nel corso del tempo',
+    positiveRepartition: 'Ripartizione dei positivi correnti nel corso del tempo in 3 categorie: isolamento domiciliare; '+
+        'ricoverati con sintomi (esclusi i ricoverati in terapia intensiva); ricoverati in terapia intensive ',
+    swapTrend: 'Andamento del valore totale di tamponi eseguiti',
+    testedCaseTrend: 'Andamento del valore totale di casi testati (diverso dai tamponi in quanto un singolo individuo' +
+        'può essere sottoposto a più tamponi).',
+    percentagePositiveTrend: 'Andamento della percentuale di esito positivo sul totale dei casi testati nel corso del tempo'
 }
