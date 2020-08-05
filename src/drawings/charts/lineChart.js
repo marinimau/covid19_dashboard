@@ -74,15 +74,15 @@ export default class MyLineChart extends Component {
             <View style={{marginTop: 20}}>
 
                 <View style={{marginTop: 8}}>
-                                    <FlatList
-                                    style={{marginBottom: 20}}
-                                    data={intervalSelectorFilter}
-                                    renderItem={({item}) => (
-                                        <Chip
-                                            onPress={() => this.activateFilter(item)}
-                                            selected={this.state.filter === item.state.field}
-                                            textStyle={{
-                                                color: this.returnState(item.state) ? '#fff' : Colors.basic,
+                    <FlatList
+                        style={{marginBottom: 20}}
+                        data={intervalSelectorFilter}
+                        renderItem={({item}) => (
+                            <Chip
+                                onPress={() => this.activateFilter(item)}
+                                selected={this.state.filter === item.state.field}
+                                textStyle={{
+                                    color: this.returnState(item.state) ? '#fff' : Colors.basic,
                                     fontWeight: this.returnState(item.state) ? '700' : '400'
                                 }}
                                 style={[
@@ -155,7 +155,7 @@ export default class MyLineChart extends Component {
                                         fill={this.props.color}/>
                                     <TextSVG
                                         x={this.state.x - 20}
-                                        y={this.state.y - 5 }
+                                        y={this.state.y - 5}
                                         fill="black"
                                         fontSize="14"
                                         fontWeight="bold"

@@ -14,6 +14,8 @@ import CardTotalCases from "../../../drawings/resume_cards/cardTotalCases";
 import LegendColors from "../../theme/legendColors";
 import NewCasesData from "../../../logic/newCasesData";
 import MyLineChart from "../../../drawings/charts/lineChart";
+import StackedAreaChart from "../../../drawings/charts/stackedAreaChart";
+import TotalCasesRepartitionData from "../../../logic/totalCasesRepartitionData";
 
 class NewCasesComponent extends Component {
 
@@ -54,7 +56,12 @@ class NewCasesComponent extends Component {
                         </View>
 
                         <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
-                            <Text style={styles.chartTitle}>Area sottesa ripartizione casi</Text>
+                            <Text style={styles.chartTitle}>{chartTitles.totalCasesRepartion}</Text>
+                            <StackedAreaChart
+                                color={LegendColors.red}
+                                keyValues={['death', 'current', 'recovered']}
+                                legend={[chartTitles.recovered, chartTitles.currentPositive, chartTitles.died]}
+                                data={TotalCasesRepartitionData().repartition}/>
                             <Text style={styles.chartDescription}>Ancora positivi, guariti, deceduti</Text>
                         </View>
                     </>

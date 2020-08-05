@@ -10,10 +10,11 @@ import dateToString from "../utils/dateToString";
 
 let dataToReturn = {
 
+    /* repartition */
     repartition: []
 };
 
-const PositiveRepartitionData = (data) => {
+const TotalCasesRepartitionData = (data) => {
 
     if(data === undefined){
         data = Records.getRecords();
@@ -26,9 +27,9 @@ const PositiveRepartitionData = (data) => {
             dataToReturn.repartition.push(
                 {
                     date: dateToString(data[i]['data']),
-                    homeQuarantine: Math.abs(data[i]['isolamento_domiciliare'] / data[i]['totale_positivi']) * 100 * 100 / 100,
-                    hospitalized: Math.abs((data[i]['totale_ospedalizzati'] - data[i]['terapia_intensiva']) / data[i]['totale_positivi']) * 100 * 100 / 100,
-                    critical: Math.abs(data[i]['terapia_intensiva'] / data[i]['totale_positivi']) * 100 * 100 / 100
+                    recovered: Math.abs(data[i]['dimessi_guariti'] / data[i]['totale_casi']) * 100 * 100 / 100,
+                    current: Math.abs(data[i]['totale_positivi']  / data[i]['totale_casi']) * 100 * 100 / 100,
+                    death: Math.abs(data[i]['deceduti'] / data[i]['totale_casi']) * 100 * 100 / 100
                 }
             )
         }
@@ -37,4 +38,4 @@ const PositiveRepartitionData = (data) => {
 };
 
 
-export default PositiveRepartitionData;
+export default TotalCasesRepartitionData;
