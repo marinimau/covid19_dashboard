@@ -9,17 +9,17 @@ import React, {Component} from 'react';
 import {Text, View} from "react-native";
 import {styles} from "../../theme/style";
 import MainScrollableContents from "../mainScrollableContainer";
-import CardCurrentPositive from "../../../drawings/resume_cards/cardCurrentPositive";
+import CardCurrentPositive from "../../../data_representation/resume_cards/cardCurrentPositive";
 import {chartTitles, dataDescription} from "../../contents/strings";
-import MyProgressCircle from "../../../drawings/charts/progressCircle";
+import MyProgressCircle from "../../../data_representation/charts/progressCircle";
 import LegendColors from "../../theme/legendColors";
 import CurrentPositiveData from "../../../logic/currentPositiveData";
-import MyLineChart from "../../../drawings/charts/lineChart";
+import MyLineChart from "../../../data_representation/charts/lineChart";
 import PositiveDeltaData from "../../../logic/positiveDeltaData";
-import CardHomeQuarantine from "../../../drawings/resume_cards/cardHomeQuarantine";
-import CardHospitalizedWithSymptoms from "../../../drawings/resume_cards/cardHospitalizedWithSymptoms";
-import CardCritical from "../../../drawings/resume_cards/cardCritical";
-import StackedAreaChart from "../../../drawings/charts/stackedAreaChart";
+import CardHomeQuarantine from "../../../data_representation/resume_cards/cardHomeQuarantine";
+import CardHospitalizedWithSymptoms from "../../../data_representation/resume_cards/cardHospitalizedWithSymptoms";
+import CardCritical from "../../../data_representation/resume_cards/cardCritical";
+import StackedAreaChart from "../../../data_representation/charts/stackedAreaChart";
 import PositiveRepartitionData from "../../../logic/positiveRepartitionData";
 
 class CurrentPositiveComponent extends Component {

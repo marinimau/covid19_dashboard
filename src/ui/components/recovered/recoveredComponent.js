@@ -9,12 +9,12 @@ import React, {Component} from 'react';
 import {Text, View} from "react-native";
 import {styles} from "../../theme/style";
 import MainScrollableContents from "../mainScrollableContainer";
-import CardRecovered from "../../../drawings/resume_cards/cardRecovered";
+import CardRecovered from "../../../data_representation/resume_cards/cardRecovered";
 import {chartTitles, dataDescription} from "../../contents/strings";
-import MyProgressCircle from "../../../drawings/charts/progressCircle";
+import MyProgressCircle from "../../../data_representation/charts/progressCircle";
 import LegendColors from "../../theme/legendColors";
 import RecoveredData from "../../../logic/recoveredData";
-import MyLineChart from "../../../drawings/charts/lineChart";
+import MyLineChart from "../../../data_representation/charts/lineChart";
 
 class RecoveredComponent extends Component {
 

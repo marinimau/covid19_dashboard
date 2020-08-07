@@ -10,12 +10,14 @@ import {Text, View} from "react-native";
 import {styles} from "../../theme/style";
 import MainScrollableContents from "../mainScrollableContainer";
 import {chartTitles, dataDescription} from "../../contents/strings";
-import CardTotalCases from "../../../drawings/resume_cards/cardTotalCases";
+import CardTotalCases from "../../../data_representation/resume_cards/cardTotalCases";
 import LegendColors from "../../theme/legendColors";
 import NewCasesData from "../../../logic/newCasesData";
-import MyLineChart from "../../../drawings/charts/lineChart";
-import StackedAreaChart from "../../../drawings/charts/stackedAreaChart";
+import MyLineChart from "../../../data_representation/charts/lineChart";
+import StackedAreaChart from "../../../data_representation/charts/stackedAreaChart";
 import TotalCasesRepartitionData from "../../../logic/totalCasesRepartitionData";
+import RegionTable from "../../../data_representation/region_table/regionTable";
+import RegionNewCasesData from "../../../logic/REGION_newCases";
 
 class NewCasesComponent extends Component {
 
@@ -63,6 +65,13 @@ class NewCasesComponent extends Component {
                                 legend={[chartTitles.recovered, chartTitles.currentPositive, chartTitles.died]}
                                 data={TotalCasesRepartitionData().repartition}/>
                             <Text style={styles.chartDescription}>{dataDescription.totalCasesRepartition}</Text>
+                        </View>
+
+                        <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
+                            <Text style={styles.chartTitle}>{chartTitles.totalCasesRegion}</Text>
+                            <RegionTable
+                                data={RegionNewCasesData()}
+                            />
                         </View>
                     </>
                 }

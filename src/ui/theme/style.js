@@ -175,7 +175,7 @@ export const styles = StyleSheet.create({
         borderRadius: 5,
     },
     legendTitle: {
-        display: 'inline',
+        //display: 'inline',
         marginLeft: 10
     }
 });

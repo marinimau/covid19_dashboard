@@ -8,14 +8,14 @@
 import React, {Component} from 'react';
 import {TouchableOpacity} from "react-native";
 import MainScrollableContents from "../mainScrollableContainer";
-import CardTotalCases from "../../../drawings/resume_cards/cardTotalCases";
-import CardRecovered from "../../../drawings/resume_cards/cardRecovered";
-import CardDied from "../../../drawings/resume_cards/cardDied";
-import CardCurrentPositive from "../../../drawings/resume_cards/cardCurrentPositive";
+import CardTotalCases from "../../../data_representation/resume_cards/cardTotalCases";
+import CardRecovered from "../../../data_representation/resume_cards/cardRecovered";
+import CardDied from "../../../data_representation/resume_cards/cardDied";
+import CardCurrentPositive from "../../../data_representation/resume_cards/cardCurrentPositive";
 import {navigate} from "../../../utils/rootNavigationRef";
 import {screenTitles} from "../../contents/strings";
-import CardSwab from "../../../drawings/resume_cards/cardSwab";
-import CardDate from "../../../drawings/resume_cards/cardDate";
+import CardSwab from "../../../data_representation/resume_cards/cardSwab";
+import CardDate from "../../../data_representation/resume_cards/cardDate";
 
 class LatestUpdateComponent extends Component {
 

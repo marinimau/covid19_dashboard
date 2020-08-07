@@ -58,7 +58,6 @@ export default function App() {
                             style={styles.root}>
                             <Drawer.Navigator
                                 initialRouteName="Resume"
-                                //openByDefault
                                 drawerContentOptions={{
                                     activeTintColor: Colors.drawerSelectedText,
                                     activeBackgroundColor: Colors.drawerSelectedBackground,

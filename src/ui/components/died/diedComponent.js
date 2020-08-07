@@ -9,12 +9,12 @@ import React, {Component} from 'react';
 import {Text, View} from "react-native";
 import {styles} from "../../theme/style";
 import MainScrollableContents from "../mainScrollableContainer";
-import CardDied from "../../../drawings/resume_cards/cardDied";
-import MyProgressCircle from "../../../drawings/charts/progressCircle";
+import CardDied from "../../../data_representation/resume_cards/cardDied";
+import MyProgressCircle from "../../../data_representation/charts/progressCircle";
 import LegendColors from "../../theme/legendColors";
 import {chartTitles, dataDescription} from "../../contents/strings";
 import DeathsData from "../../../logic/deathData";
-import MyLineChart from "../../../drawings/charts/lineChart";
+import MyLineChart from "../../../data_representation/charts/lineChart";
 
 class DiedComponent extends Component {
 

@@ -9,6 +9,7 @@
 let Records ={
 
     data: [],
+    regionData: [],
 
     setRecords(records){
         this.records = records;
@@ -16,6 +17,14 @@ let Records ={
 
     getRecords(){
         return this.records;
+    },
+
+    setRegionRecords(records){
+        this.regionData = records;
+    },
+
+    getRegionRecords(){
+        return this.regionData;
     }
 
 };

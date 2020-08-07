@@ -29,6 +29,9 @@ export const screenTitles = {
 
 export const chartTitles = {
     lastUpdateDate: 'Dati del ',
+    regionsTable: 'Regione',
+    totalCasesRegionTable: 'Totale casi',
+    incrementTable: 'Variazione',
     totalCasesCurve: 'Andamento casi totali',
     totalCasesRepartion: 'Ripartizione casi totali nel tempo',
     newCasesCurve: 'Andamento contagi giornalieri',
@@ -53,6 +56,7 @@ export const chartTitles = {
     deathTrendDay: 'Andamento decessi (variazione giornaliera)',
     deathTrendProportional: 'Andamento decessi (ogni 100 positivi)',
     totalCases: 'Casi totali',
+    totalCasesRegion: 'Dati delle singole regioni',
     swab: 'Tamponi',
     testedCases: 'Casi testati',
     positiveByScreening: 'Positivi da screening',
@@ -79,6 +83,7 @@ export const dataDescription = {
     r0: 'Il parametro R0 indica il numero medio di persone che ogni positivo contagia a sua volta.',
     screening: 'Percentuale positivi individuati tramite screening, i restanti sono stati individuati per sospetto diagnostico',
     totalCasesRepartition: 'Ripartizione (in percentuale) dei casi totali',
+    totalCasesRegion: '',
     recoveredTotal: 'Andamento del valore totale dei guariti nel corso del tempo',
     recoveredVariation: 'Andamento della variazione giornaliera (incremento) dei guariti nel corso del tempo',
     recoveredTrendProportional: 'Andamento della variazione giornaliera (incremento) dei guariti normalizzata sul numero dei ' +

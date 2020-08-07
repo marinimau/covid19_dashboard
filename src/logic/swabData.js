@@ -8,7 +8,7 @@
 import Records from "./dataset";
 
 let dataToReturn = {
-    deathsRatio: 0,
+    deathsRatio: [''],
     swabTrendAbsolute: [],
     testedCasesTrendAbsolute: [],
     percentagePositiveTrend: [],

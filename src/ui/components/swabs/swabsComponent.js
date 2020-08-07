@@ -9,13 +9,13 @@ import React, {Component} from 'react';
 import {Text, View} from "react-native";
 import {styles} from "../../theme/style";
 import MainScrollableContents from "../mainScrollableContainer";
-import CardSwab from "../../../drawings/resume_cards/cardSwab";
-import CardTestedCases from "../../../drawings/resume_cards/cardTestedCases";
+import CardSwab from "../../../data_representation/resume_cards/cardSwab";
+import CardTestedCases from "../../../data_representation/resume_cards/cardTestedCases";
 import {chartTitles, dataDescription} from "../../contents/strings";
-import MyProgressCircle from "../../../drawings/charts/progressCircle";
+import MyProgressCircle from "../../../data_representation/charts/progressCircle";
 import LegendColors from "../../theme/legendColors";
 import SwabData from "../../../logic/swabData";
-import MyLineChart from "../../../drawings/charts/lineChart";
+import MyLineChart from "../../../data_representation/charts/lineChart";
 
 class SwabsComponent extends Component {
 

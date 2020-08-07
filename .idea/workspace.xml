@@ -19,14 +19,42 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="adattato il grafico e inserita stackedAreaChart.js anche per la ripartizione dei casi totali">
+    <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="aggiunte descrizioni dove mancavano">
+      <change afterPath="$PROJECT_DIR$/src/data_representation/region_table/regionTable.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logic/REGION_newCases.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logic/retrieveRegionData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.expo/packager-info.json" beforeDir="false" afterPath="$PROJECT_DIR$/.expo/packager-info.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/drawings/charts/chartColorLegend.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_representation/charts/chartColorLegend.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/drawings/charts/lineChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_representation/charts/lineChart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/drawings/charts/pieChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_representation/charts/pieChart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/drawings/charts/progressCircle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_representation/charts/progressCircle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/drawings/charts/stackedAreaChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_representation/charts/stackedAreaChart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/drawings/general/axis.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_representation/general/axis.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/drawings/general/lineChartAxis.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_representation/general/lineChartAxis.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/drawings/new_cases_charts/newCaseLine.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/drawings/new_cases_charts/newCaseTotal.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/drawings/resume_cards/cardCritical.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_representation/resume_cards/cardCritical.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/drawings/resume_cards/cardCurrentPositive.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_representation/resume_cards/cardCurrentPositive.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/drawings/resume_cards/cardDate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_representation/resume_cards/cardDate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/drawings/resume_cards/cardDied.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_representation/resume_cards/cardDied.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/drawings/resume_cards/cardHomeQuarantine.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_representation/resume_cards/cardHomeQuarantine.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/drawings/resume_cards/cardHospitalizedWithSymptoms.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_representation/resume_cards/cardHospitalizedWithSymptoms.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/drawings/resume_cards/cardRecovered.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_representation/resume_cards/cardRecovered.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/drawings/resume_cards/cardSwab.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_representation/resume_cards/cardSwab.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/drawings/resume_cards/cardTestedCases.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_representation/resume_cards/cardTestedCases.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/drawings/resume_cards/cardTotalCases.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_representation/resume_cards/cardTotalCases.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/dataset.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/dataset.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/swabData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/swabData.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/components/current_positive/currentPositiveComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/current_positive/currentPositiveComponent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/components/died/diedComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/died/diedComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/components/latest_updates/latestUpateComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/latest_updates/latestUpateComponent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/components/new_cases/newCasesComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/new_cases/newCasesComponent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/components/recovered/recoveredComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/recovered/recoveredComponent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/components/swabs/swabsComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/swabs/swabsComponent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/contents/strings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/contents/strings.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/theme/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/theme/style.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +94,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/logic/general" />
       <recent name="$PROJECT_DIR$/src/ui/components/header" />
       <recent name="$PROJECT_DIR$/src/ui/components/loading" />
       <recent name="$PROJECT_DIR$/src/ui" />
@@ -89,6 +118,7 @@
       <workItem from="1596040188795" duration="568000" />
       <workItem from="1596041752366" duration="3477000" />
       <workItem from="1596053023896" duration="2262000" />
+      <workItem from="1596787408394" duration="7158000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1595078622516</created>
@@ -153,7 +183,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596654268978</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="aggiunte descrizioni dove mancavano">
+      <created>1596659072538</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1596659072538</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -180,7 +217,8 @@
     <MESSAGE value="iniziato a organizzare i grafici" />
     <MESSAGE value="sistemata UI" />
     <MESSAGE value="adattato il grafico e inserita stackedAreaChart.js anche per la ripartizione dei casi totali" />
-    <option name="LAST_COMMIT_MESSAGE" value="adattato il grafico e inserita stackedAreaChart.js anche per la ripartizione dei casi totali" />
+    <MESSAGE value="aggiunte descrizioni dove mancavano" />
+    <option name="LAST_COMMIT_MESSAGE" value="aggiunte descrizioni dove mancavano" />
   </component>
   <component name="WindowStateProjectService">
     <state x="814" y="295" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1596474192548">
@@ -196,22 +234,22 @@
       <screen x="0" y="23" width="1440" height="820" />
     </state>
     <state x="558" y="338" key="Github.ShareDialog/0.23.1440.820@0.23.1440.820" timestamp="1595078313212" />
-    <state width="1544" height="387" key="GridCell.Tab.0.bottom" timestamp="1596474112828">
+    <state width="772" height="387" key="GridCell.Tab.0.bottom" timestamp="1596659298244">
       <screen x="0" y="23" width="2560" height="1352" />
     </state>
-    <state width="1544" height="387" key="GridCell.Tab.0.bottom/0.23.2560.1352@0.23.2560.1352" timestamp="1596474112828" />
-    <state width="1544" height="387" key="GridCell.Tab.0.center" timestamp="1596474112828">
+    <state width="772" height="387" key="GridCell.Tab.0.bottom/0.23.2560.1352@0.23.2560.1352" timestamp="1596659298244" />
+    <state width="772" height="387" key="GridCell.Tab.0.center" timestamp="1596659298241">
       <screen x="0" y="23" width="2560" height="1352" />
     </state>
-    <state width="1544" height="387" key="GridCell.Tab.0.center/0.23.2560.1352@0.23.2560.1352" timestamp="1596474112828" />
-    <state width="1544" height="387" key="GridCell.Tab.0.left" timestamp="1596474112828">
+    <state width="772" height="387" key="GridCell.Tab.0.center/0.23.2560.1352@0.23.2560.1352" timestamp="1596659298241" />
+    <state width="772" height="387" key="GridCell.Tab.0.left" timestamp="1596659298241">
       <screen x="0" y="23" width="2560" height="1352" />
     </state>
-    <state width="1544" height="387" key="GridCell.Tab.0.left/0.23.2560.1352@0.23.2560.1352" timestamp="1596474112828" />
-    <state width="1544" height="387" key="GridCell.Tab.0.right" timestamp="1596474112828">
+    <state width="772" height="387" key="GridCell.Tab.0.left/0.23.2560.1352@0.23.2560.1352" timestamp="1596659298241" />
+    <state width="772" height="387" key="GridCell.Tab.0.right" timestamp="1596659298241">
       <screen x="0" y="23" width="2560" height="1352" />
     </state>
-    <state width="1544" height="387" key="GridCell.Tab.0.right/0.23.2560.1352@0.23.2560.1352" timestamp="1596474112828" />
+    <state width="772" height="387" key="GridCell.Tab.0.right/0.23.2560.1352@0.23.2560.1352" timestamp="1596659298241" />
     <state x="0" y="147" key="MergeDialog" timestamp="1596040223766">
       <screen x="0" y="23" width="2560" height="1352" />
     </state>
@@ -220,30 +258,18 @@
       <screen x="0" y="23" width="2560" height="1352" />
     </state>
     <state x="513" y="408" key="RollbackChangesDialog/0.23.2560.1352@0.23.2560.1352" timestamp="1596652988315" />
-    <state x="569" y="272" key="Vcs.Push.Dialog.v2" timestamp="1596654343747">
+    <state x="569" y="272" key="Vcs.Push.Dialog.v2" timestamp="1596659073623">
       <screen x="0" y="23" width="2560" height="1352" />
     </state>
     <state x="320" y="174" key="Vcs.Push.Dialog.v2/0.23.1440.820@0.23.1440.820" timestamp="1595152527908" />
-    <state x="569" y="272" key="Vcs.Push.Dialog.v2/0.23.2560.1352@0.23.2560.1352" timestamp="1596654343747" />
-    <state x="571" y="619" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1596653001048">
+    <state x="569" y="272" key="Vcs.Push.Dialog.v2/0.23.2560.1352@0.23.2560.1352" timestamp="1596659073623" />
+    <state x="571" y="619" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1596787487282">
       <screen x="0" y="23" width="2560" height="1352" />
     </state>
-    <state x="571" y="619" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.2560.1352@0.23.2560.1352" timestamp="1596653001048" />
+    <state x="571" y="619" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.2560.1352@0.23.2560.1352" timestamp="1596787487282" />
     <state x="385" y="167" width="670" height="676" key="search.everywhere.popup" timestamp="1595150088481">
       <screen x="0" y="23" width="1440" height="820" />
     </state>
     <state x="385" y="167" width="670" height="676" key="search.everywhere.popup/0.23.1440.820@0.23.1440.820" timestamp="1595150088481" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/ui/contents/strings.js</url>
-          <line>47</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
