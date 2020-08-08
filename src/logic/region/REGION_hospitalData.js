@@ -9,24 +9,24 @@ import Records from "../dataset";
 import {chartTitles} from "../../ui/contents/strings";
 
 let dataToReturn = {
-    labels: [{title: chartTitles.totalCasesRegionTable, value: 'total'},
-        {title: chartTitles.totalCasesRegionVariation, value: 'incr'}],
+    labels: [{title: chartTitles.hospitalizedWithSymptoms, value: 'hospitalized'},
+        {title: chartTitles.critical, value: 'critical'}],
     regions: [],
-    total: [],
-    incr: [],
+    hospitalized: [],
+    critical: [],
 };
 
-const RegionNewCasesData = (data) => {
+const HospitalRegionData = (data) => {
 
     data = Records.getRegionRecords();
 
     if (data !== undefined) {
 
-        if (dataToReturn.total.length === 0) {
+        if (dataToReturn.hospitalized.length === 0) {
             for (let i = 0; i < data.length; i ++) {
                 dataToReturn.regions.push(data[i]['denominazione_regione']);
-                dataToReturn.total.push(data[i]['totale_casi']);
-                dataToReturn.incr.push('+ ' + data[i]['nuovi_positivi']);
+                dataToReturn.hospitalized.push(data[i]['totale_ospedalizzati']);
+                dataToReturn.critical.push(data[i]['terapia_intensiva']);
             }
         }
     }
@@ -35,4 +35,4 @@ const RegionNewCasesData = (data) => {
 };
 
 
-export default RegionNewCasesData;
+export default HospitalRegionData;

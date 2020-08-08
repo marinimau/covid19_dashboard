@@ -16,7 +16,7 @@ let dataToReturn = {
     incr: [],
 };
 
-const RegionNewCasesData = (data) => {
+const PositiveRegionData = (data) => {
 
     data = Records.getRegionRecords();
 
@@ -25,8 +25,8 @@ const RegionNewCasesData = (data) => {
         if (dataToReturn.total.length === 0) {
             for (let i = 0; i < data.length; i ++) {
                 dataToReturn.regions.push(data[i]['denominazione_regione']);
-                dataToReturn.total.push(data[i]['totale_casi']);
-                dataToReturn.incr.push('+ ' + data[i]['nuovi_positivi']);
+                dataToReturn.total.push(data[i]['totale_positivi']);
+                dataToReturn.incr.push((data[i]['variazione_totale_positivi'] > 0 ? '+ ' : '')  + data[i]['variazione_totale_positivi']);
             }
         }
     }
@@ -35,4 +35,4 @@ const RegionNewCasesData = (data) => {
 };
 
 
-export default RegionNewCasesData;
+export default PositiveRegionData;

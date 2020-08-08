@@ -20,21 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="aggiunte descrizioni dove mancavano">
-      <change afterPath="$PROJECT_DIR$/src/logic/region/REGION_dead.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/logic/region/REGION_positivity.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/logic/region/REGION_recovered.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/logic/region/REGION_swabs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logic/region/REGION_hospitalData.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logic/region/REGION_positive.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ui/theme/shadows.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.expo/packager-info.json" beforeDir="false" afterPath="$PROJECT_DIR$/.expo/packager-info.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data_representation/region_table/regionTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_representation/region_table/regionTable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/REGION_newCases.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/region/REGION_newCases.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/dataset.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/dataset.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/retrieveRegionData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/retrieveRegionData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/components/died/diedComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/died/diedComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/components/new_cases/newCasesComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/new_cases/newCasesComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/components/recovered/recoveredComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/recovered/recoveredComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/components/swabs/swabsComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/swabs/swabsComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_representation/resume_cards/cardCurrentPositive.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_representation/resume_cards/cardCurrentPositive.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/region/REGION_newCases.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/region/REGION_newCases.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/components/current_positive/currentPositiveComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/current_positive/currentPositiveComponent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/contents/strings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/contents/strings.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -100,6 +94,7 @@
       <workItem from="1596041752366" duration="3477000" />
       <workItem from="1596053023896" duration="2262000" />
       <workItem from="1596787408394" duration="7158000" />
+      <workItem from="1596869893792" duration="1629000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1595078622516</created>
@@ -175,7 +170,7 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">

@@ -17,7 +17,7 @@ export default class CardCurrentPositive extends Component{
 
     render() {
         return (
-            <LinearGradient colors={[LegendColors.yellow, LegendColors.lightyellow]} style={[styles.cardGeneric, styles.cardShadow, styles.cardSmall, {shadowColor: LegendColors.yellow}]}>
+            <LinearGradient colors={[LegendColors.yellow, LegendColors.lightyellow]} style={[styles.cardGeneric, styles.cardShadow, styles.cardSmall, {zIndex : 999, shadowColor: LegendColors.yellow}]}>
                 <Text style={[styles.chartTitle, styles.indicatorLight]}>{chartTitles.currentPositive}</Text>
                 <Text style={[styles.indicatorValue, styles.indicatorValueBold, styles.indicatorLight]}>{latestUpdateData().totalCurrentCases}</Text>
                 <Text style={[styles.indicatorValue, styles.indicatorValueIncr, styles.indicatorLight]}>{latestUpdateData().currentCasesVariation} ({latestUpdateData().currentCasesVariationPercentage}%)</Text>

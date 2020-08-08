@@ -77,6 +77,8 @@ export const chartTitles = {
     positiveHomeQuarantine: 'Isolamento domiciliare',
     hospitalizedWithSymptoms: 'Ricoverati con sintomi',
     critical: 'Terapia intensiva',
+    regionHospitalSituation: 'Situazione ospedaliera regioni',
+
 
 }
 
@@ -103,6 +105,7 @@ export const dataDescription = {
     positiveVariation: 'Andamento della variazione giornaliera del numero di positivi correnti nel corso del tempo',
     positiveRepartition: 'Ripartizione dei positivi correnti nel corso del tempo in 3 categorie: isolamento domiciliare; '+
         'ricoverati con sintomi (esclusi i ricoverati in terapia intensiva); ricoverati in terapia intensiva.',
+    positiveRegionTable: 'Attualmente positivi',
     swapTrend: 'Andamento del valore totale di tamponi eseguiti',
     testedCaseTrend: 'Andamento del valore totale di casi testati (diverso dai tamponi in quanto un singolo individuo' +
         'può essere sottoposto a più tamponi).',

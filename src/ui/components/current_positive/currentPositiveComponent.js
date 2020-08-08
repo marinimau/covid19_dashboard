@@ -21,6 +21,9 @@ import CardHospitalizedWithSymptoms from "../../../data_representation/resume_ca
 import CardCritical from "../../../data_representation/resume_cards/cardCritical";
 import StackedAreaChart from "../../../data_representation/charts/stackedAreaChart";
 import PositiveRepartitionData from "../../../logic/positiveRepartitionData";
+import RegionTable from "../../../data_representation/region_table/regionTable";
+import PositiveRegionData from "../../../logic/region/REGION_positive";
+import HospitalRegionData from "../../../logic/region/REGION_hospitalData";
 
 class CurrentPositiveComponent extends Component {
 
@@ -67,6 +70,20 @@ class CurrentPositiveComponent extends Component {
                                 legend={[chartTitles.positiveHomeQuarantine, chartTitles.hospitalizedWithSymptoms, chartTitles.critical]}
                                 data={PositiveRepartitionData().repartition}/>
                             <Text style={styles.chartDescription}>{dataDescription.positiveRepartition}</Text>
+                        </View>
+
+                        <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
+                            <Text style={styles.chartTitle}>{chartTitles.totalCasesRegion}</Text>
+                            <RegionTable
+                                data={PositiveRegionData()}
+                            />
+                        </View>
+
+                        <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
+                            <Text style={styles.chartTitle}>{chartTitles.regionHospitalSituation}</Text>
+                            <RegionTable
+                                data={HospitalRegionData()}
+                            />
                         </View>
 
                     </>
