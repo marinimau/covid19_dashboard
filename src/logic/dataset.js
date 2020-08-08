@@ -20,6 +20,7 @@ let Records ={
     },
 
     setRegionRecords(records){
+        console.log('Records'+ records);
         this.regionData = records;
     },
 

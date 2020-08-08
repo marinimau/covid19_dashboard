@@ -17,19 +17,13 @@ import MyLineChart from "../../../data_representation/charts/lineChart";
 import StackedAreaChart from "../../../data_representation/charts/stackedAreaChart";
 import TotalCasesRepartitionData from "../../../logic/totalCasesRepartitionData";
 import RegionTable from "../../../data_representation/region_table/regionTable";
-import RegionNewCasesData from "../../../logic/REGION_newCases";
-import retrieveRegionData from "../../../logic/retrieveRegionData";
-import Records from "../../../logic/dataset";
+import RegionNewCasesData from "../../../logic/region/REGION_newCases";
 
 class NewCasesComponent extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {regionData: retrieveRegionData()}
-        Records.setRegionRecords(this.state.regionData);
     }
-
-
 
     render() {
         return (
@@ -43,7 +37,6 @@ class NewCasesComponent extends Component {
                             <Text style={[styles.chartTitle, styles.chartBigValue]}>{NewCasesData().r0}</Text>
                             <Text style={styles.chartDescription}>{dataDescription.r0}</Text>
                         </View>
-
 
                         <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
                             <Text style={styles.chartTitle}>{chartTitles.totalCasesCurve}</Text>

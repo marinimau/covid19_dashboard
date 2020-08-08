@@ -16,7 +16,6 @@ export default class RegionTable extends Component {
         super(props);
     }
 
-
     render() {
         return (
             <View style={{marginTop: 10}}>
@@ -24,17 +23,17 @@ export default class RegionTable extends Component {
                     <DataTable.Header>
                         <DataTable.Title>{chartTitles.regionsTable}</DataTable.Title>
                         {this.props.data.labels.map((label, index) =>
-                            <DataTable.Title  key={index} numeric>{label.title}</DataTable.Title>)}
+                            <DataTable.Title key={index} numeric>{label.title}</DataTable.Title>)}
                     </DataTable.Header>
 
                     {
-                    this.props.data.regions.map((item, index) => (
-                        <DataTable.Row key={index}>
-                            <DataTable.Cell>{item}</DataTable.Cell>
-                            <DataTable.Cell numeric>159</DataTable.Cell>
-                            <DataTable.Cell numeric>6.0</DataTable.Cell>
-                        </DataTable.Row>
-                    ))
+                        this.props.data.regions.map((item, index) => (
+                            <DataTable.Row key={index}>
+                                <DataTable.Cell>{item}</DataTable.Cell>
+                                {this.props.data.labels.map((label) =>
+                                    <DataTable.Cell numeric>{this.props.data[label.value][index]}</DataTable.Cell>)}
+                            </DataTable.Row>
+                        ))
                     }
                 </DataTable>
             </View>

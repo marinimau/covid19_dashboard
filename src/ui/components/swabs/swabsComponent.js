@@ -16,6 +16,9 @@ import MyProgressCircle from "../../../data_representation/charts/progressCircle
 import LegendColors from "../../theme/legendColors";
 import SwabData from "../../../logic/swabData";
 import MyLineChart from "../../../data_representation/charts/lineChart";
+import RegionTable from "../../../data_representation/region_table/regionTable";
+import SwabRegionData from "../../../logic/region/REGION_swabs";
+import PositivityRegionData from "../../../logic/region/REGION_positivity";
 
 class SwabsComponent extends Component {
 
@@ -64,8 +67,19 @@ class SwabsComponent extends Component {
                             <Text style={styles.chartDescription}>{dataDescription.percentagePositiveTrend}</Text>
                         </View>
 
+                        <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
+                            <Text style={styles.chartTitle}>{chartTitles.totalCasesRegion}</Text>
+                            <RegionTable
+                                data={SwabRegionData()}
+                            />
+                        </View>
 
-
+                        <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
+                            <Text style={styles.chartTitle}>{chartTitles.positiveRatioRegions}</Text>
+                            <RegionTable
+                                data={PositivityRegionData()}
+                            />
+                        </View>
                     </>
                 }
             />

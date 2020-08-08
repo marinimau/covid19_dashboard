@@ -5,18 +5,16 @@
  * Location: Baratili San Pietro
  */
 
-import Records from "./dataset";
-import {chartTitles} from "../ui/contents/strings";
+import Records from "../dataset";
+import {chartTitles} from "../../ui/contents/strings";
 
 let dataToReturn = {
-    labels: [{title: chartTitles.totalCasesRegionTable, value: 'total'},
-        {title: chartTitles.incrementTable, value: 'incr'}],
-    regions: ['Abruzzo', 'Basilicata', 'Calabria', 'Campania', 'Emilia Romagna'],
+    labels: [{title: chartTitles.recoveredRegionTable, value: 'total'},],
+    regions: [],
     total: [],
-    incr: [],
 };
 
-const RegionNewCasesData = (data) => {
+const RecoveredRegionData = (data) => {
 
     data = Records.getRegionRecords();
 
@@ -25,8 +23,7 @@ const RegionNewCasesData = (data) => {
         if (dataToReturn.total.length === 0) {
             for (let i = 0; i < data.length; i ++) {
                 dataToReturn.regions.push(data[i]['denominazione_regione']);
-                dataToReturn.total.push(data[i]['totale_casi']);
-                dataToReturn.incr.push(data[i]['nuovi_positivi']);
+                dataToReturn.total.push(data[i]['dimessi_guariti']);
             }
         }
     }
@@ -35,4 +32,4 @@ const RegionNewCasesData = (data) => {
 };
 
 
-export default RegionNewCasesData;
+export default RecoveredRegionData;

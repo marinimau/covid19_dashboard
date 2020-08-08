@@ -15,6 +15,8 @@ import MyProgressCircle from "../../../data_representation/charts/progressCircle
 import LegendColors from "../../theme/legendColors";
 import RecoveredData from "../../../logic/recoveredData";
 import MyLineChart from "../../../data_representation/charts/lineChart";
+import RegionTable from "../../../data_representation/region_table/regionTable";
+import RecoveredRegionData from "../../../logic/region/REGION_recovered";
 
 class RecoveredComponent extends Component {
 
@@ -51,6 +53,13 @@ class RecoveredComponent extends Component {
                             <Text style={[styles.chartTitle]}>{chartTitles.recoveredTrendProportional}</Text>
                             <MyLineChart color={LegendColors.green} data={RecoveredData().recoveredTrendProportional} />
                             <Text style={styles.chartDescription}>{dataDescription.recoveredTrendProportional}</Text>
+                        </View>
+
+                        <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
+                            <Text style={styles.chartTitle}>{chartTitles.totalCasesRegion}</Text>
+                            <RegionTable
+                                data={RecoveredRegionData()}
+                            />
                         </View>
                     </>
                 }

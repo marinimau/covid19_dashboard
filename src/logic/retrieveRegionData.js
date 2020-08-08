@@ -7,11 +7,11 @@
 
 import RemoteUrls from "../ui/contents/urls";
 
-const retrieveRegionData = () => {
+const retrieveRegionData = () =>
     fetch(RemoteUrls.regions)
         .then(res => (res.ok ? res : Promise.reject(res)))
         .then(res => res.json());
-}
+
 
 export default retrieveRegionData;
 

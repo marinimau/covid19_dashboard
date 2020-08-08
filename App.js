@@ -51,33 +51,44 @@ export default function App() {
                 if (data) Records.setRecords(data)
 
                 return (
-                    <>
-                        <StatusBar/>
-                        <NavigationContainer
-                            ref={navigationRef}
-                            style={styles.root}>
-                            <Drawer.Navigator
-                                initialRouteName="Resume"
-                                drawerContentOptions={{
-                                    activeTintColor: Colors.drawerSelectedText,
-                                    activeBackgroundColor: Colors.drawerSelectedBackground,
+                    <Async promiseFn={retrieveRegionData}>
+                        {({data, err, isLoading}) => {
+                            if (isLoading) return <LoadingScreen/>
+                            if (err) return <ErrorScreen/>
+                            if (data) Records.setRegionRecords(data)
 
-                                }}
-                                drawerType={isLargeScreen ? 'permanent' : 'front'}
-                                drawerStyle={isLargeScreen ? {width: dimens.drawerWidth} : [{width: dimens.drawerWidth}]}
-                                overlayColor={isLargeScreen ? "transparent" : Colors.basicTransparent}>
+                            return (
+                                <>
+                                    <StatusBar/>
+                                    <NavigationContainer
+                                        ref={navigationRef}
+                                        style={styles.root}>
+                                        <Drawer.Navigator
+                                            initialRouteName="Resume"
+                                            drawerContentOptions={{
+                                                activeTintColor: Colors.drawerSelectedText,
+                                                activeBackgroundColor: Colors.drawerSelectedBackground,
 
-                                <Drawer.Screen name={screenTitles.latestUpdateResume}
-                                               component={LatestUpdateResumeScreen}/>
-                                <Drawer.Screen name={screenTitles.newCases} component={NewCasesScreen}/>
-                                <Drawer.Screen name={screenTitles.recovered} component={RecoveredScreen}/>
-                                <Drawer.Screen name={screenTitles.died} component={DiedScreen}/>
-                                <Drawer.Screen name={screenTitles.currentPositive} component={CurrentPositiveScreen}/>
-                                <Drawer.Screen name={screenTitles.swab} component={SwabsResumeScreen}/>
+                                            }}
+                                            drawerType={isLargeScreen ? 'permanent' : 'front'}
+                                            drawerStyle={isLargeScreen ? {width: dimens.drawerWidth} : [{width: dimens.drawerWidth}]}
+                                            overlayColor={isLargeScreen ? "transparent" : Colors.basicTransparent}>
 
-                            </Drawer.Navigator>
-                        </NavigationContainer>
-                    </>
+                                            <Drawer.Screen name={screenTitles.latestUpdateResume}
+                                                           component={LatestUpdateResumeScreen}/>
+                                            <Drawer.Screen name={screenTitles.newCases} component={NewCasesScreen}/>
+                                            <Drawer.Screen name={screenTitles.recovered} component={RecoveredScreen}/>
+                                            <Drawer.Screen name={screenTitles.died} component={DiedScreen}/>
+                                            <Drawer.Screen name={screenTitles.currentPositive}
+                                                           component={CurrentPositiveScreen}/>
+                                            <Drawer.Screen name={screenTitles.swab} component={SwabsResumeScreen}/>
+
+                                        </Drawer.Navigator>
+                                    </NavigationContainer>
+                                </>
+                            )
+                        }}
+                    </Async>
                 )
             }}
         </Async>
