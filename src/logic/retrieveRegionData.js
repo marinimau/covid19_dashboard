@@ -5,17 +5,12 @@
  * Location: Baratili San Pietro
  */
 
-import Records from "./dataset";
+import RemoteUrls from "../ui/contents/urls";
 
 const retrieveRegionData = () => {
-    if(Records.getRegionRecords() === []){
-        fetch('https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-json/dpc-covid19-ita-regioni-latest.json')
-            .then(res => (res.ok ? res : Promise.reject(res)))
-            .then(res => res.json());
-    }
-    else {
-        return Records.getRegionRecords();
-    }
+    fetch(RemoteUrls.regions)
+        .then(res => (res.ok ? res : Promise.reject(res)))
+        .then(res => res.json());
 }
 
 export default retrieveRegionData;

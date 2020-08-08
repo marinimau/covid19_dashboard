@@ -4,10 +4,11 @@
  * Repository: http://github.com/marinimau/covid19_dashboard
  * Location: Baratili San Pietro
  */
+import RemoteUrls from "../ui/contents/urls";
 
 
 const retrieveData = () =>
-    fetch('https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-json/dpc-covid19-ita-andamento-nazionale.json')
+    fetch(RemoteUrls.national)
         .then(res => (res.ok ? res : Promise.reject(res)))
         .then(res => res.json());
 

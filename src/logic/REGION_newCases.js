@@ -11,30 +11,26 @@ import {chartTitles} from "../ui/contents/strings";
 let dataToReturn = {
     labels: [{title: chartTitles.totalCasesRegionTable, value: 'total'},
         {title: chartTitles.incrementTable, value: 'incr'}],
-    regions: [],
+    regions: ['Abruzzo', 'Basilicata', 'Calabria', 'Campania', 'Emilia Romagna'],
     total: [],
     incr: [],
 };
 
 const RegionNewCasesData = (data) => {
 
-    if (data === undefined) {
-        data = Records.getRegionRecords();
-    }
+    data = Records.getRegionRecords();
 
-    if (data !== null) {
-        let d = data[data.length - 1];
-
+    if (data !== undefined) {
 
         if (dataToReturn.total.length === 0) {
-            for (let i = 0; i < data.length; i += 1) {
+            for (let i = 0; i < data.length; i ++) {
                 dataToReturn.regions.push(data[i]['denominazione_regione']);
                 dataToReturn.total.push(data[i]['totale_casi']);
                 dataToReturn.incr.push(data[i]['nuovi_positivi']);
             }
         }
     }
-    console.log(dataToReturn);
+
     return dataToReturn;
 };
 

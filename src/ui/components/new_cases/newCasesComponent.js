@@ -18,12 +18,18 @@ import StackedAreaChart from "../../../data_representation/charts/stackedAreaCha
 import TotalCasesRepartitionData from "../../../logic/totalCasesRepartitionData";
 import RegionTable from "../../../data_representation/region_table/regionTable";
 import RegionNewCasesData from "../../../logic/REGION_newCases";
+import retrieveRegionData from "../../../logic/retrieveRegionData";
+import Records from "../../../logic/dataset";
 
 class NewCasesComponent extends Component {
 
     constructor(props) {
         super(props);
+        this.state = {regionData: retrieveRegionData()}
+        Records.setRegionRecords(this.state.regionData);
     }
+
+
 
     render() {
         return (

@@ -17,7 +17,7 @@ import {screenTitles} from "./src/ui/contents/strings";
 import Async from 'react-async';
 import {navigationRef} from './src/utils/rootNavigationRef';
 import Records from "./src/logic/dataset";
-import { enableScreens } from 'react-native-screens';
+import {enableScreens} from 'react-native-screens';
 
 /* Screens Import */
 import LatestUpdateResumeScreen from "./src/ui/screens/latestUpdateResumeScreen";
@@ -29,6 +29,7 @@ import SwabsResumeScreen from "./src/ui/screens/swabsScreen";
 import retrieveData from "./src/logic/retrieveData";
 import LoadingScreen from "./src/ui/components/loading/splash";
 import ErrorScreen from "./src/ui/components/loading/error";
+import retrieveRegionData from "./src/logic/retrieveRegionData";
 
 
 enableScreens();
@@ -44,14 +45,13 @@ export default function App() {
 
     return (
         <Async promiseFn={retrieveData}>
-            {({ data, err, isLoading }) => {
-                if (isLoading) return <LoadingScreen />
-                if (err) return <ErrorScreen />
+            {({data, err, isLoading}) => {
+                if (isLoading) return <LoadingScreen/>
+                if (err) return <ErrorScreen/>
+                if (data) Records.setRecords(data)
 
-                if (data)
-                    Records.setRecords(data)
-                    return (
-                        <>
+                return (
+                    <>
                         <StatusBar/>
                         <NavigationContainer
                             ref={navigationRef}
@@ -67,17 +67,18 @@ export default function App() {
                                 drawerStyle={isLargeScreen ? {width: dimens.drawerWidth} : [{width: dimens.drawerWidth}]}
                                 overlayColor={isLargeScreen ? "transparent" : Colors.basicTransparent}>
 
-                                <Drawer.Screen name={screenTitles.latestUpdateResume} component={LatestUpdateResumeScreen}/>
-                                <Drawer.Screen name={screenTitles.newCases}  component={NewCasesScreen}/>
+                                <Drawer.Screen name={screenTitles.latestUpdateResume}
+                                               component={LatestUpdateResumeScreen}/>
+                                <Drawer.Screen name={screenTitles.newCases} component={NewCasesScreen}/>
                                 <Drawer.Screen name={screenTitles.recovered} component={RecoveredScreen}/>
-                                <Drawer.Screen name={screenTitles.died} component={DiedScreen} />
+                                <Drawer.Screen name={screenTitles.died} component={DiedScreen}/>
                                 <Drawer.Screen name={screenTitles.currentPositive} component={CurrentPositiveScreen}/>
-                                <Drawer.Screen name={screenTitles.swab} component={SwabsResumeScreen} />
+                                <Drawer.Screen name={screenTitles.swab} component={SwabsResumeScreen}/>
 
                             </Drawer.Navigator>
                         </NavigationContainer>
-                        </>
-                    )
+                    </>
+                )
             }}
         </Async>
     );
