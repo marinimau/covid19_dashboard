@@ -17,7 +17,7 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "bundleIdentifier": "com.marinimau.covidashboard"
     },
     "web": {
       "favicon": "./assets/favicon.png"
