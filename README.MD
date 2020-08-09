@@ -1,4 +1,6 @@
-# Covid-19 Dashboard
+![Covid19 Italy](https://github.com/marinimau/covid19_dashboard/blob/master/repository-open-graph-template.png)
+
+
 
 A cross-platform (Android, iOS, Web) dashboard to represent the trend of the Covid-19 pandemic in Italy.
 
