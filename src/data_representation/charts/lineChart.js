@@ -31,7 +31,7 @@ export default class MyLineChart extends Component {
             x: 0,
             y: 0,
             visible: false,
-            value: 0
+            value: 0,
         };
     }
 

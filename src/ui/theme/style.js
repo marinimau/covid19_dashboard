@@ -9,6 +9,7 @@ import {StyleSheet} from "react-native";
 import Colors from "./colors";
 import LegendColors from "./legendColors"
 import {dynamicDimens} from "./dimens";
+import {Platform} from "react-native-web";
 
 
 export const styles = StyleSheet.create({
@@ -70,7 +71,7 @@ export const styles = StyleSheet.create({
         borderTopRightRadius: 20,
         borderBottomRightRadius: 20,
         borderBottomLeftRadius: 20,
-        margin: 7,
+        margin: Platform.OS === 'ios' ? 7 : 10,
         height: 'auto',
         padding: 20,
         backgroundColor: Colors.basicElevation,

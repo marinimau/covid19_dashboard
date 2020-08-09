@@ -6,12 +6,11 @@
  */
 
 import React, {Component} from 'react';
-import {View, Text, ActivityIndicator} from "react-native";
+import {View, ActivityIndicator} from "react-native";
 import {styles} from "../../theme/style";
-import {loadingMessages} from "../../contents/strings";
 
 
-class LoadingScreen extends Component{
+class LoadingComponent extends Component{
 
     constructor() {
         super();
@@ -28,4 +27,4 @@ class LoadingScreen extends Component{
     }
 }
 
-export default LoadingScreen;
+export default LoadingComponent;

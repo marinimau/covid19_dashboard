@@ -27,9 +27,10 @@ import DiedScreen from "./src/ui/screens/diedScreen";
 import CurrentPositiveScreen from "./src/ui/screens/currentPositiveScreen";
 import SwabsResumeScreen from "./src/ui/screens/swabsScreen";
 import retrieveData from "./src/logic/retrieveData";
-import LoadingScreen from "./src/ui/components/loading/splash";
 import ErrorScreen from "./src/ui/components/loading/error";
 import retrieveRegionData from "./src/logic/retrieveRegionData";
+import LoadingScreen from "./src/ui/screens/loadingScreen";
+import LoadingComponent from "./src/ui/components/loading/loading";
 
 
 enableScreens();
@@ -46,14 +47,14 @@ export default function App() {
     return (
         <Async promiseFn={retrieveData}>
             {({data, err, isLoading}) => {
-                if (isLoading) return <LoadingScreen/>
+                if (isLoading) return <LoadingComponent/>
                 if (err) return <ErrorScreen/>
                 if (data) Records.setRecords(data)
 
                 return (
                     <Async promiseFn={retrieveRegionData}>
                         {({data, err, isLoading}) => {
-                            if (isLoading) return <LoadingScreen/>
+                            if (isLoading) return <LoadingComponent/>
                             if (err) return <ErrorScreen/>
                             if (data) Records.setRegionRecords(data)
 
