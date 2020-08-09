@@ -63,7 +63,6 @@ If you have the iOS simulator installed, just click on **'run on iOS simulator'*
 * [React-Native](https://reactnative.dev)
 * [D3.js](http://d3js.org)
 * [Expo](https://expo.io)
-* [Redux](https://redux.js.org) 
 
 
 ## Data
@@ -71,6 +70,8 @@ If you have the iOS simulator installed, just click on **'run on iOS simulator'*
 Source:
 
 ```https://github.com/pcm-dpc/COVID-19```
+
+realtime updated.
 
 
 ## Authors
