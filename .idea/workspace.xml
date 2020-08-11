@@ -20,7 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="finito di aggiungere le tabelle con i dati regionali">
-      <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.expo/packager-info.json" beforeDir="false" afterPath="$PROJECT_DIR$/.expo/packager-info.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.expo/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/.expo/settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_representation/charts/lineChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_representation/charts/lineChart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_representation/resume_cards/cardCurrentPositive.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_representation/resume_cards/cardCurrentPositive.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_representation/resume_cards/cardDied.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_representation/resume_cards/cardDied.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_representation/resume_cards/cardRecovered.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_representation/resume_cards/cardRecovered.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_representation/resume_cards/cardSwab.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_representation/resume_cards/cardSwab.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_representation/resume_cards/cardTotalCases.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_representation/resume_cards/cardTotalCases.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +75,7 @@
       <recent name="$PROJECT_DIR$/src/ui" />
     </key>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -86,6 +95,8 @@
       <workItem from="1596053023896" duration="2262000" />
       <workItem from="1596787408394" duration="7158000" />
       <workItem from="1596869893792" duration="1629000" />
+      <workItem from="1597000662459" duration="24000" />
+      <workItem from="1597172933297" duration="1078000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1595078622516</created>
@@ -171,7 +182,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596964018980</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="finito di aggiungere le tabelle con i dati regionali">
+      <created>1597000677551</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1597000677551</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -240,12 +258,12 @@
       <screen x="0" y="23" width="2560" height="1352" />
     </state>
     <state x="513" y="408" key="RollbackChangesDialog/0.23.2560.1352@0.23.2560.1352" timestamp="1596652988315" />
-    <state x="320" y="175" key="Vcs.Push.Dialog.v2" timestamp="1596964020568">
+    <state x="320" y="175" key="Vcs.Push.Dialog.v2" timestamp="1597000682620">
       <screen x="0" y="25" width="1440" height="814" />
     </state>
     <state x="320" y="174" key="Vcs.Push.Dialog.v2/0.23.1440.820@0.23.1440.820" timestamp="1595152527908" />
     <state x="569" y="272" key="Vcs.Push.Dialog.v2/0.23.2560.1352@0.23.2560.1352" timestamp="1596659073623" />
-    <state x="320" y="175" key="Vcs.Push.Dialog.v2/0.25.1440.814@0.25.1440.814" timestamp="1596964020568" />
+    <state x="320" y="175" key="Vcs.Push.Dialog.v2/0.25.1440.814@0.25.1440.814" timestamp="1597000682620" />
     <state x="571" y="619" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1596787487282">
       <screen x="0" y="23" width="2560" height="1352" />
     </state>
