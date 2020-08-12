@@ -19,19 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="risolti alcuni problemi nella UI">
-      <change afterPath="$PROJECT_DIR$/src/ui/components/info/infoComponent.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/contents/infoMenu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/screens/infoScreen.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/linking.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.expo/packager-info.json" beforeDir="false" afterPath="$PROJECT_DIR$/.expo/packager-info.json" afterDir="false" />
+    <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="aggiunta pagina menu">
+      <change afterPath="$PROJECT_DIR$/src/ui/components/header/lastUpdateBanner.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/region/REGION_positive.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/region/REGION_positive.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/contents/strings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/contents/strings.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/contents/urls.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/contents/urls.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/theme/colors.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/theme/colors.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/components/mainScrollableContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/mainScrollableContainer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +90,7 @@
       <workItem from="1596869893792" duration="1629000" />
       <workItem from="1597000662459" duration="24000" />
       <workItem from="1597172933297" duration="2297000" />
-      <workItem from="1597221580716" duration="4589000" />
+      <workItem from="1597221580716" duration="8101000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1595078622516</created>
@@ -199,7 +190,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597174087820</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="aggiunta pagina menu">
+      <created>1597227249907</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1597227249908</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -229,14 +227,16 @@
     <MESSAGE value="aggiunte descrizioni dove mancavano" />
     <MESSAGE value="finito di aggiungere le tabelle con i dati regionali" />
     <MESSAGE value="risolti alcuni problemi nella UI" />
-    <option name="LAST_COMMIT_MESSAGE" value="risolti alcuni problemi nella UI" />
+    <MESSAGE value="aggiunta pagina menu" />
+    <option name="LAST_COMMIT_MESSAGE" value="aggiunta pagina menu" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="814" y="295" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1596474192548">
-      <screen x="0" y="23" width="2560" height="1352" />
+    <state x="458" y="189" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1597228486721">
+      <screen x="0" y="25" width="1440" height="814" />
     </state>
     <state x="458" y="188" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.820@0.23.1440.820" timestamp="1595080474201" />
     <state x="814" y="295" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.2560.1352@0.23.2560.1352" timestamp="1596474192548" />
+    <state x="458" y="189" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.25.1440.814@0.25.1440.814" timestamp="1597228486721" />
     <state x="27" y="38" key="CommitChangelistDialog2" timestamp="1595152525607">
       <screen x="0" y="23" width="1440" height="820" />
     </state>
@@ -269,12 +269,12 @@
       <screen x="0" y="23" width="2560" height="1352" />
     </state>
     <state x="513" y="408" key="RollbackChangesDialog/0.23.2560.1352@0.23.2560.1352" timestamp="1596652988315" />
-    <state x="320" y="175" key="Vcs.Push.Dialog.v2" timestamp="1597174090086">
+    <state x="320" y="175" key="Vcs.Push.Dialog.v2" timestamp="1597227287481">
       <screen x="0" y="25" width="1440" height="814" />
     </state>
     <state x="320" y="174" key="Vcs.Push.Dialog.v2/0.23.1440.820@0.23.1440.820" timestamp="1595152527908" />
     <state x="569" y="272" key="Vcs.Push.Dialog.v2/0.23.2560.1352@0.23.2560.1352" timestamp="1596659073623" />
-    <state x="320" y="175" key="Vcs.Push.Dialog.v2/0.25.1440.814@0.25.1440.814" timestamp="1597174090086" />
+    <state x="320" y="175" key="Vcs.Push.Dialog.v2/0.25.1440.814@0.25.1440.814" timestamp="1597227287481" />
     <state x="571" y="619" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1596787487282">
       <screen x="0" y="23" width="2560" height="1352" />
     </state>

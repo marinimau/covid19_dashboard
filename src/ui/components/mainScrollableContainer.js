@@ -8,18 +8,21 @@
 import React from 'react'
 import {styles} from "../theme/style";
 import {ScrollView, View, Platform} from "react-native";
+import LastUpdateBanner from "./header/lastUpdateBanner";
 
 function MainScrollableContents(props) {
     return (
-        <View style={[styles.rootContainer, {position: 'relative'}]}>
-            <ScrollView>
-                <View style={[styles.scrollableContainer]}>
+        <>
+            <View style={[styles.rootContainer, {position: 'relative'}]}>
+                <ScrollView>
+                    <View style={[styles.scrollableContainer]}>
 
-                    {props.content}
+                        {props.content}
 
-                </View>
-            </ScrollView>
-        </View>
+                    </View>
+                </ScrollView>
+            </View>
+        </>
     );
 }
 
