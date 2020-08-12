@@ -26,7 +26,7 @@ const PositiveRegionData = (data) => {
             for (let i = 0; i < data.length; i ++) {
                 dataToReturn.regions.push(data[i]['denominazione_regione']);
                 dataToReturn.total.push(data[i]['totale_positivi']);
-                dataToReturn.incr.push((data[i]['variazione_totale_positivi'] > 0 ? '+ ' : '')  + data[i]['variazione_totale_positivi']);
+                dataToReturn.incr.push((data[i]['variazione_totale_positivi'] > 0 ? '+' : '')  + data[i]['variazione_totale_positivi']);
             }
         }
     }

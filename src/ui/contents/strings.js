@@ -8,7 +8,7 @@
 export const appInfo = {
     name: 'Covid19 Dashboard',
     version: '1.0.0 beta',
-    author: 'Mauro Marini'
+    author: '@marinimau, @scambuilds'
 };
 
 export const loadingMessages = {
@@ -23,7 +23,8 @@ export const screenTitles = {
     recovered: 'Guariti',
     died: 'Deceduti',
     currentPositive: 'Positivi',
-    swab: 'Tamponi'
+    swab: 'Tamponi',
+    info: 'Informazioni'
 };
 
 
@@ -110,4 +111,21 @@ export const dataDescription = {
     testedCaseTrend: 'Andamento del valore totale di casi testati (diverso dai tamponi in quanto un singolo individuo' +
         'può essere sottoposto a più tamponi).',
     percentagePositiveTrend: 'Andamento della percentuale di esito positivo sul totale dei casi testati nel corso del tempo'
+}
+
+
+export const infoMenuTitles = {
+    sectionLinks: 'Link utili',
+    donate: 'Dona',
+    contact: 'Contatti',
+    repository: 'Repository',
+    data: 'Sorgente dati',
+}
+
+
+export const infoMenuDescriptions = {
+    donate: 'donazione libera',
+    contact: 'ricevi assistenza',
+    repository: 'codice sorgente',
+    data: 'Protezione Civile IT',
 }

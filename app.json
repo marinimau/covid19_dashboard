@@ -4,6 +4,7 @@
     "slug": "covid19_dashboard",
     "version": "1.0.0",
     "orientation": "portrait",
+    "privacy": "public",
     "icon": "./assets/icon.png",
     "splash": {
       "image": "./assets/splash.png",

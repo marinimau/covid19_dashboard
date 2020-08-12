@@ -29,8 +29,8 @@ import SwabsResumeScreen from "./src/ui/screens/swabsScreen";
 import retrieveData from "./src/logic/retrieveData";
 import ErrorScreen from "./src/ui/components/loading/error";
 import retrieveRegionData from "./src/logic/retrieveRegionData";
-import LoadingScreen from "./src/ui/screens/loadingScreen";
 import LoadingComponent from "./src/ui/components/loading/loading";
+import InfoScreen from "./src/ui/screens/infoScreen";
 
 
 enableScreens();
@@ -83,6 +83,7 @@ export default function App() {
                                             <Drawer.Screen name={screenTitles.currentPositive}
                                                            component={CurrentPositiveScreen}/>
                                             <Drawer.Screen name={screenTitles.swab} component={SwabsResumeScreen}/>
+                                            <Drawer.Screen name={screenTitles.info} component={InfoScreen}/>
 
                                         </Drawer.Navigator>
                                     </NavigationContainer>
