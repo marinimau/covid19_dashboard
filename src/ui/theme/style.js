@@ -5,11 +5,10 @@
  * Location: Baratili San Pietro
  */
 
-import {StyleSheet} from "react-native";
+import {StyleSheet, Platform} from "react-native";
 import Colors from "./colors";
 import LegendColors from "./legendColors"
 import {dynamicDimens} from "./dimens";
-import {Platform} from "react-native-web";
 
 
 export const styles = StyleSheet.create({
@@ -26,7 +25,8 @@ export const styles = StyleSheet.create({
     scrollableContainer: {
         flex: 1,
         flexDirection: 'row',
-        flexWrap: 'wrap'
+        flexWrap: 'wrap',
+        marginBottom: Platform.OS === 'web' ? 10 : 55,
     },
     loading: {
         backgroundColor: Colors.basicElevation,
@@ -71,7 +71,7 @@ export const styles = StyleSheet.create({
         borderTopRightRadius: 20,
         borderBottomRightRadius: 20,
         borderBottomLeftRadius: 20,
-        margin: Platform.OS === 'ios' ? 7 : 10,
+        margin: 10,
         height: 'auto',
         padding: 20,
         backgroundColor: Colors.basicElevation,
@@ -184,14 +184,17 @@ export const styles = StyleSheet.create({
      *
      */
     notesContainer: {
-        width: 'auto',
+        bottom: 0,
+        position:'absolute',
+        justifyContent: 'center',
+        alignItems: 'center',
+        width: '100%',
         height: 'auto',
-        backgroundColor: Colors.basic,
-        position: 'relative',
-        paddingTop: 5,
-        paddingBottom: 20,
+        backgroundColor: Colors.basicNotes,
+        paddingTop: 15,
+        paddingBottom: 15,
         borderColor: 'transparent',
         borderBottomColor: Colors.mainTransparent,
         borderWidth: 0.5,
-    }
+    },
 });

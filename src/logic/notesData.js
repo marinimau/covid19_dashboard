@@ -20,7 +20,7 @@ const NotesData = (data) => {
         if (dataToReturn.notes.length === 0) {
             for (let i = 0; i < data.length; i++) {
                 if (data[i]['note'] !== null) {
-                    dataToReturn.notes.push('(' + data[i]['denominazione_regione'].toUpperCase() + ') ' + data[i]['note'] + '*** ');
+                    dataToReturn.notes.push('       (' + data[i]['denominazione_regione'].toUpperCase() + ') ' + data[i]['note'].replace(/(\r\n|\n|\r)/gm, ""));
                 }
             }
         }

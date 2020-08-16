@@ -7,7 +7,7 @@
 
 import React, {Component} from 'react'
 import {styles} from "../../theme/style";
-import {View} from "react-native";
+import {View, SafeAreaView} from "react-native";
 import NotesData from "../../../logic/notesData";
 import Colors from "../../theme/colors";
 import TextTicker from "react-native-text-ticker";
@@ -23,17 +23,20 @@ class NotesComponent extends Component {
 
         return (
             <View style={[styles.notesContainer]}>
-                <TextTicker
-                    style={{color: Colors.basicElevation}}
-                    duration={11000}
-                    bounce={true}
-                    scroll={true}
-                    isInteraction={false}
-                    repeatSpacer={150}
-                    marqueeDelay={100}
-                >
-                    {NotesData().notes}
-                </TextTicker>
+                <SafeAreaView>
+                    <TextTicker
+                        style={{color: Colors.basic}}
+                        duration={50000}
+                        bounce={false}
+                        scroll={true}
+                        isInteraction={false}
+                        repeatSpacer={50}
+                        marqueeDelay={0}
+                    >
+                        {NotesData().notes}
+                    </TextTicker>
+                </SafeAreaView>
+
             </View>
         )
     }
