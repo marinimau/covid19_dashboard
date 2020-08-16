@@ -19,12 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="aggiunte note">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/notesData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/notesData.js" afterDir="false" />
+    <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="sistemato text marquee delle note">
       <change beforePath="$PROJECT_DIR$/src/ui/components/latest_updates/notesComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/latest_updates/notesComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/components/mainScrollableContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/mainScrollableContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/theme/colors.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/theme/colors.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/theme/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/theme/style.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -95,7 +91,7 @@
       <workItem from="1597172933297" duration="2297000" />
       <workItem from="1597221580716" duration="8584000" />
       <workItem from="1597305968710" duration="249000" />
-      <workItem from="1597565784725" duration="16104000" />
+      <workItem from="1597565784725" duration="16252000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1595078622516</created>
@@ -216,7 +212,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597579913098</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="sistemato text marquee delle note">
+      <created>1597589592925</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1597589592925</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -249,7 +252,8 @@
     <MESSAGE value="aggiunta pagina menu" />
     <MESSAGE value="aggiunto banner" />
     <MESSAGE value="aggiunte note" />
-    <option name="LAST_COMMIT_MESSAGE" value="aggiunte note" />
+    <MESSAGE value="sistemato text marquee delle note" />
+    <option name="LAST_COMMIT_MESSAGE" value="sistemato text marquee delle note" />
   </component>
   <component name="WindowStateProjectService">
     <state x="458" y="189" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1597228486721">
@@ -290,12 +294,12 @@
       <screen x="0" y="23" width="2560" height="1352" />
     </state>
     <state x="513" y="408" key="RollbackChangesDialog/0.23.2560.1352@0.23.2560.1352" timestamp="1596652988315" />
-    <state x="320" y="175" key="Vcs.Push.Dialog.v2" timestamp="1597579916010">
+    <state x="320" y="175" key="Vcs.Push.Dialog.v2" timestamp="1597589616720">
       <screen x="0" y="25" width="1440" height="814" />
     </state>
     <state x="320" y="174" key="Vcs.Push.Dialog.v2/0.23.1440.820@0.23.1440.820" timestamp="1595152527908" />
     <state x="569" y="272" key="Vcs.Push.Dialog.v2/0.23.2560.1352@0.23.2560.1352" timestamp="1596659073623" />
-    <state x="320" y="175" key="Vcs.Push.Dialog.v2/0.25.1440.814@0.25.1440.814" timestamp="1597579916010" />
+    <state x="320" y="175" key="Vcs.Push.Dialog.v2/0.25.1440.814@0.25.1440.814" timestamp="1597589616720" />
     <state x="571" y="619" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1596787487282">
       <screen x="0" y="23" width="2560" height="1352" />
     </state>

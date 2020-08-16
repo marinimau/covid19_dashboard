@@ -25,7 +25,7 @@ class NotesComponent extends Component {
             <View style={[styles.notesContainer]}>
                 <SafeAreaView>
                     <TextTicker
-                        style={{color: Colors.basic}}
+                        style={{color: Colors.basicElevation}}
                         duration={50000}
                         bounce={false}
                         scroll={true}

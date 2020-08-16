@@ -190,7 +190,7 @@ export const styles = StyleSheet.create({
         alignItems: 'center',
         width: '100%',
         height: 'auto',
-        backgroundColor: Colors.basicNotes,
+        backgroundColor: Colors.basic,
         paddingTop: 15,
         paddingBottom: 15,
         borderColor: 'transparent',
