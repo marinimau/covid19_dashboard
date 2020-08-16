@@ -7,8 +7,9 @@
 
 import React from 'react'
 import {styles} from "../theme/style";
-import {ScrollView, View, Platform} from "react-native";
-import LastUpdateBanner from "./header/lastUpdateBanner";
+import {ScrollView, View} from "react-native";
+import NotesComponent from "./latest_updates/notesComponent";
+import {SafeAreaView} from "react-native-safe-area-context";
 
 function MainScrollableContents(props) {
     return (
@@ -21,9 +22,11 @@ function MainScrollableContents(props) {
 
                     </View>
                 </ScrollView>
+                <NotesComponent/>
             </View>
         </>
-    );
+    )
+        ;
 }
 
 export default MainScrollableContents;

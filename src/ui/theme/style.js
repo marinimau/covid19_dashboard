@@ -178,5 +178,20 @@ export const styles = StyleSheet.create({
     legendTitle: {
         //display: 'inline',
         marginLeft: 10
+    },
+    /*
+     *  Notes
+     *
+     */
+    notesContainer: {
+        width: 'auto',
+        height: 'auto',
+        backgroundColor: Colors.basic,
+        position: 'relative',
+        paddingTop: 5,
+        paddingBottom: 20,
+        borderColor: 'transparent',
+        borderBottomColor: Colors.mainTransparent,
+        borderWidth: 0.5,
     }
 });

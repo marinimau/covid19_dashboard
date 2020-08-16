@@ -6,10 +6,8 @@
  */
 
 import * as React from 'react';
-import {Text} from 'react-native';
 import { Banner } from 'react-native-paper';
 import Colors from "../../theme/colors";
-import {styles} from "../../theme/style";
 import {chartTitles, dataDescription} from "../../contents/strings";
 import latestUpdateData from "../../../logic/latestUpdateData";
 

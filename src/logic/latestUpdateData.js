@@ -56,23 +56,23 @@ const latestUpdateData = (data) => {
 
         /* Recovered */
         dataToReturn.totalRecovered = d['dimessi_guariti'];
-        dataToReturn.recoveredVariation =  '+ '+Math.abs(data[data.length - 2]['dimessi_guariti'] - d['dimessi_guariti']);
-        dataToReturn.recoveredVariationPercentage = '+' + Math.round((Math.abs(Math.abs(data[data.length - 2]['dimessi_guariti'] - d['dimessi_guariti']) / d['dimessi_guariti'] * 100) * 100) / 100).toFixed(2);
+        dataToReturn.recoveredVariation =  '+ '+Math.abs(d['dimessi_guariti'] - data[data.length - 2]['dimessi_guariti']);
+        dataToReturn.recoveredVariationPercentage = '+' + Math.round((Math.abs(Math.abs(d['dimessi_guariti'] - data[data.length - 2]['dimessi_guariti']) / d['dimessi_guariti'] * 100) * 100) / 100).toFixed(2);
 
         /* Deaths */
         dataToReturn.totalDeaths = d['deceduti'];
-        dataToReturn.deathsVariation = '+ ' + Math.abs(data[data.length - 2]['deceduti'] - d['deceduti']);
-        dataToReturn.deathsVariationPercentage = '+' + Math.round((Math.abs(data[data.length - 2]['deceduti'] - d['deceduti']) /d['deceduti'] * 100 * 100) / 100).toFixed(2);
+        dataToReturn.deathsVariation = '+ ' + Math.abs( d['deceduti'] - data[data.length - 2]['deceduti']);
+        dataToReturn.deathsVariationPercentage = '+' + Math.round((Math.abs(d['deceduti'] - data[data.length - 2]['deceduti']) /d['deceduti'] * 100 * 100) / 100).toFixed(2);
 
         /* Swab */
         dataToReturn.swab = d['tamponi'];
-        dataToReturn.swabVariation = '+ ' + Math.abs(data[data.length - 2]['tamponi'] - d['tamponi']);
-        dataToReturn.swabVariationPercentage =  '+' +  Math.round(Math.abs(data[data.length - 2]['tamponi'] - d['tamponi']) /d['tamponi'] * 100  * 100 / 100).toFixed(2);
+        dataToReturn.swabVariation = '+ ' + Math.abs( d['tamponi'] - data[data.length - 2]['tamponi']);
+        dataToReturn.swabVariationPercentage =  '+' +  Math.round(Math.abs( d['tamponi'] - data[data.length - 2]['tamponi']) /d['tamponi'] * 100  * 100 / 100).toFixed(2);
 
         /* Tested Cases */
         dataToReturn.testedCases = d['casi_testati'];
-        dataToReturn.testedCasesVariation = '+ ' + Math.abs(data[data.length - 2]['casi_testati'] - d['casi_testati']);
-        dataToReturn.testedCasesVariationPercentage = '+' + Math.round(Math.abs(data[data.length - 2]['casi_testati'] - d['casi_testati']) /d['casi_testati'] * 100  * 100 / 100).toFixed(2);
+        dataToReturn.testedCasesVariation = '+ ' + Math.abs(d['casi_testati'] - data[data.length - 2]['casi_testati']);
+        dataToReturn.testedCasesVariationPercentage = '+' + Math.round(Math.abs( d['casi_testati'] - data[data.length - 2]['casi_testati']) /d['casi_testati'] * 100  * 100 / 100).toFixed(2);
     }
     return dataToReturn;
 };

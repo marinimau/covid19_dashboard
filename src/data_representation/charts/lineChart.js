@@ -15,7 +15,6 @@ import {hexToRgb} from "../../utils/colorConverter";
 import intervalSelectorFilter from "../../ui/contents/intervalSelectorData";
 import DateLabels from "../../logic/retrieveTimeLabels";
 import {Line, Text as TextSVG, Svg, Circle} from "react-native-svg";
-import {styles} from "../../ui/theme/style";
 
 export default class MyLineChart extends Component {
 
