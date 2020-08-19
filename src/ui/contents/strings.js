@@ -71,7 +71,9 @@ export const chartTitles = {
     swabPositiveRatio: 'Percentuale positivi',
     swabPositiveRatioDescription: 'Percentuale di pazienti positivi rispetto ai casi testati',
     swabTrend: 'Andamento tamponi (totale)',
+    swabTrendVariation: 'Andamento tamponi (valore giornaliero)',
     testedCaseTrend: 'Andamento casi testati (totale)',
+    testedCasesTrendVariation: 'Andamento casi testati (variazione giornaliera)',
     testedAndPositive: 'Percentuale positivi rispetto ai testati',
     placeholderValue: 'N/D',
     placeholderValueIncr: ' (+N/D)',
@@ -108,8 +110,10 @@ export const dataDescription = {
         'ricoverati con sintomi (esclusi i ricoverati in terapia intensiva); ricoverati in terapia intensiva.',
     positiveRegionTable: 'Attualmente positivi',
     swapTrend: 'Andamento del valore totale di tamponi eseguiti',
+    swabTrendVariation: 'Andamento del numero di tamponi eseguiti nell\'arco giornata',
     testedCaseTrend: 'Andamento del valore totale di casi testati (diverso dai tamponi in quanto un singolo individuo' +
         'può essere sottoposto a più tamponi).',
+    testedCasesTrendVariation: 'Andamento del numero di casi testati eseguiti nell\'arco della giornata',
     percentagePositiveTrend: 'Andamento della percentuale di esito positivo sul totale dei casi testati nel corso del tempo'
 }
 

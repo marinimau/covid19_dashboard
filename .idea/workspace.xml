@@ -22,7 +22,9 @@
     <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="sistemato text marquee delle note">
       <change beforePath="$PROJECT_DIR$/.expo/packager-info.json" beforeDir="false" afterPath="$PROJECT_DIR$/.expo/packager-info.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/positiveDeltaData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/positiveDeltaData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/swabData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/swabData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/components/swabs/swabsComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/swabs/swabsComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/contents/strings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/contents/strings.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +94,8 @@
       <workItem from="1597172933297" duration="2297000" />
       <workItem from="1597221580716" duration="8584000" />
       <workItem from="1597305968710" duration="249000" />
-      <workItem from="1597565784725" duration="18115000" />
+      <workItem from="1597565784725" duration="18584000" />
+      <workItem from="1597866917702" duration="722000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1595078622516</created>
@@ -227,7 +230,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597589746232</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="sistemato text marquee delle note">
+      <created>1597779021472</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1597779021472</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -302,12 +312,12 @@
       <screen x="0" y="23" width="2560" height="1352" />
     </state>
     <state x="513" y="408" key="RollbackChangesDialog/0.23.2560.1352@0.23.2560.1352" timestamp="1596652988315" />
-    <state x="320" y="175" key="Vcs.Push.Dialog.v2" timestamp="1597589748816">
+    <state x="320" y="175" key="Vcs.Push.Dialog.v2" timestamp="1597779023243">
       <screen x="0" y="25" width="1440" height="814" />
     </state>
     <state x="320" y="174" key="Vcs.Push.Dialog.v2/0.23.1440.820@0.23.1440.820" timestamp="1595152527908" />
     <state x="569" y="272" key="Vcs.Push.Dialog.v2/0.23.2560.1352@0.23.2560.1352" timestamp="1596659073623" />
-    <state x="320" y="175" key="Vcs.Push.Dialog.v2/0.25.1440.814@0.25.1440.814" timestamp="1597589748816" />
+    <state x="320" y="175" key="Vcs.Push.Dialog.v2/0.25.1440.814@0.25.1440.814" timestamp="1597779023243" />
     <state x="321" y="384" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597777201471">
       <screen x="0" y="25" width="1440" height="814" />
     </state>

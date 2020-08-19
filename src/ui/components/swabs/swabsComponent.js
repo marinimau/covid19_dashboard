@@ -56,9 +56,21 @@ class SwabsComponent extends Component {
                         </View>
 
                         <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
+                            <Text style={[styles.chartTitle]}>{chartTitles.swabTrendVariation}</Text>
+                            <MyLineChart color={LegendColors.blue} data={SwabData().swabTrendVariation} />
+                            <Text style={styles.chartDescription}>{dataDescription.swabTrendVariation}</Text>
+                        </View>
+
+                        <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
                             <Text style={[styles.chartTitle]}>{chartTitles.testedCaseTrend}</Text>
                             <MyLineChart color={LegendColors.blue} data={SwabData().testedCasesTrendAbsolute} />
                             <Text style={styles.chartDescription}>{dataDescription.testedCaseTrend}</Text>
+                        </View>
+
+                        <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
+                            <Text style={[styles.chartTitle]}>{chartTitles.testedCasesTrendVariation}</Text>
+                            <MyLineChart color={LegendColors.blue} data={SwabData().testedCasesTrendVariation} />
+                            <Text style={styles.chartDescription}>{dataDescription.testedCasesTrendVariation}</Text>
                         </View>
 
                         <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
