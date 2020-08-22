@@ -44,7 +44,7 @@ class InfoComponent extends Component {
                                                 left={() => <List.Icon color={Colors.icons} icon={item.icon}/>}
                                                 right={() => <List.Icon color={Colors.icons} icon="chevron-right"/>}
                                             />
-                                            <Divider />
+                                            <Divider inset={true}/>
                                         </>
                                     ))
                                 }

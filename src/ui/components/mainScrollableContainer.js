@@ -21,7 +21,7 @@ function MainScrollableContents(props) {
 
                     </View>
                 </ScrollView>
-                {Platform.OS !== 'web' ? <NotesComponent/> : <></>}
+                <NotesComponent/>
             </View>
         </>
     )

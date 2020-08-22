@@ -13,7 +13,8 @@ export const appInfo = {
 
 export const loadingMessages = {
     loading: 'Caricamento...',
-    error: 'Qualcosa è andato storto, ricarica la pagina'
+    error: 'Qualcosa è andato storto, ricarica la pagina',
+    noNotes: 'Nessuna nota in data odierna',
 };
 
 export const screenTitles = {
@@ -81,8 +82,6 @@ export const chartTitles = {
     hospitalizedWithSymptoms: 'Ricoverati con sintomi',
     critical: 'Terapia intensiva',
     regionHospitalSituation: 'Situazione ospedaliera regioni',
-
-
 }
 
 

@@ -26,7 +26,7 @@ export const styles = StyleSheet.create({
         flex: 1,
         flexDirection: 'row',
         flexWrap: 'wrap',
-        marginBottom: Platform.OS === 'web' ? 10 : 55,
+        marginBottom: 55,
     },
     loading: {
         backgroundColor: Colors.basicElevation,

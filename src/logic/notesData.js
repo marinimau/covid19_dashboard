@@ -6,6 +6,7 @@
  */
 
 import Records from "./dataset";
+import {loadingMessages} from "../ui/contents/strings";
 
 let dataToReturn = {
     notes: []
@@ -16,11 +17,14 @@ const NotesData = (data) => {
     data = Records.getRegionRecords();
 
     if (data !== undefined) {
-
         if (dataToReturn.notes.length === 0) {
-            for (let i = 0; i < data.length; i++) {
-                if (data[i]['note'] !== null) {
-                    dataToReturn.notes.push('       (' + data[i]['denominazione_regione'].toUpperCase() + ') ' + data[i]['note'].replace(/(\r\n|\n|\r)/gm, ""));
+            if (data.length === 0) {
+                dataToReturn.notes.push(loadingMessages.noNotes);
+            } else {
+                for (let i = 0; i < data.length; i++) {
+                    if (data[i]['note'] !== null) {
+                        dataToReturn.notes.push('       (' + data[i]['denominazione_regione'].toUpperCase() + ') ' + data[i]['note'].replace(/(\r\n|\n|\r)/gm, ""));
+                    }
                 }
             }
         }
