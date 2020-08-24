@@ -18,13 +18,9 @@ const NotesData = (data) => {
 
     if (data !== undefined) {
         if (dataToReturn.notes.length === 0) {
-            if (data.length === 0) {
-                dataToReturn.notes.push(loadingMessages.noNotes);
-            } else {
-                for (let i = 0; i < data.length; i++) {
-                    if (data[i]['note'] !== null) {
-                        dataToReturn.notes.push('       (' + data[i]['denominazione_regione'].toUpperCase() + ') ' + data[i]['note'].replace(/(\r\n|\n|\r)/gm, ""));
-                    }
+            for (let i = 0; i < data.length; i++) {
+                if (data[i]['note'] !== null) {
+                    dataToReturn.notes.push('       (' + data[i]['denominazione_regione'].toUpperCase() + ') ' + data[i]['note'].replace(/(\r\n|\n|\r)/gm, ""));
                 }
             }
             if (dataToReturn.notes.length === 0) {
