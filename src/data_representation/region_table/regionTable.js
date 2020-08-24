@@ -31,7 +31,7 @@ export default class RegionTable extends Component {
                             <DataTable.Row key={index}>
                                 <DataTable.Cell>{item}</DataTable.Cell>
                                 {this.props.data.labels.map((label) =>
-                                    <DataTable.Cell numeric>{this.props.data[label.value][index]}</DataTable.Cell>)}
+                                    <DataTable.Cell numeric>{this.props.data[label.value][index].toLocaleString('it')}</DataTable.Cell>)}
                             </DataTable.Row>
                         ))
                     }

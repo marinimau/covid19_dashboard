@@ -78,11 +78,11 @@ export default function App() {
                                             <Drawer.Screen name={screenTitles.latestUpdateResume}
                                                            component={LatestUpdateResumeScreen}/>
                                             <Drawer.Screen name={screenTitles.newCases} component={NewCasesScreen}/>
-                                            <Drawer.Screen name={screenTitles.recovered} component={RecoveredScreen}/>
-                                            <Drawer.Screen name={screenTitles.died} component={DiedScreen}/>
                                             <Drawer.Screen name={screenTitles.currentPositive}
                                                            component={CurrentPositiveScreen}/>
+                                            <Drawer.Screen name={screenTitles.recovered} component={RecoveredScreen}/>
                                             <Drawer.Screen name={screenTitles.swab} component={SwabsResumeScreen}/>
+                                            <Drawer.Screen name={screenTitles.died} component={DiedScreen}/>
                                             <Drawer.Screen name={screenTitles.info} component={InfoScreen}/>
 
                                         </Drawer.Navigator>

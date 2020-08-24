@@ -20,10 +20,10 @@ export const loadingMessages = {
 export const screenTitles = {
     home: 'Home',
     latestUpdateResume: 'Resoconto',
-    newCases: 'Nuovi casi',
+    newCases: 'Casi Totali',
     recovered: 'Guariti',
     died: 'Deceduti',
-    currentPositive: 'Positivi',
+    currentPositive: 'Positivi Attuali',
     swab: 'Tamponi',
     info: 'Informazioni'
 };

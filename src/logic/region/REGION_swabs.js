@@ -9,10 +9,10 @@ import Records from "../dataset";
 import {chartTitles} from "../../ui/contents/strings";
 
 let dataToReturn = {
-    labels: [{title: chartTitles.swabRegionTotal, value: 'swab'}, {title: chartTitles.testedCasesRegionTotal, value: 'tested'}],
+    labels: [{title: chartTitles.swabRegionTotal, value: 'swab'}, {title: chartTitles.percetageTestedPositive, value: 'percentagePositive'}],
     regions: [],
     swab: [],
-    tested: []
+    percentagePositive: []
 };
 
 const SwabRegionData = (data) => {
@@ -25,7 +25,7 @@ const SwabRegionData = (data) => {
             for (let i = 0; i < data.length; i ++) {
                 dataToReturn.regions.push(data[i]['denominazione_regione']);
                 dataToReturn.swab.push(data[i]['tamponi']);
-                dataToReturn.tested.push(data[i]['casi_testati']);
+                dataToReturn.percentagePositive.push((Math.round(data[i]['totale_casi'] / data[i]['casi_testati'] * 100 * 100) / 100).toFixed(2) + '%');
             }
         }
     }

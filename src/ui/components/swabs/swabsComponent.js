@@ -85,13 +85,6 @@ class SwabsComponent extends Component {
                                 data={SwabRegionData()}
                             />
                         </View>
-
-                        <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
-                            <Text style={styles.chartTitle}>{chartTitles.positiveRatioRegions}</Text>
-                            <RegionTable
-                                data={PositivityRegionData()}
-                            />
-                        </View>
                     </>
                 }
             />
