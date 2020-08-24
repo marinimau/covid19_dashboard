@@ -8,7 +8,8 @@
 export const appInfo = {
     name: 'Covid19 Dashboard',
     version: '1.0.0 beta',
-    author: '@marinimau, @scambuilds'
+    author: '@marinimau, @skambuilds',
+    description: 'Benvenuto! Questa Covid-19 Dashboard è stata realizzata dall\'Università degli Studi di Cagliari per il monitoraggio e la visualizzazione dei dati nel territorio italiano.'
 };
 
 export const loadingMessages = {
