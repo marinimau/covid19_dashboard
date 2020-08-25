@@ -8,19 +8,24 @@
 import React from 'react'
 import {styles} from "../theme/style";
 import {ScrollView, View, Platform} from "react-native";
+import NotesComponent from "./latest_updates/notesComponent";
 
 function MainScrollableContents(props) {
     return (
-        <View style={[styles.rootContainer, {position: 'relative'}]}>
-            <ScrollView>
-                <View style={[styles.scrollableContainer]}>
+        <>
+            <View style={[styles.rootContainer, {position: 'relative'}]}>
+                <ScrollView>
+                    <View style={[styles.scrollableContainer]}>
 
-                    {props.content}
+                        {props.content}
 
-                </View>
-            </ScrollView>
-        </View>
-    );
+                    </View>
+                </ScrollView>
+                <NotesComponent/>
+            </View>
+        </>
+    )
+        ;
 }
 
 export default MainScrollableContents;

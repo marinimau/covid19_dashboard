@@ -21,7 +21,7 @@ const HeaderLeft = () => {
                 onPress={() => {
                     navigation.dispatch(DrawerActions.openDrawer());
                 }}
-                style={{marginLeft: Platform.OS === 'ios' ? 0 : 25}}>
+                style={{marginLeft: Platform.OS === 'ios' ? 25 : 25}}>
                 <Ionicons name="ios-menu" size={32} color={Colors.basic} />
             </TouchableOpacity>
         </View>

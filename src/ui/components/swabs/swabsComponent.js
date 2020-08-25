@@ -9,13 +9,16 @@ import React, {Component} from 'react';
 import {Text, View} from "react-native";
 import {styles} from "../../theme/style";
 import MainScrollableContents from "../mainScrollableContainer";
-import CardSwab from "../../../drawings/resume_cards/cardSwab";
-import CardTestedCases from "../../../drawings/resume_cards/cardTestedCases";
+import CardSwab from "../../../data_representation/resume_cards/cardSwab";
+import CardTestedCases from "../../../data_representation/resume_cards/cardTestedCases";
 import {chartTitles, dataDescription} from "../../contents/strings";
-import MyProgressCircle from "../../../drawings/charts/progressCircle";
+import MyProgressCircle from "../../../data_representation/charts/progressCircle";
 import LegendColors from "../../theme/legendColors";
 import SwabData from "../../../logic/swabData";
-import MyLineChart from "../../../drawings/charts/lineChart";
+import MyLineChart from "../../../data_representation/charts/lineChart";
+import RegionTable from "../../../data_representation/region_table/regionTable";
+import SwabRegionData from "../../../logic/region/REGION_swabs";
+import PositivityRegionData from "../../../logic/region/REGION_positivity";
 
 class SwabsComponent extends Component {
 
@@ -53,9 +56,21 @@ class SwabsComponent extends Component {
                         </View>
 
                         <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
+                            <Text style={[styles.chartTitle]}>{chartTitles.swabTrendVariation}</Text>
+                            <MyLineChart color={LegendColors.blue} data={SwabData().swabTrendVariation} />
+                            <Text style={styles.chartDescription}>{dataDescription.swabTrendVariation}</Text>
+                        </View>
+
+                        <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
                             <Text style={[styles.chartTitle]}>{chartTitles.testedCaseTrend}</Text>
                             <MyLineChart color={LegendColors.blue} data={SwabData().testedCasesTrendAbsolute} />
                             <Text style={styles.chartDescription}>{dataDescription.testedCaseTrend}</Text>
+                        </View>
+
+                        <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
+                            <Text style={[styles.chartTitle]}>{chartTitles.testedCasesTrendVariation}</Text>
+                            <MyLineChart color={LegendColors.blue} data={SwabData().testedCasesTrendVariation} />
+                            <Text style={styles.chartDescription}>{dataDescription.testedCasesTrendVariation}</Text>
                         </View>
 
                         <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
@@ -64,8 +79,12 @@ class SwabsComponent extends Component {
                             <Text style={styles.chartDescription}>{dataDescription.percentagePositiveTrend}</Text>
                         </View>
 
-
-
+                        <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
+                            <Text style={styles.chartTitle}>{chartTitles.totalCasesRegion}</Text>
+                            <RegionTable
+                                data={SwabRegionData()}
+                            />
+                        </View>
                     </>
                 }
             />

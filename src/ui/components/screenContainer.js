@@ -13,7 +13,7 @@ import HeaderLeft from "../components/header/headerMenuButton";
 import {styles} from "../theme/style";
 import { createNativeStackNavigator } from 'react-native-screens/native-stack';
 
-const Stack = Platform.OS === 'ios' ? createNativeStackNavigator() : createStackNavigator();
+const Stack = createStackNavigator();
 const dimensions = Dimensions.get('window').width;
 
 export default class ScreenContainer extends Component  {
@@ -27,9 +27,7 @@ export default class ScreenContainer extends Component  {
             <Stack.Navigator>
                 <Stack.Screen
                     options={{
-                        headerLargeTitle: Platform.OS === 'ios',
                         headerStyle: [styles.header, styles.headerShadow, {borderBottomColor: 'transparent'}],
-                        headerTitleStyle: Platform.OS ==='ios' ? {fontWeight: 900} : null,
                         headerLeft: dimensions < dimens.largeScreen ? ({}) => <HeaderLeft /> : null
                     }}
                     component={({}) => this.props.component}

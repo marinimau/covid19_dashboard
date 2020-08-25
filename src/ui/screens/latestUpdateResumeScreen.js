@@ -11,7 +11,6 @@ import LatestUpdateComponent from "../components/latest_updates/latestUpateCompo
 import ScreenContainer from "../components/screenContainer";
 
 
-
 function LatestUpdateResumeScreen({ navigation }) {
 
     return (

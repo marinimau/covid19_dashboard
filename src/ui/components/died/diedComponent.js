@@ -9,12 +9,14 @@ import React, {Component} from 'react';
 import {Text, View} from "react-native";
 import {styles} from "../../theme/style";
 import MainScrollableContents from "../mainScrollableContainer";
-import CardDied from "../../../drawings/resume_cards/cardDied";
-import MyProgressCircle from "../../../drawings/charts/progressCircle";
+import CardDied from "../../../data_representation/resume_cards/cardDied";
+import MyProgressCircle from "../../../data_representation/charts/progressCircle";
 import LegendColors from "../../theme/legendColors";
 import {chartTitles, dataDescription} from "../../contents/strings";
 import DeathsData from "../../../logic/deathData";
-import MyLineChart from "../../../drawings/charts/lineChart";
+import MyLineChart from "../../../data_representation/charts/lineChart";
+import RegionTable from "../../../data_representation/region_table/regionTable";
+import DeadRegionData from "../../../logic/region/REGION_dead";
 
 class DiedComponent extends Component {
 
@@ -51,6 +53,13 @@ class DiedComponent extends Component {
                             <Text style={[styles.chartTitle]}>{chartTitles.deathTrendProportional}</Text>
                             <MyLineChart color={LegendColors.grey} decimalPlaces={2} data={DeathsData().diedTrendProportional} />
                             <Text style={styles.chartDescription}>{dataDescription.diedTrendProportional}</Text>
+                        </View>
+
+                        <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
+                            <Text style={styles.chartTitle}>{chartTitles.totalCasesRegion}</Text>
+                            <RegionTable
+                                data={DeadRegionData()}
+                            />
                         </View>
                     </>
                 }

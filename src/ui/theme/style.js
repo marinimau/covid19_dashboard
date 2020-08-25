@@ -5,17 +5,17 @@
  * Location: Baratili San Pietro
  */
 
-import {StyleSheet} from "react-native";
+import {StyleSheet, Platform} from "react-native";
 import Colors from "./colors";
-import {dimens, dynamicDimens} from "./dimens";
-import {Dimensions} from "react-native-web";
+import LegendColors from "./legendColors"
+import {dynamicDimens} from "./dimens";
 
 
 export const styles = StyleSheet.create({
-    root : {
+    root: {
         backgroundColor: Colors.basicTransparent,
     },
-    rootContainer : {
+    rootContainer: {
         flex: 1,
         alignItems: 'flex-start',
         alignContent: 'space-around',
@@ -25,7 +25,8 @@ export const styles = StyleSheet.create({
     scrollableContainer: {
         flex: 1,
         flexDirection: 'row',
-        flexWrap: 'wrap'
+        flexWrap: 'wrap',
+        marginBottom: 55,
     },
     loading: {
         backgroundColor: Colors.basicElevation,
@@ -43,7 +44,6 @@ export const styles = StyleSheet.create({
     header: {
         borderBottomColor: 'transparent',
     },
-
     headerTitle: {
         color: '#fff'
     },
@@ -51,13 +51,12 @@ export const styles = StyleSheet.create({
         shadowColor: Colors.basicShadow,
         shadowOffset: {
             width: 0,
-            height: 10,
+            height: 5,
         },
         shadowOpacity: 0.4,
         shadowRadius: 13.16,
         elevation: 20,
     },
-
     /*
      *  Card items
      *  3 sizes:
@@ -72,7 +71,7 @@ export const styles = StyleSheet.create({
         borderTopRightRadius: 20,
         borderBottomRightRadius: 20,
         borderBottomLeftRadius: 20,
-        margin: 7,
+        margin: 10,
         height: 'auto',
         padding: 20,
         backgroundColor: Colors.basicElevation,
@@ -105,22 +104,36 @@ export const styles = StyleSheet.create({
     indicatorTitle: {
         fontSize: 22,
         fontWeight: "700",
+        color: '#fff'
     },
     indicatorValue: {
-        fontSize: 32,
-        fontWeight: "700",
+        textAlign: 'center',
+    },
+    indicatorValueBold: {
+        marginTop:20,
+        fontSize: 22,
+        fontWeight: "900",
+    },
+    indicatorValueIncr: {
+        marginTop: 5,
+        marginBottom: 10,
+        fontSize: 14,
+        fontStyle: 'italic',
+    },
+    indicatorLight: {
+        color: '#fff'
     },
     indicatorOrange: {
-        color: '#ffaa00'
+        color: LegendColors.yellow
     },
     indicatorGreen: {
-        color: '#4ce600'
+        backgroundColor: LegendColors.green
     },
     indicatorGrey: {
-        color: '#c2c2c2'
+        color: LegendColors.grey
     },
     indicatorRed: {
-        color: '#ff0000'
+        color: LegendColors.red
     },
     /*
      *  Chart
@@ -128,5 +141,60 @@ export const styles = StyleSheet.create({
     chartTitle: {
         fontSize: 18,
         fontWeight: "700",
+    },
+    chartDescription: {
+        fontSize: 12,
+        fontStyle: 'italic',
+        textAlign: 'center',
+        marginTop: 20,
+    },
+    chartBigValue: {
+        width: '100%',
+        textAlign: 'center',
+        fontSize: 30,
+        marginTop: 30,
+        marginBottom: 30,
+    },
+    /*
+     *  Chart legend
+     *
+     */
+    legendExternalContainer: {
+        flex: 1,
+        margin: 10,
+        flexDirection: 'row',
+        flexWrap: 'wrap'
+    },
+    legendContainer: {
+        margin: 10,
+        position: 'relative',
+        flexDirection: 'row'
+    },
+    legendColorSquare: {
+        width: 20,
+        height:20,
+        borderRadius: 5,
+    },
+    legendTitle: {
+        //display: 'inline',
+        marginLeft: 10
+    },
+    /*
+     *  Notes
+     *
+     */
+    notesContainer: {
+        bottom: 0,
+        position:'absolute',
+        justifyContent: 'center',
+        alignItems: 'center',
+        width: '100%',
+        height: 'auto',
+        backgroundColor: Colors.basic,
+        paddingTop: 15,
+        paddingBottom: 15,
+        borderColor: 'transparent',
+        borderBottomColor: Colors.mainTransparent,
+        borderWidth: 0.5,
     },
 });

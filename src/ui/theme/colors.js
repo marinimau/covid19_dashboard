@@ -12,6 +12,8 @@ Colors = {
     main: '#1479FF',//'#1479FF',
     mainTransparent: 'rgba(20,121,255,0.1)',
     basic: '#1C1C1E',
+    basicNotes: 'rgba(255,255,255,0.9)',
+    icons: 'rgba(28,28,30,0.4)',
     basicTransparent: 'rgba(25,59,104,0.1)',
     basicShadow:'rgba(25,59,104,0.33)',
     basicElevation: '#FFFFFF',

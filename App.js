@@ -17,7 +17,7 @@ import {screenTitles} from "./src/ui/contents/strings";
 import Async from 'react-async';
 import {navigationRef} from './src/utils/rootNavigationRef';
 import Records from "./src/logic/dataset";
-import { enableScreens } from 'react-native-screens';
+import {enableScreens} from 'react-native-screens';
 
 /* Screens Import */
 import LatestUpdateResumeScreen from "./src/ui/screens/latestUpdateResumeScreen";
@@ -27,8 +27,10 @@ import DiedScreen from "./src/ui/screens/diedScreen";
 import CurrentPositiveScreen from "./src/ui/screens/currentPositiveScreen";
 import SwabsResumeScreen from "./src/ui/screens/swabsScreen";
 import retrieveData from "./src/logic/retrieveData";
-import LoadingScreen from "./src/ui/components/loading/splash";
 import ErrorScreen from "./src/ui/components/loading/error";
+import retrieveRegionData from "./src/logic/retrieveRegionData";
+import LoadingComponent from "./src/ui/components/loading/loading";
+import InfoScreen from "./src/ui/screens/infoScreen";
 
 
 enableScreens();
@@ -44,41 +46,52 @@ export default function App() {
 
     return (
         <Async promiseFn={retrieveData}>
-            {({ data, err, isLoading }) => {
-                if (isLoading) return <LoadingScreen />
-                if (err) return <ErrorScreen />
+            {({data, err, isLoading}) => {
+                if (isLoading) return <LoadingComponent/>
+                if (err) return <ErrorScreen/>
+                if (data) Records.setRecords(data)
 
-                if (data)
-                    Records.setRecords(data)
-                    return (
-                        <>
-                        <StatusBar/>
-                        <NavigationContainer
-                            ref={navigationRef}
-                            style={styles.root}>
-                            <Drawer.Navigator
-                                initialRouteName="Resume"
-                                //openByDefault
-                                drawerContentOptions={{
-                                    activeTintColor: Colors.drawerSelectedText,
-                                    activeBackgroundColor: Colors.drawerSelectedBackground,
+                return (
+                    <Async promiseFn={retrieveRegionData}>
+                        {({data, err, isLoading}) => {
+                            if (isLoading) return <LoadingComponent/>
+                            if (err) return <ErrorScreen/>
+                            if (data) Records.setRegionRecords(data)
 
-                                }}
-                                drawerType={isLargeScreen ? 'permanent' : 'front'}
-                                drawerStyle={isLargeScreen ? {width: dimens.drawerWidth} : [{width: dimens.drawerWidth}]}
-                                overlayColor={isLargeScreen ? "transparent" : Colors.basicTransparent}>
+                            return (
+                                <>
+                                    <StatusBar/>
+                                    <NavigationContainer
+                                        ref={navigationRef}
+                                        style={styles.root}>
+                                        <Drawer.Navigator
+                                            initialRouteName="Resume"
+                                            drawerContentOptions={{
+                                                activeTintColor: Colors.drawerSelectedText,
+                                                activeBackgroundColor: Colors.drawerSelectedBackground,
 
-                                <Drawer.Screen name={screenTitles.latestUpdateResume} component={LatestUpdateResumeScreen}/>
-                                <Drawer.Screen name={screenTitles.newCases}  component={NewCasesScreen}/>
-                                <Drawer.Screen name={screenTitles.recovered} component={RecoveredScreen}/>
-                                <Drawer.Screen name={screenTitles.died} component={DiedScreen} />
-                                <Drawer.Screen name={screenTitles.currentPositive} component={CurrentPositiveScreen}/>
-                                <Drawer.Screen name={screenTitles.swab} component={SwabsResumeScreen} />
+                                            }}
+                                            drawerType={isLargeScreen ? 'permanent' : 'front'}
+                                            drawerStyle={isLargeScreen ? {width: dimens.drawerWidth} : [{width: dimens.drawerWidth}]}
+                                            overlayColor={isLargeScreen ? "transparent" : Colors.basicTransparent}>
 
-                            </Drawer.Navigator>
-                        </NavigationContainer>
-                        </>
-                    )
+                                            <Drawer.Screen name={screenTitles.latestUpdateResume}
+                                                           component={LatestUpdateResumeScreen}/>
+                                            <Drawer.Screen name={screenTitles.newCases} component={NewCasesScreen}/>
+                                            <Drawer.Screen name={screenTitles.currentPositive}
+                                                           component={CurrentPositiveScreen}/>
+                                            <Drawer.Screen name={screenTitles.recovered} component={RecoveredScreen}/>
+                                            <Drawer.Screen name={screenTitles.swab} component={SwabsResumeScreen}/>
+                                            <Drawer.Screen name={screenTitles.died} component={DiedScreen}/>
+                                            <Drawer.Screen name={screenTitles.info} component={InfoScreen}/>
+
+                                        </Drawer.Navigator>
+                                    </NavigationContainer>
+                                </>
+                            )
+                        }}
+                    </Async>
+                )
             }}
         </Async>
     );
