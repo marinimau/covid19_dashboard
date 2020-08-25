@@ -148,6 +148,12 @@ export const styles = StyleSheet.create({
         textAlign: 'center',
         marginTop: 20,
     },
+    infoDescription: {
+        fontSize: 18,
+        textAlign: 'left',
+        marginTop: 20,
+        marginLeft: 20
+    },
     chartBigValue: {
         width: '100%',
         textAlign: 'center',
