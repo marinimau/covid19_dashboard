@@ -160,7 +160,7 @@ export default class MyLineChart extends Component {
                                         fontSize="14"
                                         fontWeight="bold"
                                         textAnchor="middle">
-                                        {this.state.value}
+                                        {this.state.value.toLocaleString('it')}
                                     </TextSVG>
                                 </Svg>
                             </View> : null

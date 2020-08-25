@@ -13,14 +13,10 @@ import CardRecovered from "../../../data_representation/resume_cards/cardRecover
 import CardDied from "../../../data_representation/resume_cards/cardDied";
 import CardCurrentPositive from "../../../data_representation/resume_cards/cardCurrentPositive";
 import {navigate} from "../../../utils/rootNavigationRef";
-import {appInfo, infoMenuTitles, screenTitles} from "../../contents/strings";
+import {appInfo, screenTitles} from "../../contents/strings";
 import CardSwab from "../../../data_representation/resume_cards/cardSwab";
 import CardDate from "../../../data_representation/resume_cards/cardDate";
-import NotesComponent from "./notesComponent";
 import {styles} from "../../theme/style";
-import {Divider, List} from "react-native-paper";
-import {menuLinks} from "../../contents/infoMenu";
-import {openLink} from "../../../utils/linking";
 import Colors from "../../theme/colors";
 
 class LatestUpdateComponent extends Component {
@@ -41,7 +37,7 @@ class LatestUpdateComponent extends Component {
                             paddingLeft: 0,
                             paddingRight: 0
                         }]}>
-                            <Text style={[styles.infoDescription, {color: Colors.basic}]}>
+                            <Text style={[styles.infoDescription]}>
                                 {appInfo.description}
                             </Text>
                         </View>
@@ -83,7 +79,6 @@ class LatestUpdateComponent extends Component {
             />
         )
     }
-
 }
 
 export default LatestUpdateComponent;

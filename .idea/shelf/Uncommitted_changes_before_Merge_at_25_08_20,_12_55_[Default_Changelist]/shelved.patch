@@ -1,0 +1,288 @@
+Index: src/logic/REGION_newCases.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/logic/REGION_newCases.js	(date 1598352743650)
++++ src/logic/REGION_newCases.js	(date 1598352743650)
+@@ -0,0 +1,42 @@
++/**
++ * covid19_dashboard copyright © 2020
++ * Created by mauromarini on 05/08/20
++ * Repository: http://github.com/marinimau/covid19_dashboard
++ * Location: Baratili San Pietro
++ */
++
++import Records from "./dataset";
++import {chartTitles} from "../ui/contents/strings";
++
++let dataToReturn = {
++    labels: [{title: chartTitles.totalCasesRegionTable, value: 'total'},
++        {title: chartTitles.incrementTable, value: 'incr'}],
++    regions: [],
++    total: [],
++    incr: [],
++};
++
++const RegionNewCasesData = (data) => {
++
++    if (data === undefined) {
++        data = Records.getRegionRecords();
++    }
++
++    if (data !== null) {
++        let d = data[data.length - 1];
++
++
++        if (dataToReturn.total.length === 0) {
++            for (let i = 0; i < data.length; i += 1) {
++                dataToReturn.regions.push(data[i]['denominazione_regione']);
++                dataToReturn.total.push(data[i]['totale_casi']);
++                dataToReturn.incr.push(data[i]['nuovi_positivi']);
++            }
++        }
++    }
++    console.log(dataToReturn);
++    return dataToReturn;
++};
++
++
++export default RegionNewCasesData;
+\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_Merge_at_25_08_20__12_53__Default_Changelist_.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/shelf/Uncommitted_changes_before_Merge_at_25_08_20__12_53__Default_Changelist_.xml	(date 1598352823521)
++++ .idea/shelf/Uncommitted_changes_before_Merge_at_25_08_20__12_53__Default_Changelist_.xml	(date 1598352823521)
+@@ -0,0 +1,4 @@
++<changelist name="Uncommitted_changes_before_Merge_at_25_08_20,_12_53_[Default_Changelist]" date="1598352817856" recycled="true" deleted="true">
++  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_25_08_20,_12_53_[Default_Changelist]/shelved.patch" />
++  <option name="DESCRIPTION" value="Uncommitted changes before Merge at 25/08/20, 12:53 [Default Changelist]" />
++</changelist>
+\ No newline at end of file
+Index: .expo/packager-info.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>{\n  \"devToolsPort\": 19002,\n  \"expoServerPort\": 19000,\n  \"packagerPort\": 19001,\n  \"packagerPid\": 721,\n  \"webpackServerPort\": 19006,\n  \"expoServerNgrokUrl\": null,\n  \"packagerNgrokUrl\": null,\n  \"ngrokPid\": null\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .expo/packager-info.json	(revision df31ae57d3dc270ff6530f6cbcd4f398bf69f905)
++++ .expo/packager-info.json	(date 1598352898242)
+@@ -1,8 +1,8 @@
+ {
+   "devToolsPort": 19002,
+   "expoServerPort": 19000,
+-  "packagerPort": 19001,
+-  "packagerPid": 721,
++  "packagerPort": 19003,
++  "packagerPid": 4749,
+   "webpackServerPort": 19006,
+   "expoServerNgrokUrl": null,
+   "packagerNgrokUrl": null,
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"BranchesTreeState\">\n    <expand>\n      <path>\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n        <item name=\"LOCAL_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n      </path>\n      <path>\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n        <item name=\"REMOTE_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n      </path>\n      <path>\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n        <item name=\"REMOTE_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n        <item name=\"GROUP_NODE:origin\" type=\"e8cecc67:BranchNodeDescriptor\" />\n      </path>\n    </expand>\n    <select />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"71d30709-e3e2-4122-af9d-74bdecd22ff1\" name=\"Default Changelist\" comment=\"adattato il grafico e inserita stackedAreaChart.js anche per la ripartizione dei casi totali\">\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/ui/components/current_positive/currentPositiveComponent.js\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/ui/components/current_positive/currentPositiveComponent.js\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/ui/components/died/diedComponent.js\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/ui/components/died/diedComponent.js\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/ui/components/new_cases/newCasesComponent.js\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/ui/components/new_cases/newCasesComponent.js\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/ui/components/recovered/recoveredComponent.js\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/ui/components/recovered/recoveredComponent.js\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/ui/components/swabs/swabsComponent.js\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/ui/components/swabs/swabsComponent.js\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/ui/contents/strings.js\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/ui/contents/strings.js\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"JavaScript File\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n    <option name=\"UPDATE_TYPE\" value=\"REBASE\" />\n  </component>\n  <component name=\"JsFlowSettings\">\n    <service-enabled>true</service-enabled>\n    <exe-path />\n    <other-services-enabled>true</other-services-enabled>\n    <auto-save>true</auto-save>\n  </component>\n  <component name=\"ProjectId\" id=\"1erNHNuLYlSoG8hxr7rUGJ09Ze7\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\n    <property name=\"dart.analysis.tool.window.visible\" value=\"false\" />\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$\" />\n    <property name=\"nodejs_package_manager_path\" value=\"npm\" />\n    <property name=\"ts.external.directory.path\" value=\"$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external\" />\n  </component>\n  <component name=\"RecentsManager\">\n    <key name=\"MoveFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$/src/ui/components/header\" />\n      <recent name=\"$PROJECT_DIR$/src/ui/components/loading\" />\n      <recent name=\"$PROJECT_DIR$/src/ui\" />\n      <recent name=\"$PROJECT_DIR$/src/components/drawer\" />\n    </key>\n  </component>\n  <component name=\"SvnConfiguration\">\n    <configuration />\n  </component>\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"71d30709-e3e2-4122-af9d-74bdecd22ff1\" name=\"Default Changelist\" comment=\"\" />\n      <created>1595075662595</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1595075662595</updated>\n      <workItem from=\"1595075664402\" duration=\"12582000\" />\n      <workItem from=\"1595145766116\" duration=\"7630000\" />\n      <workItem from=\"1595253539475\" duration=\"2709000\" />\n      <workItem from=\"1595926130050\" duration=\"93000\" />\n      <workItem from=\"1596040188795\" duration=\"568000\" />\n      <workItem from=\"1596041752366\" duration=\"3477000\" />\n      <workItem from=\"1596053023896\" duration=\"2262000\" />\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"initial commit\">\n      <created>1595078622516</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1595078622516</updated>\n    </task>\n    <task id=\"LOCAL-00002\" summary=\"header in home\">\n      <created>1595082159705</created>\n      <option name=\"number\" value=\"00002\" />\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1595082159705</updated>\n    </task>\n    <task id=\"LOCAL-00003\" summary=\"screens sistemati, header e menu funzionante in tutti\">\n      <created>1595083956352</created>\n      <option name=\"number\" value=\"00003\" />\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1595083956352</updated>\n    </task>\n    <task id=\"LOCAL-00004\" summary=\"data retrieving funzionante\">\n      <created>1595090447936</created>\n      <option name=\"number\" value=\"00004\" />\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1595090447936</updated>\n    </task>\n    <task id=\"LOCAL-00005\" summary=\"aggiunto il loader\">\n      <created>1595090642764</created>\n      <option name=\"number\" value=\"00005\" />\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1595090642764</updated>\n    </task>\n    <task id=\"LOCAL-00006\" summary=\"aggiunto il loader\">\n      <created>1595148795949</created>\n      <option name=\"number\" value=\"00006\" />\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1595148795949</updated>\n    </task>\n    <task id=\"LOCAL-00007\" summary=\"iniziato a organizzare i grafici\">\n      <created>1595152526190</created>\n      <option name=\"number\" value=\"00007\" />\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1595152526190</updated>\n    </task>\n    <task id=\"LOCAL-00008\" summary=\"sistemata UI\">\n      <created>1595926195216</created>\n      <option name=\"number\" value=\"00008\" />\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1595926195216</updated>\n    </task>\n    <task id=\"LOCAL-00009\" summary=\"adattato il grafico e inserita stackedAreaChart.js anche per la ripartizione dei casi totali\">\n      <created>1596654268978</created>\n      <option name=\"number\" value=\"00009\" />\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1596654268978</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"10\" />\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"2\" />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n    <option name=\"oldMeFiltersMigrated\" value=\"true\" />\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"initial commit\" />\n    <MESSAGE value=\"header in home\" />\n    <MESSAGE value=\"screens sistemati, header e menu funzionante in tutti\" />\n    <MESSAGE value=\"data retrieving funzionante\" />\n    <MESSAGE value=\"aggiunto il loader\" />\n    <MESSAGE value=\"iniziato a organizzare i grafici\" />\n    <MESSAGE value=\"sistemata UI\" />\n    <MESSAGE value=\"adattato il grafico e inserita stackedAreaChart.js anche per la ripartizione dei casi totali\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"adattato il grafico e inserita stackedAreaChart.js anche per la ripartizione dei casi totali\" />\n  </component>\n  <component name=\"WindowStateProjectService\">\n    <state x=\"814\" y=\"295\" key=\"#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog\" timestamp=\"1596474192548\">\n      <screen x=\"0\" y=\"23\" width=\"2560\" height=\"1352\" />\n    </state>\n    <state x=\"458\" y=\"188\" key=\"#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.820@0.23.1440.820\" timestamp=\"1595080474201\" />\n    <state x=\"814\" y=\"295\" key=\"#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.2560.1352@0.23.2560.1352\" timestamp=\"1596474192548\" />\n    <state x=\"27\" y=\"38\" key=\"CommitChangelistDialog2\" timestamp=\"1595152525607\">\n      <screen x=\"0\" y=\"23\" width=\"1440\" height=\"820\" />\n    </state>\n    <state x=\"27\" y=\"38\" key=\"CommitChangelistDialog2/0.23.1440.820@0.23.1440.820\" timestamp=\"1595152525607\" />\n    <state x=\"558\" y=\"338\" key=\"Github.ShareDialog\" timestamp=\"1595078313212\">\n      <screen x=\"0\" y=\"23\" width=\"1440\" height=\"820\" />\n    </state>\n    <state x=\"558\" y=\"338\" key=\"Github.ShareDialog/0.23.1440.820@0.23.1440.820\" timestamp=\"1595078313212\" />\n    <state width=\"1544\" height=\"387\" key=\"GridCell.Tab.0.bottom\" timestamp=\"1596474112828\">\n      <screen x=\"0\" y=\"23\" width=\"2560\" height=\"1352\" />\n    </state>\n    <state width=\"1544\" height=\"387\" key=\"GridCell.Tab.0.bottom/0.23.2560.1352@0.23.2560.1352\" timestamp=\"1596474112828\" />\n    <state width=\"1544\" height=\"387\" key=\"GridCell.Tab.0.center\" timestamp=\"1596474112828\">\n      <screen x=\"0\" y=\"23\" width=\"2560\" height=\"1352\" />\n    </state>\n    <state width=\"1544\" height=\"387\" key=\"GridCell.Tab.0.center/0.23.2560.1352@0.23.2560.1352\" timestamp=\"1596474112828\" />\n    <state width=\"1544\" height=\"387\" key=\"GridCell.Tab.0.left\" timestamp=\"1596474112828\">\n      <screen x=\"0\" y=\"23\" width=\"2560\" height=\"1352\" />\n    </state>\n    <state width=\"1544\" height=\"387\" key=\"GridCell.Tab.0.left/0.23.2560.1352@0.23.2560.1352\" timestamp=\"1596474112828\" />\n    <state width=\"1544\" height=\"387\" key=\"GridCell.Tab.0.right\" timestamp=\"1596474112828\">\n      <screen x=\"0\" y=\"23\" width=\"2560\" height=\"1352\" />\n    </state>\n    <state width=\"1544\" height=\"387\" key=\"GridCell.Tab.0.right/0.23.2560.1352@0.23.2560.1352\" timestamp=\"1596474112828\" />\n    <state x=\"0\" y=\"147\" key=\"MergeDialog\" timestamp=\"1596040223766\">\n      <screen x=\"0\" y=\"23\" width=\"2560\" height=\"1352\" />\n    </state>\n    <state x=\"0\" y=\"147\" key=\"MergeDialog/0.23.2560.1352@0.23.2560.1352\" timestamp=\"1596040223766\" />\n    <state x=\"513\" y=\"408\" key=\"RollbackChangesDialog\" timestamp=\"1596652988315\">\n      <screen x=\"0\" y=\"23\" width=\"2560\" height=\"1352\" />\n    </state>\n    <state x=\"513\" y=\"408\" key=\"RollbackChangesDialog/0.23.2560.1352@0.23.2560.1352\" timestamp=\"1596652988315\" />\n    <state x=\"569\" y=\"272\" key=\"Vcs.Push.Dialog.v2\" timestamp=\"1596654343747\">\n      <screen x=\"0\" y=\"23\" width=\"2560\" height=\"1352\" />\n    </state>\n    <state x=\"320\" y=\"174\" key=\"Vcs.Push.Dialog.v2/0.23.1440.820@0.23.1440.820\" timestamp=\"1595152527908\" />\n    <state x=\"569\" y=\"272\" key=\"Vcs.Push.Dialog.v2/0.23.2560.1352@0.23.2560.1352\" timestamp=\"1596654343747\" />\n    <state x=\"571\" y=\"619\" key=\"com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2\" timestamp=\"1596653001048\">\n      <screen x=\"0\" y=\"23\" width=\"2560\" height=\"1352\" />\n    </state>\n    <state x=\"571\" y=\"619\" key=\"com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.2560.1352@0.23.2560.1352\" timestamp=\"1596653001048\" />\n    <state x=\"385\" y=\"167\" width=\"670\" height=\"676\" key=\"search.everywhere.popup\" timestamp=\"1595150088481\">\n      <screen x=\"0\" y=\"23\" width=\"1440\" height=\"820\" />\n    </state>\n    <state x=\"385\" y=\"167\" width=\"670\" height=\"676\" key=\"search.everywhere.popup/0.23.1440.820@0.23.1440.820\" timestamp=\"1595150088481\" />\n  </component>\n  <component name=\"XDebuggerManager\">\n    <breakpoint-manager>\n      <breakpoints>\n        <line-breakpoint enabled=\"true\" type=\"javascript\">\n          <url>file://$PROJECT_DIR$/src/ui/contents/strings.js</url>\n          <line>47</line>\n          <properties lambdaOrdinal=\"-1\" />\n          <option name=\"timeStamp\" value=\"1\" />\n        </line-breakpoint>\n      </breakpoints>\n    </breakpoint-manager>\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/workspace.xml	(revision df31ae57d3dc270ff6530f6cbcd4f398bf69f905)
++++ .idea/workspace.xml	(date 1598352861280)
+@@ -20,13 +20,12 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="adattato il grafico e inserita stackedAreaChart.js anche per la ripartizione dei casi totali">
++      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_25_08_20,_12_53_[Default_Changelist]/shelved.patch" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_25_08_20__12_53__Default_Changelist_.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/data_representation/region_table/regionTable.js" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/logic/REGION_newCases.js" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/logic/retrieveRegionData.js" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/ui/components/current_positive/currentPositiveComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/current_positive/currentPositiveComponent.js" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/ui/components/died/diedComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/died/diedComponent.js" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/ui/components/new_cases/newCasesComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/new_cases/newCasesComponent.js" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/ui/components/recovered/recoveredComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/recovered/recoveredComponent.js" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/ui/components/swabs/swabsComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/swabs/swabsComponent.js" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/ui/contents/strings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/contents/strings.js" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -216,10 +215,11 @@
+       <screen x="0" y="23" width="2560" height="1352" />
+     </state>
+     <state x="0" y="147" key="MergeDialog/0.23.2560.1352@0.23.2560.1352" timestamp="1596040223766" />
+-    <state x="513" y="408" key="RollbackChangesDialog" timestamp="1596652988315">
+-      <screen x="0" y="23" width="2560" height="1352" />
++    <state x="289" y="257" key="RollbackChangesDialog" timestamp="1598352839004">
++      <screen x="0" y="25" width="1440" height="814" />
+     </state>
+     <state x="513" y="408" key="RollbackChangesDialog/0.23.2560.1352@0.23.2560.1352" timestamp="1596652988315" />
++    <state x="289" y="257" key="RollbackChangesDialog/0.25.1440.814@0.25.1440.814" timestamp="1598352839004" />
+     <state x="569" y="272" key="Vcs.Push.Dialog.v2" timestamp="1596654343747">
+       <screen x="0" y="23" width="2560" height="1352" />
+     </state>
+@@ -229,6 +229,10 @@
+       <screen x="0" y="23" width="2560" height="1352" />
+     </state>
+     <state x="571" y="619" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.2560.1352@0.23.2560.1352" timestamp="1596653001048" />
++    <state x="467" y="149" key="git4idea.branch.GitSmartOperationDialog" timestamp="1598352816787">
++      <screen x="0" y="25" width="1440" height="814" />
++    </state>
++    <state x="467" y="149" key="git4idea.branch.GitSmartOperationDialog/0.25.1440.814@0.25.1440.814" timestamp="1598352816787" />
+     <state x="385" y="167" width="670" height="676" key="search.everywhere.popup" timestamp="1595150088481">
+       <screen x="0" y="23" width="1440" height="820" />
+     </state>
+@@ -240,7 +244,6 @@
+         <line-breakpoint enabled="true" type="javascript">
+           <url>file://$PROJECT_DIR$/src/ui/contents/strings.js</url>
+           <line>47</line>
+-          <properties lambdaOrdinal="-1" />
+           <option name="timeStamp" value="1" />
+         </line-breakpoint>
+       </breakpoints>
+Index: src/logic/retrieveRegionData.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/logic/retrieveRegionData.js	(date 1598352743651)
++++ src/logic/retrieveRegionData.js	(date 1598352743651)
+@@ -0,0 +1,22 @@
++/**
++ * covid19_dashboard copyright © 2020
++ * Created by mauromarini on 07/08/2020
++ * Repository: http://github.com/marinimau/covid19_dashboard
++ * Location: Baratili San Pietro
++ */
++
++import Records from "./dataset";
++
++const retrieveRegionData = () => {
++    if(Records.getRegionRecords() === []){
++        fetch('https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-json/dpc-covid19-ita-regioni-latest.json')
++            .then(res => (res.ok ? res : Promise.reject(res)))
++            .then(res => res.json());
++    }
++    else {
++        return Records.getRegionRecords();
++    }
++}
++
++export default retrieveRegionData;
++
+Index: .idea/shelf/Uncommitted_changes_before_Merge_at_25_08_20,_12_53_[Default_Changelist]/shelved.patch
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/shelf/Uncommitted_changes_before_Merge_at_25_08_20,_12_53_[Default_Changelist]/shelved.patch	(date 1598352817242)
++++ .idea/shelf/Uncommitted_changes_before_Merge_at_25_08_20,_12_53_[Default_Changelist]/shelved.patch	(date 1598352817242)
+@@ -0,0 +1,34 @@
++Index: .idea/workspace.xml
++IDEA additional info:
++Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
++<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"BranchesTreeState\">\n    <expand>\n      <path>\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n        <item name=\"LOCAL_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n      </path>\n      <path>\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n        <item name=\"REMOTE_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n      </path>\n      <path>\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n        <item name=\"REMOTE_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n        <item name=\"GROUP_NODE:origin\" type=\"e8cecc67:BranchNodeDescriptor\" />\n      </path>\n    </expand>\n    <select />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"71d30709-e3e2-4122-af9d-74bdecd22ff1\" name=\"Default Changelist\" comment=\"adattato il grafico e inserita stackedAreaChart.js anche per la ripartizione dei casi totali\">\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/ui/components/current_positive/currentPositiveComponent.js\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/ui/components/current_positive/currentPositiveComponent.js\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/ui/components/died/diedComponent.js\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/ui/components/died/diedComponent.js\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/ui/components/new_cases/newCasesComponent.js\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/ui/components/new_cases/newCasesComponent.js\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/ui/components/recovered/recoveredComponent.js\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/ui/components/recovered/recoveredComponent.js\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/ui/components/swabs/swabsComponent.js\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/ui/components/swabs/swabsComponent.js\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/ui/contents/strings.js\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/ui/contents/strings.js\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"JavaScript File\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n    <option name=\"UPDATE_TYPE\" value=\"REBASE\" />\n  </component>\n  <component name=\"JsFlowSettings\">\n    <service-enabled>true</service-enabled>\n    <exe-path />\n    <other-services-enabled>true</other-services-enabled>\n    <auto-save>true</auto-save>\n  </component>\n  <component name=\"ProjectId\" id=\"1erNHNuLYlSoG8hxr7rUGJ09Ze7\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\n    <property name=\"dart.analysis.tool.window.visible\" value=\"false\" />\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$\" />\n    <property name=\"nodejs_package_manager_path\" value=\"npm\" />\n    <property name=\"ts.external.directory.path\" value=\"$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external\" />\n  </component>\n  <component name=\"RecentsManager\">\n    <key name=\"MoveFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$/src/ui/components/header\" />\n      <recent name=\"$PROJECT_DIR$/src/ui/components/loading\" />\n      <recent name=\"$PROJECT_DIR$/src/ui\" />\n      <recent name=\"$PROJECT_DIR$/src/components/drawer\" />\n    </key>\n  </component>\n  <component name=\"SvnConfiguration\">\n    <configuration />\n  </component>\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"71d30709-e3e2-4122-af9d-74bdecd22ff1\" name=\"Default Changelist\" comment=\"\" />\n      <created>1595075662595</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1595075662595</updated>\n      <workItem from=\"1595075664402\" duration=\"12582000\" />\n      <workItem from=\"1595145766116\" duration=\"7630000\" />\n      <workItem from=\"1595253539475\" duration=\"2709000\" />\n      <workItem from=\"1595926130050\" duration=\"93000\" />\n      <workItem from=\"1596040188795\" duration=\"568000\" />\n      <workItem from=\"1596041752366\" duration=\"3477000\" />\n      <workItem from=\"1596053023896\" duration=\"2262000\" />\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"initial commit\">\n      <created>1595078622516</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1595078622516</updated>\n    </task>\n    <task id=\"LOCAL-00002\" summary=\"header in home\">\n      <created>1595082159705</created>\n      <option name=\"number\" value=\"00002\" />\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1595082159705</updated>\n    </task>\n    <task id=\"LOCAL-00003\" summary=\"screens sistemati, header e menu funzionante in tutti\">\n      <created>1595083956352</created>\n      <option name=\"number\" value=\"00003\" />\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1595083956352</updated>\n    </task>\n    <task id=\"LOCAL-00004\" summary=\"data retrieving funzionante\">\n      <created>1595090447936</created>\n      <option name=\"number\" value=\"00004\" />\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1595090447936</updated>\n    </task>\n    <task id=\"LOCAL-00005\" summary=\"aggiunto il loader\">\n      <created>1595090642764</created>\n      <option name=\"number\" value=\"00005\" />\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1595090642764</updated>\n    </task>\n    <task id=\"LOCAL-00006\" summary=\"aggiunto il loader\">\n      <created>1595148795949</created>\n      <option name=\"number\" value=\"00006\" />\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1595148795949</updated>\n    </task>\n    <task id=\"LOCAL-00007\" summary=\"iniziato a organizzare i grafici\">\n      <created>1595152526190</created>\n      <option name=\"number\" value=\"00007\" />\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1595152526190</updated>\n    </task>\n    <task id=\"LOCAL-00008\" summary=\"sistemata UI\">\n      <created>1595926195216</created>\n      <option name=\"number\" value=\"00008\" />\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1595926195216</updated>\n    </task>\n    <task id=\"LOCAL-00009\" summary=\"adattato il grafico e inserita stackedAreaChart.js anche per la ripartizione dei casi totali\">\n      <created>1596654268978</created>\n      <option name=\"number\" value=\"00009\" />\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1596654268978</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"10\" />\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"2\" />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n    <option name=\"oldMeFiltersMigrated\" value=\"true\" />\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"initial commit\" />\n    <MESSAGE value=\"header in home\" />\n    <MESSAGE value=\"screens sistemati, header e menu funzionante in tutti\" />\n    <MESSAGE value=\"data retrieving funzionante\" />\n    <MESSAGE value=\"aggiunto il loader\" />\n    <MESSAGE value=\"iniziato a organizzare i grafici\" />\n    <MESSAGE value=\"sistemata UI\" />\n    <MESSAGE value=\"adattato il grafico e inserita stackedAreaChart.js anche per la ripartizione dei casi totali\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"adattato il grafico e inserita stackedAreaChart.js anche per la ripartizione dei casi totali\" />\n  </component>\n  <component name=\"WindowStateProjectService\">\n    <state x=\"814\" y=\"295\" key=\"#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog\" timestamp=\"1596474192548\">\n      <screen x=\"0\" y=\"23\" width=\"2560\" height=\"1352\" />\n    </state>\n    <state x=\"458\" y=\"188\" key=\"#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.820@0.23.1440.820\" timestamp=\"1595080474201\" />\n    <state x=\"814\" y=\"295\" key=\"#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.2560.1352@0.23.2560.1352\" timestamp=\"1596474192548\" />\n    <state x=\"27\" y=\"38\" key=\"CommitChangelistDialog2\" timestamp=\"1595152525607\">\n      <screen x=\"0\" y=\"23\" width=\"1440\" height=\"820\" />\n    </state>\n    <state x=\"27\" y=\"38\" key=\"CommitChangelistDialog2/0.23.1440.820@0.23.1440.820\" timestamp=\"1595152525607\" />\n    <state x=\"558\" y=\"338\" key=\"Github.ShareDialog\" timestamp=\"1595078313212\">\n      <screen x=\"0\" y=\"23\" width=\"1440\" height=\"820\" />\n    </state>\n    <state x=\"558\" y=\"338\" key=\"Github.ShareDialog/0.23.1440.820@0.23.1440.820\" timestamp=\"1595078313212\" />\n    <state width=\"1544\" height=\"387\" key=\"GridCell.Tab.0.bottom\" timestamp=\"1596474112828\">\n      <screen x=\"0\" y=\"23\" width=\"2560\" height=\"1352\" />\n    </state>\n    <state width=\"1544\" height=\"387\" key=\"GridCell.Tab.0.bottom/0.23.2560.1352@0.23.2560.1352\" timestamp=\"1596474112828\" />\n    <state width=\"1544\" height=\"387\" key=\"GridCell.Tab.0.center\" timestamp=\"1596474112828\">\n      <screen x=\"0\" y=\"23\" width=\"2560\" height=\"1352\" />\n    </state>\n    <state width=\"1544\" height=\"387\" key=\"GridCell.Tab.0.center/0.23.2560.1352@0.23.2560.1352\" timestamp=\"1596474112828\" />\n    <state width=\"1544\" height=\"387\" key=\"GridCell.Tab.0.left\" timestamp=\"1596474112828\">\n      <screen x=\"0\" y=\"23\" width=\"2560\" height=\"1352\" />\n    </state>\n    <state width=\"1544\" height=\"387\" key=\"GridCell.Tab.0.left/0.23.2560.1352@0.23.2560.1352\" timestamp=\"1596474112828\" />\n    <state width=\"1544\" height=\"387\" key=\"GridCell.Tab.0.right\" timestamp=\"1596474112828\">\n      <screen x=\"0\" y=\"23\" width=\"2560\" height=\"1352\" />\n    </state>\n    <state width=\"1544\" height=\"387\" key=\"GridCell.Tab.0.right/0.23.2560.1352@0.23.2560.1352\" timestamp=\"1596474112828\" />\n    <state x=\"0\" y=\"147\" key=\"MergeDialog\" timestamp=\"1596040223766\">\n      <screen x=\"0\" y=\"23\" width=\"2560\" height=\"1352\" />\n    </state>\n    <state x=\"0\" y=\"147\" key=\"MergeDialog/0.23.2560.1352@0.23.2560.1352\" timestamp=\"1596040223766\" />\n    <state x=\"513\" y=\"408\" key=\"RollbackChangesDialog\" timestamp=\"1596652988315\">\n      <screen x=\"0\" y=\"23\" width=\"2560\" height=\"1352\" />\n    </state>\n    <state x=\"513\" y=\"408\" key=\"RollbackChangesDialog/0.23.2560.1352@0.23.2560.1352\" timestamp=\"1596652988315\" />\n    <state x=\"569\" y=\"272\" key=\"Vcs.Push.Dialog.v2\" timestamp=\"1596654343747\">\n      <screen x=\"0\" y=\"23\" width=\"2560\" height=\"1352\" />\n    </state>\n    <state x=\"320\" y=\"174\" key=\"Vcs.Push.Dialog.v2/0.23.1440.820@0.23.1440.820\" timestamp=\"1595152527908\" />\n    <state x=\"569\" y=\"272\" key=\"Vcs.Push.Dialog.v2/0.23.2560.1352@0.23.2560.1352\" timestamp=\"1596654343747\" />\n    <state x=\"571\" y=\"619\" key=\"com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2\" timestamp=\"1596653001048\">\n      <screen x=\"0\" y=\"23\" width=\"2560\" height=\"1352\" />\n    </state>\n    <state x=\"571\" y=\"619\" key=\"com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.2560.1352@0.23.2560.1352\" timestamp=\"1596653001048\" />\n    <state x=\"385\" y=\"167\" width=\"670\" height=\"676\" key=\"search.everywhere.popup\" timestamp=\"1595150088481\">\n      <screen x=\"0\" y=\"23\" width=\"1440\" height=\"820\" />\n    </state>\n    <state x=\"385\" y=\"167\" width=\"670\" height=\"676\" key=\"search.everywhere.popup/0.23.1440.820@0.23.1440.820\" timestamp=\"1595150088481\" />\n  </component>\n  <component name=\"XDebuggerManager\">\n    <breakpoint-manager>\n      <breakpoints>\n        <line-breakpoint enabled=\"true\" type=\"javascript\">\n          <url>file://$PROJECT_DIR$/src/ui/contents/strings.js</url>\n          <line>47</line>\n          <properties lambdaOrdinal=\"-1\" />\n          <option name=\"timeStamp\" value=\"1\" />\n        </line-breakpoint>\n      </breakpoints>\n    </breakpoint-manager>\n  </component>\n</project>
++Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
++<+>UTF-8
++===================================================================
++--- .idea/workspace.xml	(revision df31ae57d3dc270ff6530f6cbcd4f398bf69f905)
+++++ .idea/workspace.xml	(date 1598352763105)
++@@ -19,15 +19,7 @@
++     <select />
++   </component>
++   <component name="ChangeListManager">
++-    <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="adattato il grafico e inserita stackedAreaChart.js anche per la ripartizione dei casi totali">
++-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++-      <change beforePath="$PROJECT_DIR$/src/ui/components/current_positive/currentPositiveComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/current_positive/currentPositiveComponent.js" afterDir="false" />
++-      <change beforePath="$PROJECT_DIR$/src/ui/components/died/diedComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/died/diedComponent.js" afterDir="false" />
++-      <change beforePath="$PROJECT_DIR$/src/ui/components/new_cases/newCasesComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/new_cases/newCasesComponent.js" afterDir="false" />
++-      <change beforePath="$PROJECT_DIR$/src/ui/components/recovered/recoveredComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/recovered/recoveredComponent.js" afterDir="false" />
++-      <change beforePath="$PROJECT_DIR$/src/ui/components/swabs/swabsComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/swabs/swabsComponent.js" afterDir="false" />
++-      <change beforePath="$PROJECT_DIR$/src/ui/contents/strings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/contents/strings.js" afterDir="false" />
++-    </list>
+++    <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="adattato il grafico e inserita stackedAreaChart.js anche per la ripartizione dei casi totali" />
++     <option name="SHOW_DIALOG" value="false" />
++     <option name="HIGHLIGHT_CONFLICTS" value="true" />
++     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
++@@ -240,7 +232,6 @@
++         <line-breakpoint enabled="true" type="javascript">
++           <url>file://$PROJECT_DIR$/src/ui/contents/strings.js</url>
++           <line>47</line>
++-          <properties lambdaOrdinal="-1" />
++           <option name="timeStamp" value="1" />
++         </line-breakpoint>
++       </breakpoints>
+Index: src/data_representation/region_table/regionTable.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/data_representation/region_table/regionTable.js	(date 1598352743647)
++++ src/data_representation/region_table/regionTable.js	(date 1598352743647)
+@@ -0,0 +1,63 @@
++/**
++ * covid19_dashboard copyright © 2020
++ * Created by mauromarini on 07/08/2020
++ * Repository: http://github.com/marinimau/covid19_dashboard
++ * Location: Baratili San Pietro
++ */
++
++import React, {Component} from 'react';
++import {View} from 'react-native';
++import { DataTable } from 'react-native-paper';
++import LoadingScreen from "../../ui/components/loading/splash";
++import ErrorScreen from "../../ui/components/loading/error";
++import Records from "../../logic/dataset";
++import Async from "react-async";
++import retrieveRegionData from "../../logic/retrieveRegionData";
++import {chartTitles} from "../../ui/contents/strings";
++
++export default class RegionTable extends Component{
++
++    constructor(props) {
++        super(props);
++    }
++
++
++    render() {
++        return (
++            <Async promiseFn={retrieveRegionData()}>
++                {({data, err, isLoading}) => {
++                    if (isLoading) return <LoadingScreen/>
++                    if (err) return <ErrorScreen/>
++                    if (data) Records.setRegionRecords(data)
++                    console.log(Records.getRegionRecords());
++
++                    return (
++                        <View style={{marginTop: 10}}>
++                            <DataTable>
++                                <DataTable.Header>
++                                    <DataTable.Title>{chartTitles.regionsTable}</DataTable.Title>
++                                    {this.props.data.labels.map(label =>  <DataTable.Title numeric>{label.title}</DataTable.Title>)}
++                                </DataTable.Header>
++
++                                {
++                                    this.props.data.regions.map((region, index) => (
++                                        <DataTable.Row>
++                                            <DataTable.Cell>{region}</DataTable.Cell>
++                                            <DataTable.Cell numeric>159</DataTable.Cell>
++                                            <DataTable.Cell numeric>6.0</DataTable.Cell>
++                                        </DataTable.Row>
++                                    ))
++                                }
++
++
++                            </DataTable>
++                        </View>
++                    )
++                }
++                }
++            </Async>
++        );
++    }
++
++}
++

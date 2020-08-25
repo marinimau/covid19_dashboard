@@ -19,14 +19,17 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="risolti alcuni problemi">
+    <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="adattato il grafico e inserita stackedAreaChart.js anche per la ripartizione dei casi totali">
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_25_08_20,_12_53_[Default_Changelist]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_25_08_20,_12_55_[Default_Changelist]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_25_08_20__12_53__Default_Changelist_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_25_08_20__12_55__Default_Changelist_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logic/REGION_newCases.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data_representation/region_table/regionTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_representation/region_table/regionTable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/notesData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/notesData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/region/REGION_swabs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/region/REGION_swabs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/components/swabs/swabsComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/swabs/swabsComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_representation/charts/lineChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_representation/charts/lineChart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/components/latest_updates/latestUpateComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/latest_updates/latestUpateComponent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/contents/strings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/contents/strings.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/theme/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/theme/style.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +45,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
@@ -327,21 +331,26 @@
       <screen x="0" y="23" width="2560" height="1352" />
     </state>
     <state x="0" y="147" key="MergeDialog/0.23.2560.1352@0.23.2560.1352" timestamp="1596040223766" />
-    <state x="513" y="408" key="RollbackChangesDialog" timestamp="1596652988315">
-      <screen x="0" y="23" width="2560" height="1352" />
+    <state x="358" y="197" key="MultipleFileMergeDialog" timestamp="1598353137020">
+      <screen x="0" y="25" width="1440" height="814" />
+    </state>
+    <state x="358" y="197" key="MultipleFileMergeDialog/0.25.1440.814@0.25.1440.814" timestamp="1598353137020" />
+    <state x="289" y="257" key="RollbackChangesDialog" timestamp="1598353034384">
+      <screen x="0" y="25" width="1440" height="814" />
     </state>
     <state x="513" y="408" key="RollbackChangesDialog/0.23.2560.1352@0.23.2560.1352" timestamp="1596652988315" />
+    <state x="289" y="257" key="RollbackChangesDialog/0.25.1440.814@0.25.1440.814" timestamp="1598353034384" />
     <state x="320" y="175" key="Vcs.Push.Dialog.v2" timestamp="1598085407758">
       <screen x="0" y="25" width="1440" height="814" />
     </state>
     <state x="320" y="174" key="Vcs.Push.Dialog.v2/0.23.1440.820@0.23.1440.820" timestamp="1595152527908" />
     <state x="569" y="272" key="Vcs.Push.Dialog.v2/0.23.2560.1352@0.23.2560.1352" timestamp="1596659073623" />
     <state x="320" y="175" key="Vcs.Push.Dialog.v2/0.25.1440.814@0.25.1440.814" timestamp="1598085407758" />
-    <state x="321" y="384" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597777201471">
+    <state x="321" y="384" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598353043672">
       <screen x="0" y="25" width="1440" height="814" />
     </state>
     <state x="571" y="619" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.2560.1352@0.23.2560.1352" timestamp="1596787487282" />
-    <state x="321" y="384" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.25.1440.814@0.25.1440.814" timestamp="1597777201471" />
+    <state x="321" y="384" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.25.1440.814@0.25.1440.814" timestamp="1598353043672" />
     <state x="385" y="167" width="670" height="676" key="search.everywhere.popup" timestamp="1595150088481">
       <screen x="0" y="23" width="1440" height="820" />
     </state>

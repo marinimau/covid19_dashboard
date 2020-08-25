@@ -5,7 +5,7 @@
  * Location: Baratili San Pietro
  */
 
-import {StyleSheet, Platform} from "react-native";
+import {StyleSheet} from "react-native";
 import Colors from "./colors";
 import LegendColors from "./legendColors"
 import {dynamicDimens} from "./dimens";
@@ -149,10 +149,13 @@ export const styles = StyleSheet.create({
         marginTop: 20,
     },
     infoDescription: {
-        fontSize: 18,
+        fontSize: 16,
+        color: Colors.basic,
         textAlign: 'left',
         marginTop: 20,
-        marginLeft: 20
+        marginLeft: 20,
+        marginRight: 20,
+
     },
     chartBigValue: {
         width: '100%',
@@ -182,7 +185,6 @@ export const styles = StyleSheet.create({
         borderRadius: 5,
     },
     legendTitle: {
-        //display: 'inline',
         marginLeft: 10
     },
     /*
