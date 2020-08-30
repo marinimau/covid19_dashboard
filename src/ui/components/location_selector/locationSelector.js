@@ -11,7 +11,7 @@ import RNPickerSelect from 'react-native-picker-select';
 import {styles} from "../../theme/style";
 import {View, StyleSheet} from "react-native";
 import {chartTitles, uiButtons} from "../../contents/strings";
-import {Platform} from "react-native-web";
+import Colors from "../../theme/colors";
 
 
 class LocationSelector extends Component {
@@ -29,13 +29,7 @@ class LocationSelector extends Component {
                     items={RegionList}
                     onValueChange={(value) => this.setState({location: value})}
                     doneText={uiButtons.done}
-                    style={[
-                        pickerSelectStyles,
-                        {iconContainer: {
-                            top: 10,
-                            right: 12,
-                        }}
-                    ]}
+                    style={pickerSelectStyles}
                     useNativeAndroidPickerStyle={true}
                 />
             </View>
@@ -48,20 +42,17 @@ const pickerSelectStyles = StyleSheet.create({
         fontSize: 16,
         paddingVertical: 12,
         paddingHorizontal: 10,
-        borderWidth: 1,
-        borderColor: 'gray',
-        borderRadius: 4,
-        color: 'black',
+        borderWidth: 0,
+        color: Colors.basic,
         paddingRight: 30, // to ensure the text is never behind the icon
     },
     inputAndroid: {
         fontSize: 16,
         paddingHorizontal: 10,
         paddingVertical: 8,
-        borderWidth: 0.5,
-        borderColor: 'purple',
+        borderWidth: 0,
         borderRadius: 8,
-        color: 'black',
+        color: Colors.basic,
         paddingRight: 30, // to ensure the text is never behind the icon
     },
 });
