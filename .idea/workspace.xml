@@ -19,15 +19,37 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="adattato il grafico e inserita stackedAreaChart.js anche per la ripartizione dei casi totali">
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_25_08_20,_12_53_[Default_Changelist]/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_25_08_20,_12_55_[Default_Changelist]/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_25_08_20__12_53__Default_Changelist_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_25_08_20__12_55__Default_Changelist_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/logic/REGION_newCases.js" afterDir="false" />
+    <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="risolti alcuni problemi">
+      <change afterPath="$PROJECT_DIR$/src/ui/components/location_selector/locationSelector.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ui/contents/locationsList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.expo/packager-info.json" beforeDir="false" afterPath="$PROJECT_DIR$/.expo/packager-info.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data_representation/charts/lineChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_representation/charts/lineChart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/drawings/charts/chartColorLegend.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/drawings/charts/lineChart.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/drawings/charts/pieChart.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/drawings/charts/progressCircle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/drawings/charts/stackedAreaChart.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/drawings/general/lineChartAxis.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/drawings/new_cases_charts/newCaseLine.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/drawings/pie_chart/pie_chart.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/drawings/resume_cards/cardCritical.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/drawings/resume_cards/cardCurrentPositive.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/drawings/resume_cards/cardDate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/drawings/resume_cards/cardDied.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/drawings/resume_cards/cardHomeQuarantine.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/drawings/resume_cards/cardHospitalizedWithSymptoms.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/drawings/resume_cards/cardRecovered.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/drawings/resume_cards/cardSwab.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/drawings/resume_cards/cardTestedCases.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/drawings/resume_cards/cardTotalCases.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/positiveDeltaData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/positiveDeltaData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/components/home/homeComponents.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/components/info/infoComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/info/infoComponent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/components/latest_updates/latestUpateComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/latest_updates/latestUpateComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/components/latest_updates/notesComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/latest_updates/notesComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/components/mainScrollableContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/mainScrollableContainer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/contents/strings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/contents/strings.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/theme/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/theme/style.js" afterDir="false" />
     </list>
@@ -63,11 +85,14 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/ui/components/latest_updates" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/ui/components/latest_updates" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/logic/region" />
       <recent name="$PROJECT_DIR$/src/logic/general" />
@@ -103,6 +128,7 @@
       <workItem from="1597565784725" duration="18584000" />
       <workItem from="1597866917702" duration="1231000" />
       <workItem from="1598081802785" duration="4916000" />
+      <workItem from="1598603388888" duration="7140000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1595078622516</created>
@@ -258,7 +284,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598085404410</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="risolti alcuni problemi">
+      <created>1598355125528</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1598355125528</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -340,12 +373,12 @@
     </state>
     <state x="513" y="408" key="RollbackChangesDialog/0.23.2560.1352@0.23.2560.1352" timestamp="1596652988315" />
     <state x="289" y="257" key="RollbackChangesDialog/0.25.1440.814@0.25.1440.814" timestamp="1598353034384" />
-    <state x="320" y="175" key="Vcs.Push.Dialog.v2" timestamp="1598085407758">
+    <state x="320" y="175" key="Vcs.Push.Dialog.v2" timestamp="1598355130376">
       <screen x="0" y="25" width="1440" height="814" />
     </state>
     <state x="320" y="174" key="Vcs.Push.Dialog.v2/0.23.1440.820@0.23.1440.820" timestamp="1595152527908" />
     <state x="569" y="272" key="Vcs.Push.Dialog.v2/0.23.2560.1352@0.23.2560.1352" timestamp="1596659073623" />
-    <state x="320" y="175" key="Vcs.Push.Dialog.v2/0.25.1440.814@0.25.1440.814" timestamp="1598085407758" />
+    <state x="320" y="175" key="Vcs.Push.Dialog.v2/0.25.1440.814@0.25.1440.814" timestamp="1598355130376" />
     <state x="321" y="384" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598353043672">
       <screen x="0" y="25" width="1440" height="814" />
     </state>

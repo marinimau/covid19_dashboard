@@ -40,21 +40,21 @@ const PositiveDeltaData = (data) => {
         let d = data[data.length - 1];
 
         /* Home Quarantine */
-        dataToReturn.homeQuarantine = d['isolamento_domiciliare'].toLocaleString('it');
+        dataToReturn.homeQuarantine = (d['isolamento_domiciliare']).toLocaleString('it');
         dataToReturn.homeQuarantinePercentage = Math.round(Math.abs(d['isolamento_domiciliare'] / d['totale_positivi'])* 100 * 100 / 100).toFixed(2);
-        dataToReturn.homeQuarantineVariation = data[data.length - 2]['isolamento_domiciliare'] - d['isolamento_domiciliare'].toLocaleString('it');
+        dataToReturn.homeQuarantineVariation = (d['isolamento_domiciliare'] - data[data.length - 2]['isolamento_domiciliare']).toLocaleString('it');
         dataToReturn.homeQuarantineVariationPercentage = Math.round((data[data.length - 2]['isolamento_domiciliare'] - d['isolamento_domiciliare']) / d['isolamento_domiciliare'] * 100 * 100 / 100).toFixed(2);
 
         /* Hospitalized with Symptoms */
         dataToReturn.hospitalized = d['totale_ospedalizzati'].toLocaleString('it');
         dataToReturn.hospitalizedPercentage = Math.round(Math.abs(d['totale_ospedalizzati'] / d['totale_positivi'])* 100 * 100 / 100).toFixed(2);
-        dataToReturn.hospitalizedVariation = data[data.length - 2]['totale_ospedalizzati'] - d['totale_ospedalizzati'].toLocaleString('it');
+        dataToReturn.hospitalizedVariation = (d['totale_ospedalizzati'] - data[data.length - 2]['totale_ospedalizzati']).toLocaleString('it');
         dataToReturn.hospitalizedVariationPercentage = Math.round((data[data.length - 2]['totale_ospedalizzati'] - d['totale_ospedalizzati']) / d['totale_ospedalizzati'] * 100 * 100 / 100).toFixed(2);
 
         /* Critical */
         dataToReturn.critical = d['terapia_intensiva'].toLocaleString('it');
         dataToReturn.criticalPercentage = Math.round(Math.abs(d['terapia_intensiva'] / d['totale_positivi'])* 100 * 100 / 100).toFixed(2);
-        dataToReturn.criticalVariation = data[data.length - 2]['terapia_intensiva'] - d['terapia_intensiva'].toLocaleString('it');
+        dataToReturn.criticalVariation = (d['terapia_intensiva'] - data[data.length - 2]['terapia_intensiva']).toLocaleString('it');
         dataToReturn.criticalVariationPercentage = Math.round((data[data.length - 2]['terapia_intensiva'] - d['terapia_intensiva']) / d['terapia_intensiva'] * 100 * 100 / 100).toFixed(2);
 
 

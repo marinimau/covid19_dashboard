@@ -32,16 +32,6 @@ class LatestUpdateComponent extends Component {
             <MainScrollableContents
                 content={
                     <>
-                        <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig, {
-                            paddingTop: 0,
-                            paddingLeft: 0,
-                            paddingRight: 0
-                        }]}>
-                            <Text style={[styles.infoDescription]}>
-                                {appInfo.description}
-                            </Text>
-                        </View>
-
                         <TouchableOpacity onPress={() => {
                             navigate(screenTitles.newCases);
                         }}>

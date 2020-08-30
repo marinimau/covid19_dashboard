@@ -12,6 +12,10 @@ export const appInfo = {
     description: 'Covid-19 italy è una dashboard realizzata dall\'Università degli Studi di Cagliari per il monitoraggio e la visualizzazione dei dati riguardanti la pandemia Covid-19 nel territorio italiano.'
 };
 
+export const uiButtons = {
+    done: 'Fatto'
+}
+
 export const loadingMessages = {
     loading: 'Caricamento...',
     error: 'Qualcosa è andato storto, ricarica la pagina',
@@ -31,6 +35,7 @@ export const screenTitles = {
 
 
 export const chartTitles = {
+    allItaly: 'Tutta Italia',
     lastUpdateDate: 'Dati del ',
     regionsTable: 'Regione',
     totalCasesRegionTable: 'Totale casi',

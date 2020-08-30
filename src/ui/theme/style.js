@@ -151,6 +151,7 @@ export const styles = StyleSheet.create({
     infoDescription: {
         fontSize: 16,
         color: Colors.basic,
+        fontStyle: 'italic',
         textAlign: 'left',
         marginTop: 20,
         marginLeft: 20,

@@ -7,8 +7,9 @@
 
 import React from 'react'
 import {styles} from "../theme/style";
-import {ScrollView, View, Platform} from "react-native";
+import {ScrollView, View} from "react-native";
 import NotesComponent from "./latest_updates/notesComponent";
+import LocationSelector from "./location_selector/locationSelector";
 
 function MainScrollableContents(props) {
     return (
@@ -16,7 +17,7 @@ function MainScrollableContents(props) {
             <View style={[styles.rootContainer, {position: 'relative'}]}>
                 <ScrollView>
                     <View style={[styles.scrollableContainer]}>
-
+                        <LocationSelector />
                         {props.content}
 
                     </View>
