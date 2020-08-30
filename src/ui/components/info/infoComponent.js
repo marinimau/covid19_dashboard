@@ -27,7 +27,6 @@ class InfoComponent extends Component {
             <MainScrollableContents
                 content={
                     <>
-
                         <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig, {
                             paddingTop: 0,
                             paddingLeft: 0,

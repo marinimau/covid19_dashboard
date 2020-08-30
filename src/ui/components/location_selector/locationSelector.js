@@ -11,6 +11,7 @@ import RNPickerSelect from 'react-native-picker-select';
 import {styles} from "../../theme/style";
 import {View, StyleSheet} from "react-native";
 import {chartTitles, uiButtons} from "../../contents/strings";
+import {Platform} from "react-native-web";
 
 
 class LocationSelector extends Component {
@@ -35,7 +36,7 @@ class LocationSelector extends Component {
                             right: 12,
                         }}
                     ]}
-                    useNativeAndroidPickerStyle={false}
+                    useNativeAndroidPickerStyle={true}
                 />
             </View>
         );
