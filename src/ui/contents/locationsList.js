@@ -7,8 +7,8 @@
 
 import {chartTitles} from "./strings";
 
-
 export const RegionList = [
+    {label: chartTitles.allItaly, value: 0},
     {label: 'Abruzzo', value: 1},
     {label: 'Basilicata', value: 2},
     {label: 'Calabria', value: 3},

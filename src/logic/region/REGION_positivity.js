@@ -21,7 +21,7 @@ const PositivityRegionData = (data) => {
     if (data !== undefined) {
 
         if (dataToReturn.percentagePositive.length === 0) {
-            for (let i = 0; i < data.length; i ++) {
+            for (let i = data.length - 21; i < data.length; i ++) {
                 dataToReturn.regions.push(data[i]['denominazione_regione']);
                 dataToReturn.percentagePositive.push((Math.round(data[i]['totale_casi'] / data[i]['casi_testati'] * 100 * 100) / 100).toFixed(2) + '%');
             }

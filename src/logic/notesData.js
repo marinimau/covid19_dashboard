@@ -15,10 +15,11 @@ let dataToReturn = {
 const NotesData = (data) => {
 
     data = Records.getRegionRecords();
+    console.log(data)
 
     if (data !== undefined) {
         if (dataToReturn.notes.length === 0) {
-            for (let i = 0; i < data.length; i++) {
+            for (let i = data.length - 21 ; i < data.length; i++) {
                 if (data[i]['note'] !== null) {
                     dataToReturn.notes.push('       (' + data[i]['denominazione_regione'].toUpperCase() + ') ' + data[i]['note'].replace(/(\r\n|\n|\r)/gm, ""));
                 }

@@ -23,7 +23,7 @@ const HospitalRegionData = (data) => {
     if (data !== undefined) {
 
         if (dataToReturn.hospitalized.length === 0) {
-            for (let i = 0; i < data.length; i ++) {
+            for (let i = data.length - 21; i < data.length; i ++) {
                 dataToReturn.regions.push(data[i]['denominazione_regione']);
                 dataToReturn.hospitalized.push(data[i]['totale_ospedalizzati']);
                 dataToReturn.critical.push(data[i]['terapia_intensiva']);

@@ -23,7 +23,7 @@ const RegionNewCasesData = (data) => {
     if (data !== undefined) {
 
         if (dataToReturn.total.length === 0) {
-            for (let i = 0; i < data.length; i ++) {
+            for (let i = data.length - 21; i < data.length; i ++) {
                 dataToReturn.regions.push(data[i]['denominazione_regione']);
                 dataToReturn.total.push(data[i]['totale_casi']);
                 dataToReturn.incr.push('+ ' + data[i]['nuovi_positivi']);

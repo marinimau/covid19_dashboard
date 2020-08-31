@@ -12,22 +12,27 @@ import {styles} from "../../theme/style";
 import {View, StyleSheet} from "react-native";
 import {chartTitles, uiButtons} from "../../contents/strings";
 import Colors from "../../theme/colors";
+import SelectedLocation from "../../../logic/selectedLocation";
 
 
 class LocationSelector extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {location: 0}
+        this.state = {location: SelectedLocation.getLocation()}
     }
 
     render() {
         return (
             <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig, {padding: 0}]}>
                 <RNPickerSelect
-                    placeholder={{value: 0, label: chartTitles.allItaly}}
+                    placeholder={Object}
                     items={RegionList}
-                    onValueChange={(value) => this.setState({location: value})}
+                    onValueChange={(value) => {
+                        this.setState({location: value} );
+                        SelectedLocation.setLocation(value);
+                    }}
+                    value={RegionList[this.state.location]}
                     doneText={uiButtons.done}
                     style={pickerSelectStyles}
                     useNativeAndroidPickerStyle={true}

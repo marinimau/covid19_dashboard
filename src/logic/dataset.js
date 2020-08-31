@@ -5,7 +5,6 @@
  * Location: Baratili San Pietro
  */
 
-
 let Records ={
 
     data: [],
@@ -20,7 +19,6 @@ let Records ={
     },
 
     setRegionRecords(records){
-        console.log('Records'+ records);
         this.regionData = records;
     },
 

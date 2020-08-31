@@ -11,7 +11,6 @@ import {View, SafeAreaView, Platform} from "react-native";
 import NotesData from "../../../logic/notesData";
 import Colors from "../../theme/colors";
 import TextTicker from "react-native-text-ticker";
-import MarqueeText from "react-native-marquee";
 
 
 class NotesComponent extends PureComponent {
@@ -24,19 +23,7 @@ class NotesComponent extends PureComponent {
 
         return (
             <View style={[styles.notesContainer]}>
-                <SafeAreaView>
                     {Platform.OS === 'web' ?
-                        <MarqueeText
-                            style={{color: Colors.basicElevation}}
-                            duration={3000}
-                            marqueeOnStart
-                            loop
-                            marqueeDelay={1000}
-                            marqueeResetDelay={1000}
-                        >
-                            {NotesData().notes}
-                        </MarqueeText>
-                        :
                         <TextTicker
                             style={{color: Colors.basicElevation}}
                             duration={50000}
@@ -45,13 +32,30 @@ class NotesComponent extends PureComponent {
                             isInteraction={false}
                             repeatSpacer={50}
                             marqueeDelay={0}
+                            animationType={'scroll'}
+                            disabled={true}
                             loop
+                            useNativeDriver={false}
+                            isRTL={false}
                         >
                             {NotesData().notes}
                         </TextTicker>
+                        :
+                        <SafeAreaView>
+                            <TextTicker
+                                style={{color: Colors.basicElevation}}
+                                duration={50000}
+                                bounce={false}
+                                scroll={true}
+                                isInteraction={false}
+                                repeatSpacer={50}
+                                marqueeDelay={0}
+                                loop
+                            >
+                                {NotesData().notes}
+                            </TextTicker>
+                        </SafeAreaView>
                     }
-                </SafeAreaView>
-
             </View>
         )
     }

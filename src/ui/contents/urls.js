@@ -7,7 +7,8 @@
 
 const RemoteUrls = {
     national: 'https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-json/dpc-covid19-ita-andamento-nazionale.json',
-    regions: 'https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-json/dpc-covid19-ita-regioni-latest.json',
+    regionsLatest: 'https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-json/dpc-covid19-ita-regioni-latest.json',
+    regions: 'https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-json/dpc-covid19-ita-regioni.json',
     donate: 'https://www.paypal.com/paypalme/marinimau',
     repository: 'https://github.com/marinimau/covid19_dashboard',
     data: 'https://github.com/pcm-dpc/COVID-19',

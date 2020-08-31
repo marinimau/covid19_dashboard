@@ -19,10 +19,23 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="fixato android">
+    <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="fixato ios">
+      <change afterPath="$PROJECT_DIR$/src/logic/selectedLocation.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.expo/packager-info.json" beforeDir="false" afterPath="$PROJECT_DIR$/.expo/packager-info.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/dataset.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/dataset.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/notesData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/notesData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/region/REGION_dead.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/region/REGION_dead.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/region/REGION_hospitalData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/region/REGION_hospitalData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/region/REGION_newCases.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/region/REGION_newCases.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/region/REGION_positive.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/region/REGION_positive.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/region/REGION_positivity.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/region/REGION_positivity.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/region/REGION_recovered.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/region/REGION_recovered.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/region/REGION_swabs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/region/REGION_swabs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/components/latest_updates/notesComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/latest_updates/notesComponent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/components/location_selector/locationSelector.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/location_selector/locationSelector.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/contents/locationsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/contents/locationsList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/contents/urls.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/contents/urls.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +112,8 @@
       <workItem from="1597565784725" duration="18584000" />
       <workItem from="1597866917702" duration="1231000" />
       <workItem from="1598081802785" duration="4916000" />
-      <workItem from="1598603388888" duration="9755000" />
+      <workItem from="1598603388888" duration="12516000" />
+      <workItem from="1598884676974" duration="5581000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1595078622516</created>
@@ -276,7 +290,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598799956384</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="fixato ios">
+      <created>1598801207673</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1598801207673</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -314,7 +335,8 @@
     <MESSAGE value="risolti alcuni problemi" />
     <MESSAGE value="iniziata l'implementazione del selettore delle regioni" />
     <MESSAGE value="fixato android" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixato android" />
+    <MESSAGE value="fixato ios" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixato ios" />
   </component>
   <component name="WindowStateProjectService">
     <state x="458" y="189" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1597228486721">
@@ -360,12 +382,12 @@
     </state>
     <state x="513" y="408" key="RollbackChangesDialog/0.23.2560.1352@0.23.2560.1352" timestamp="1596652988315" />
     <state x="289" y="257" key="RollbackChangesDialog/0.25.1440.814@0.25.1440.814" timestamp="1598353034384" />
-    <state x="320" y="175" key="Vcs.Push.Dialog.v2" timestamp="1598799958430">
+    <state x="320" y="175" key="Vcs.Push.Dialog.v2" timestamp="1598801209124">
       <screen x="0" y="25" width="1440" height="814" />
     </state>
     <state x="320" y="174" key="Vcs.Push.Dialog.v2/0.23.1440.820@0.23.1440.820" timestamp="1595152527908" />
     <state x="569" y="272" key="Vcs.Push.Dialog.v2/0.23.2560.1352@0.23.2560.1352" timestamp="1596659073623" />
-    <state x="320" y="175" key="Vcs.Push.Dialog.v2/0.25.1440.814@0.25.1440.814" timestamp="1598799958430" />
+    <state x="320" y="175" key="Vcs.Push.Dialog.v2/0.25.1440.814@0.25.1440.814" timestamp="1598801209124" />
     <state x="321" y="384" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598353043672">
       <screen x="0" y="25" width="1440" height="814" />
     </state>
