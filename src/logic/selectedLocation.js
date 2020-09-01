@@ -4,7 +4,9 @@
  * Repository: http://github.com/marinimau/covid19_dashboard
  * Location: Baratili San Pietro
  */
+
 import {RegionList} from "../ui/contents/locationsList";
+import Records from "./dataset";
 
 
 let SelectedLocation ={
@@ -14,6 +16,7 @@ let SelectedLocation ={
     setLocation(index){
         if(index >= 0 && index <= RegionList.length){
             this.index = index;
+            Records.clearSingleRegionData();
         }
     },
 

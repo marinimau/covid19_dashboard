@@ -19,23 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="fixato ios">
-      <change afterPath="$PROJECT_DIR$/src/logic/selectedLocation.js" afterDir="false" />
+    <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="aggiunte descrizioni dove mancavano">
       <change beforePath="$PROJECT_DIR$/.expo/packager-info.json" beforeDir="false" afterPath="$PROJECT_DIR$/.expo/packager-info.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/logic/dataset.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/dataset.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/notesData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/notesData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/region/REGION_dead.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/region/REGION_dead.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/region/REGION_hospitalData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/region/REGION_hospitalData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/region/REGION_newCases.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/region/REGION_newCases.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/region/REGION_positive.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/region/REGION_positive.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/region/REGION_positivity.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/region/REGION_positivity.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/region/REGION_recovered.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/region/REGION_recovered.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/region/REGION_swabs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/region/REGION_swabs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/components/latest_updates/notesComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/latest_updates/notesComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/components/location_selector/locationSelector.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/location_selector/locationSelector.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/contents/locationsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/contents/locationsList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/contents/urls.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/contents/urls.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/selectedLocation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/selectedLocation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/components/screenContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/screenContainer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,14 +58,11 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/ui/components/latest_updates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/ui/components/latest_updates" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/logic/region" />
       <recent name="$PROJECT_DIR$/src/logic/general" />
@@ -85,7 +71,6 @@
       <recent name="$PROJECT_DIR$/src/ui" />
     </key>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -104,16 +89,6 @@
       <workItem from="1596041752366" duration="3477000" />
       <workItem from="1596053023896" duration="2262000" />
       <workItem from="1596787408394" duration="7158000" />
-      <workItem from="1596869893792" duration="1629000" />
-      <workItem from="1597000662459" duration="24000" />
-      <workItem from="1597172933297" duration="2297000" />
-      <workItem from="1597221580716" duration="8584000" />
-      <workItem from="1597305968710" duration="249000" />
-      <workItem from="1597565784725" duration="18584000" />
-      <workItem from="1597866917702" duration="1231000" />
-      <workItem from="1598081802785" duration="4916000" />
-      <workItem from="1598603388888" duration="12516000" />
-      <workItem from="1598884676974" duration="5581000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1595078622516</created>
@@ -185,123 +160,11 @@
       <option name="project" value="LOCAL" />
       <updated>1596659072538</updated>
     </task>
-    <task id="LOCAL-00011" summary="finito di aggiungere le tabelle con i dati regionali">
-      <created>1596881257507</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1596881257507</updated>
-    </task>
-    <task id="LOCAL-00012" summary="finito di aggiungere le tabelle con i dati regionali">
-      <created>1596964018980</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1596964018980</updated>
-    </task>
-    <task id="LOCAL-00013" summary="finito di aggiungere le tabelle con i dati regionali">
-      <created>1597000677551</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1597000677551</updated>
-    </task>
-    <task id="LOCAL-00014" summary="risolti alcuni problemi nella UI">
-      <created>1597174087820</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1597174087820</updated>
-    </task>
-    <task id="LOCAL-00015" summary="aggiunta pagina menu">
-      <created>1597227249907</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1597227249908</updated>
-    </task>
-    <task id="LOCAL-00016" summary="aggiunto banner">
-      <created>1597231111626</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1597231111626</updated>
-    </task>
-    <task id="LOCAL-00017" summary="aggiunte note">
-      <created>1597579913098</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1597579913098</updated>
-    </task>
-    <task id="LOCAL-00018" summary="sistemato text marquee delle note">
-      <created>1597589592925</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1597589592925</updated>
-    </task>
-    <task id="LOCAL-00019" summary="sistemato text marquee delle note">
-      <created>1597589746232</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1597589746232</updated>
-    </task>
-    <task id="LOCAL-00020" summary="sistemato text marquee delle note">
-      <created>1597779021472</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1597779021472</updated>
-    </task>
-    <task id="LOCAL-00021" summary="aggiunti grafici mancanti alla sezione tamponi">
-      <created>1597867725826</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1597867725827</updated>
-    </task>
-    <task id="LOCAL-00022" summary="risolti alcuni problemi">
-      <created>1598085404410</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1598085404410</updated>
-    </task>
-    <task id="LOCAL-00023" summary="risolti alcuni problemi">
-      <created>1598355125528</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1598355125528</updated>
-    </task>
-    <task id="LOCAL-00024" summary="iniziata l'implementazione del selettore delle regioni">
-      <created>1598797882446</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1598797882446</updated>
-    </task>
-    <task id="LOCAL-00025" summary="fixato android">
-      <created>1598799956384</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1598799956384</updated>
-    </task>
-    <task id="LOCAL-00026" summary="fixato ios">
-      <created>1598801207673</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1598801207673</updated>
-    </task>
-    <option name="localTasksCounter" value="27" />
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -325,26 +188,14 @@
     <MESSAGE value="sistemata UI" />
     <MESSAGE value="adattato il grafico e inserita stackedAreaChart.js anche per la ripartizione dei casi totali" />
     <MESSAGE value="aggiunte descrizioni dove mancavano" />
-    <MESSAGE value="finito di aggiungere le tabelle con i dati regionali" />
-    <MESSAGE value="risolti alcuni problemi nella UI" />
-    <MESSAGE value="aggiunta pagina menu" />
-    <MESSAGE value="aggiunto banner" />
-    <MESSAGE value="aggiunte note" />
-    <MESSAGE value="sistemato text marquee delle note" />
-    <MESSAGE value="aggiunti grafici mancanti alla sezione tamponi" />
-    <MESSAGE value="risolti alcuni problemi" />
-    <MESSAGE value="iniziata l'implementazione del selettore delle regioni" />
-    <MESSAGE value="fixato android" />
-    <MESSAGE value="fixato ios" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixato ios" />
+    <option name="LAST_COMMIT_MESSAGE" value="aggiunte descrizioni dove mancavano" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="458" y="189" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1597228486721">
-      <screen x="0" y="25" width="1440" height="814" />
+    <state x="814" y="295" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1596474192548">
+      <screen x="0" y="23" width="2560" height="1352" />
     </state>
     <state x="458" y="188" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.820@0.23.1440.820" timestamp="1595080474201" />
     <state x="814" y="295" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.2560.1352@0.23.2560.1352" timestamp="1596474192548" />
-    <state x="458" y="189" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.25.1440.814@0.25.1440.814" timestamp="1597228486721" />
     <state x="27" y="38" key="CommitChangelistDialog2" timestamp="1595152525607">
       <screen x="0" y="23" width="1440" height="820" />
     </state>
@@ -373,26 +224,19 @@
       <screen x="0" y="23" width="2560" height="1352" />
     </state>
     <state x="0" y="147" key="MergeDialog/0.23.2560.1352@0.23.2560.1352" timestamp="1596040223766" />
-    <state x="358" y="197" key="MultipleFileMergeDialog" timestamp="1598353137020">
-      <screen x="0" y="25" width="1440" height="814" />
-    </state>
-    <state x="358" y="197" key="MultipleFileMergeDialog/0.25.1440.814@0.25.1440.814" timestamp="1598353137020" />
-    <state x="289" y="257" key="RollbackChangesDialog" timestamp="1598353034384">
-      <screen x="0" y="25" width="1440" height="814" />
+    <state x="513" y="408" key="RollbackChangesDialog" timestamp="1596652988315">
+      <screen x="0" y="23" width="2560" height="1352" />
     </state>
     <state x="513" y="408" key="RollbackChangesDialog/0.23.2560.1352@0.23.2560.1352" timestamp="1596652988315" />
-    <state x="289" y="257" key="RollbackChangesDialog/0.25.1440.814@0.25.1440.814" timestamp="1598353034384" />
-    <state x="320" y="175" key="Vcs.Push.Dialog.v2" timestamp="1598801209124">
-      <screen x="0" y="25" width="1440" height="814" />
+    <state x="569" y="272" key="Vcs.Push.Dialog.v2" timestamp="1596659073623">
+      <screen x="0" y="23" width="2560" height="1352" />
     </state>
     <state x="320" y="174" key="Vcs.Push.Dialog.v2/0.23.1440.820@0.23.1440.820" timestamp="1595152527908" />
     <state x="569" y="272" key="Vcs.Push.Dialog.v2/0.23.2560.1352@0.23.2560.1352" timestamp="1596659073623" />
-    <state x="320" y="175" key="Vcs.Push.Dialog.v2/0.25.1440.814@0.25.1440.814" timestamp="1598801209124" />
-    <state x="321" y="384" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598353043672">
-      <screen x="0" y="25" width="1440" height="814" />
+    <state x="571" y="619" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1596787487282">
+      <screen x="0" y="23" width="2560" height="1352" />
     </state>
     <state x="571" y="619" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.2560.1352@0.23.2560.1352" timestamp="1596787487282" />
-    <state x="321" y="384" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.25.1440.814@0.25.1440.814" timestamp="1598353043672" />
     <state x="385" y="167" width="670" height="676" key="search.everywhere.popup" timestamp="1595150088481">
       <screen x="0" y="23" width="1440" height="820" />
     </state>

@@ -5,17 +5,30 @@
  * Location: Baratili San Pietro
  */
 
+import SelectedLocation from "./selectedLocation";
+
 let Records ={
 
     data: [],
     regionData: [],
+    singleRegionData: [],
 
     setRecords(records){
-        this.records = records;
+        this.data = records;
     },
 
     getRecords(){
-        return this.records;
+        if(SelectedLocation.getLocation() === 0){
+            return this.data;
+        }
+        else {
+            if(this.singleRegionData.length === 0){
+                for(let i = SelectedLocation.getLocation() - 1; i < this.regionData.length; i+=21){
+                    this.singleRegionData.push(this.regionData[i]);
+                }
+            }
+            return this.singleRegionData;
+        }
     },
 
     setRegionRecords(records){
@@ -24,6 +37,10 @@ let Records ={
 
     getRegionRecords(){
         return this.regionData;
+    },
+
+    clearSingleRegionData(){
+        this.singleRegionData = [];
     }
 
 };
