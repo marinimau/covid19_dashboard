@@ -71,21 +71,6 @@ class CurrentPositiveComponent extends Component {
                                 data={PositiveRepartitionData().repartition}/>
                             <Text style={styles.chartDescription}>{dataDescription.positiveRepartition}</Text>
                         </View>
-
-                        <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
-                            <Text style={styles.chartTitle}>{chartTitles.totalCasesRegion}</Text>
-                            <RegionTable
-                                data={PositiveRegionData()}
-                            />
-                        </View>
-
-                        <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
-                            <Text style={styles.chartTitle}>{chartTitles.regionHospitalSituation}</Text>
-                            <RegionTable
-                                data={HospitalRegionData()}
-                            />
-                        </View>
-
                     </>
                 }
             />

@@ -29,7 +29,7 @@ const DeathsData = (data) => {
             for (let i=1; i< data.length; i+=1){
                 dataToReturn.diedTrendAbsolute.push(data[i]['deceduti']);
                 dataToReturn.diedTrendDayValue.push(data[i]['deceduti'] - data[i - 1]['deceduti']);
-                dataToReturn.diedTrendProportional.push((data[i]['deceduti'] - data[i - 1]['deceduti']) / data[i]['totale_positivi'] * 100);
+                dataToReturn.diedTrendProportional.push((data[i]['deceduti'] - data[i - 1]['deceduti']) <= 0 ? 0 : Math.abs((data[i]['deceduti'] - data[i - 1]['deceduti']) / data[i]['totale_positivi'] * 100));
             }
         }
 

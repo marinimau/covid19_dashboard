@@ -29,7 +29,7 @@ const RecoveredData = (data) => {
             for (let i=1; i< data.length; i+=1){
                 dataToReturn.recoveredTrendAbsolute.push(data[i]['dimessi_guariti']);
                 dataToReturn.recoveredTrendDayValue.push(data[i]['dimessi_guariti'] - data[i - 1]['dimessi_guariti']);
-                dataToReturn.recoveredTrendProportional.push((data[i]['dimessi_guariti'] - data[i - 1]['dimessi_guariti']) / data[i]['totale_positivi'] * 100);
+                dataToReturn.recoveredTrendProportional.push(data[i]['dimessi_guariti'] - data[i - 1]['dimessi_guariti'] <= 0 ? 0 : Math.abs((data[i]['dimessi_guariti'] - data[i - 1]['dimessi_guariti']) / data[i]['totale_positivi'] * 100));
             }
         }
     }

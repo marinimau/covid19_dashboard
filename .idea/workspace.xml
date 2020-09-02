@@ -19,16 +19,19 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="visualizzazione dati regionali corretta, manca renderizzare nuovamente i grafici se i dati cambiano">
-      <change beforePath="$PROJECT_DIR$/.expo/packager-info.json" beforeDir="false" afterPath="$PROJECT_DIR$/.expo/packager-info.json" afterDir="false" />
+    <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="pulizia dati che potevano creare anomalie con lo stackedAreaChart su iOS">
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_25_08_20,_12_53_[Default_Changelist]/shelved.patch" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_25_08_20,_12_55_[Default_Changelist]/shelved.patch" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_25_08_20__12_53__Default_Changelist_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_25_08_20__12_55__Default_Changelist_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data_representation/charts/stackedAreaChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_representation/charts/stackedAreaChart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/positiveRepartitionData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/positiveRepartitionData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/totalCasesRepartitionData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/totalCasesRepartitionData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/deathData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/deathData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/recoveredData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/recoveredData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/components/current_positive/currentPositiveComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/current_positive/currentPositiveComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/components/died/diedComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/died/diedComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/components/new_cases/newCasesComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/new_cases/newCasesComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/components/recovered/recoveredComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/recovered/recoveredComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/components/swabs/swabsComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/swabs/swabsComponent.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +96,7 @@
       <workItem from="1596041752366" duration="3477000" />
       <workItem from="1596053023896" duration="2262000" />
       <workItem from="1596787408394" duration="7158000" />
-      <workItem from="1599034707334" duration="954000" />
+      <workItem from="1599034707334" duration="2219000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1595078622516</created>
@@ -172,7 +175,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598985100539</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="pulizia dati che potevano creare anomalie con lo stackedAreaChart su iOS">
+      <created>1599036076694</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1599036076694</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -201,7 +211,8 @@
     <MESSAGE value="adattato il grafico e inserita stackedAreaChart.js anche per la ripartizione dei casi totali" />
     <MESSAGE value="aggiunte descrizioni dove mancavano" />
     <MESSAGE value="visualizzazione dati regionali corretta, manca renderizzare nuovamente i grafici se i dati cambiano" />
-    <option name="LAST_COMMIT_MESSAGE" value="visualizzazione dati regionali corretta, manca renderizzare nuovamente i grafici se i dati cambiano" />
+    <MESSAGE value="pulizia dati che potevano creare anomalie con lo stackedAreaChart su iOS" />
+    <option name="LAST_COMMIT_MESSAGE" value="pulizia dati che potevano creare anomalie con lo stackedAreaChart su iOS" />
   </component>
   <component name="WindowStateProjectService">
     <state x="814" y="295" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1596474192548">
@@ -241,11 +252,11 @@
       <screen x="0" y="23" width="2560" height="1352" />
     </state>
     <state x="513" y="408" key="RollbackChangesDialog/0.23.2560.1352@0.23.2560.1352" timestamp="1596652988315" />
-    <state x="569" y="272" key="Vcs.Push.Dialog.v2" timestamp="1598985102323">
+    <state x="569" y="272" key="Vcs.Push.Dialog.v2" timestamp="1599036079876">
       <screen x="0" y="23" width="2560" height="1352" />
     </state>
     <state x="320" y="174" key="Vcs.Push.Dialog.v2/0.23.1440.820@0.23.1440.820" timestamp="1595152527908" />
-    <state x="569" y="272" key="Vcs.Push.Dialog.v2/0.23.2560.1352@0.23.2560.1352" timestamp="1598985102323" />
+    <state x="569" y="272" key="Vcs.Push.Dialog.v2/0.23.2560.1352@0.23.2560.1352" timestamp="1599036079876" />
     <state x="571" y="619" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1596787487282">
       <screen x="0" y="23" width="2560" height="1352" />
     </state>

@@ -65,13 +65,6 @@ class NewCasesComponent extends Component {
                                 data={TotalCasesRepartitionData().repartition}/>
                             <Text style={styles.chartDescription}>{dataDescription.totalCasesRepartition}</Text>
                         </View>
-
-                        <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
-                            <Text style={styles.chartTitle}>{chartTitles.totalCasesRegion}</Text>
-                            <RegionTable
-                                data={RegionNewCasesData()}
-                            />
-                        </View>
                     </>
                 }
             />
