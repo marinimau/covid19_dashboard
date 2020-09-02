@@ -9,8 +9,8 @@ import React, {Component} from 'react';
 import {RegionList} from "../../contents/locationsList";
 import RNPickerSelect from 'react-native-picker-select';
 import {styles} from "../../theme/style";
-import {View, StyleSheet} from "react-native";
-import {chartTitles, uiButtons} from "../../contents/strings";
+import {View, StyleSheet, Platform} from "react-native";
+import {uiButtons} from "../../contents/strings";
 import Colors from "../../theme/colors";
 import SelectedLocation from "../../../logic/selectedLocation";
 
@@ -26,13 +26,11 @@ class LocationSelector extends Component {
         return (
             <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig, {padding: 0}]}>
                 <RNPickerSelect
-                    placeholder={Object}
                     items={RegionList}
                     onValueChange={(value) => {
                         this.setState({location: value} );
                         SelectedLocation.setLocation(value);
                     }}
-                    value={RegionList[this.state.location]}
                     doneText={uiButtons.done}
                     style={pickerSelectStyles}
                     useNativeAndroidPickerStyle={true}

@@ -26,8 +26,8 @@ export const RegionList = [
     {label: 'Puglia', value: 15},
     {label: 'Sardegna', value: 16},
     {label: 'Sicilia', value: 17},
-    {label: 'Toscana', value: 19},
-    {label: 'Umbria', value: 20},
-    {label: 'Valle d\'Aosta', value: 21},
-    {label: 'Veneto', value: 22},
+    {label: 'Toscana', value: 18},
+    {label: 'Umbria', value: 19},
+    {label: 'Valle d\'Aosta', value: 20},
+    {label: 'Veneto', value: 21},
 ]
