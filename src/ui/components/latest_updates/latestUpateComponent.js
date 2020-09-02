@@ -6,18 +6,16 @@
  */
 
 import React, {Component} from 'react';
-import {Text, TouchableOpacity, View} from "react-native";
+import {TouchableOpacity} from "react-native";
 import MainScrollableContents from "../mainScrollableContainer";
 import CardTotalCases from "../../../data_representation/resume_cards/cardTotalCases";
 import CardRecovered from "../../../data_representation/resume_cards/cardRecovered";
 import CardDied from "../../../data_representation/resume_cards/cardDied";
 import CardCurrentPositive from "../../../data_representation/resume_cards/cardCurrentPositive";
 import {navigate} from "../../../utils/rootNavigationRef";
-import {appInfo, screenTitles} from "../../contents/strings";
+import {screenTitles} from "../../contents/strings";
 import CardSwab from "../../../data_representation/resume_cards/cardSwab";
 import CardDate from "../../../data_representation/resume_cards/cardDate";
-import {styles} from "../../theme/style";
-import Colors from "../../theme/colors";
 
 class LatestUpdateComponent extends Component {
 

@@ -9,7 +9,7 @@ import React, {Component} from 'react';
 import {RegionList} from "../../contents/locationsList";
 import RNPickerSelect from 'react-native-picker-select';
 import {styles} from "../../theme/style";
-import {View, StyleSheet, Platform} from "react-native";
+import {View, StyleSheet} from "react-native";
 import {uiButtons} from "../../contents/strings";
 import Colors from "../../theme/colors";
 import SelectedLocation from "../../../logic/selectedLocation";
@@ -47,7 +47,7 @@ const pickerSelectStyles = StyleSheet.create({
         paddingHorizontal: 10,
         borderWidth: 0,
         color: Colors.basic,
-        paddingRight: 30, // to ensure the text is never behind the icon
+        paddingRight: 30,
     },
     inputAndroid: {
         fontSize: 16,
@@ -56,7 +56,7 @@ const pickerSelectStyles = StyleSheet.create({
         borderWidth: 0,
         borderRadius: 8,
         color: Colors.basic,
-        paddingRight: 30, // to ensure the text is never behind the icon
+        paddingRight: 30,
     },
 });
 

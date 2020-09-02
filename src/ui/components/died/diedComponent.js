@@ -15,8 +15,7 @@ import LegendColors from "../../theme/legendColors";
 import {chartTitles, dataDescription} from "../../contents/strings";
 import DeathsData from "../../../logic/deathData";
 import MyLineChart from "../../../data_representation/charts/lineChart";
-import RegionTable from "../../../data_representation/region_table/regionTable";
-import DeadRegionData from "../../../logic/region/REGION_dead";
+
 
 class DiedComponent extends Component {
 
@@ -59,7 +58,6 @@ class DiedComponent extends Component {
             />
         )
     }
-
 }
 
 export default DiedComponent;

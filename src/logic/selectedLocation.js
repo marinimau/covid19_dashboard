@@ -17,6 +17,7 @@ let SelectedLocation ={
         if(index >= 0 && index <= RegionList.length){
             this.index = index;
             Records.clearSingleRegionData();
+
         }
     },
 
