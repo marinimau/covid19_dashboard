@@ -9,20 +9,16 @@
 import React from 'react'
 import {StackedAreaChart, YAxis, XAxis, Grid} from 'react-native-svg-charts'
 import * as shape from 'd3-shape'
-import {FlatList, Text, View} from 'react-native'
+import {FlatList, View} from 'react-native'
 import {hexToRgb} from "../../utils/colorConverter";
 import intervalSelectorFilter from "../../ui/contents/intervalSelectorData";
 import {Chip} from "react-native-paper";
 import Colors from "../../ui/theme/colors";
 import DateLabels from "../../logic/retrieveTimeLabels";
-import {Rect} from "react-native-svg";
-import {chartTitles} from "../../ui/contents/strings";
 import {styles} from "../../ui/theme/style";
 import ChartColorLegend from "./chartColorLegend";
 
 class MyStackAreaChart extends React.PureComponent {
-
-
     constructor(props) {
         super(props);
         this.state = {

@@ -22,15 +22,16 @@ const PositiveRepartitionData = (data) => {
     if(data !== null && dataToReturn.repartition.length === 0){
 
         for(let i = 0; i < data.length; i++){
-
-            dataToReturn.repartition.push(
-                {
-                    date: dateToString(data[i]['data']),
-                    homeQuarantine: Math.abs(data[i]['isolamento_domiciliare'] / data[i]['totale_positivi']) * 100 * 100 / 100,
-                    hospitalized: Math.abs((data[i]['totale_ospedalizzati'] - data[i]['terapia_intensiva']) / data[i]['totale_positivi']) * 100 * 100 / 100,
-                    critical: Math.abs(data[i]['terapia_intensiva'] / data[i]['totale_positivi']) * 100 * 100 / 100
-                }
-            )
+            if(data[i]['isolamento_domiciliare'] + data[i]['totale_ospedalizzati'] + data[i]['terapia_intensiva'] > 0){
+                dataToReturn.repartition.push(
+                    {
+                        date: dateToString(data[i]['data']),
+                        homeQuarantine: Math.abs(data[i]['isolamento_domiciliare'] / data[i]['totale_positivi']) * 100 * 100 / 100,
+                        hospitalized: Math.abs((data[i]['totale_ospedalizzati'] - data[i]['terapia_intensiva']) / data[i]['totale_positivi']) * 100 * 100 / 100,
+                        critical: Math.abs(data[i]['terapia_intensiva'] / data[i]['totale_positivi']) * 100 * 100 / 100
+                    }
+                )
+            }
         }
     }
     return dataToReturn;
