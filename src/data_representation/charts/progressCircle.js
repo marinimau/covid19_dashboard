@@ -12,6 +12,7 @@ import Colors from "../../ui/theme/colors";
 import {AnimatedCircularProgress} from "react-native-circular-progress/index";
 import LegendColors from "../../ui/theme/legendColors";
 import {dimens} from "../../ui/theme/dimens";
+import darkMode from "../../ui/theme/darkModeDetector";
 
 
 export default  class MyProgressCircle extends Component {
@@ -30,10 +31,10 @@ export default  class MyProgressCircle extends Component {
                     padding={10}
                     tintColor={this.props.color}
                     onAnimationComplete={() => console.log('onAnimationComplete')}
-                    backgroundColor={Colors.basicTransparent}>
+                    backgroundColor={(darkMode() ? Colors.darkMode_basicTransparent : Colors.basicTransparent)}>
                     {
                         (fill) => (
-                            <Text>
+                            <Text style={{color: (darkMode() ? Colors.darkMode_basic : Colors.basic)}}>
                                 {this.props.value}%
                             </Text>
                         )

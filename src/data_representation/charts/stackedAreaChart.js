@@ -17,6 +17,7 @@ import Colors from "../../ui/theme/colors";
 import DateLabels from "../../logic/retrieveTimeLabels";
 import {styles} from "../../ui/theme/style";
 import ChartColorLegend from "./chartColorLegend";
+import darkMode from "../../ui/theme/darkModeDetector";
 
 class MyStackAreaChart extends React.PureComponent {
     constructor(props) {
@@ -70,7 +71,7 @@ class MyStackAreaChart extends React.PureComponent {
         const colorRGB = hexToRgb(this.props.color);
         const colors = [`rgba(${colorRGB.r}, ${colorRGB.g}, ${colorRGB.b}, 0.9)`, `rgba(${colorRGB.r}, ${colorRGB.g}, ${colorRGB.b}, 0.6)`, `rgba(${colorRGB.r}, ${colorRGB.g}, ${colorRGB.b}, 0.3)`]
         const keys = this.props.keyValues
-        const axesSvg = {fontSize: 12, fill: Colors.basic};
+        const axesSvg = {fontSize: 12, fill: (darkMode() ? Colors.darkMode_basic : Colors.basic)};
         const gridSvg = {
             fill: `rgba(${colorRGB.r}, ${colorRGB.g}, ${colorRGB.b}, 0.3)`,
             strokeDasharray: [5, 8],
@@ -88,12 +89,12 @@ class MyStackAreaChart extends React.PureComponent {
                                 onPress={() => this.activateFilter(item)}
                                 selected={this.state.filter === item.state.field}
                                 textStyle={{
-                                    color: this.returnState(item.state) ? '#fff' : Colors.basic,
+                                    color: this.returnState(item.state) ? '#fff' : darkMode() ? Colors.darkMode_basic : Colors.basic,
                                     fontWeight: this.returnState(item.state) ? '700' : '400'
                                 }}
                                 style={[
                                     {
-                                        backgroundColor: this.returnState(item.state) ? this.props.color : this.props.color.basicTransparent,
+                                        backgroundColor: this.returnState(item.state) ? this.props.color : (darkMode() ? Colors.darkMode_basicTransparent : Colors.basicTransparent),
                                         marginRight: 5,
                                     }]}>
                                 {item.name}
@@ -132,7 +133,7 @@ class MyStackAreaChart extends React.PureComponent {
                         numberOfTicks={5}
                         svg={{
                             fontSize: 12,
-                            fill: Colors.basic,
+                            fill: (darkMode() ? Colors.darkMode_basic : Colors.basic),
                             alignmentBaseline: 'baseline',
                             baselineShift: '3',
                         }}

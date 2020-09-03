@@ -9,6 +9,7 @@ import {StyleSheet} from "react-native";
 import Colors from "./colors";
 import LegendColors from "./legendColors"
 import {dynamicDimens} from "./dimens";
+import darkMode from "./darkModeDetector";
 
 
 export const styles = StyleSheet.create({
@@ -20,7 +21,7 @@ export const styles = StyleSheet.create({
         alignItems: 'flex-start',
         alignContent: 'space-around',
         justifyContent: 'flex-start',
-        backgroundColor: Colors.basicElevation,
+        backgroundColor: darkMode() ? Colors.darkMode_basicElevation : Colors.basicElevation,
     },
     scrollableContainer: {
         flex: 1,
@@ -29,11 +30,11 @@ export const styles = StyleSheet.create({
         marginBottom: 55,
     },
     loading: {
-        backgroundColor: Colors.basicElevation,
+        backgroundColor:  darkMode() ? Colors.darkMode_basicElevation : Colors.basicElevation,
     },
     container: {
         flex: 1,
-        backgroundColor: Colors.basicElevation,
+        backgroundColor:  darkMode() ? Colors.darkMode_basicElevation : Colors.basicElevation,
         alignItems: 'center',
         justifyContent: 'center',
     },
@@ -42,13 +43,14 @@ export const styles = StyleSheet.create({
      *
      */
     header: {
+        backgroundColor: darkMode() ? Colors.darkMode_basicElevation : Colors.basicElevation,
         borderBottomColor: 'transparent',
     },
     headerTitle: {
-        color: '#fff'
+        color: darkMode() ? Colors.darkMode_basic : Colors.basic,
     },
     headerShadow: {
-        shadowColor: Colors.basicShadow,
+        shadowColor: darkMode() ? Colors.darkMode_basicShadow : Colors.basicShadow,
         shadowOffset: {
             width: 0,
             height: 5,
@@ -74,13 +76,13 @@ export const styles = StyleSheet.create({
         margin: 10,
         height: 'auto',
         padding: 20,
-        backgroundColor: Colors.basicElevation,
-        borderColor: Colors.mainTransparent,
+        backgroundColor: darkMode() ? Colors.darkMode_basicElevation : Colors.basicElevation,
+        borderColor: darkMode() ? Colors.darkMode_mainTransparent : Colors.mainTransparent,
         borderWidth: 0.5,
         elevation: 20,
     },
     cardShadow: {
-        shadowColor: Colors.basicShadow,
+        shadowColor: darkMode() ? Colors.darkMode_basicShadow : Colors.basicShadow,
         shadowOffset: {
             width: 0,
             height: 10,
@@ -108,6 +110,7 @@ export const styles = StyleSheet.create({
     },
     indicatorValue: {
         textAlign: 'center',
+        color:  darkMode() ? Colors.darkMode_basic : Colors.basic
     },
     indicatorValueBold: {
         marginTop:20,
@@ -141,16 +144,18 @@ export const styles = StyleSheet.create({
     chartTitle: {
         fontSize: 18,
         fontWeight: "700",
+        color: darkMode() ? Colors.darkMode_basic : Colors.basic,
     },
     chartDescription: {
         fontSize: 12,
         fontStyle: 'italic',
         textAlign: 'center',
         marginTop: 20,
+        color: darkMode() ? Colors.darkMode_basic : Colors.basic,
     },
     infoDescription: {
         fontSize: 16,
-        color: Colors.basic,
+        color: darkMode() ? Colors.darkMode_basic : Colors.basic,
         fontStyle: 'italic',
         textAlign: 'left',
         marginTop: 20,
@@ -164,6 +169,7 @@ export const styles = StyleSheet.create({
         fontSize: 30,
         marginTop: 30,
         marginBottom: 30,
+        color: darkMode() ? Colors.darkMode_basic : Colors.basic,
     },
     /*
      *  Chart legend
@@ -186,7 +192,8 @@ export const styles = StyleSheet.create({
         borderRadius: 5,
     },
     legendTitle: {
-        marginLeft: 10
+        marginLeft: 10,
+        color: darkMode() ? Colors.darkMode_basic : Colors.basic,
     },
     /*
      *  Notes

@@ -22,6 +22,7 @@ import DiedScreen from "../screens/diedScreen";
 import InfoScreen from "../screens/infoScreen";
 import {createDrawerNavigator} from "@react-navigation/drawer";
 import {Dimensions} from "react-native";
+import {Appearance, AppearanceProvider} from 'react-native-appearance';
 
 
 const Drawer = createDrawerNavigator();
@@ -29,6 +30,8 @@ const Drawer = createDrawerNavigator();
 const dimensions = Dimensions.get('window').width;
 
 const isLargeScreen = dimensions >= dimens.largeScreen;
+
+let colorScheme = Appearance.getColorScheme();
 
 export default class GlobalContainer extends Component {
 
@@ -38,7 +41,7 @@ export default class GlobalContainer extends Component {
 
     render() {
         return (
-            <>
+            <AppearanceProvider>
                 <StatusBar/>
                 <NavigationContainer
                     ref={navigationRef}
@@ -46,11 +49,15 @@ export default class GlobalContainer extends Component {
                     <Drawer.Navigator
                         initialRouteName="Resume"
                         drawerContentOptions={{
-                            activeTintColor: Colors.drawerSelectedText,
-                            activeBackgroundColor: Colors.drawerSelectedBackground,
+                            activeTintColor: colorScheme === 'dark' ? Colors.darkMode_drawerSelectedText : Colors.drawerSelectedText,
+                            inactiveTintColor: colorScheme === 'dark' ? Colors.darkMode_navigationInactive : Colors.navigationInactive,
+                            activeBackgroundColor: colorScheme === 'dark' ? Colors.darkMode_drawerSelectedBackground : Colors.drawerSelectedBackground,
+                            drawerBackgroundColor: colorScheme === 'dark' ? Colors.darkMode_basicElevation : Colors.basicElevation,
                         }}
                         drawerType={isLargeScreen ? 'permanent' : 'front'}
-                        drawerStyle={isLargeScreen ? {width: dimens.drawerWidth} : [{width: dimens.drawerWidth}]}
+                        drawerStyle={isLargeScreen ? [{width: dimens.drawerWidth,
+                            backgroundColor: colorScheme === 'dark' ? Colors.darkMode_basicElevation : Colors.basicElevation,}]
+                            : [{width: dimens.drawerWidth, backgroundColor: colorScheme === 'dark' ? Colors.darkMode_basicElevation : Colors.basicElevation}]}
                         overlayColor={isLargeScreen ? "transparent" : Colors.basicTransparent}>
 
                         <Drawer.Screen name={screenTitles.latestUpdateResume}
@@ -65,7 +72,7 @@ export default class GlobalContainer extends Component {
 
                     </Drawer.Navigator>
                 </NavigationContainer>
-            </>
+            </AppearanceProvider>
         );
     }
 }

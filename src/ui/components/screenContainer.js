@@ -30,6 +30,7 @@ export default class ScreenContainer extends Component  {
                 <Stack.Screen
                     options={{
                         headerStyle: [styles.header, styles.headerShadow, {borderBottomColor: 'transparent'}],
+                        headerTitleStyle: [styles.headerTitle],
                         headerLeft: dimensions < dimens.largeScreen ? ({}) => <HeaderLeft /> : null
                     }}
                     component={({}) => this.props.component}

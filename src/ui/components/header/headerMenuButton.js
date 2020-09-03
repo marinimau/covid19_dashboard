@@ -11,6 +11,9 @@ import {View, Platform} from "react-native";
 import {TouchableOpacity} from "react-native-gesture-handler";
 import { Ionicons } from '@expo/vector-icons';
 import Colors from "../../theme/colors";
+import {Appearance} from "react-native-appearance";
+
+let colorScheme = Appearance.getColorScheme();
 
 const HeaderLeft = () => {
     const navigation = useNavigation();
@@ -22,7 +25,7 @@ const HeaderLeft = () => {
                     navigation.dispatch(DrawerActions.openDrawer());
                 }}
                 style={{marginLeft: Platform.OS === 'ios' ? 25 : 25}}>
-                <Ionicons name="ios-menu" size={32} color={Colors.basic} />
+                <Ionicons name="ios-menu" size={32} color={colorScheme === 'dark' ? Colors.darkMode_basic : Colors.basic} />
             </TouchableOpacity>
         </View>
     );

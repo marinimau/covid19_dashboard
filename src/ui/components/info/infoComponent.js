@@ -14,6 +14,7 @@ import {List, Divider} from 'react-native-paper';
 import Colors from "../../theme/colors";
 import {menuLinks} from "../../contents/infoMenu";
 import {openLink} from "../../../utils/linking";
+import darkMode from "../../theme/darkModeDetector";
 
 class InfoComponent extends Component {
 
@@ -43,16 +44,18 @@ class InfoComponent extends Component {
                             paddingRight: 0
                         }]}>
                             <List.Section>
-                                <List.Subheader>{infoMenuTitles.sectionLinks}</List.Subheader>
+                                <List.Subheader style={{color: (darkMode() ? Colors.darkMode_basic : Colors.basic)}}>{infoMenuTitles.sectionLinks}</List.Subheader>
                                 {
                                     menuLinks.map((item, i) => (
                                         <>
                                             <List.Item
+                                                titleStyle={{color: (darkMode() ? Colors.darkMode_basic : Colors.basic)}}
                                                 title={item.title}
+                                                descriptionStyle={{color: (darkMode() ? Colors.darkMode_basic : Colors.basic)}}
                                                 description={item.description}
                                                 onPress={() => openLink(item.url)}
-                                                left={() => <List.Icon color={Colors.icons} icon={item.icon}/>}
-                                                right={() => <List.Icon color={Colors.icons} icon="chevron-right"/>}
+                                                left={() => <List.Icon color={(darkMode() ? Colors.darkMode_icons : Colors.icons)} icon={item.icon}/>}
+                                                right={() => <List.Icon color={(darkMode() ? Colors.darkMode_icons : Colors.icons)} icon="chevron-right"/>}
                                             />
                                             <Divider inset={true}/>
                                         </>
@@ -60,10 +63,10 @@ class InfoComponent extends Component {
                                 }
 
                             </List.Section>
-                            <Text style={[styles.chartDescription, {color: Colors.icons}]}>
+                            <Text style={[styles.chartDescription, {color: (darkMode() ? Colors.darkMode_icons : Colors.icons)}]}>
                                 {appInfo.name + ' - ' + appInfo.version}
                             </Text>
-                            <Text style={[styles.chartDescription, {marginTop: 5, color: Colors.icons}]}>
+                            <Text style={[styles.chartDescription, {marginTop: 5, color: (darkMode() ? Colors.darkMode_icons : Colors.icons)}]}>
                                 {'copyright © 2020 ' + appInfo.author }
                             </Text>
                         </View>

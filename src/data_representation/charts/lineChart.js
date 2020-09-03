@@ -15,6 +15,7 @@ import {hexToRgb} from "../../utils/colorConverter";
 import intervalSelectorFilter from "../../ui/contents/intervalSelectorData";
 import DateLabels from "../../logic/retrieveTimeLabels";
 import {Line, Text as TextSVG, Svg, Circle} from "react-native-svg";
+import darkMode from "../../ui/theme/darkModeDetector";
 
 export default class MyLineChart extends Component {
 
@@ -82,12 +83,12 @@ export default class MyLineChart extends Component {
                                 onPress={() => this.activateFilter(item)}
                                 selected={this.state.filter === item.state.field}
                                 textStyle={{
-                                    color: this.returnState(item.state) ? '#fff' : Colors.basic,
+                                    color: this.returnState(item.state) ? '#fff' :  darkMode() ? Colors.darkMode_basic : Colors.basic,
                                     fontWeight: this.returnState(item.state) ? '700' : '400'
                                 }}
                                 style={[
                                     {
-                                        backgroundColor: this.returnState(item.state) ? this.props.color : this.props.color.basicTransparent,
+                                        backgroundColor: this.returnState(item.state) ? this.props.color : (darkMode() ? Colors.darkMode_basicTransparent : Colors.basicTransparent),
                                         marginRight: 5,
                                     }]}>
                                 {item.name}
@@ -116,12 +117,12 @@ export default class MyLineChart extends Component {
                     withVerticalLines={false}
                     yAxisInterval={1}
                     chartConfig={{
-                        backgroundColor: Colors.basicElevation,
-                        backgroundGradientFrom: Colors.basicElevation,
-                        backgroundGradientTo: Colors.basicElevation,
+                        backgroundColor: (darkMode() ? Colors.darkMode_basicElevation : Colors.basicElevation),
+                        backgroundGradientFrom: (darkMode() ? Colors.darkMode_basicElevation : Colors.basicElevation),
+                        backgroundGradientTo: (darkMode() ? Colors.darkMode_basicElevation : Colors.basicElevation),
                         decimalPlaces: this.props.decimalPlaces === undefined ? 0 : this.props.decimalPlaces,
                         color: (opacity = 1) => `rgba(${colorRGB.r}, ${colorRGB.g}, ${colorRGB.b}, ${opacity})`,
-                        labelColor: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
+                        labelColor: (opacity = 1) => (darkMode() ? Colors.darkMode_basic : Colors.basic),
                         style: {
                             borderRadius: 16
                         },
@@ -146,7 +147,7 @@ export default class MyLineChart extends Component {
                                         y1="0"
                                         x2={this.state.x}
                                         y2="190"
-                                        stroke={Colors.basicTransparent}
+                                        stroke={(darkMode() ? Colors.darkMode_basicTransparent : Colors.basicTransparent)}
                                         strokeWidth="1"/>
                                     <Circle
                                         cx={this.state.x}
@@ -156,7 +157,7 @@ export default class MyLineChart extends Component {
                                     <TextSVG
                                         x={this.state.x - 20}
                                         y={this.state.y - 5}
-                                        fill="black"
+                                        fill={(darkMode() ? Colors.darkMode_basic : Colors.basic)}
                                         fontSize="14"
                                         fontWeight="bold"
                                         textAnchor="middle">
