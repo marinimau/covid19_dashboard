@@ -13,6 +13,8 @@ import {View, StyleSheet} from "react-native";
 import {uiButtons} from "../../contents/strings";
 import Colors from "../../theme/colors";
 import SelectedLocation from "../../../logic/selectedLocation";
+import darkMode from "../../theme/darkModeDetector";
+import {List} from "react-native-paper";
 
 
 class LocationSelector extends Component {
@@ -46,7 +48,7 @@ const pickerSelectStyles = StyleSheet.create({
         paddingVertical: 12,
         paddingHorizontal: 10,
         borderWidth: 0,
-        color: Colors.basic,
+        color: (darkMode() ? Colors.darkMode_basic : Colors.basic),
         paddingRight: 30,
     },
     inputAndroid: {
@@ -55,7 +57,7 @@ const pickerSelectStyles = StyleSheet.create({
         paddingVertical: 8,
         borderWidth: 0,
         borderRadius: 8,
-        color: Colors.basic,
+        color: (darkMode() ? Colors.darkMode_basic : Colors.basic),
         paddingRight: 30,
     },
 });
