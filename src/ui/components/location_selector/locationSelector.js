@@ -14,7 +14,6 @@ import {uiButtons} from "../../contents/strings";
 import Colors from "../../theme/colors";
 import SelectedLocation from "../../../logic/selectedLocation";
 import darkMode from "../../theme/darkModeDetector";
-import {List} from "react-native-paper";
 
 
 class LocationSelector extends Component {

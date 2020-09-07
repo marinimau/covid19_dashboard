@@ -19,8 +19,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="aggiunto il tema scuro">
+    <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="fatta una correzione al location selector">
+      <change beforePath="$PROJECT_DIR$/.expo/packager-info.json" beforeDir="false" afterPath="$PROJECT_DIR$/.expo/packager-info.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/selectedLocation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/selectedLocation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/components/GlobalContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/GlobalContainer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/components/location_selector/locationSelector.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/location_selector/locationSelector.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -100,7 +105,8 @@
       <workItem from="1598081802785" duration="4916000" />
       <workItem from="1598603388888" duration="12516000" />
       <workItem from="1598884676974" duration="5581000" />
-      <workItem from="1599129276713" duration="9253000" />
+      <workItem from="1599129276713" duration="9422000" />
+      <workItem from="1599219396522" duration="3585000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1595078622516</created>
@@ -298,7 +304,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599163780328</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="fatta una correzione al location selector">
+      <created>1599164548524</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1599164548524</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -339,7 +352,8 @@
     <MESSAGE value="fixato ios" />
     <MESSAGE value="refactoring generale" />
     <MESSAGE value="aggiunto il tema scuro" />
-    <option name="LAST_COMMIT_MESSAGE" value="aggiunto il tema scuro" />
+    <MESSAGE value="fatta una correzione al location selector" />
+    <option name="LAST_COMMIT_MESSAGE" value="fatta una correzione al location selector" />
   </component>
   <component name="WindowStateProjectService">
     <state x="458" y="189" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1597228486721">
@@ -385,12 +399,12 @@
     </state>
     <state x="513" y="408" key="RollbackChangesDialog/0.23.2560.1352@0.23.2560.1352" timestamp="1596652988315" />
     <state x="289" y="257" key="RollbackChangesDialog/0.25.1440.814@0.25.1440.814" timestamp="1598353034384" />
-    <state x="320" y="175" key="Vcs.Push.Dialog.v2" timestamp="1599163784215">
+    <state x="320" y="175" key="Vcs.Push.Dialog.v2" timestamp="1599164550583">
       <screen x="0" y="25" width="1440" height="814" />
     </state>
     <state x="320" y="174" key="Vcs.Push.Dialog.v2/0.23.1440.820@0.23.1440.820" timestamp="1595152527908" />
     <state x="569" y="272" key="Vcs.Push.Dialog.v2/0.23.2560.1352@0.23.2560.1352" timestamp="1596659073623" />
-    <state x="320" y="175" key="Vcs.Push.Dialog.v2/0.25.1440.814@0.25.1440.814" timestamp="1599163784215" />
+    <state x="320" y="175" key="Vcs.Push.Dialog.v2/0.25.1440.814@0.25.1440.814" timestamp="1599164550583" />
     <state x="321" y="384" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598353043672">
       <screen x="0" y="25" width="1440" height="814" />
     </state>

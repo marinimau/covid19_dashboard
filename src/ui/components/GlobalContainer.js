@@ -5,7 +5,7 @@
  * Location: Baratili San Pietro
  */
 
-import React, {Component} from 'react';
+import React, {PureComponent} from 'react';
 import {StatusBar} from "expo-status-bar";
 import {NavigationContainer} from "@react-navigation/native";
 import {navigationRef} from "../../utils/rootNavigationRef";
@@ -23,6 +23,8 @@ import InfoScreen from "../screens/infoScreen";
 import {createDrawerNavigator} from "@react-navigation/drawer";
 import {Dimensions} from "react-native";
 import {Appearance, AppearanceProvider} from 'react-native-appearance';
+import { EventRegister } from 'react-native-event-listeners';
+
 
 
 const Drawer = createDrawerNavigator();
@@ -33,10 +35,22 @@ const isLargeScreen = dimensions >= dimens.largeScreen;
 
 let colorScheme = Appearance.getColorScheme();
 
-export default class GlobalContainer extends Component {
+export default class GlobalContainer extends PureComponent {
+
 
     constructor(props) {
         super(props);
+    }
+
+    componentWillMount() {
+        this.listener = EventRegister.addEventListener('locationChanged', (data) => {
+            console.log('Changed');
+            this.forceUpdate()
+        })
+    }
+
+    componentWillUnmount() {
+        EventRegister.removeEventListener(this.listener)
     }
 
     render() {
@@ -55,8 +69,8 @@ export default class GlobalContainer extends Component {
                             drawerBackgroundColor: colorScheme === 'dark' ? Colors.darkMode_basicElevation : Colors.basicElevation,
                         }}
                         drawerType={isLargeScreen ? 'permanent' : 'front'}
-                        drawerStyle={isLargeScreen ? [{width: dimens.drawerWidth,
-                            backgroundColor: colorScheme === 'dark' ? Colors.darkMode_basicElevation : Colors.basicElevation,}]
+                        drawerStyle={isLargeScreen ? [{width: dimens.drawerWidth, borderRightColor: colorScheme === 'dark' ? Colors.darkMode_basicTransparent : Colors.basicTransparent,
+                            backgroundColor: colorScheme === 'dark' ? Colors.darkMode_basicElevation : Colors.basicElevation}]
                             : [{width: dimens.drawerWidth, backgroundColor: colorScheme === 'dark' ? Colors.darkMode_basicElevation : Colors.basicElevation}]}
                         overlayColor={isLargeScreen ? "transparent" : Colors.basicTransparent}>
 
