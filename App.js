@@ -14,8 +14,6 @@ import ErrorScreen from "./src/ui/components/loading/error";
 import retrieveRegionData from "./src/logic/retrieveRegionData";
 import LoadingComponent from "./src/ui/components/loading/loading";
 import GlobalContainer from "./src/ui/components/GlobalContainer";
-import {Appearance} from "react-native-appearance";
-import RNRestart from 'react-native-restart';
 
 
 enableScreens();

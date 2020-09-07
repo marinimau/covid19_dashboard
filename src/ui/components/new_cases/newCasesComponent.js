@@ -16,8 +16,6 @@ import NewCasesData from "../../../logic/newCasesData";
 import MyLineChart from "../../../data_representation/charts/lineChart";
 import StackedAreaChart from "../../../data_representation/charts/stackedAreaChart";
 import TotalCasesRepartitionData from "../../../logic/totalCasesRepartitionData";
-import RegionTable from "../../../data_representation/region_table/regionTable";
-import RegionNewCasesData from "../../../logic/region/REGION_newCases";
 
 class NewCasesComponent extends Component {
 

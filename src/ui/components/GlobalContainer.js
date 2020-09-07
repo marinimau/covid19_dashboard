@@ -36,6 +36,8 @@ let colorScheme = Appearance.getColorScheme();
 
 let subscription;
 
+let dataChangedListener;
+
 export default class GlobalContainer extends PureComponent {
 
 
@@ -44,9 +46,9 @@ export default class GlobalContainer extends PureComponent {
     }
 
     componentWillMount() {
-        this.listener = EventRegister.addEventListener('locationChanged', (data) => {
+        dataChangedListener = EventRegister.addEventListener('locationChanged', (data) => {
             console.log('Changed');
-            this.forceUpdate()
+            this.forceUpdate();
         });
         subscription = Appearance.addChangeListener(({ colorScheme }) => {
             Updates.reload();
@@ -54,7 +56,7 @@ export default class GlobalContainer extends PureComponent {
     }
 
     componentWillUnmount() {
-        EventRegister.removeEventListener(this.listener)
+        EventRegister.removeEventListener(dataChangedListener)
         subscription.remove();
     }
 

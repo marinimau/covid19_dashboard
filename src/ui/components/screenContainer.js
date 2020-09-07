@@ -14,14 +14,27 @@ import {styles} from "../theme/style";
 import { createNativeStackNavigator } from 'react-native-screens/native-stack';
 import {RegionList} from "../contents/locationsList";
 import SelectedLocation from "../../logic/selectedLocation";
+import {EventRegister} from "react-native-event-listeners";
 
 const Stack = createStackNavigator();
 const dimensions = Dimensions.get('window').width;
+let dataChangedListener;
 
 export default class ScreenContainer extends Component  {
 
     constructor(props) {
         super(props);
+        this.state = {location: RegionList[SelectedLocation.getLocation()].label}
+    }
+
+    componentWillMount() {
+        dataChangedListener = EventRegister.addEventListener('locationChanged', (data) => {
+            this.setState({location: RegionList[SelectedLocation.getLocation()].label});
+        });
+    }
+
+    componentWillUnmount() {
+        EventRegister.removeEventListener(dataChangedListener)
     }
 
     render() {
@@ -31,10 +44,11 @@ export default class ScreenContainer extends Component  {
                     options={{
                         headerStyle: [styles.header, styles.headerShadow, {borderBottomColor: 'transparent'}],
                         headerTitleStyle: [styles.headerTitle],
-                        headerLeft: dimensions < dimens.largeScreen ? ({}) => <HeaderLeft /> : null
+                        headerLeft: dimensions < dimens.largeScreen ? ({}) => <HeaderLeft /> : null,
+                        animationEnabled: false
                     }}
                     component={({}) => this.props.component}
-                    name={this.props.title + ' > ' + RegionList[SelectedLocation.getLocation()].label}
+                    name={this.props.title + ' > ' + this.state.location}
                 />
             </Stack.Navigator>
 

@@ -16,6 +16,9 @@ import intervalSelectorFilter from "../../ui/contents/intervalSelectorData";
 import DateLabels from "../../logic/retrieveTimeLabels";
 import {Line, Text as TextSVG, Svg, Circle} from "react-native-svg";
 import darkMode from "../../ui/theme/darkModeDetector";
+import {RegionList} from "../../ui/contents/locationsList";
+import SelectedLocation from "../../logic/selectedLocation";
+
 
 export default class MyLineChart extends Component {
 
@@ -31,6 +34,7 @@ export default class MyLineChart extends Component {
             labels: DateLabels(7).dateLabels,
             x: 0,
             y: 0,
+            location: RegionList[SelectedLocation.getLocation()].label,
             visible: false,
             value: 0,
         };

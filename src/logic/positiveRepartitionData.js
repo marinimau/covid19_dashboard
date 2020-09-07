@@ -26,9 +26,9 @@ const PositiveRepartitionData = (data) => {
                 dataToReturn.repartition.push(
                     {
                         date: dateToString(data[i]['data']),
-                        homeQuarantine: Math.abs(data[i]['isolamento_domiciliare'] / data[i]['totale_positivi']) * 100 * 100 / 100,
-                        hospitalized: Math.abs((data[i]['totale_ospedalizzati'] - data[i]['terapia_intensiva']) / data[i]['totale_positivi']) * 100 * 100 / 100,
-                        critical: Math.abs(data[i]['terapia_intensiva'] / data[i]['totale_positivi']) * 100 * 100 / 100
+                        homeQuarantine: Math.abs(data[i]['isolamento_domiciliare'] === 0 ? 0 : data[i]['isolamento_domiciliare'] / data[i]['totale_positivi']) * 100 * 100 / 100,
+                        hospitalized: Math.abs((data[i]['totale_ospedalizzati'] - data[i]['terapia_intensiva']) === 0 ? 0 :(data[i]['totale_ospedalizzati'] - data[i]['terapia_intensiva']) / data[i]['totale_positivi']) * 100 * 100 / 100,
+                        critical: Math.abs(data[i]['terapia_intensiva'] === 0 ? 0 : data[i]['terapia_intensiva'] / data[i]['totale_positivi']) * 100 * 100 / 100
                     }
                 )
             }

@@ -55,7 +55,7 @@ const PositiveDeltaData = (data) => {
         dataToReturn.critical = d['terapia_intensiva'].toLocaleString('it');
         dataToReturn.criticalPercentage = Math.round(Math.abs(d['terapia_intensiva'] / d['totale_positivi'])* 100 * 100 / 100).toFixed(2);
         dataToReturn.criticalVariation = (d['terapia_intensiva'] - data[data.length - 2]['terapia_intensiva']).toLocaleString('it');
-        dataToReturn.criticalVariationPercentage = Math.round((data[data.length - 2]['terapia_intensiva'] - d['terapia_intensiva']) / d['terapia_intensiva'] * 100 * 100 / 100).toFixed(2);
+        dataToReturn.criticalVariationPercentage = Math.round((data[data.length - 2]['terapia_intensiva'] - d['terapia_intensiva']) === 0 ? 0 : (data[data.length - 2]['terapia_intensiva'] - d['terapia_intensiva']) / d['terapia_intensiva'] * 100 * 100 / 100).toFixed(2);
 
 
         if( dataToReturn.deltaTrendAbsolute.length === 0){
