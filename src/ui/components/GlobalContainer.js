@@ -21,11 +21,10 @@ import SwabsResumeScreen from "../screens/swabsScreen";
 import DiedScreen from "../screens/diedScreen";
 import InfoScreen from "../screens/infoScreen";
 import {createDrawerNavigator} from "@react-navigation/drawer";
-import {Dimensions} from "react-native";
+import {Dimensions, Platform} from "react-native";
 import {Appearance, AppearanceProvider} from 'react-native-appearance';
 import { EventRegister } from 'react-native-event-listeners';
-
-
+import { Updates } from 'expo';
 
 const Drawer = createDrawerNavigator();
 
@@ -34,6 +33,8 @@ const dimensions = Dimensions.get('window').width;
 const isLargeScreen = dimensions >= dimens.largeScreen;
 
 let colorScheme = Appearance.getColorScheme();
+
+let subscription;
 
 export default class GlobalContainer extends PureComponent {
 
@@ -46,11 +47,15 @@ export default class GlobalContainer extends PureComponent {
         this.listener = EventRegister.addEventListener('locationChanged', (data) => {
             console.log('Changed');
             this.forceUpdate()
-        })
+        });
+        subscription = Appearance.addChangeListener(({ colorScheme }) => {
+            Updates.reload();
+        });
     }
 
     componentWillUnmount() {
         EventRegister.removeEventListener(this.listener)
+        subscription.remove();
     }
 
     render() {

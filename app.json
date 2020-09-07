@@ -1,7 +1,7 @@
 {
   "expo": {
     "userInterfaceStyle": "automatic",
-    "name": "covid19_dashboard",
+    "name": "Covid 19 Italy",
     "slug": "covid19_dashboard",
     "version": "1.0.0",
     "orientation": "portrait",

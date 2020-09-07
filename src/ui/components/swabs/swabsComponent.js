@@ -16,9 +16,6 @@ import MyProgressCircle from "../../../data_representation/charts/progressCircle
 import LegendColors from "../../theme/legendColors";
 import SwabData from "../../../logic/swabData";
 import MyLineChart from "../../../data_representation/charts/lineChart";
-import RegionTable from "../../../data_representation/region_table/regionTable";
-import SwabRegionData from "../../../logic/region/REGION_swabs";
-import PositivityRegionData from "../../../logic/region/REGION_positivity";
 
 class SwabsComponent extends Component {
 
