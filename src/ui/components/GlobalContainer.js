@@ -46,17 +46,12 @@ export default class GlobalContainer extends PureComponent {
     }
 
     componentWillMount() {
-        dataChangedListener = EventRegister.addEventListener('locationChanged', (data) => {
-            console.log('Changed');
-            this.forceUpdate();
-        });
         subscription = Appearance.addChangeListener(({ colorScheme }) => {
             Updates.reload();
         });
     }
 
     componentWillUnmount() {
-        EventRegister.removeEventListener(dataChangedListener)
         subscription.remove();
     }
 

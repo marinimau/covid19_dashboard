@@ -19,16 +19,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="tema cambia immediatamente se rileva cambiamenti">
+    <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="refresh dati funzionante mancano 2 grafici">
+      <change afterPath="$PROJECT_DIR$/src/data_representation/charts/lineChartDecorator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.expo/packager-info.json" beforeDir="false" afterPath="$PROJECT_DIR$/.expo/packager-info.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data_representation/charts/lineChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_representation/charts/lineChart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/positiveDeltaData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/positiveDeltaData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/positiveRepartitionData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/positiveRepartitionData.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/components/GlobalContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/GlobalContainer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/components/new_cases/newCasesComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/new_cases/newCasesComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/components/screenContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/screenContainer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,6 +93,7 @@
       <workItem from="1596053023896" duration="2262000" />
       <workItem from="1596787408394" duration="7158000" />
       <workItem from="1599034707334" duration="3822000" />
+      <workItem from="1599558174273" duration="4330000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1595078622516</created>
@@ -193,7 +193,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599499418317</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="refresh dati funzionante mancano 2 grafici">
+      <created>1599502618200</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1599502618200</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -225,7 +232,8 @@
     <MESSAGE value="pulizia dati che potevano creare anomalie con lo stackedAreaChart su iOS" />
     <MESSAGE value="puliti altri dati" />
     <MESSAGE value="tema cambia immediatamente se rileva cambiamenti" />
-    <option name="LAST_COMMIT_MESSAGE" value="tema cambia immediatamente se rileva cambiamenti" />
+    <MESSAGE value="refresh dati funzionante mancano 2 grafici" />
+    <option name="LAST_COMMIT_MESSAGE" value="refresh dati funzionante mancano 2 grafici" />
   </component>
   <component name="WindowStateProjectService">
     <state x="814" y="295" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1596474192548">
@@ -265,11 +273,11 @@
       <screen x="0" y="23" width="2560" height="1352" />
     </state>
     <state x="513" y="408" key="RollbackChangesDialog/0.23.2560.1352@0.23.2560.1352" timestamp="1596652988315" />
-    <state x="569" y="272" key="Vcs.Push.Dialog.v2" timestamp="1599499420917">
+    <state x="569" y="272" key="Vcs.Push.Dialog.v2" timestamp="1599502621601">
       <screen x="0" y="23" width="2560" height="1352" />
     </state>
     <state x="320" y="174" key="Vcs.Push.Dialog.v2/0.23.1440.820@0.23.1440.820" timestamp="1595152527908" />
-    <state x="569" y="272" key="Vcs.Push.Dialog.v2/0.23.2560.1352@0.23.2560.1352" timestamp="1599499420917" />
+    <state x="569" y="272" key="Vcs.Push.Dialog.v2/0.23.2560.1352@0.23.2560.1352" timestamp="1599502621601" />
     <state x="571" y="619" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1596787487282">
       <screen x="0" y="23" width="2560" height="1352" />
     </state>

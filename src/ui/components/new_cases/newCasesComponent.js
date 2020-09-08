@@ -16,11 +16,26 @@ import NewCasesData from "../../../logic/newCasesData";
 import MyLineChart from "../../../data_representation/charts/lineChart";
 import StackedAreaChart from "../../../data_representation/charts/stackedAreaChart";
 import TotalCasesRepartitionData from "../../../logic/totalCasesRepartitionData";
+import {EventRegister} from "react-native-event-listeners";
+
+let dataChangedListener;
 
 class NewCasesComponent extends Component {
 
     constructor(props) {
         super(props);
+        this.state = { data: NewCasesData()}
+    }
+
+    componentWillMount() {
+        dataChangedListener = EventRegister.addEventListener('locationChanged', (data) => {
+            console.log('Changed');
+            this.setState({data: NewCasesData()});
+        });
+    }
+
+    componentWillUnmount() {
+        EventRegister.removeEventListener(dataChangedListener);
     }
 
     render() {
@@ -38,7 +53,7 @@ class NewCasesComponent extends Component {
 
                         <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
                             <Text style={styles.chartTitle}>{chartTitles.totalCasesCurve}</Text>
-                            <MyLineChart color={LegendColors.red} data={NewCasesData().newCasesTrendAbsolute} />
+                            <MyLineChart color={LegendColors.red} data={this.state.data.newCasesTrendAbsolute} />
                             <Text style={styles.chartDescription}>{dataDescription.totalCases}</Text>
                         </View>
 

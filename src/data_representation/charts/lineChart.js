@@ -5,7 +5,7 @@
  * Location: Baratili San Pietro
  */
 
-import React, {Component} from 'react';
+import React, {Component, PureComponent} from 'react';
 import {FlatList, View} from 'react-native';
 import {Chip} from 'react-native-paper';
 import {LineChart} from "react-native-chart-kit";
@@ -14,13 +14,12 @@ import Colors from "../../ui/theme/colors";
 import {hexToRgb} from "../../utils/colorConverter";
 import intervalSelectorFilter from "../../ui/contents/intervalSelectorData";
 import DateLabels from "../../logic/retrieveTimeLabels";
-import {Line, Text as TextSVG, Svg, Circle} from "react-native-svg";
 import darkMode from "../../ui/theme/darkModeDetector";
 import {RegionList} from "../../ui/contents/locationsList";
 import SelectedLocation from "../../logic/selectedLocation";
+import LineChartDecorator from "./lineChartDecorator";
 
-
-export default class MyLineChart extends Component {
+export default class MyLineChart extends PureComponent {
 
 
     constructor(props) {
@@ -70,10 +69,15 @@ export default class MyLineChart extends Component {
         }
     }
 
+    decorator = () => {
+        console.log('premuto un punto');
+        return this.state.visible ?
+            <LineChartDecorator color={this.props.color} x={this.state.x} y={this.state.y}
+                                value={this.state.value}/> : null
+    }
+
 
     render() {
-
-
         const colorRGB = hexToRgb(this.props.color);
         return (
             <View style={{marginTop: 20}}>
@@ -87,7 +91,7 @@ export default class MyLineChart extends Component {
                                 onPress={() => this.activateFilter(item)}
                                 selected={this.state.filter === item.state.field}
                                 textStyle={{
-                                    color: this.returnState(item.state) ? '#fff' :  darkMode() ? Colors.darkMode_basic : Colors.basic,
+                                    color: this.returnState(item.state) ? '#fff' : darkMode() ? Colors.darkMode_basic : Colors.basic,
                                     fontWeight: this.returnState(item.state) ? '700' : '400'
                                 }}
                                 style={[
@@ -125,7 +129,7 @@ export default class MyLineChart extends Component {
                         backgroundGradientFrom: (darkMode() ? Colors.darkMode_basicElevation : Colors.basicElevation),
                         backgroundGradientTo: (darkMode() ? Colors.darkMode_basicElevation : Colors.basicElevation),
                         decimalPlaces: this.props.decimalPlaces === undefined ? 0 : this.props.decimalPlaces,
-                        color: (opacity = 1) => `rgba(${colorRGB.r}, ${colorRGB.g}, ${colorRGB.b}, ${opacity})`,
+                        color: (opacity = 1) => `rgba(${colorRGB.r}, ${colorRGB.g}, ${colorRGB.b}, ${darkMode() ? opacity * 3 : opacity * 3})`,
                         labelColor: (opacity = 1) => (darkMode() ? Colors.darkMode_basic : Colors.basic),
                         style: {
                             borderRadius: 16
@@ -142,39 +146,12 @@ export default class MyLineChart extends Component {
                         borderRadius: 16
                     }}
 
-                    decorator={() => {
-                        return this.state.visible ?
-                            <View>
-                                <Svg>
-                                    <Line
-                                        x1={this.state.x}
-                                        y1="0"
-                                        x2={this.state.x}
-                                        y2="190"
-                                        stroke={(darkMode() ? Colors.darkMode_basicTransparent : Colors.basicTransparent)}
-                                        strokeWidth="1"/>
-                                    <Circle
-                                        cx={this.state.x}
-                                        cy={this.state.y}
-                                        r="5"
-                                        fill={this.props.color}/>
-                                    <TextSVG
-                                        x={this.state.x - 20}
-                                        y={this.state.y - 5}
-                                        fill={(darkMode() ? Colors.darkMode_basic : Colors.basic)}
-                                        fontSize="14"
-                                        fontWeight="bold"
-                                        textAnchor="middle">
-                                        {this.state.value.toLocaleString('it')}
-                                    </TextSVG>
-                                </Svg>
-                            </View> : null
-                    }}
+                    decorator={this.decorator}
 
                     onDataPointClick={(data) => {
 
                         let isSamePoint = (this.state.x === data.x
-                            && this.state.y === data.y)
+                            && this.state.y === data.y);
 
                         isSamePoint ?
                             this.setState({x: data.x, value: data.value, y: data.y, visible: !this.state.visible})
