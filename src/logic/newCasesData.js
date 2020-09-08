@@ -16,9 +16,8 @@ let dataToReturn = {
 
 const NewCasesData = (data) => {
 
-    if(data === undefined){
-        data = Records.getRecords();
-    }
+    data = Records.getRecords();
+
 
     if(data !== null){
         let d = data[data.length - 1];

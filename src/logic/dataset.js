@@ -7,7 +7,7 @@
 
 import SelectedLocation from "./selectedLocation";
 
-let Records ={
+let Records = {
 
     data: [],
     regionData: [],
@@ -18,7 +18,10 @@ let Records ={
     },
 
     getRecords(){
-        if(SelectedLocation.getLocation() === 0){
+        console.log('location index: ' + SelectedLocation.getLocation());
+
+        if(SelectedLocation.getLocation() <= 0){
+            console.log(this.data);
             return this.data;
         }
         else {
@@ -27,6 +30,9 @@ let Records ={
                     this.singleRegionData.push(this.regionData[i]);
                 }
             }
+            console.log('normal data:');
+            console.log(this.data);
+            console.log(this.singleRegionData);
             return this.singleRegionData;
         }
     },

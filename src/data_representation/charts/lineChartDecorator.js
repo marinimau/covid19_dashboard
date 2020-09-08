@@ -20,7 +20,7 @@ class LineChartDecorator extends Component{
 
     render() {
         return (
-            <View>
+            <View style={{zIndex: 999}}>
                 <Svg>
                     <Line
                         x1={this.props.x}

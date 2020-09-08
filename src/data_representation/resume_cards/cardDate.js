@@ -6,7 +6,6 @@
  */
 
 import React, {Component} from 'react';
-import Colors from "../../ui/theme/colors";
 import {styles} from "../../ui/theme/style";
 import {Text, View} from "react-native";
 import {chartTitles, dataDescription} from "../../ui/contents/strings";
