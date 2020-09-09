@@ -36,8 +36,6 @@ let colorScheme = Appearance.getColorScheme();
 
 let subscription;
 
-let dataChangedListener;
-
 export default class GlobalContainer extends PureComponent {
 
 

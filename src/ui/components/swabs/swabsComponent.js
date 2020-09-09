@@ -16,11 +16,13 @@ import MyProgressCircle from "../../../data_representation/charts/progressCircle
 import LegendColors from "../../theme/legendColors";
 import SwabData from "../../../logic/swabData";
 import MyLineChart from "../../../data_representation/charts/lineChart";
+import LineChartCard from "../cards/lineChartCard";
 
 class SwabsComponent extends Component {
 
     constructor() {
         super();
+        this.state = {data: SwabData(), color: LegendColors.blue}
     }
 
     render() {
@@ -46,35 +48,35 @@ class SwabsComponent extends Component {
                         </View>
 
 
-                        <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
-                            <Text style={[styles.chartTitle]}>{chartTitles.swabTrend}</Text>
-                            <MyLineChart color={LegendColors.blue} data={SwabData().swabTrendAbsolute} />
-                            <Text style={styles.chartDescription}>{dataDescription.swapTrend}</Text>
-                        </View>
+                        <LineChartCard
+                            title={chartTitles.swabTrend}
+                            color={this.state.color}
+                            data={this.state.data.swabTrendAbsolute}
+                            description={dataDescription.swapTrend} />
 
-                        <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
-                            <Text style={[styles.chartTitle]}>{chartTitles.swabTrendVariation}</Text>
-                            <MyLineChart color={LegendColors.blue} data={SwabData().swabTrendVariation} />
-                            <Text style={styles.chartDescription}>{dataDescription.swabTrendVariation}</Text>
-                        </View>
+                        <LineChartCard
+                            title={chartTitles.swabTrendVariation}
+                            color={this.state.color}
+                            data={this.state.data.swabTrendVariation}
+                            description={dataDescription.swabTrendVariation} />
 
-                        <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
-                            <Text style={[styles.chartTitle]}>{chartTitles.testedCaseTrend}</Text>
-                            <MyLineChart color={LegendColors.blue} data={SwabData().testedCasesTrendAbsolute} />
-                            <Text style={styles.chartDescription}>{dataDescription.testedCaseTrend}</Text>
-                        </View>
+                        <LineChartCard
+                            title={chartTitles.testedCaseTrend}
+                            color={this.state.color}
+                            data={this.state.data.testedCasesTrendAbsolute}
+                            description={dataDescription.testedCaseTrend} />
 
-                        <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
-                            <Text style={[styles.chartTitle]}>{chartTitles.testedCasesTrendVariation}</Text>
-                            <MyLineChart color={LegendColors.blue} data={SwabData().testedCasesTrendVariation} />
-                            <Text style={styles.chartDescription}>{dataDescription.testedCasesTrendVariation}</Text>
-                        </View>
+                        <LineChartCard
+                            title={chartTitles.testedCasesTrendVariation}
+                            color={this.state.color}
+                            data={this.state.data.testedCasesTrendVariation}
+                            description={dataDescription.testedCasesTrendVariation} />
 
-                        <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
-                            <Text style={[styles.chartTitle]}>{chartTitles.testedAndPositive}</Text>
-                            <MyLineChart color={LegendColors.blue} decimalPlaces={3} data={SwabData().percentagePositiveTrend} />
-                            <Text style={styles.chartDescription}>{dataDescription.percentagePositiveTrend}</Text>
-                        </View>
+                        <LineChartCard
+                            title={chartTitles.testedAndPositive}
+                            color={this.state.color}
+                            data={this.state.data.percentagePositiveTrend}
+                            description={dataDescription.percentagePositiveTrend} />
                     </>
                 }
             />

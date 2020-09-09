@@ -17,11 +17,13 @@ import RecoveredData from "../../../logic/recoveredData";
 import MyLineChart from "../../../data_representation/charts/lineChart";
 import RegionTable from "../../../data_representation/region_table/regionTable";
 import RecoveredRegionData from "../../../logic/region/REGION_recovered";
+import LineChartCard from "../cards/lineChartCard";
 
 class RecoveredComponent extends Component {
 
     constructor() {
         super();
+        this.state = {data: RecoveredData(), color: LegendColors.green}
     }
 
     render() {
@@ -33,27 +35,27 @@ class RecoveredComponent extends Component {
 
                         <View style={[styles.cardGeneric, styles.cardShadow, styles.cardSmall]}>
                             <Text style={[styles.chartTitle]}>{chartTitles.recoveredPercentage}</Text>
-                            <MyProgressCircle value={RecoveredData().recoveredRatio} color={LegendColors.green}/>
+                            <MyProgressCircle value={this.state.data.recoveredRatio} color={LegendColors.green}/>
                             <Text style={styles.chartDescription}>{chartTitles.recoveredPercentageDescription}</Text>
                         </View>
 
-                        <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
-                            <Text style={[styles.chartTitle]}>{chartTitles.recoveredTrend}</Text>
-                            <MyLineChart color={LegendColors.green} data={RecoveredData().recoveredTrendAbsolute} />
-                            <Text style={styles.chartDescription}>{dataDescription.recoveredTotal}</Text>
-                        </View>
+                        <LineChartCard
+                            title={chartTitles.recoveredTrend}
+                            color={this.state.color}
+                            data={this.state.data.recoveredTrendAbsolute}
+                            description={dataDescription.recoveredTotal} />
 
-                        <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
-                            <Text style={[styles.chartTitle]}>{chartTitles.recoveredTrendDay}</Text>
-                            <MyLineChart color={LegendColors.green} data={RecoveredData().recoveredTrendDayValue} />
-                            <Text style={styles.chartDescription}>{dataDescription.recoveredVariation}</Text>
-                        </View>
+                        <LineChartCard
+                            title={chartTitles.recoveredTrendDay}
+                            color={this.state.color}
+                            data={this.state.data.recoveredTrendDayValue}
+                            description={dataDescription.recoveredVariation} />
 
-                        <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
-                            <Text style={[styles.chartTitle]}>{chartTitles.recoveredTrendProportional}</Text>
-                            <MyLineChart color={LegendColors.green} data={RecoveredData().recoveredTrendProportional} />
-                            <Text style={styles.chartDescription}>{dataDescription.recoveredTrendProportional}</Text>
-                        </View>
+                        <LineChartCard
+                            title={chartTitles.recoveredTrendProportional}
+                            color={this.state.color}
+                            data={this.state.data.recoveredTrendProportional}
+                            description={dataDescription.recoveredTrendProportional} />
                     </>
                 }
             />

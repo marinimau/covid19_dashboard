@@ -17,6 +17,7 @@ import MyLineChart from "../../../data_representation/charts/lineChart";
 import StackedAreaChart from "../../../data_representation/charts/stackedAreaChart";
 import TotalCasesRepartitionData from "../../../logic/totalCasesRepartitionData";
 import {EventRegister} from "react-native-event-listeners";
+import LineChartCard from "../cards/lineChartCard";
 
 let dataChangedListener;
 
@@ -51,23 +52,23 @@ class NewCasesComponent extends Component {
                             <Text style={styles.chartDescription}>{dataDescription.r0}</Text>
                         </View>
 
-                        <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
-                            <Text style={styles.chartTitle}>{chartTitles.totalCasesCurve}</Text>
-                            <MyLineChart color={this.state.color} data={this.state.data.newCasesTrendAbsolute} />
-                            <Text style={styles.chartDescription}>{dataDescription.totalCases}</Text>
-                        </View>
+                        <LineChartCard
+                            title={chartTitles.totalCasesCurve}
+                            color={this.state.color}
+                            data={this.state.data.newCasesTrendAbsolute}
+                            description={dataDescription.totalCases} />
 
-                        <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
-                            <Text style={styles.chartTitle}>{chartTitles.newCasesCurve}</Text>
-                            <MyLineChart color={this.state.color} data={this.state.data.newCasesTrendDayValue} />
-                            <Text style={styles.chartDescription}>{dataDescription.newCases}</Text>
-                        </View>
+                        <LineChartCard
+                            title={chartTitles.newCasesCurve}
+                            color={this.state.color}
+                            data={this.state.data.newCasesTrendDayValue}
+                            description={dataDescription.newCases} />
 
-                        <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
-                            <Text style={styles.chartTitle}>{chartTitles.r0Curve}</Text>
-                            <MyLineChart color={this.state.color} data={this.state.data.r0Trend} />
-                            <Text style={styles.chartDescription}>{dataDescription.r0}</Text>
-                        </View>
+                        <LineChartCard
+                            title={chartTitles.r0Curve}
+                            color={this.state.color}
+                            data={this.state.data.r0Trend}
+                            description={dataDescription.r0} />
 
                         <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
                             <Text style={styles.chartTitle}>{chartTitles.totalCasesRepartion}</Text>

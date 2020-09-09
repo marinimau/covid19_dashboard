@@ -5,7 +5,7 @@
  * Location: Baratili San Pietro
  */
 
-import React, {Component, PureComponent} from 'react';
+import React, {PureComponent} from 'react';
 import {FlatList, View} from 'react-native';
 import {Chip} from 'react-native-paper';
 import {LineChart} from "react-native-chart-kit";
@@ -18,8 +18,6 @@ import darkMode from "../../ui/theme/darkModeDetector";
 import {RegionList} from "../../ui/contents/locationsList";
 import SelectedLocation from "../../logic/selectedLocation";
 import LineChartDecorator from "./lineChartDecorator";
-import {EventRegister} from "react-native-event-listeners";
-
 
 export default class MyLineChart extends PureComponent {
 
@@ -29,9 +27,15 @@ export default class MyLineChart extends PureComponent {
             _1W: true,
             _1M: false,
             _MAX: false,
-            data: this.props.data.slice(Math.max(this.props.data.length - 7, 0)),
+            data: {
+                labels: DateLabels(7).dateLabels,
+                datasets: [
+                    {
+                        data: this.props.data.slice(Math.max(this.props.data.length - 7, 0))
+                    }
+                ]
+            },
             filter: 7,
-            labels: DateLabels(7).dateLabels,
             x: 0,
             y: 0,
             location: RegionList[SelectedLocation.getLocation()].label,
@@ -47,13 +51,28 @@ export default class MyLineChart extends PureComponent {
 
             this.setState({filter: filter.field}, function () {
                 if (this.state.filter === -1) {
-                    this.setState({data: this.props.data}, function () {
-                        this.setState({labels: DateLabels(this.state.filter).dateLabels});
+                    this.setState({
+                        data: {
+                            labels: DateLabels(this.state.filter).dateLabels,
+                            datasets: [
+                                {
+                                    data: this.props.data
+                                }
+                            ]
+                        },
                     });
                 } else {
-                    this.setState({data: this.props.data.slice(Math.max(this.props.data.length - this.state.filter, 0))}, function () {
-                        this.setState({labels: DateLabels(this.state.filter).dateLabels});
-                    });
+                    this.setState({
+                            data: {
+                                labels: DateLabels(this.state.filter).dateLabels,
+                                datasets: [
+                                    {
+                                        data: this.props.data.slice(Math.max(this.props.data.length - this.state.filter, 0))
+                                    }
+                                ]
+                            },
+                        },
+                    );
                 }
             });
         });
@@ -112,14 +131,7 @@ export default class MyLineChart extends PureComponent {
                 </View>
 
                 <LineChart
-                    data={{
-                        labels: this.state.labels,
-                        datasets: [
-                            {
-                                data: this.state.data
-                            }
-                        ]
-                    }}
+                    data={this.state.data}
                     width={dynamicDimens.chartFullWidth}
                     height={dimens.lineChartHeight}
                     yAxisLabel=""

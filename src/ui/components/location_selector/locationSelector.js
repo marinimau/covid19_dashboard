@@ -10,7 +10,7 @@ import {RegionList} from "../../contents/locationsList";
 import RNPickerSelect from 'react-native-picker-select';
 import {styles} from "../../theme/style";
 import {View, StyleSheet} from "react-native";
-import {uiButtons} from "../../contents/strings";
+import {chartTitles, uiButtons} from "../../contents/strings";
 import Colors from "../../theme/colors";
 import SelectedLocation from "../../../logic/selectedLocation";
 import darkMode from "../../theme/darkModeDetector";
@@ -28,6 +28,7 @@ class LocationSelector extends Component {
             <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig, {padding: 0}]}>
                 <RNPickerSelect
                     items={RegionList}
+                    placeholder={{value: 0, label: chartTitles.locationSelectorPlaceholder}}
                     onValueChange={(value) => {
                         this.setState({location: value} );
                         SelectedLocation.setLocation(value);

@@ -24,11 +24,13 @@ import PositiveRepartitionData from "../../../logic/positiveRepartitionData";
 import RegionTable from "../../../data_representation/region_table/regionTable";
 import PositiveRegionData from "../../../logic/region/REGION_positive";
 import HospitalRegionData from "../../../logic/region/REGION_hospitalData";
+import LineChartCard from "../cards/lineChartCard";
 
 class CurrentPositiveComponent extends Component {
 
     constructor() {
         super();
+        this.state = {data: PositiveDeltaData(), color: LegendColors.yellow}
     }
 
     render() {
@@ -44,17 +46,17 @@ class CurrentPositiveComponent extends Component {
                             <Text style={styles.chartDescription}>{chartTitles.positivePercentageDescription}</Text>
                         </View>
 
-                        <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
-                            <Text style={styles.chartTitle}>{chartTitles.positiveTrendAbsolute}</Text>
-                            <MyLineChart color={LegendColors.yellow} data={PositiveDeltaData().deltaTrendAbsolute} />
-                            <Text style={styles.chartDescription}>{dataDescription.positiveTotal}</Text>
-                        </View>
+                        <LineChartCard
+                            title={chartTitles.positiveTrendAbsolute}
+                            color={this.state.color}
+                            data={this.state.data.deltaTrendAbsolute}
+                            description={dataDescription.positiveTotal} />
 
-                        <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
-                            <Text style={styles.chartTitle}>{chartTitles.positiveTrendVariation}</Text>
-                            <MyLineChart color={LegendColors.yellow} data={PositiveDeltaData().deltaTrendDayVariation} />
-                            <Text style={styles.chartDescription}>{dataDescription.positiveVariation}</Text>
-                        </View>
+                        <LineChartCard
+                            title={chartTitles.positiveTrendVariation}
+                            color={this.state.color}
+                            data={this.state.data.deltaTrendDayVariation}
+                            description={dataDescription.positiveVariation} />
 
                         <CardHomeQuarantine />
 

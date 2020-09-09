@@ -19,17 +19,17 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="fixato il marquee">
+    <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="fix ombreggiatura esagerata in dark mode">
+      <change afterPath="$PROJECT_DIR$/src/ui/components/cards/lineChartCard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data_representation/charts/lineChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_representation/charts/lineChart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data_representation/charts/lineChartDecorator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_representation/charts/lineChartDecorator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data_representation/charts/stackedAreaChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_representation/charts/stackedAreaChart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data_representation/resume_cards/cardCurrentPositive.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_representation/resume_cards/cardCurrentPositive.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data_representation/resume_cards/cardDied.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_representation/resume_cards/cardDied.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data_representation/resume_cards/cardRecovered.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_representation/resume_cards/cardRecovered.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data_representation/resume_cards/cardSwab.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_representation/resume_cards/cardSwab.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data_representation/resume_cards/cardTotalCases.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_representation/resume_cards/cardTotalCases.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/contents/params.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/contents/params.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/components/GlobalContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/GlobalContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/components/current_positive/currentPositiveComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/current_positive/currentPositiveComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/components/location_selector/locationSelector.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/location_selector/locationSelector.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/components/new_cases/newCasesComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/new_cases/newCasesComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/components/recovered/recoveredComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/recovered/recoveredComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/components/swabs/swabsComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/swabs/swabsComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/contents/strings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/contents/strings.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -209,7 +209,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599650941581</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="fix ombreggiatura esagerata in dark mode">
+      <created>1599655271971</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1599655271971</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -243,7 +250,8 @@
     <MESSAGE value="tema cambia immediatamente se rileva cambiamenti" />
     <MESSAGE value="refresh dati funzionante mancano 2 grafici" />
     <MESSAGE value="fixato il marquee" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixato il marquee" />
+    <MESSAGE value="fix ombreggiatura esagerata in dark mode" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix ombreggiatura esagerata in dark mode" />
   </component>
   <component name="WindowStateProjectService">
     <state x="814" y="295" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1596474192548">
@@ -283,11 +291,11 @@
       <screen x="0" y="23" width="2560" height="1352" />
     </state>
     <state x="513" y="408" key="RollbackChangesDialog/0.23.2560.1352@0.23.2560.1352" timestamp="1596652988315" />
-    <state x="569" y="272" key="Vcs.Push.Dialog.v2" timestamp="1599650943754">
+    <state x="569" y="272" key="Vcs.Push.Dialog.v2" timestamp="1599655273784">
       <screen x="0" y="23" width="2560" height="1352" />
     </state>
     <state x="320" y="174" key="Vcs.Push.Dialog.v2/0.23.1440.820@0.23.1440.820" timestamp="1595152527908" />
-    <state x="569" y="272" key="Vcs.Push.Dialog.v2/0.23.2560.1352@0.23.2560.1352" timestamp="1599650943754" />
+    <state x="569" y="272" key="Vcs.Push.Dialog.v2/0.23.2560.1352@0.23.2560.1352" timestamp="1599655273784" />
     <state x="571" y="619" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1596787487282">
       <screen x="0" y="23" width="2560" height="1352" />
     </state>
