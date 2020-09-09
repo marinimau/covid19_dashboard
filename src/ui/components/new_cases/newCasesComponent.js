@@ -13,30 +13,16 @@ import {chartTitles, dataDescription} from "../../contents/strings";
 import CardTotalCases from "../../../data_representation/resume_cards/cardTotalCases";
 import LegendColors from "../../theme/legendColors";
 import NewCasesData from "../../../logic/newCasesData";
-import MyLineChart from "../../../data_representation/charts/lineChart";
 import StackedAreaChart from "../../../data_representation/charts/stackedAreaChart";
 import TotalCasesRepartitionData from "../../../logic/totalCasesRepartitionData";
-import {EventRegister} from "react-native-event-listeners";
 import LineChartCard from "../cards/lineChartCard";
 
-let dataChangedListener;
 
 class NewCasesComponent extends Component {
 
     constructor(props) {
         super(props);
         this.state = { data: NewCasesData(), color: LegendColors.red}
-    }
-
-    componentWillMount() {
-        dataChangedListener = EventRegister.addEventListener('locationChanged', (data) => {
-            console.log('Changed');
-            this.setState({data: NewCasesData()});
-        });
-    }
-
-    componentWillUnmount() {
-        EventRegister.removeEventListener(dataChangedListener);
     }
 
     render() {

@@ -15,7 +15,6 @@ import {chartTitles, dataDescription} from "../../contents/strings";
 import MyProgressCircle from "../../../data_representation/charts/progressCircle";
 import LegendColors from "../../theme/legendColors";
 import SwabData from "../../../logic/swabData";
-import MyLineChart from "../../../data_representation/charts/lineChart";
 import LineChartCard from "../cards/lineChartCard";
 
 class SwabsComponent extends Component {

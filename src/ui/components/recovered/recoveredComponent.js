@@ -14,9 +14,6 @@ import {chartTitles, dataDescription} from "../../contents/strings";
 import MyProgressCircle from "../../../data_representation/charts/progressCircle";
 import LegendColors from "../../theme/legendColors";
 import RecoveredData from "../../../logic/recoveredData";
-import MyLineChart from "../../../data_representation/charts/lineChart";
-import RegionTable from "../../../data_representation/region_table/regionTable";
-import RecoveredRegionData from "../../../logic/region/REGION_recovered";
 import LineChartCard from "../cards/lineChartCard";
 
 class RecoveredComponent extends Component {
