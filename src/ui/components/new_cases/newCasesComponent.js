@@ -24,7 +24,7 @@ class NewCasesComponent extends Component {
 
     constructor(props) {
         super(props);
-        this.state = { data: NewCasesData()}
+        this.state = { data: NewCasesData(), color: LegendColors.red}
     }
 
     componentWillMount() {
@@ -47,25 +47,25 @@ class NewCasesComponent extends Component {
 
                         <View style={[styles.cardGeneric, styles.cardShadow, styles.cardSmall]}>
                             <Text style={[styles.chartTitle]}>{chartTitles.r0value}</Text>
-                            <Text style={[styles.chartTitle, styles.chartBigValue]}>{NewCasesData().r0}</Text>
+                            <Text style={[styles.chartTitle, styles.chartBigValue]}>{this.state.data.r0}</Text>
                             <Text style={styles.chartDescription}>{dataDescription.r0}</Text>
                         </View>
 
                         <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
                             <Text style={styles.chartTitle}>{chartTitles.totalCasesCurve}</Text>
-                            <MyLineChart color={LegendColors.red} data={this.state.data.newCasesTrendAbsolute} />
+                            <MyLineChart color={this.state.color} data={this.state.data.newCasesTrendAbsolute} />
                             <Text style={styles.chartDescription}>{dataDescription.totalCases}</Text>
                         </View>
 
                         <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
                             <Text style={styles.chartTitle}>{chartTitles.newCasesCurve}</Text>
-                            <MyLineChart color={LegendColors.red} data={NewCasesData().newCasesTrendDayValue} />
+                            <MyLineChart color={this.state.color} data={this.state.data.newCasesTrendDayValue} />
                             <Text style={styles.chartDescription}>{dataDescription.newCases}</Text>
                         </View>
 
                         <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
                             <Text style={styles.chartTitle}>{chartTitles.r0Curve}</Text>
-                            <MyLineChart color={LegendColors.red} data={NewCasesData().r0Trend} />
+                            <MyLineChart color={this.state.color} data={this.state.data.r0Trend} />
                             <Text style={styles.chartDescription}>{dataDescription.r0}</Text>
                         </View>
 

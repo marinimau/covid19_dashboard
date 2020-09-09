@@ -18,9 +18,10 @@ import darkMode from "../../ui/theme/darkModeDetector";
 import {RegionList} from "../../ui/contents/locationsList";
 import SelectedLocation from "../../logic/selectedLocation";
 import LineChartDecorator from "./lineChartDecorator";
+import {EventRegister} from "react-native-event-listeners";
+
 
 export default class MyLineChart extends PureComponent {
-
 
     constructor(props) {
         super(props);
@@ -38,6 +39,7 @@ export default class MyLineChart extends PureComponent {
             value: 0,
         };
     }
+
 
     activateFilter(filter) {
         this.setState({_1W: false, _1M: false, _MAX: false, visible: false});
@@ -122,6 +124,7 @@ export default class MyLineChart extends PureComponent {
                     height={dimens.lineChartHeight}
                     yAxisLabel=""
                     yAxisSuffix=""
+                    whitScrollableDot={true}
                     withVerticalLines={false}
                     yAxisInterval={1}
                     chartConfig={{

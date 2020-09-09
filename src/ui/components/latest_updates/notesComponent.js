@@ -7,11 +7,13 @@
 
 import React, {PureComponent} from 'react'
 import {styles} from "../../theme/style";
-import {View, SafeAreaView, Platform} from "react-native";
+import {View, SafeAreaView, Platform, Dimensions} from "react-native";
 import NotesData from "../../../logic/notesData";
 import Colors from "../../theme/colors";
 import TextTicker from "react-native-text-ticker";
+import {dimens} from "../../theme/dimens";
 
+let windowWidth = Dimensions.get("window").width;
 
 class NotesComponent extends PureComponent {
 
@@ -25,18 +27,15 @@ class NotesComponent extends PureComponent {
             <View style={[styles.notesContainer]}>
                     {Platform.OS === 'web' ?
                         <TextTicker
-                            style={{color: Colors.basicElevation}}
+                            style={{width: (windowWidth > dimens.largeScreen ? windowWidth - dimens.drawerWidth : windowWidth), color: Colors.basicElevation}}
                             duration={50000}
                             bounce={false}
                             scroll={true}
                             isInteraction={false}
+                            useNativeDriver={false}
                             repeatSpacer={50}
                             marqueeDelay={0}
-                            animationType={'scroll'}
-                            disabled={true}
                             loop
-                            useNativeDriver={false}
-                            isRTL={false}
                         >
                             {NotesData().notes}
                         </TextTicker>
