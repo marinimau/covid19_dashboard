@@ -12,13 +12,14 @@ import {styles} from "../../ui/theme/style";
 import {Text, View} from "react-native";
 import {chartTitles} from "../../ui/contents/strings";
 import latestUpdateData from "../../logic/latestUpdateData";
+import {ShadowOpacity} from "../../ui/contents/params";
 
 export default class CardSwab extends Component{
 
 
     render() {
         return (
-            <View style={[styles.cardGeneric, styles.cardShadow, styles.cardSmall, {backgroundColor: LegendColors.blue, shadowColor: LegendColors.lightblue}]}>
+            <View style={[styles.cardGeneric, styles.cardShadow, styles.cardSmall, {backgroundColor: LegendColors.blue, shadowColor: LegendColors.lightblue, shadowOpacity: ShadowOpacity}]}>
                 <Text style={[styles.chartTitle, styles.indicatorLight]}>{chartTitles.swab}</Text>
                 <Text style={[styles.indicatorValue, styles.indicatorValueBold, styles.indicatorLight]}>{latestUpdateData().swab}</Text>
                 <Text style={[styles.indicatorValue, styles.indicatorValueIncr,  styles.indicatorLight]}>{latestUpdateData().swabVariation} ({latestUpdateData().swabVariationPercentage}%)</Text>

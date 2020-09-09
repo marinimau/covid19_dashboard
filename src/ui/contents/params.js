@@ -8,6 +8,7 @@
 import React from 'react';
 import {Dimensions} from 'react-native';
 import {dimens} from "../theme/dimens";
+import darkMode from "../theme/darkModeDetector";
 
 
 export function lineChartNumLabels(range) {
@@ -20,3 +21,5 @@ export function lineChartNumLabels(range) {
     }
 
 }
+
+export const ShadowOpacity = darkMode() ? 0.2 : 0.4;

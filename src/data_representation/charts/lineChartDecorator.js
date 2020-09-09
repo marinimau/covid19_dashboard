@@ -8,7 +8,7 @@
 import {Circle, Line, Svg, Text as TextSVG} from "react-native-svg";
 import darkMode from "../../ui/theme/darkModeDetector";
 import Colors from "../../ui/theme/colors";
-import {View} from "react-native";
+import {View, Dimensions} from "react-native";
 import React, {Component} from "react";
 
 

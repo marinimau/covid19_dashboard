@@ -73,7 +73,7 @@ class MyStackAreaChart extends React.PureComponent {
         const keys = this.props.keyValues
         const axesSvg = {fontSize: 12, fill: (darkMode() ? Colors.darkMode_basic : Colors.basic)};
         const gridSvg = {
-            fill: `rgba(${colorRGB.r}, ${colorRGB.g}, ${colorRGB.b}, 0.3)`,
+            fill: darkMode() ? Colors.darkMode_basicTransparent : Colors.basicTransparent,
             strokeDasharray: [5, 8],
             strokeOpacity: 0.6
         }
