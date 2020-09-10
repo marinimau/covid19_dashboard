@@ -16,19 +16,34 @@ import NewCasesData from "../../../logic/newCasesData";
 import StackedAreaChart from "../../../data_representation/charts/stackedAreaChart";
 import TotalCasesRepartitionData from "../../../logic/totalCasesRepartitionData";
 import LineChartCard from "../cards/lineChartCard";
+import {EventRegister} from "react-native-event-listeners";
 
+let dataChangedListener;
 
 class NewCasesComponent extends Component {
 
     constructor(props) {
         super(props);
-        this.state = { data: NewCasesData(), color: LegendColors.red}
+        this.state = { data: NewCasesData(), color: LegendColors.red, value: 0}
+    }
+
+    componentDidMount() {
+        dataChangedListener = EventRegister.addEventListener('locationChanged', (data) => {
+            this.updateData();
+        });
+    }
+
+    componentWillUnmount() {
+        EventRegister.removeEventListener(dataChangedListener)
+    }
+
+    updateData(){
+        this.setState({data: NewCasesData()});
     }
 
     render() {
         return (
-            <MainScrollableContents
-                content={
+            <MainScrollableContents>
                     <>
                         <CardTotalCases />
 
@@ -38,19 +53,24 @@ class NewCasesComponent extends Component {
                             <Text style={styles.chartDescription}>{dataDescription.r0}</Text>
                         </View>
 
+                        <Text>{NewCasesData().newCasesTrendAbsolute[100]}</Text>
+
                         <LineChartCard
+                            key={this.state.data}
                             title={chartTitles.totalCasesCurve}
                             color={this.state.color}
                             data={this.state.data.newCasesTrendAbsolute}
                             description={dataDescription.totalCases} />
 
                         <LineChartCard
+                            key={this.state.data}
                             title={chartTitles.newCasesCurve}
                             color={this.state.color}
                             data={this.state.data.newCasesTrendDayValue}
                             description={dataDescription.newCases} />
 
                         <LineChartCard
+                            key={this.state.data}
                             title={chartTitles.r0Curve}
                             color={this.state.color}
                             data={this.state.data.r0Trend}
@@ -66,8 +86,7 @@ class NewCasesComponent extends Component {
                             <Text style={styles.chartDescription}>{dataDescription.totalCasesRepartition}</Text>
                         </View>
                     </>
-                }
-            />
+            </MainScrollableContents>
         )
     }
 

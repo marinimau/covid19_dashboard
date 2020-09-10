@@ -5,28 +5,32 @@
  * Location: Baratili San Pietro
  */
 
-import React from 'react'
+import React, {Component} from 'react'
 import {styles} from "../theme/style";
 import {ScrollView, View} from "react-native";
 import NotesComponent from "./latest_updates/notesComponent";
 import LocationSelector from "./location_selector/locationSelector";
 
-function MainScrollableContents(props) {
-    return (
-        <>
-            <View style={[styles.rootContainer, {position: 'relative'}]}>
-                <ScrollView>
-                    <View style={[styles.scrollableContainer]}>
-                        <LocationSelector />
-                        {props.content}
+export default class MainScrollableContents extends Component {
 
-                    </View>
-                </ScrollView>
-                <NotesComponent/>
-            </View>
-        </>
-    )
-        ;
+    constructor(props) {
+        super(props);
+    }
+
+    render() {
+        return (
+            <>
+                <View style={[styles.rootContainer, {position: 'relative'}]}>
+                    <ScrollView>
+                        <View style={[styles.scrollableContainer]}>
+                            <LocationSelector />
+                            {this.props.children}
+                        </View>
+                    </ScrollView>
+                    <NotesComponent/>
+                </View>
+            </>
+        );
+    }
 }
 
-export default MainScrollableContents;

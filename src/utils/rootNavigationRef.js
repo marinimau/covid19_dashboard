@@ -17,3 +17,7 @@ export function navigate(name, params) {
 export function reRender() {
     navigationRef.current?.forceUpdate();
 }
+
+
+export const stackRef = React.createRef();
+

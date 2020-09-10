@@ -26,59 +26,58 @@ class SwabsComponent extends Component {
 
     render() {
         return (
-            <MainScrollableContents
-                content={
-                    <>
-                        <CardSwab />
+            <MainScrollableContents>
 
-                        <CardTestedCases />
+                <>
+                    <CardSwab />
 
-                        <View style={[styles.cardGeneric, styles.cardShadow, styles.cardSmall]}>
-                            <Text style={[styles.chartTitle]}>{chartTitles.swabPositiveRatio}</Text>
-                            <MyProgressCircle value={SwabData().positiveRatio} color={LegendColors.blue}/>
-                            <Text style={styles.chartDescription}>{chartTitles.swabPositiveRatioDescription}</Text>
-                        </View>
+                    <CardTestedCases />
 
-
-                        <View style={[styles.cardGeneric, styles.cardShadow, styles.cardSmall]}>
-                            <Text style={[styles.chartTitle]}>{chartTitles.positiveByScreening}</Text>
-                            <MyProgressCircle value={SwabData().positiveByScreening} color={LegendColors.blue}/>
-                            <Text style={styles.chartDescription}>{dataDescription.screening}</Text>
-                        </View>
+                    <View style={[styles.cardGeneric, styles.cardShadow, styles.cardSmall]}>
+                        <Text style={[styles.chartTitle]}>{chartTitles.swabPositiveRatio}</Text>
+                        <MyProgressCircle value={SwabData().positiveRatio} color={LegendColors.blue}/>
+                        <Text style={styles.chartDescription}>{chartTitles.swabPositiveRatioDescription}</Text>
+                    </View>
 
 
-                        <LineChartCard
-                            title={chartTitles.swabTrend}
-                            color={this.state.color}
-                            data={this.state.data.swabTrendAbsolute}
-                            description={dataDescription.swapTrend} />
+                    <View style={[styles.cardGeneric, styles.cardShadow, styles.cardSmall]}>
+                        <Text style={[styles.chartTitle]}>{chartTitles.positiveByScreening}</Text>
+                        <MyProgressCircle value={SwabData().positiveByScreening} color={LegendColors.blue}/>
+                        <Text style={styles.chartDescription}>{dataDescription.screening}</Text>
+                    </View>
 
-                        <LineChartCard
-                            title={chartTitles.swabTrendVariation}
-                            color={this.state.color}
-                            data={this.state.data.swabTrendVariation}
-                            description={dataDescription.swabTrendVariation} />
 
-                        <LineChartCard
-                            title={chartTitles.testedCaseTrend}
-                            color={this.state.color}
-                            data={this.state.data.testedCasesTrendAbsolute}
-                            description={dataDescription.testedCaseTrend} />
+                    <LineChartCard
+                        title={chartTitles.swabTrend}
+                        color={this.state.color}
+                        data={this.state.data.swabTrendAbsolute}
+                        description={dataDescription.swapTrend} />
 
-                        <LineChartCard
-                            title={chartTitles.testedCasesTrendVariation}
-                            color={this.state.color}
-                            data={this.state.data.testedCasesTrendVariation}
-                            description={dataDescription.testedCasesTrendVariation} />
+                    <LineChartCard
+                        title={chartTitles.swabTrendVariation}
+                        color={this.state.color}
+                        data={this.state.data.swabTrendVariation}
+                        description={dataDescription.swabTrendVariation} />
 
-                        <LineChartCard
-                            title={chartTitles.testedAndPositive}
-                            color={this.state.color}
-                            data={this.state.data.percentagePositiveTrend}
-                            description={dataDescription.percentagePositiveTrend} />
-                    </>
-                }
-            />
+                    <LineChartCard
+                        title={chartTitles.testedCaseTrend}
+                        color={this.state.color}
+                        data={this.state.data.testedCasesTrendAbsolute}
+                        description={dataDescription.testedCaseTrend} />
+
+                    <LineChartCard
+                        title={chartTitles.testedCasesTrendVariation}
+                        color={this.state.color}
+                        data={this.state.data.testedCasesTrendVariation}
+                        description={dataDescription.testedCasesTrendVariation} />
+
+                    <LineChartCard
+                        title={chartTitles.testedAndPositive}
+                        color={this.state.color}
+                        data={this.state.data.percentagePositiveTrend}
+                        description={dataDescription.percentagePositiveTrend} />
+                </>
+            </MainScrollableContents>
         )
     }
 

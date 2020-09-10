@@ -21,10 +21,13 @@ import SwabsResumeScreen from "../screens/swabsScreen";
 import DiedScreen from "../screens/diedScreen";
 import InfoScreen from "../screens/infoScreen";
 import {createDrawerNavigator} from "@react-navigation/drawer";
-import {Dimensions, Platform} from "react-native";
+import {Dimensions} from "react-native";
 import {Appearance, AppearanceProvider} from 'react-native-appearance';
-import { EventRegister } from 'react-native-event-listeners';
 import { Updates } from 'expo';
+
+/* Data */
+import DataRouter from "../../logic/dataRouter";
+import NewCasesData from "../../logic/newCasesData";
 
 const Drawer = createDrawerNavigator();
 

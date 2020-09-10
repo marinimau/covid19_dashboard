@@ -8,6 +8,7 @@
 import {RegionList} from "../ui/contents/locationsList";
 import Records from "./dataset";
 import { EventRegister } from 'react-native-event-listeners'
+import DataRouter from "./dataRouter";
 
 
 let SelectedLocation ={
@@ -18,7 +19,9 @@ let SelectedLocation ={
         if(index >= 0 && index <= RegionList.length){
             this.index = index;
             Records.clearSingleRegionData();
-            EventRegister.emit('locationChanged', 'it works!!!')
+            Records.getRecords();
+            DataRouter.refreshData();
+            EventRegister.emit('locationChanged', 'it works!!!');
         }
     },
 

@@ -7,8 +7,12 @@
 import NewCasesData from "./newCasesData";
 
 
-const DataRouter = {
+let DataRouter = {
     NewCasesData: () => {return NewCasesData()},
+
+    refreshData(){
+        this.NewCasesData = NewCasesData()
+    }
 }
 
 export default DataRouter;

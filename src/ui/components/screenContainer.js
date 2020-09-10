@@ -11,7 +11,6 @@ import {createStackNavigator} from "@react-navigation/stack";
 import {dimens} from "../theme/dimens";
 import HeaderLeft from "../components/header/headerMenuButton";
 import {styles} from "../theme/style";
-import { createNativeStackNavigator } from 'react-native-screens/native-stack';
 import {RegionList} from "../contents/locationsList";
 import SelectedLocation from "../../logic/selectedLocation";
 import {EventRegister} from "react-native-event-listeners";
@@ -19,6 +18,7 @@ import {EventRegister} from "react-native-event-listeners";
 const Stack = createStackNavigator();
 const dimensions = Dimensions.get('window').width;
 let dataChangedListener;
+
 
 export default class ScreenContainer extends Component  {
 
@@ -45,9 +45,10 @@ export default class ScreenContainer extends Component  {
                         headerStyle: [styles.header, styles.headerShadow, {borderBottomColor: 'transparent'}],
                         headerTitleStyle: [styles.headerTitle],
                         headerLeft: dimensions < dimens.largeScreen ? ({}) => <HeaderLeft /> : null,
-                        animationEnabled: false
+                        animationEnabled: false,
+                        title: this.props.title + ' > ' + this.state.location
                     }}
-                    component={({}) => this.props.component}
+                    component={() => this.props.component}
                     name={this.props.title + ' > ' + this.state.location}
                 />
             </Stack.Navigator>

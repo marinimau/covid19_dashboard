@@ -140,9 +140,9 @@ export default class MyLineChart extends PureComponent {
                     withVerticalLines={false}
                     yAxisInterval={1}
                     chartConfig={{
-                        backgroundColor: 'transparent',
-                        backgroundGradientFrom: 'transparent',
-                        backgroundGradientTo: 'transparent',
+                        backgroundColor: darkMode() ? Colors.darkMode_basicElevation : Colors.basicElevation,
+                        backgroundGradientFrom: darkMode() ? Colors.darkMode_basicElevation : Colors.basicElevation,
+                        backgroundGradientTo: darkMode() ? Colors.darkMode_basicElevation : Colors.basicElevation,
                         decimalPlaces: this.props.decimalPlaces === undefined ? 0 : this.props.decimalPlaces,
                         color: (opacity = 1) => `rgba(${colorRGB.r}, ${colorRGB.g}, ${colorRGB.b}, ${darkMode() ? opacity * 3 : opacity * 3})`,
                         labelColor: (opacity = 1) => (darkMode() ? Colors.darkMode_basic : Colors.basic),

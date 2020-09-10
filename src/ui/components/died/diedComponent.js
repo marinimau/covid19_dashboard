@@ -25,37 +25,35 @@ class DiedComponent extends Component {
 
     render() {
         return (
-            <MainScrollableContents
-                content={
-                    <>
-                        <CardDied />
+            <MainScrollableContents>
+                <>
+                    <CardDied />
 
-                        <View style={[styles.cardGeneric, styles.cardShadow, styles.cardSmall]}>
-                            <Text style={[styles.chartTitle]}>{chartTitles.deathsRatio}</Text>
-                            <MyProgressCircle value={DeathsData().deathsRatio} color={LegendColors.grey}/>
-                            <Text style={styles.chartDescription}>{chartTitles.deathRatioDescription}</Text>
-                        </View>
+                    <View style={[styles.cardGeneric, styles.cardShadow, styles.cardSmall]}>
+                        <Text style={[styles.chartTitle]}>{chartTitles.deathsRatio}</Text>
+                        <MyProgressCircle value={DeathsData().deathsRatio} color={LegendColors.grey}/>
+                        <Text style={styles.chartDescription}>{chartTitles.deathRatioDescription}</Text>
+                    </View>
 
-                        <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
-                            <Text style={[styles.chartTitle]}>{chartTitles.deathTrend}</Text>
-                            <MyLineChart color={LegendColors.grey} data={DeathsData().diedTrendAbsolute} />
-                            <Text style={styles.chartDescription}>{dataDescription.diedTotal}</Text>
-                        </View>
+                    <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
+                        <Text style={[styles.chartTitle]}>{chartTitles.deathTrend}</Text>
+                        <MyLineChart color={LegendColors.grey} data={DeathsData().diedTrendAbsolute} />
+                        <Text style={styles.chartDescription}>{dataDescription.diedTotal}</Text>
+                    </View>
 
-                        <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
-                            <Text style={[styles.chartTitle]}>{chartTitles.deathTrendDay}</Text>
-                            <MyLineChart color={LegendColors.grey} data={DeathsData().diedTrendDayValue} />
-                            <Text style={styles.chartDescription}>{dataDescription.diedVariation}</Text>
-                        </View>
+                    <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
+                        <Text style={[styles.chartTitle]}>{chartTitles.deathTrendDay}</Text>
+                        <MyLineChart color={LegendColors.grey} data={DeathsData().diedTrendDayValue} />
+                        <Text style={styles.chartDescription}>{dataDescription.diedVariation}</Text>
+                    </View>
 
-                        <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
-                            <Text style={[styles.chartTitle]}>{chartTitles.deathTrendProportional}</Text>
-                            <MyLineChart color={LegendColors.grey} decimalPlaces={2} data={DeathsData().diedTrendProportional} />
-                            <Text style={styles.chartDescription}>{dataDescription.diedTrendProportional}</Text>
-                        </View>
-                    </>
-                }
-            />
+                    <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
+                        <Text style={[styles.chartTitle]}>{chartTitles.deathTrendProportional}</Text>
+                        <MyLineChart color={LegendColors.grey} decimalPlaces={2} data={DeathsData().diedTrendProportional} />
+                        <Text style={styles.chartDescription}>{dataDescription.diedTrendProportional}</Text>
+                    </View>
+                </>
+            </MainScrollableContents>
         )
     }
 }

@@ -31,47 +31,45 @@ class CurrentPositiveComponent extends Component {
 
     render() {
         return (
-            <MainScrollableContents
-                content={
-                    <>
-                        <CardCurrentPositive />
+            <MainScrollableContents>
+                <>
+                    <CardCurrentPositive />
 
-                        <View style={[styles.cardGeneric, styles.cardShadow, styles.cardSmall]}>
-                            <Text style={[styles.chartTitle]}>{chartTitles.currentPositivePercentage}</Text>
-                            <MyProgressCircle value={CurrentPositiveData().positiveRatio} color={LegendColors.yellow}/>
-                            <Text style={styles.chartDescription}>{chartTitles.positivePercentageDescription}</Text>
-                        </View>
+                    <View style={[styles.cardGeneric, styles.cardShadow, styles.cardSmall]}>
+                        <Text style={[styles.chartTitle]}>{chartTitles.currentPositivePercentage}</Text>
+                        <MyProgressCircle value={CurrentPositiveData().positiveRatio} color={LegendColors.yellow}/>
+                        <Text style={styles.chartDescription}>{chartTitles.positivePercentageDescription}</Text>
+                    </View>
 
-                        <LineChartCard
-                            title={chartTitles.positiveTrendAbsolute}
-                            color={this.state.color}
-                            data={this.state.data.deltaTrendAbsolute}
-                            description={dataDescription.positiveTotal} />
+                    <LineChartCard
+                        title={chartTitles.positiveTrendAbsolute}
+                        color={this.state.color}
+                        data={this.state.data.deltaTrendAbsolute}
+                        description={dataDescription.positiveTotal} />
 
-                        <LineChartCard
-                            title={chartTitles.positiveTrendVariation}
-                            color={this.state.color}
-                            data={this.state.data.deltaTrendDayVariation}
-                            description={dataDescription.positiveVariation} />
+                    <LineChartCard
+                        title={chartTitles.positiveTrendVariation}
+                        color={this.state.color}
+                        data={this.state.data.deltaTrendDayVariation}
+                        description={dataDescription.positiveVariation} />
 
-                        <CardHomeQuarantine />
+                    <CardHomeQuarantine />
 
-                        <CardHospitalizedWithSymptoms />
+                    <CardHospitalizedWithSymptoms />
 
-                        <CardCritical />
+                    <CardCritical />
 
-                        <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
-                            <Text style={styles.chartTitle}>{chartTitles.positiveRepartition}</Text>
-                            <StackedAreaChart
-                                color={LegendColors.yellow}
-                                keyValues={['critical', 'hospitalized', 'homeQuarantine']}
-                                legend={[chartTitles.positiveHomeQuarantine, chartTitles.hospitalizedWithSymptoms, chartTitles.critical]}
-                                data={PositiveRepartitionData().repartition}/>
-                            <Text style={styles.chartDescription}>{dataDescription.positiveRepartition}</Text>
-                        </View>
-                    </>
-                }
-            />
+                    <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
+                        <Text style={styles.chartTitle}>{chartTitles.positiveRepartition}</Text>
+                        <StackedAreaChart
+                            color={LegendColors.yellow}
+                            keyValues={['critical', 'hospitalized', 'homeQuarantine']}
+                            legend={[chartTitles.positiveHomeQuarantine, chartTitles.hospitalizedWithSymptoms, chartTitles.critical]}
+                            data={PositiveRepartitionData().repartition}/>
+                        <Text style={styles.chartDescription}>{dataDescription.positiveRepartition}</Text>
+                    </View>
+                </>
+            </MainScrollableContents>
         )
     }
 

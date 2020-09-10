@@ -25,37 +25,37 @@ class RecoveredComponent extends Component {
 
     render() {
         return (
-            <MainScrollableContents
-                content={
-                    <>
-                        <CardRecovered light={true} />
+            <MainScrollableContents>
 
-                        <View style={[styles.cardGeneric, styles.cardShadow, styles.cardSmall]}>
-                            <Text style={[styles.chartTitle]}>{chartTitles.recoveredPercentage}</Text>
-                            <MyProgressCircle value={this.state.data.recoveredRatio} color={LegendColors.green}/>
-                            <Text style={styles.chartDescription}>{chartTitles.recoveredPercentageDescription}</Text>
-                        </View>
+                <>
+                    <CardRecovered light={true}/>
 
-                        <LineChartCard
-                            title={chartTitles.recoveredTrend}
-                            color={this.state.color}
-                            data={this.state.data.recoveredTrendAbsolute}
-                            description={dataDescription.recoveredTotal} />
+                    <View style={[styles.cardGeneric, styles.cardShadow, styles.cardSmall]}>
+                        <Text style={[styles.chartTitle]}>{chartTitles.recoveredPercentage}</Text>
+                        <MyProgressCircle value={this.state.data.recoveredRatio} color={LegendColors.green}/>
+                        <Text style={styles.chartDescription}>{chartTitles.recoveredPercentageDescription}</Text>
+                    </View>
 
-                        <LineChartCard
-                            title={chartTitles.recoveredTrendDay}
-                            color={this.state.color}
-                            data={this.state.data.recoveredTrendDayValue}
-                            description={dataDescription.recoveredVariation} />
+                    <LineChartCard
+                        title={chartTitles.recoveredTrend}
+                        color={this.state.color}
+                        data={this.state.data.recoveredTrendAbsolute}
+                        description={dataDescription.recoveredTotal}/>
 
-                        <LineChartCard
-                            title={chartTitles.recoveredTrendProportional}
-                            color={this.state.color}
-                            data={this.state.data.recoveredTrendProportional}
-                            description={dataDescription.recoveredTrendProportional} />
-                    </>
-                }
-            />
+                    <LineChartCard
+                        title={chartTitles.recoveredTrendDay}
+                        color={this.state.color}
+                        data={this.state.data.recoveredTrendDayValue}
+                        description={dataDescription.recoveredVariation}/>
+
+                    <LineChartCard
+                        title={chartTitles.recoveredTrendProportional}
+                        color={this.state.color}
+                        data={this.state.data.recoveredTrendProportional}
+                        description={dataDescription.recoveredTrendProportional}/>
+                </>
+
+            </MainScrollableContents>
         )
     }
 
