@@ -20,6 +20,7 @@ let SelectedLocation ={
             this.index = index;
             Records.clearSingleRegionData();
             Records.getRecords();
+            DataRouter.cleanData();
             DataRouter.refreshData();
             EventRegister.emit('locationChanged', 'it works!!!');
         }

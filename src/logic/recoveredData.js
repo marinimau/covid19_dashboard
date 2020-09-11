@@ -14,6 +14,12 @@ let dataToReturn = {
     recoveredTrendProportional: [],
 };
 
+export function cleanData() {
+    dataToReturn.recoveredTrendAbsolute = [];
+    dataToReturn.recoveredTrendDayValue = [];
+    dataToReturn.recoveredTrendProportional = [];
+}
+
 const RecoveredData = (data) => {
 
     if(data === undefined){

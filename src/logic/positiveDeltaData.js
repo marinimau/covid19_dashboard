@@ -30,6 +30,11 @@ let dataToReturn = {
     criticalVariationPercentage: 0,
 };
 
+export function cleanData() {
+    dataToReturn.deltaTrendAbsolute = [];
+    dataToReturn.deltaTrendDayVariation = [];
+}
+
 const PositiveDeltaData = (data) => {
 
     if(data === undefined){

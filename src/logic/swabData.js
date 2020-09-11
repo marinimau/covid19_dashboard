@@ -17,6 +17,14 @@ let dataToReturn = {
     positiveByScreening: 0,
 };
 
+export function cleanData() {
+    dataToReturn.swabTrendAbsolute = [];
+    dataToReturn.swabTrendVariation = [];
+    dataToReturn.testedCasesTrendAbsolute = [];
+    dataToReturn.testedCasesTrendVariation = [];
+    dataToReturn.percentagePositiveTrend = [];
+}
+
 const SwabData = (data) => {
 
     if(data === undefined){

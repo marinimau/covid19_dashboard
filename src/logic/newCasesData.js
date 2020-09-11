@@ -14,6 +14,12 @@ let dataToReturn = {
     r0Trend: [],
 };
 
+export function cleanData() {
+    dataToReturn.newCasesTrendAbsolute = [];
+    dataToReturn.newCasesTrendDayValue = [];
+    dataToReturn.r0Trend = [];
+}
+
 const NewCasesData = (data) => {
 
     data = Records.getRecords();

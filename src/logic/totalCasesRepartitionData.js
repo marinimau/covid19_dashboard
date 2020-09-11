@@ -9,10 +9,13 @@ import Records from "./dataset";
 import dateToString from "../utils/dateToString";
 
 let dataToReturn = {
-
     /* repartition */
     repartition: []
 };
+
+export function cleanData() {
+    dataToReturn.repartition = [];
+}
 
 const TotalCasesRepartitionData = (data) => {
 

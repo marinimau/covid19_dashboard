@@ -9,9 +9,12 @@ import Records from "./dataset";
 import dateToString from "../utils/dateToString";
 
 let dataToReturn = {
-
     repartition: []
 };
+
+export function cleanData() {
+    dataToReturn.repartition = [];
+}
 
 const PositiveRepartitionData = (data) => {
 
