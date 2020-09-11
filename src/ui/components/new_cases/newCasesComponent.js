@@ -53,8 +53,6 @@ class NewCasesComponent extends Component {
                             <Text style={styles.chartDescription}>{dataDescription.r0}</Text>
                         </View>
 
-                        <Text>{NewCasesData().newCasesTrendAbsolute[100]}</Text>
-
                         <LineChartCard
                             key={this.state.data}
                             title={chartTitles.totalCasesCurve}

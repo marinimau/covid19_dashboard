@@ -36,7 +36,7 @@ class NotesComponent extends PureComponent {
                             repeatSpacer={50}
                             marqueeDelay={0}
                             loop
-                        >
+                            isRTL={false}>
                             {NotesData().notes}
                         </TextTicker>
                         :
@@ -50,7 +50,7 @@ class NotesComponent extends PureComponent {
                                 repeatSpacer={50}
                                 marqueeDelay={0}
                                 loop
-                            >
+                                isRTL={false}>
                                 {NotesData().notes}
                             </TextTicker>
                         </SafeAreaView>
