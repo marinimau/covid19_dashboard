@@ -10,6 +10,7 @@ import Records from "./dataset";
 let dataToReturn = {
     deltaTrendAbsolute: [],
     deltaTrendDayVariation: [],
+    percentageOfTotal: 0,
 
     /* Home Quarantine */
     homeQuarantine: 0,
@@ -43,6 +44,8 @@ const PositiveDeltaData = (data) => {
 
     if(data !== null){
         let d = data[data.length - 1];
+
+        dataToReturn.percentageOfTotal = (Math.round(d['totale_positivi']/Records.data[Records.data.length -1]['totale_positivi'] * 100 * 100).toFixed(2)) / 100;
 
         /* Home Quarantine */
         dataToReturn.homeQuarantine = (d['isolamento_domiciliare']).toLocaleString('it');

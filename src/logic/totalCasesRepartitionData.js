@@ -10,11 +10,13 @@ import dateToString from "../utils/dateToString";
 
 let dataToReturn = {
     /* repartition */
-    repartition: []
+    repartition: [],
+    repartitionPercentage: []
 };
 
 export function cleanData() {
     dataToReturn.repartition = [];
+    dataToReturn.repartitionPercentage = [];
 }
 
 const TotalCasesRepartitionData = (data) => {
@@ -23,11 +25,19 @@ const TotalCasesRepartitionData = (data) => {
         data = Records.getRecords();
     }
 
-    if(data !== null && dataToReturn.repartition.length === 0){
+    if(data !== null && dataToReturn.repartition.length === 0 && dataToReturn.repartitionPercentage.length === 0 ){
 
         for(let i = 0; i < data.length; i++){
             if(data[i]['dimessi_guariti'] + data[i]['totale_positivi'] + data[i]['deceduti'] > 0){
                 dataToReturn.repartition.push(
+                    {
+                        date: dateToString(data[i]['data']),
+                        recovered: data[i]['dimessi_guariti'],
+                        current: data[i]['totale_positivi'],
+                        death: data[i]['deceduti']
+                    }
+                );
+                dataToReturn.repartitionPercentage.push(
                     {
                         date: dateToString(data[i]['data']),
                         recovered: Math.abs(data[i]['dimessi_guariti'] / data[i]['totale_casi']) * 100 * 100 / 100,

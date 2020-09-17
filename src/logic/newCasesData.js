@@ -8,7 +8,7 @@
 import Records from "./dataset";
 
 let dataToReturn = {
-    r0: 0,
+    percentageOfTotal: 0,
     newCasesTrendAbsolute: [],
     newCasesTrendDayValue: [],
     r0Trend: [],
@@ -28,7 +28,7 @@ const NewCasesData = (data) => {
     if(data !== null){
         let d = data[data.length - 1];
 
-        dataToReturn.r0 = 0;
+        dataToReturn.percentageOfTotal = (Math.round(d['totale_casi']/Records.data[Records.data.length -1]['totale_casi'] * 100 * 100).toFixed(2)) / 100;
 
         if( dataToReturn.newCasesTrendAbsolute.length === 0){
             for (let i=1; i< data.length; i+=1){

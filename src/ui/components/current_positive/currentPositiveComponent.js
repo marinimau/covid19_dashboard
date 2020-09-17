@@ -41,6 +41,12 @@ class CurrentPositiveComponent extends Component {
                         <Text style={styles.chartDescription}>{chartTitles.positivePercentageDescription}</Text>
                     </View>
 
+                    <View style={[styles.cardGeneric, styles.cardShadow, styles.cardSmall]}>
+                        <Text style={[styles.chartTitle]}>{chartTitles.positiveCasesAreaPercentage}</Text>
+                        <MyProgressCircle value={this.state.data.percentageOfTotal} color={LegendColors.yellow}/>
+                        <Text style={styles.chartDescription}>{chartTitles.positiveCasesAreaPercentage}</Text>
+                    </View>
+
                     <LineChartCard
                         title={chartTitles.positiveTrendAbsolute}
                         color={this.state.color}

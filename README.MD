@@ -4,6 +4,14 @@
 
 A cross-platform (Android, iOS, Web) dashboard to represent the trend of the Covid-19 pandemic in Italy.
 
+## Features
+
+* Show trend (with different intervals)
+* Full data representation for each region
+* Show notes of the last 24h
+* Dark-mode based on system theme
+* Full responsive webapp
+* iOS and Android apps rendered with native optimizations
 
 ## Instructions
 

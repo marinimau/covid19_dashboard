@@ -17,6 +17,7 @@ import StackedAreaChart from "../../../data_representation/charts/stackedAreaCha
 import TotalCasesRepartitionData from "../../../logic/totalCasesRepartitionData";
 import LineChartCard from "../cards/lineChartCard";
 import {EventRegister} from "react-native-event-listeners";
+import MyProgressCircle from "../../../data_representation/charts/progressCircle";
 
 let dataChangedListener;
 
@@ -48,9 +49,9 @@ class NewCasesComponent extends Component {
                         <CardTotalCases />
 
                         <View style={[styles.cardGeneric, styles.cardShadow, styles.cardSmall]}>
-                            <Text style={[styles.chartTitle]}>{chartTitles.r0value}</Text>
-                            <Text style={[styles.chartTitle, styles.chartBigValue]}>{this.state.data.r0}</Text>
-                            <Text style={styles.chartDescription}>{dataDescription.r0}</Text>
+                            <Text style={[styles.chartTitle]}>{chartTitles.totalCasesPercentage}</Text>
+                            <MyProgressCircle value={this.state.data.percentageOfTotal} color={LegendColors.red}/>
+                            <Text style={styles.chartDescription}>{dataDescription.totalCasesPercentage}</Text>
                         </View>
 
                         <LineChartCard
@@ -67,21 +68,25 @@ class NewCasesComponent extends Component {
                             data={this.state.data.newCasesTrendDayValue}
                             description={dataDescription.newCases} />
 
-                        <LineChartCard
-                            key={this.state.data}
-                            title={chartTitles.r0Curve}
-                            color={this.state.color}
-                            data={this.state.data.r0Trend}
-                            description={dataDescription.r0} />
 
                         <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
-                            <Text style={styles.chartTitle}>{chartTitles.totalCasesRepartion}</Text>
+                            <Text style={styles.chartTitle}>{chartTitles.totalCasesRepartionAbsolute}</Text>
                             <StackedAreaChart
                                 color={LegendColors.red}
                                 keyValues={['death', 'current', 'recovered']}
                                 legend={[chartTitles.recovered, chartTitles.currentPositive, chartTitles.died]}
                                 data={TotalCasesRepartitionData().repartition}/>
-                            <Text style={styles.chartDescription}>{dataDescription.totalCasesRepartition}</Text>
+                            <Text style={styles.chartDescription}>{dataDescription.totalCasesRepartitionAbsolute}</Text>
+                        </View>
+
+                        <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
+                            <Text style={styles.chartTitle}>{chartTitles.totalCasesRepartionPercentage}</Text>
+                            <StackedAreaChart
+                                color={LegendColors.red}
+                                keyValues={['death', 'current', 'recovered']}
+                                legend={[chartTitles.recovered, chartTitles.currentPositive, chartTitles.died]}
+                                data={TotalCasesRepartitionData().repartitionPercentage}/>
+                            <Text style={styles.chartDescription}>{dataDescription.totalCasesRepartitionPercentage}</Text>
                         </View>
                     </>
             </MainScrollableContents>
