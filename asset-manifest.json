@@ -1,0 +1,34 @@
+{
+  "files": {
+    "app.js": "/covid19_dashboard/static/js/app.ab8a4a65.chunk.js",
+    "app.js.map": "/covid19_dashboard/static/js/app.ab8a4a65.chunk.js.map",
+    "runtime~app.js": "/covid19_dashboard/static/js/runtime~app.bd5d74b6.js",
+    "runtime~app.js.map": "/covid19_dashboard/static/js/runtime~app.bd5d74b6.js.map",
+    "static/js/2.c5f28470.chunk.js": "/covid19_dashboard/static/js/2.c5f28470.chunk.js",
+    "static/js/2.c5f28470.chunk.js.map": "/covid19_dashboard/static/js/2.c5f28470.chunk.js.map",
+    "fonts/AntDesign.ttf": "/covid19_dashboard/./fonts/AntDesign.ttf",
+    "fonts/Entypo.ttf": "/covid19_dashboard/./fonts/Entypo.ttf",
+    "fonts/Feather.ttf": "/covid19_dashboard/./fonts/Feather.ttf",
+    "fonts/FontAwesome.ttf": "/covid19_dashboard/./fonts/FontAwesome.ttf",
+    "fonts/FontAwesome5_Brands.ttf": "/covid19_dashboard/./fonts/FontAwesome5_Brands.ttf",
+    "fonts/FontAwesome5_Solid.ttf": "/covid19_dashboard/./fonts/FontAwesome5_Solid.ttf",
+    "fonts/Fontisto.ttf": "/covid19_dashboard/./fonts/Fontisto.ttf",
+    "fonts/Foundation.ttf": "/covid19_dashboard/./fonts/Foundation.ttf",
+    "fonts/Ionicons.ttf": "/covid19_dashboard/./fonts/Ionicons.ttf",
+    "fonts/MaterialCommunityIcons.ttf": "/covid19_dashboard/./fonts/MaterialCommunityIcons.ttf",
+    "fonts/MaterialIcons.ttf": "/covid19_dashboard/./fonts/MaterialIcons.ttf",
+    "fonts/SimpleLineIcons.ttf": "/covid19_dashboard/./fonts/SimpleLineIcons.ttf",
+    "favicon-16.png": "/covid19_dashboard/favicon-16.png",
+    "favicon-32.png": "/covid19_dashboard/favicon-32.png",
+    "favicon.ico": "/covid19_dashboard/favicon.ico",
+    "index.html": "/covid19_dashboard/index.html",
+    "manifest.json": "/covid19_dashboard/manifest.json",
+    "serve.json": "/covid19_dashboard/serve.json",
+    "static/js/2.c5f28470.chunk.js.LICENSE.txt": "/covid19_dashboard/static/js/2.c5f28470.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime~app.bd5d74b6.js",
+    "static/js/2.c5f28470.chunk.js",
+    "static/js/app.ab8a4a65.chunk.js"
+  ]
+}
