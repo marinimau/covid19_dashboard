@@ -4,6 +4,10 @@
 
 A cross-platform (Android, iOS, Web) dashboard to represent the trend of the Covid-19 pandemic in Italy.
 
+### PWA URL
+
+[https://marinimau.github.io/covid19_dashboard/](https://marinimau.github.io/covid19_dashboard/)
+
 ## Features
 
 * Show trend (with different intervals)
