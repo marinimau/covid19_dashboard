@@ -4,7 +4,7 @@
 
 A cross-platform (Android, iOS, Web) dashboard to represent the trend of the Covid-19 pandemic in Italy.
 
-### PWA URL
+## PWA URL
 
 [https://marinimau.github.io/covid19_dashboard/](https://marinimau.github.io/covid19_dashboard/)
 
@@ -16,6 +16,11 @@ A cross-platform (Android, iOS, Web) dashboard to represent the trend of the Cov
 * Dark-mode based on system theme
 * Full responsive webapp
 * iOS and Android apps rendered with native optimizations
+
+## Issues
+
+* Transparent text in select region picker when runned on web from iOS
+* Sometimes the line chart background is black on Safari or there isn't line shadow on Firefox
 
 ## Instructions
 

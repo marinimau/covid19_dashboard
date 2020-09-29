@@ -6,7 +6,7 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "privacy": "public",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/icon_android.png",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain"
@@ -18,12 +18,14 @@
       "**/*"
     ],
     "ios": {
+      "icon": "./assets/icon_ios.png",
       "bundleIdentifier": "com.marinimau.covidashboard"
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/icon_android.png"
     },
     "android": {
+      "icon": "./assets/icon_android.png",
       "package": "com.marinimau.covidashboard"
     }
   }
