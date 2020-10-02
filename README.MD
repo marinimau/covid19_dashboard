@@ -8,6 +8,10 @@ A cross-platform (Android, iOS, Web) dashboard to represent the trend of the Cov
 
 [https://marinimau.github.io/covid19_dashboard/](https://marinimau.github.io/covid19_dashboard/)
 
+## Video (iPad version)
+
+[https://youtu.be/KhLnk_gmTfQ](https://youtu.be/KhLnk_gmTfQ)
+
 ## Features
 
 * Show trend (with different intervals)
