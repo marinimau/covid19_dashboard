@@ -66,13 +66,23 @@ class CurrentPositiveComponent extends Component {
                     <CardCritical />
 
                     <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
-                        <Text style={styles.chartTitle}>{chartTitles.positiveRepartition}</Text>
+                        <Text style={styles.chartTitle}>{chartTitles.positiveRepartitionAbsolute}</Text>
                         <StackedAreaChart
                             color={LegendColors.yellow}
                             keyValues={['critical', 'hospitalized', 'homeQuarantine']}
                             legend={[chartTitles.positiveHomeQuarantine, chartTitles.hospitalizedWithSymptoms, chartTitles.critical]}
-                            data={PositiveRepartitionData().repartition}/>
-                        <Text style={styles.chartDescription}>{dataDescription.positiveRepartition}</Text>
+                            data={PositiveRepartitionData().repartitionAbsolute}/>
+                        <Text style={styles.chartDescription}>{dataDescription.positiveRepartitionAbsolute}</Text>
+                    </View>
+
+                    <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
+                        <Text style={styles.chartTitle}>{chartTitles.positiveRepartitionPercentage}</Text>
+                        <StackedAreaChart
+                            color={LegendColors.yellow}
+                            keyValues={['critical', 'hospitalized', 'homeQuarantine']}
+                            legend={[chartTitles.positiveHomeQuarantine, chartTitles.hospitalizedWithSymptoms, chartTitles.critical]}
+                            data={PositiveRepartitionData().repartitionPercentage}/>
+                        <Text style={styles.chartDescription}>{dataDescription.positiveRepartitionPercentage}</Text>
                     </View>
                 </>
             </MainScrollableContents>

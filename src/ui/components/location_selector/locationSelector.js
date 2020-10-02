@@ -14,6 +14,7 @@ import {chartTitles, uiButtons} from "../../contents/strings";
 import Colors from "../../theme/colors";
 import SelectedLocation from "../../../logic/selectedLocation";
 import darkMode from "../../theme/darkModeDetector";
+import {SYSTEM_FONT_STACK} from "react-native-web/dist/exports/StyleSheet/constants";
 
 
 class LocationSelector extends Component {
@@ -43,11 +44,24 @@ class LocationSelector extends Component {
 }
 
 const pickerSelectStyles = StyleSheet.create({
+    inputWeb: {
+        fontSize: 16,
+        paddingTop: 12,
+        paddingBottom: 12,
+        paddingLeft: 30,
+        paddingRight: 30,
+        borderWidth: 0,
+        textColor: (darkMode() ? Colors.darkMode_basic : Colors.basic),
+        backgroundColor: (darkMode() ? Colors.darkMode_basicElevation : Colors.basicElevation),
+        fontFamily: SYSTEM_FONT_STACK,
+        color: (darkMode() ? Colors.darkMode_basic : Colors.basic),
+    },
     inputIOS: {
         fontSize: 16,
         paddingVertical: 12,
         paddingHorizontal: 10,
         borderWidth: 0,
+        backgroundColor: (darkMode() ? Colors.darkMode_basicElevation : Colors.basicElevation),
         color: (darkMode() ? Colors.darkMode_basic : Colors.basic),
         paddingRight: 30,
     },
