@@ -38,6 +38,15 @@ export const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
     },
+    menuItemradius: {
+        paddingLeft: 10,
+        borderRadius:20,
+        borderTopLeftRadius: 5,
+        borderTopRightRadius: 20,
+        borderBottomRightRadius: 20,
+        borderBottomLeftRadius: 20,
+        borderColor: 'transparent'
+    },
     /*
      *  HeaderStyle
      *

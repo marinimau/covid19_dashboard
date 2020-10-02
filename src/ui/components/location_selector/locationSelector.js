@@ -46,12 +46,8 @@ class LocationSelector extends Component {
 const pickerSelectStyles = StyleSheet.create({
     inputWeb: {
         fontSize: 16,
-        paddingTop: 12,
-        paddingBottom: 12,
-        paddingLeft: 30,
-        paddingRight: 30,
+        margin: 10,
         borderWidth: 0,
-        textColor: (darkMode() ? Colors.darkMode_basic : Colors.basic),
         backgroundColor: (darkMode() ? Colors.darkMode_basicElevation : Colors.basicElevation),
         fontFamily: SYSTEM_FONT_STACK,
         color: (darkMode() ? Colors.darkMode_basic : Colors.basic),
@@ -61,6 +57,7 @@ const pickerSelectStyles = StyleSheet.create({
         paddingVertical: 12,
         paddingHorizontal: 10,
         borderWidth: 0,
+        margin: 5,
         backgroundColor: (darkMode() ? Colors.darkMode_basicElevation : Colors.basicElevation),
         color: (darkMode() ? Colors.darkMode_basic : Colors.basic),
         paddingRight: 30,

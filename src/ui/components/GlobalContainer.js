@@ -70,6 +70,7 @@ export default class GlobalContainer extends PureComponent {
                             inactiveTintColor: colorScheme === 'dark' ? Colors.darkMode_navigationInactive : Colors.navigationInactive,
                             activeBackgroundColor: colorScheme === 'dark' ? Colors.darkMode_drawerSelectedBackground : Colors.drawerSelectedBackground,
                             drawerBackgroundColor: colorScheme === 'dark' ? Colors.darkMode_basicElevation : Colors.basicElevation,
+                            itemStyle: styles.menuItemradius
                         }}
                         drawerType={isLargeScreen ? 'permanent' : 'front'}
                         drawerStyle={isLargeScreen ? [{width: dimens.drawerWidth, borderRightColor: colorScheme === 'dark' ? Colors.darkMode_basicTransparent : Colors.basicTransparent,
