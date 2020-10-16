@@ -1,11 +1,11 @@
 {
   "files": {
-    "app.js": "/covid19_dashboard/static/js/app.5176f856.chunk.js",
-    "app.js.map": "/covid19_dashboard/static/js/app.5176f856.chunk.js.map",
+    "app.js": "/covid19_dashboard/static/js/app.08f66007.chunk.js",
+    "app.js.map": "/covid19_dashboard/static/js/app.08f66007.chunk.js.map",
     "runtime~app.js": "/covid19_dashboard/static/js/runtime~app.bd5d74b6.js",
     "runtime~app.js.map": "/covid19_dashboard/static/js/runtime~app.bd5d74b6.js.map",
-    "static/js/2.13d0cbf5.chunk.js": "/covid19_dashboard/static/js/2.13d0cbf5.chunk.js",
-    "static/js/2.13d0cbf5.chunk.js.map": "/covid19_dashboard/static/js/2.13d0cbf5.chunk.js.map",
+    "static/js/2.df57bcd4.chunk.js": "/covid19_dashboard/static/js/2.df57bcd4.chunk.js",
+    "static/js/2.df57bcd4.chunk.js.map": "/covid19_dashboard/static/js/2.df57bcd4.chunk.js.map",
     "fonts/AntDesign.ttf": "/covid19_dashboard/./fonts/AntDesign.ttf",
     "fonts/Entypo.ttf": "/covid19_dashboard/./fonts/Entypo.ttf",
     "fonts/Feather.ttf": "/covid19_dashboard/./fonts/Feather.ttf",
@@ -24,11 +24,11 @@
     "index.html": "/covid19_dashboard/index.html",
     "manifest.json": "/covid19_dashboard/manifest.json",
     "serve.json": "/covid19_dashboard/serve.json",
-    "static/js/2.13d0cbf5.chunk.js.LICENSE.txt": "/covid19_dashboard/static/js/2.13d0cbf5.chunk.js.LICENSE.txt"
+    "static/js/2.df57bcd4.chunk.js.LICENSE.txt": "/covid19_dashboard/static/js/2.df57bcd4.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime~app.bd5d74b6.js",
-    "static/js/2.13d0cbf5.chunk.js",
-    "static/js/app.5176f856.chunk.js"
+    "static/js/2.df57bcd4.chunk.js",
+    "static/js/app.08f66007.chunk.js"
   ]
 }
