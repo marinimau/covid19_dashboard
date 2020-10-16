@@ -4,18 +4,19 @@
  * Repository: http://github.com/marinimau/covid19_dashboard
  * Location: Baratili San Pietro
  */
+import darkMode from "./darkModeDetector";
 
 let LegendColors = {
     lightgreen: '#64DD17',
-    green: '#00C853',
+    green: '#30d158',
     lightyellow: '#ffb700',
-    yellow: '#FFAB00',
+    yellow: darkMode() ? '#ffd60a' : '#ffcc00',
     lightred: '#DD2C00',
-    red: '#D32F2F',
+    red: darkMode() ? '#ff453a' : '#ff3a30',
     lightgrey: '#455A64',
     grey: '#616161',
     lightblue: '#00B8D4',
-    blue: '#0091EA'
+    blue: darkMode() ? '#0a84ff' : '#007bff',
 }
 
 export default LegendColors;

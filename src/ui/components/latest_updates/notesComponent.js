@@ -12,6 +12,7 @@ import NotesData from "../../../logic/notesData";
 import Colors from "../../theme/colors";
 import TextTicker from "react-native-text-ticker";
 import {dimens} from "../../theme/dimens";
+import darkMode from "../../theme/darkModeDetector";
 
 let windowWidth = Dimensions.get("window").width;
 
@@ -27,7 +28,7 @@ class NotesComponent extends PureComponent {
             <View style={[styles.notesContainer]}>
                     {Platform.OS === 'web' ?
                         <TextTicker
-                            style={{width: (windowWidth > dimens.largeScreen ? windowWidth - dimens.drawerWidth : windowWidth), color: Colors.basicElevation}}
+                            style={{width: (windowWidth > dimens.largeScreen ? windowWidth - dimens.drawerWidth : windowWidth), color: darkMode() ? Colors.darkMode_basic : Colors.basicElevation}}
                             duration={50000}
                             bounce={false}
                             scroll={true}

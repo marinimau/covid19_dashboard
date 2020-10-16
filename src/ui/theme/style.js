@@ -21,7 +21,7 @@ export const styles = StyleSheet.create({
         alignItems: 'flex-start',
         alignContent: 'space-around',
         justifyContent: 'flex-start',
-        backgroundColor: darkMode() ? Colors.darkMode_basicElevation : Colors.basicElevation,
+        backgroundColor: darkMode() ? Colors.darkMode_background : Colors.background,
     },
     scrollableContainer: {
         flex: 1,
@@ -30,7 +30,7 @@ export const styles = StyleSheet.create({
         marginBottom: 55,
     },
     loading: {
-        backgroundColor:  darkMode() ? Colors.darkMode_basicElevation : Colors.basicElevation,
+        backgroundColor:  darkMode() ? Colors.darkMode_background : Colors.background,
     },
     container: {
         flex: 1,
@@ -56,7 +56,7 @@ export const styles = StyleSheet.create({
         borderBottomColor: 'transparent',
     },
     headerTitle: {
-        color: darkMode() ? Colors.darkMode_basic : Colors.basic,
+        color: darkMode() ? Colors.darkMode_title : Colors.title,
     },
     headerShadow: {
         shadowColor: darkMode() ? Colors.darkMode_basicShadow : Colors.basicShadow,
@@ -77,16 +77,12 @@ export const styles = StyleSheet.create({
      */
     cardGeneric: {
         position: 'relative',
-        borderRadius:20,
-        borderTopLeftRadius: 5,
-        borderTopRightRadius: 20,
-        borderBottomRightRadius: 20,
-        borderBottomLeftRadius: 20,
+        borderRadius: 10,
         margin: 10,
         height: 'auto',
         padding: 20,
         backgroundColor: darkMode() ? Colors.darkMode_basicElevation : Colors.basicElevation,
-        borderColor: darkMode() ? Colors.darkMode_mainTransparent : Colors.mainTransparent,
+        borderColor: darkMode() ? Colors.darkMode_basicTransparent : Colors.borders,
         borderWidth: 0.5,
         elevation: 20,
     },
@@ -96,7 +92,7 @@ export const styles = StyleSheet.create({
             width: 0,
             height: 10,
         },
-        shadowOpacity: 0.51,
+        shadowOpacity: darkMode() ? 0 : 0.2,
         shadowRadius: 13.16,
         elevation: 20,
     },
@@ -153,7 +149,7 @@ export const styles = StyleSheet.create({
     chartTitle: {
         fontSize: 18,
         fontWeight: "700",
-        color: darkMode() ? Colors.darkMode_basic : Colors.basic,
+        color: darkMode() ? Colors.darkMode_title : Colors.title,
     },
     chartDescription: {
         fontSize: 12,
@@ -215,7 +211,7 @@ export const styles = StyleSheet.create({
         alignItems: 'center',
         width: '100%',
         height: 'auto',
-        backgroundColor: Colors.basic,
+        backgroundColor: darkMode() ? Colors.darkMode_basicElevation : Colors.basic,
         paddingTop: 15,
         paddingBottom: 15,
         borderColor: 'transparent',

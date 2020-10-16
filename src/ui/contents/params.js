@@ -22,4 +22,4 @@ export function lineChartNumLabels(range) {
 
 }
 
-export const ShadowOpacity = darkMode() ? 0.2 : 0.4;
+export const ShadowOpacity = darkMode() ? 0 : 0.2;

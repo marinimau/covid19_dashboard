@@ -26,7 +26,7 @@ class LocationSelector extends Component {
 
     render() {
         return (
-            <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig, {padding: 0}]}>
+            <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig, {backgroundColor: darkMode() ? Colors.darkMode_basicNotes : Colors.basicElevation, padding: 0}]}>
                 <RNPickerSelect
                     items={RegionList}
                     placeholder={{value: 0, label: chartTitles.locationSelectorPlaceholder}}
@@ -48,7 +48,7 @@ const pickerSelectStyles = StyleSheet.create({
         fontSize: 16,
         margin: 10,
         borderWidth: 0,
-        backgroundColor: (darkMode() ? Colors.darkMode_basicElevation : Colors.basicElevation),
+        backgroundColor: 'transparent',
         fontFamily: SYSTEM_FONT_STACK,
         color: (darkMode() ? Colors.darkMode_basic : Colors.basic),
     },
@@ -58,7 +58,7 @@ const pickerSelectStyles = StyleSheet.create({
         paddingHorizontal: 10,
         borderWidth: 0,
         margin: 5,
-        backgroundColor: (darkMode() ? Colors.darkMode_basicElevation : Colors.basicElevation),
+        backgroundColor: 'transparent',
         color: (darkMode() ? Colors.darkMode_basic : Colors.basic),
         paddingRight: 30,
     },
@@ -68,7 +68,7 @@ const pickerSelectStyles = StyleSheet.create({
         paddingVertical: 8,
         borderWidth: 0,
         borderRadius: 8,
-        color: (darkMode() ? Colors.darkMode_basic : Colors.basic),
+        color: 'transparent',
         paddingRight: 30,
     },
 });
