@@ -9,7 +9,7 @@ import React, {Component} from 'react';
 import {RegionList} from "../../contents/locationsList";
 import RNPickerSelect from 'react-native-picker-select';
 import {styles} from "../../theme/style";
-import {View, StyleSheet} from "react-native";
+import {View, StyleSheet, Platform} from "react-native";
 import {chartTitles, uiButtons} from "../../contents/strings";
 import Colors from "../../theme/colors";
 import SelectedLocation from "../../../logic/selectedLocation";
@@ -26,12 +26,15 @@ class LocationSelector extends Component {
 
     render() {
         return (
-            <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig, {backgroundColor: darkMode() ? Colors.darkMode_basicNotes : Colors.basicElevation, padding: 0}]}>
+            <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig, {
+                backgroundColor: darkMode() ? Colors.darkMode_basicNotes : Colors.basicElevation,
+                padding: 0
+            }]}>
                 <RNPickerSelect
                     items={RegionList}
                     placeholder={{value: 0, label: chartTitles.locationSelectorPlaceholder}}
                     onValueChange={(value) => {
-                        this.setState({location: value} );
+                        this.setState({location: value});
                         SelectedLocation.setLocation(value);
                     }}
                     doneText={uiButtons.done}
@@ -46,7 +49,6 @@ class LocationSelector extends Component {
 const pickerSelectStyles = StyleSheet.create({
     inputWeb: {
         fontSize: 16,
-        margin: 10,
         borderWidth: 0,
         backgroundColor: 'transparent',
         fontFamily: SYSTEM_FONT_STACK,
@@ -57,7 +59,6 @@ const pickerSelectStyles = StyleSheet.create({
         paddingVertical: 12,
         paddingHorizontal: 10,
         borderWidth: 0,
-        margin: 5,
         backgroundColor: 'transparent',
         color: (darkMode() ? Colors.darkMode_basic : Colors.basic),
         paddingRight: 30,

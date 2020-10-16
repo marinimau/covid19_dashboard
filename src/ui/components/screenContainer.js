@@ -43,7 +43,7 @@ export default class ScreenContainer extends Component  {
             <Stack.Navigator>
                 <Stack.Screen
                     options={{
-                        headerStyle: [styles.header, styles.headerShadow, {borderBottomColor: 'transparent'}],
+                        headerStyle: [styles.header, styles.headerShadow],
                         headerTitleStyle: [styles.headerTitle],
                         headerLeft: dimensions < dimens.largeScreen ? ({}) => <HeaderLeft /> : null,
                         headerRight: ({}) => <HeaderRight /> ,

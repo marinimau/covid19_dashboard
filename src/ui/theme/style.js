@@ -53,7 +53,8 @@ export const styles = StyleSheet.create({
      */
     header: {
         backgroundColor: darkMode() ? Colors.darkMode_basicElevation : Colors.basicElevation,
-        borderBottomColor: 'transparent',
+        borderBottomColor: darkMode() ? Colors.darkMode_basicNotes : Colors.borders,
+        borderBottomWidth: 0.5,
     },
     headerTitle: {
         color: darkMode() ? Colors.darkMode_title : Colors.title,
@@ -215,7 +216,7 @@ export const styles = StyleSheet.create({
         paddingTop: 15,
         paddingBottom: 15,
         borderColor: 'transparent',
-        borderBottomColor: Colors.mainTransparent,
+        borderTopColor: darkMode() ? Colors.darkMode_basicNotes : Colors.borders,
         borderWidth: 0.5,
     },
 });

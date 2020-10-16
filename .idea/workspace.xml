@@ -19,10 +19,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="new dark and light interface">
-      <change afterPath="$PROJECT_DIR$/src/ui/components/header/headerSelectLocationButton.js" afterDir="false" />
+    <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="sistemati alcuni aspetti">
+      <change beforePath="$PROJECT_DIR$/.expo/packager-info.json" beforeDir="false" afterPath="$PROJECT_DIR$/.expo/packager-info.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/components/location_selector/locationSelector.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/location_selector/locationSelector.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/components/screenContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/screenContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/theme/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/theme/style.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web-build/register-service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/web-build/register-service-worker.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -73,7 +77,7 @@
       <recent name="$PROJECT_DIR$/src/ui/components/loading" />
     </key>
   </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -106,7 +110,6 @@
       <workItem from="1599219396522" duration="3585000" />
       <workItem from="1600333864033" duration="7058000" />
       <workItem from="1600690888513" duration="1413000" />
-      <workItem from="1602853504809" duration="7334000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1595078622516</created>
@@ -325,18 +328,18 @@
       <option name="project" value="LOCAL" />
       <updated>1600348243938</updated>
     </task>
-    <task id="LOCAL-00032" summary="new dark and light interface">
-      <created>1602860542819</created>
+    <task id="LOCAL-00032" summary="sistemati alcuni aspetti">
+      <created>1601648238373</created>
       <option name="number" value="00032" />
       <option name="presentableId" value="LOCAL-00032" />
       <option name="project" value="LOCAL" />
-      <updated>1602860542819</updated>
+      <updated>1601648238373</updated>
     </task>
     <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -375,8 +378,8 @@
     <MESSAGE value="fatta una correzione al location selector" />
     <MESSAGE value="finito di sistemare i dati" />
     <MESSAGE value="new splash icon" />
-    <MESSAGE value="new dark and light interface" />
-    <option name="LAST_COMMIT_MESSAGE" value="new dark and light interface" />
+    <MESSAGE value="sistemati alcuni aspetti" />
+    <option name="LAST_COMMIT_MESSAGE" value="sistemati alcuni aspetti" />
   </component>
   <component name="WindowStateProjectService">
     <state x="458" y="189" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1597228486721">
@@ -393,22 +396,22 @@
       <screen x="0" y="23" width="1440" height="820" />
     </state>
     <state x="558" y="338" key="Github.ShareDialog/0.23.1440.820@0.23.1440.820" timestamp="1595078313212" />
-    <state width="1544" height="387" key="GridCell.Tab.0.bottom" timestamp="1601895764008">
+    <state width="772" height="387" key="GridCell.Tab.0.bottom" timestamp="1596659298244">
       <screen x="0" y="23" width="2560" height="1352" />
     </state>
-    <state width="1544" height="387" key="GridCell.Tab.0.bottom/0.23.2560.1352@0.23.2560.1352" timestamp="1601895764008" />
-    <state width="1544" height="387" key="GridCell.Tab.0.center" timestamp="1601895764008">
+    <state width="772" height="387" key="GridCell.Tab.0.bottom/0.23.2560.1352@0.23.2560.1352" timestamp="1596659298244" />
+    <state width="772" height="387" key="GridCell.Tab.0.center" timestamp="1596659298241">
       <screen x="0" y="23" width="2560" height="1352" />
     </state>
-    <state width="1544" height="387" key="GridCell.Tab.0.center/0.23.2560.1352@0.23.2560.1352" timestamp="1601895764008" />
-    <state width="1544" height="387" key="GridCell.Tab.0.left" timestamp="1601895764007">
+    <state width="772" height="387" key="GridCell.Tab.0.center/0.23.2560.1352@0.23.2560.1352" timestamp="1596659298241" />
+    <state width="772" height="387" key="GridCell.Tab.0.left" timestamp="1596659298241">
       <screen x="0" y="23" width="2560" height="1352" />
     </state>
-    <state width="1544" height="387" key="GridCell.Tab.0.left/0.23.2560.1352@0.23.2560.1352" timestamp="1601895764007" />
-    <state width="1544" height="387" key="GridCell.Tab.0.right" timestamp="1601895764008">
+    <state width="772" height="387" key="GridCell.Tab.0.left/0.23.2560.1352@0.23.2560.1352" timestamp="1596659298241" />
+    <state width="772" height="387" key="GridCell.Tab.0.right" timestamp="1596659298241">
       <screen x="0" y="23" width="2560" height="1352" />
     </state>
-    <state width="1544" height="387" key="GridCell.Tab.0.right/0.23.2560.1352@0.23.2560.1352" timestamp="1601895764008" />
+    <state width="772" height="387" key="GridCell.Tab.0.right/0.23.2560.1352@0.23.2560.1352" timestamp="1596659298241" />
     <state x="308" y="179" key="IDE.errors.dialog" timestamp="1599567119457">
       <screen x="0" y="25" width="1440" height="814" />
     </state>
@@ -426,22 +429,18 @@
     </state>
     <state x="513" y="408" key="RollbackChangesDialog/0.23.2560.1352@0.23.2560.1352" timestamp="1596652988315" />
     <state x="289" y="257" key="RollbackChangesDialog/0.25.1440.814@0.25.1440.814" timestamp="1598353034384" />
-    <state x="569" y="272" key="Vcs.Push.Dialog.v2" timestamp="1602860545045">
-      <screen x="0" y="23" width="2560" height="1352" />
+    <state x="320" y="175" key="Vcs.Push.Dialog.v2" timestamp="1601648240966">
+      <screen x="0" y="25" width="1440" height="814" />
     </state>
     <state x="320" y="174" key="Vcs.Push.Dialog.v2/0.23.1440.820@0.23.1440.820" timestamp="1595152527908" />
-    <state x="569" y="272" key="Vcs.Push.Dialog.v2/0.23.2560.1352@0.23.2560.1352" timestamp="1602860545045" />
-    <state x="320" y="175" key="Vcs.Push.Dialog.v2/0.25.1440.814@0.25.1440.814" timestamp="1600348245194" />
+    <state x="569" y="272" key="Vcs.Push.Dialog.v2/0.23.2560.1352@0.23.2560.1352" timestamp="1596659073623" />
+    <state x="320" y="175" key="Vcs.Push.Dialog.v2/0.25.1440.814@0.25.1440.814" timestamp="1601648240966" />
     <state x="569" y="275" key="Vcs.Push.Dialog.v2/0.25.2560.1354@0.25.2560.1354" timestamp="1600341272830" />
     <state x="321" y="384" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598353043672">
       <screen x="0" y="25" width="1440" height="814" />
     </state>
     <state x="571" y="619" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.2560.1352@0.23.2560.1352" timestamp="1596787487282" />
     <state x="321" y="384" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.25.1440.814@0.25.1440.814" timestamp="1598353043672" />
-    <state x="443" y="494" key="git4idea.merge.GitPullDialog" timestamp="1602853513022">
-      <screen x="0" y="23" width="2560" height="1352" />
-    </state>
-    <state x="443" y="494" key="git4idea.merge.GitPullDialog/0.23.2560.1352@0.23.2560.1352" timestamp="1602853513022" />
     <state x="385" y="167" width="670" height="676" key="search.everywhere.popup" timestamp="1595150088481">
       <screen x="0" y="23" width="1440" height="820" />
     </state>
