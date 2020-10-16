@@ -5,7 +5,7 @@
  * Location: Baratili San Pietro
  */
 
-import {Dimensions, Platform} from "react-native";
+import {Dimensions} from "react-native";
 import React, {Component} from "react";
 import {createStackNavigator} from "@react-navigation/stack";
 import {dimens} from "../theme/dimens";
@@ -14,6 +14,7 @@ import {styles} from "../theme/style";
 import {RegionList} from "../contents/locationsList";
 import SelectedLocation from "../../logic/selectedLocation";
 import {EventRegister} from "react-native-event-listeners";
+import HeaderRight from "./header/headerSelectLocationButton";
 
 const Stack = createStackNavigator();
 const dimensions = Dimensions.get('window').width;
@@ -45,6 +46,7 @@ export default class ScreenContainer extends Component  {
                         headerStyle: [styles.header, styles.headerShadow, {borderBottomColor: 'transparent'}],
                         headerTitleStyle: [styles.headerTitle],
                         headerLeft: dimensions < dimens.largeScreen ? ({}) => <HeaderLeft /> : null,
+                        headerRight: ({}) => <HeaderRight /> ,
                         animationEnabled: false,
                         title: this.props.title + ' > ' + this.state.location
                     }}
