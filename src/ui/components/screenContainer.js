@@ -46,7 +46,6 @@ export default class ScreenContainer extends Component  {
                         headerStyle: [styles.header, styles.headerShadow],
                         headerTitleStyle: [styles.headerTitle],
                         headerLeft: dimensions < dimens.largeScreen ? ({}) => <HeaderLeft /> : null,
-                        headerRight: ({}) => <HeaderRight /> ,
                         animationEnabled: false,
                         title: this.props.title + ' > ' + this.state.location
                     }}
