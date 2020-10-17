@@ -23,7 +23,7 @@ A cross-platform (Android, iOS, Web) dashboard to represent the trend of the Cov
 
 ## Issues
 
-* Transparent text in select region picker when runned on web from iOS
+* Transparent text in select region picker when runned on web from iOS - it depends from library, we have found the solution but it requires to edit the library code after "npm install";
 * Sometimes the line chart background is black on Safari or there isn't line shadow on Firefox
 
 ## Instructions
