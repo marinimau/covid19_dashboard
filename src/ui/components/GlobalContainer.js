@@ -75,7 +75,7 @@ export default class GlobalContainer extends PureComponent {
                         drawerStyle={isLargeScreen ? [{width: dimens.drawerWidth, borderRightColor: colorScheme === 'dark' ? Colors.darkMode_basicTransparent : Colors.basicTransparent,
                             backgroundColor: colorScheme === 'dark' ? Colors.darkMode_basicElevation : Colors.basicElevation}]
                             : [{width: dimens.drawerWidth, backgroundColor: colorScheme === 'dark' ? Colors.darkMode_basicElevation : Colors.basicElevation}]}
-                        overlayColor={isLargeScreen ? "transparent" : Colors.basicTransparent}>
+                        overlayColor={isLargeScreen ? "transparent" : Colors.navigationOverlay}>
 
                         <Drawer.Screen name={screenTitles.latestUpdateResume}
                                        component={LatestUpdateResumeScreen}/>

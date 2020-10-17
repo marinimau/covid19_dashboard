@@ -40,7 +40,7 @@ export default class ScreenContainer extends Component  {
 
     render() {
         return (
-            <Stack.Navigator>
+            <Stack.Navigator mode={"modal"}>
                 <Stack.Screen
                     options={{
                         headerStyle: [styles.header, styles.headerShadow],

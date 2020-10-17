@@ -24,6 +24,7 @@ const Colors = {
     accent3: '#14EBFF',
     axis: '#E4E4E4',
     bars: '#1479FF',
+    navigationOverlay: 'rgba(0,0,0,0.1)',
     drawerSelectedText: '#1C1C1E',
     drawerSelectedBackground: 'rgba(25,59,104,0.1)',
     /** DARK MODE **/

@@ -55,6 +55,9 @@ export const styles = StyleSheet.create({
         backgroundColor: darkMode() ? Colors.darkMode_basicElevation : Colors.basicElevation,
         borderBottomColor: darkMode() ? Colors.darkMode_basicNotes : Colors.borders,
         borderBottomWidth: 0.5,
+        position: 'fixed',
+        top: 0,
+        left: 0,
     },
     headerTitle: {
         color: darkMode() ? Colors.darkMode_title : Colors.title,
@@ -207,7 +210,7 @@ export const styles = StyleSheet.create({
      */
     notesContainer: {
         bottom: 0,
-        position:'absolute',
+        position:'fixed',
         justifyContent: 'center',
         alignItems: 'center',
         width: '100%',
