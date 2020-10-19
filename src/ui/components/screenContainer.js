@@ -14,7 +14,6 @@ import {styles} from "../theme/style";
 import {RegionList} from "../contents/locationsList";
 import SelectedLocation from "../../logic/selectedLocation";
 import {EventRegister} from "react-native-event-listeners";
-import HeaderRight from "./header/headerSelectLocationButton";
 
 const Stack = createStackNavigator();
 const dimensions = Dimensions.get('window').width;

@@ -5,7 +5,7 @@
  * Location: Baratili San Pietro
  */
 
-import {StyleSheet} from "react-native";
+import {StyleSheet, Platform} from "react-native";
 import Colors from "./colors";
 import LegendColors from "./legendColors"
 import {dynamicDimens} from "./dimens";
@@ -55,7 +55,7 @@ export const styles = StyleSheet.create({
         backgroundColor: darkMode() ? Colors.darkMode_basicElevation : Colors.basicElevation,
         borderBottomColor: darkMode() ? Colors.darkMode_basicNotes : Colors.borders,
         borderBottomWidth: 0.5,
-        position: 'fixed',
+        position: Platform.OS === 'android' ? 'absolute': 'fixed',
         top: 0,
         left: 0,
     },
@@ -210,7 +210,7 @@ export const styles = StyleSheet.create({
      */
     notesContainer: {
         bottom: 0,
-        position:'fixed',
+        position: Platform.OS === 'android' ? 'absolute': 'fixed',
         justifyContent: 'center',
         alignItems: 'center',
         width: '100%',

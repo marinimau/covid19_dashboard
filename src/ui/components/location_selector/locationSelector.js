@@ -39,7 +39,8 @@ class LocationSelector extends Component {
                     }}
                     doneText={uiButtons.done}
                     style={pickerSelectStyles}
-                    useNativeAndroidPickerStyle={true}
+                    fixAndroidTouchableBug={true}
+                    useNativeAndroidPickerStyle={false}
                 />
             </View>
         );

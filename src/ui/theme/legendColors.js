@@ -7,15 +7,10 @@
 import darkMode from "./darkModeDetector";
 
 let LegendColors = {
-    lightgreen: '#64DD17',
-    green: '#30d158',
-    lightyellow: '#ffb700',
+    green: darkMode() ? '#30d158' : '#34c759',
     yellow: darkMode() ? '#ffd60a' : '#ffcc00',
-    lightred: '#DD2C00',
     red: darkMode() ? '#ff453a' : '#ff3a30',
-    lightgrey: '#455A64',
-    grey: '#616161',
-    lightblue: '#00B8D4',
+    grey: darkMode() ? '#767676' : '#616161',
     blue: darkMode() ? '#0a84ff' : '#007bff',
 }
 
