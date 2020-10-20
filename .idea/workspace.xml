@@ -19,14 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="sistemato bug etichette assenti su ios">
-      <change beforePath="$PROJECT_DIR$/.expo/packager-info.json" beforeDir="false" afterPath="$PROJECT_DIR$/.expo/packager-info.json" afterDir="false" />
+    <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="risolto bug cursore sul web">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data_representation/charts/lineChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_representation/charts/lineChart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data_representation/charts/lineChartDecorator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_representation/charts/lineChartDecorator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/components/GlobalContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/GlobalContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.MD" beforeDir="false" afterPath="$PROJECT_DIR$/README.MD" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/components/location_selector/locationSelector.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/location_selector/locationSelector.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/theme/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/theme/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-build/register-service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/web-build/register-service-worker.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -349,7 +346,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602872642282</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="risolto bug cursore sul web">
+      <created>1603214269776</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1603214269776</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -368,7 +372,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="screens sistemati, header e menu funzionante in tutti" />
     <MESSAGE value="data retrieving funzionante" />
     <MESSAGE value="aggiunto il loader" />
     <MESSAGE value="iniziato a organizzare i grafici" />
@@ -393,7 +396,8 @@
     <MESSAGE value="new splash icon" />
     <MESSAGE value="sistemati alcuni aspetti" />
     <MESSAGE value="sistemato bug etichette assenti su ios" />
-    <option name="LAST_COMMIT_MESSAGE" value="sistemato bug etichette assenti su ios" />
+    <MESSAGE value="risolto bug cursore sul web" />
+    <option name="LAST_COMMIT_MESSAGE" value="risolto bug cursore sul web" />
   </component>
   <component name="WindowStateProjectService">
     <state x="458" y="189" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1597228486721">
@@ -443,12 +447,12 @@
     </state>
     <state x="513" y="408" key="RollbackChangesDialog/0.23.2560.1352@0.23.2560.1352" timestamp="1596652988315" />
     <state x="289" y="257" key="RollbackChangesDialog/0.25.1440.814@0.25.1440.814" timestamp="1598353034384" />
-    <state x="320" y="175" key="Vcs.Push.Dialog.v2" timestamp="1602872644027">
+    <state x="320" y="175" key="Vcs.Push.Dialog.v2" timestamp="1603214271942">
       <screen x="0" y="25" width="1440" height="814" />
     </state>
     <state x="320" y="174" key="Vcs.Push.Dialog.v2/0.23.1440.820@0.23.1440.820" timestamp="1595152527908" />
     <state x="569" y="272" key="Vcs.Push.Dialog.v2/0.23.2560.1352@0.23.2560.1352" timestamp="1596659073623" />
-    <state x="320" y="175" key="Vcs.Push.Dialog.v2/0.25.1440.814@0.25.1440.814" timestamp="1602872644027" />
+    <state x="320" y="175" key="Vcs.Push.Dialog.v2/0.25.1440.814@0.25.1440.814" timestamp="1603214271942" />
     <state x="569" y="275" key="Vcs.Push.Dialog.v2/0.25.2560.1354@0.25.2560.1354" timestamp="1600341272830" />
     <state x="321" y="384" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598353043672">
       <screen x="0" y="25" width="1440" height="814" />

@@ -40,13 +40,9 @@ After installing it's common to see:
 
 when you try to run expo-cli.
 
-To avoid this problem launch these two commands:
+To avoid this problem justvlaunch this command:
 
 ```export PATH=$PATH:~/.npm-global/bin```
-
-and then:
-
-```source ~/.bash_profile```
 
 
 #### 2. Launch expo-cli
@@ -57,7 +53,7 @@ Simply go to the project path and write:
 
 and after
 
-```npm start```
+```expo start```
 
 The Metro Bundler web page should appear in seconds.
 

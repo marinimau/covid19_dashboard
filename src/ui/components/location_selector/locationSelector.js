@@ -51,7 +51,7 @@ const pickerSelectStyles = StyleSheet.create({
     inputWeb: {
         fontSize: 16,
         borderWidth: 0,
-        backgroundColor: darkMode() ? Colors.darkMode_basicElevation :Colors.basicElevation,
+        backgroundColor: darkMode() ? 'transparent' :Colors.basicElevation,
         fontFamily: SYSTEM_FONT_STACK,
         color: (darkMode() ? Colors.darkMode_basic : Colors.basic),
     },
