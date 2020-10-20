@@ -8,8 +8,7 @@
 import {Circle, Line, Svg, Text as TextSVG} from "react-native-svg";
 import darkMode from "../../ui/theme/darkModeDetector";
 import Colors from "../../ui/theme/colors";
-import {View, Dimensions} from "react-native";
-import React, {Component} from "react";
+import React, {Component, Fragment} from "react";
 
 
 class LineChartDecorator extends Component{
@@ -20,7 +19,7 @@ class LineChartDecorator extends Component{
 
     render() {
         return (
-            <View style={{zIndex: 999}}>
+            <Fragment key={Math.random()}>
                 <Svg>
                     <Line
                         x1={this.props.x}
@@ -35,8 +34,8 @@ class LineChartDecorator extends Component{
                         r="5"
                         fill={this.props.color}/>
                     <TextSVG
-                        x={this.props.x - 20}
-                        y={this.props.y - 5}
+                        x={this.props.x}
+                        y={10}
                         fill={(darkMode() ? Colors.darkMode_basic : Colors.basic)}
                         fontSize="14"
                         fontWeight="bold"
@@ -44,7 +43,7 @@ class LineChartDecorator extends Component{
                         {this.props.value.toLocaleString('it')}
                     </TextSVG>
                 </Svg>
-            </View>
+            </Fragment>
         );
     }
 }

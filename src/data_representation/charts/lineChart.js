@@ -147,9 +147,9 @@ export default class MyLineChart extends PureComponent {
                         color: (opacity = 1) => `rgba(${colorRGB.r}, ${colorRGB.g}, ${colorRGB.b}, ${darkMode() ? opacity * 3 : opacity * 3})`,
                         labelColor: (opacity = 1) => (darkMode() ? Colors.darkMode_basic : Colors.basic),
                         propsForDots: {
-                            r: "0",
+                            r: "1",
                             strokeWidth: "0",
-                            stroke: Colors.basicElevation
+                            stroke: this.props.color
                         },
                         propsForBackgroundLines: {
                             stroke: darkMode() ? Colors.darkMode_basicTransparent : Colors.basicTransparent,

@@ -55,7 +55,7 @@ export const styles = StyleSheet.create({
         backgroundColor: darkMode() ? Colors.darkMode_basicElevation : Colors.basicElevation,
         borderBottomColor: darkMode() ? Colors.darkMode_basicNotes : Colors.borders,
         borderBottomWidth: 0.5,
-        position: Platform.OS === 'android' ? 'absolute': 'fixed',
+        position:  Platform.OS === 'web' ? 'fixed': 'absolute',
         top: 0,
         left: 0,
     },
@@ -210,9 +210,9 @@ export const styles = StyleSheet.create({
      */
     notesContainer: {
         bottom: 0,
-        position: Platform.OS === 'android' ? 'absolute': 'fixed',
-        justifyContent: 'center',
-        alignItems: 'center',
+        position: Platform.OS === 'web' ? 'fixed': 'absolute',
+        justifyContent: Platform.OS === 'web' ? 'left': 'center',
+        alignItems: Platform.OS === 'web' ? 'left': 'center',
         width: '100%',
         height: 'auto',
         backgroundColor: darkMode() ? Colors.darkMode_basicElevation : Colors.basic,
