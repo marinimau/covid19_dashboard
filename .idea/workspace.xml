@@ -20,9 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="risolto bug cursore sul web">
+      <change beforePath="$PROJECT_DIR$/.expo/packager-info.json" beforeDir="false" afterPath="$PROJECT_DIR$/.expo/packager-info.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.MD" beforeDir="false" afterPath="$PROJECT_DIR$/README.MD" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/components/location_selector/locationSelector.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/location_selector/locationSelector.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_representation/charts/lineChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_representation/charts/lineChart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_representation/charts/lineChartDecorator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_representation/charts/lineChartDecorator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/retrieveTimeLabels.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/retrieveTimeLabels.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web-build/register-service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/web-build/register-service-worker.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -107,6 +109,7 @@
       <workItem from="1600333864033" duration="7058000" />
       <workItem from="1600690888513" duration="1413000" />
       <workItem from="1602948909750" duration="1103000" />
+      <workItem from="1603472173046" duration="1891000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1595078622516</created>
@@ -353,7 +356,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603214269776</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="risolto bug cursore sul web">
+      <created>1603214802125</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1603214802125</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -414,22 +424,26 @@
       <screen x="0" y="23" width="1440" height="820" />
     </state>
     <state x="558" y="338" key="Github.ShareDialog/0.23.1440.820@0.23.1440.820" timestamp="1595078313212" />
-    <state width="772" height="387" key="GridCell.Tab.0.bottom" timestamp="1596659298244">
-      <screen x="0" y="23" width="2560" height="1352" />
+    <state width="1419" height="208" key="GridCell.Tab.0.bottom" timestamp="1603446676155">
+      <screen x="0" y="25" width="1440" height="814" />
     </state>
     <state width="772" height="387" key="GridCell.Tab.0.bottom/0.23.2560.1352@0.23.2560.1352" timestamp="1596659298244" />
-    <state width="772" height="387" key="GridCell.Tab.0.center" timestamp="1596659298241">
-      <screen x="0" y="23" width="2560" height="1352" />
+    <state width="1419" height="208" key="GridCell.Tab.0.bottom/0.25.1440.814@0.25.1440.814" timestamp="1603446676155" />
+    <state width="1419" height="208" key="GridCell.Tab.0.center" timestamp="1603446676155">
+      <screen x="0" y="25" width="1440" height="814" />
     </state>
     <state width="772" height="387" key="GridCell.Tab.0.center/0.23.2560.1352@0.23.2560.1352" timestamp="1596659298241" />
-    <state width="772" height="387" key="GridCell.Tab.0.left" timestamp="1596659298241">
-      <screen x="0" y="23" width="2560" height="1352" />
+    <state width="1419" height="208" key="GridCell.Tab.0.center/0.25.1440.814@0.25.1440.814" timestamp="1603446676155" />
+    <state width="1419" height="208" key="GridCell.Tab.0.left" timestamp="1603446676154">
+      <screen x="0" y="25" width="1440" height="814" />
     </state>
     <state width="772" height="387" key="GridCell.Tab.0.left/0.23.2560.1352@0.23.2560.1352" timestamp="1596659298241" />
-    <state width="772" height="387" key="GridCell.Tab.0.right" timestamp="1596659298241">
-      <screen x="0" y="23" width="2560" height="1352" />
+    <state width="1419" height="208" key="GridCell.Tab.0.left/0.25.1440.814@0.25.1440.814" timestamp="1603446676154" />
+    <state width="1419" height="208" key="GridCell.Tab.0.right" timestamp="1603446676155">
+      <screen x="0" y="25" width="1440" height="814" />
     </state>
     <state width="772" height="387" key="GridCell.Tab.0.right/0.23.2560.1352@0.23.2560.1352" timestamp="1596659298241" />
+    <state width="1419" height="208" key="GridCell.Tab.0.right/0.25.1440.814@0.25.1440.814" timestamp="1603446676155" />
     <state x="308" y="179" key="IDE.errors.dialog" timestamp="1599567119457">
       <screen x="0" y="25" width="1440" height="814" />
     </state>
@@ -447,18 +461,19 @@
     </state>
     <state x="513" y="408" key="RollbackChangesDialog/0.23.2560.1352@0.23.2560.1352" timestamp="1596652988315" />
     <state x="289" y="257" key="RollbackChangesDialog/0.25.1440.814@0.25.1440.814" timestamp="1598353034384" />
-    <state x="320" y="175" key="Vcs.Push.Dialog.v2" timestamp="1603214271942">
+    <state x="320" y="175" key="Vcs.Push.Dialog.v2" timestamp="1603214803764">
       <screen x="0" y="25" width="1440" height="814" />
     </state>
     <state x="320" y="174" key="Vcs.Push.Dialog.v2/0.23.1440.820@0.23.1440.820" timestamp="1595152527908" />
     <state x="569" y="272" key="Vcs.Push.Dialog.v2/0.23.2560.1352@0.23.2560.1352" timestamp="1596659073623" />
-    <state x="320" y="175" key="Vcs.Push.Dialog.v2/0.25.1440.814@0.25.1440.814" timestamp="1603214271942" />
+    <state x="320" y="175" key="Vcs.Push.Dialog.v2/0.25.1440.814@0.25.1440.814" timestamp="1603214803764" />
     <state x="569" y="275" key="Vcs.Push.Dialog.v2/0.25.2560.1354@0.25.2560.1354" timestamp="1600341272830" />
-    <state x="321" y="384" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598353043672">
-      <screen x="0" y="25" width="1440" height="814" />
+    <state x="321" y="385" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603472223080">
+      <screen x="0" y="25" width="1440" height="816" />
     </state>
     <state x="571" y="619" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.2560.1352@0.23.2560.1352" timestamp="1596787487282" />
     <state x="321" y="384" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.25.1440.814@0.25.1440.814" timestamp="1598353043672" />
+    <state x="321" y="385" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.25.1440.816@0.25.1440.816" timestamp="1603472223080" />
     <state x="385" y="167" width="670" height="676" key="search.everywhere.popup" timestamp="1595150088481">
       <screen x="0" y="23" width="1440" height="820" />
     </state>

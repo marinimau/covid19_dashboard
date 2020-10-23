@@ -28,6 +28,7 @@ export default class MyLineChart extends PureComponent {
             _1M: false,
             _MAX: false,
             data: {
+                completeDate: DateLabels(7).dateLabelsComplete,
                 labels: DateLabels(7).dateLabels,
                 datasets: [
                     {
@@ -41,6 +42,7 @@ export default class MyLineChart extends PureComponent {
             location: RegionList[SelectedLocation.getLocation()].label,
             visible: false,
             value: 0,
+            selectedDate: 0
         };
     }
 
@@ -53,6 +55,7 @@ export default class MyLineChart extends PureComponent {
                 if (this.state.filter === -1) {
                     this.setState({
                         data: {
+                            completeDate: DateLabels(this.state.filter).dateLabelsComplete,
                             labels: DateLabels(this.state.filter).dateLabels,
                             datasets: [
                                 {
@@ -64,6 +67,7 @@ export default class MyLineChart extends PureComponent {
                 } else {
                     this.setState({
                             data: {
+                                completeDate: DateLabels(this.state.filter).dateLabelsComplete,
                                 labels: DateLabels(this.state.filter).dateLabels,
                                 datasets: [
                                     {
@@ -94,6 +98,7 @@ export default class MyLineChart extends PureComponent {
         console.log('premuto un punto');
         return this.state.visible ?
             <LineChartDecorator color={this.props.color} x={this.state.x} y={this.state.y}
+                                selectedDate={this.state.selectedDate}
                                 value={this.state.value}/> : null
     }
 
@@ -169,9 +174,9 @@ export default class MyLineChart extends PureComponent {
                             && this.state.y === data.y);
 
                         isSamePoint ?
-                            this.setState({x: data.x, value: data.value, y: data.y, visible: !this.state.visible})
+                            this.setState({x: data.x, value: data.value, selectedDate: this.state.data.completeDate[data.index], y: data.y, visible: !this.state.visible})
                             :
-                            this.setState({x: data.x, value: data.value, y: data.y, visible: true});
+                            this.setState({x: data.x, value: data.value, selectedDate: this.state.data.completeDate[data.index], y: data.y, visible: true});
 
                     }}
                 />

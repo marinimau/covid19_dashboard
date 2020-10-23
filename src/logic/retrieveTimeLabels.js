@@ -18,6 +18,7 @@ import {lineChartNumLabels} from "../ui/contents/params";
 
 let dataToReturn = {
     dateLabels: [],
+    dateLabelsComplete: [],
 };
 
 const DateLabels = (range) => {
@@ -28,6 +29,7 @@ const DateLabels = (range) => {
     if(data !== null){
 
         dataToReturn.dateLabels = [];
+        dataToReturn.dateLabelsComplete = [];
 
         if( dataToReturn){
             let start = range === -1 || range === undefined ? 1 : data.length - range;
@@ -35,6 +37,9 @@ const DateLabels = (range) => {
             for (let i = start; i < data.length; i+=incr){
                 i = Math.round(i)
                 dataToReturn.dateLabels.push(dateToString(data[i]['data']));
+            }
+            for (let i = start; i < data.length; i++){
+                dataToReturn.dateLabelsComplete.push(dateToString(data[i]['data']));
             }
         }
 
