@@ -40,7 +40,7 @@ class LineChartDecorator extends Component{
                         fontSize="14"
                         fontWeight="bold"
                         textAnchor="middle">
-                        {this.props.selectedDate + ' - ' + this.props.value.toLocaleString('it')}
+                        {this.props.value === null ? 'N/D' : this.props.selectedDate + ' - ' + this.props.value.toLocaleString('it')}
                     </TextSVG>
                 </Svg>
             </Fragment>
