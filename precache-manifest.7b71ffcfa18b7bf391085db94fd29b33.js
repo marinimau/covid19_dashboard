@@ -1,7 +1,7 @@
 self.__precacheManifest = [
   {
-    "revision": "978341fd904e0cef8614",
-    "url": "/covid19_dashboard/static/js/app.24640c21.chunk.js"
+    "revision": "f4c80762b7de740296c5",
+    "url": "/covid19_dashboard/static/js/app.75fba6b6.chunk.js"
   },
   {
     "revision": "333d08dae729b820fa78",
@@ -64,7 +64,7 @@ self.__precacheManifest = [
     "url": "/covid19_dashboard/expo-service-worker.js"
   },
   {
-    "revision": "e100d97d03c88447790c909a9c773baf",
+    "revision": "ebc53b029b43488048302607a88dc151",
     "url": "/covid19_dashboard/index.html"
   },
   {
