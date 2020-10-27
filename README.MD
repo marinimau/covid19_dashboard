@@ -8,6 +8,10 @@ A cross-platform (Android, iOS, Web) dashboard to represent the trend of the Cov
 
 [https://marinimau.github.io/covid19_dashboard/](https://marinimau.github.io/covid19_dashboard/)
 
+## Screenshot
+
+![light/dark swap screen](./screenshot/2.png)
+
 ## Video (PWA on iPad 2019, Safari, iOS 14 and dark mode)
 
 [https://youtu.be/71gJnXslZbk](https://youtu.be/71gJnXslZbk)
