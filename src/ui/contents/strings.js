@@ -55,6 +55,7 @@ export const chartTitles = {
     positiveRepartitionAbsolute: 'Ripartizione attualmente positivi nel tempo (valore assoluto)',
     positiveRepartitionPercentage: 'Ripartizione attualmente positivi nel tempo (percentuale)',
     positiveCasesAreaPercentage: 'Percentuale sul totale nazionale',
+    criticalTrendAbsolute: 'Andamento terapie intensive',
     recovered: 'Guariti',
     recoveredPercentage: 'Percentuale guariti',
     recoveredPercentageDescription: 'Percentuale pazienti guariti rispetto ai casi totali',
@@ -122,6 +123,7 @@ export const dataDescription = {
         'ricoverati con sintomi (esclusi i ricoverati in terapia intensiva); ricoverati in terapia intensiva (si riporta il valore assoluto).',
     positiveRepartition: 'Ripartizione dei positivi correnti nel corso del tempo in 3 categorie: isolamento domiciliare; '+
         'ricoverati con sintomi (esclusi i ricoverati in terapia intensiva); ricoverati in terapia intensiva (si riportano i valori in percentuale al totale dei positivi).',
+    criticalTrendAbsolute: 'Andamento del numero di ricoverati in terapia intensiva',
     positiveRegionTable: 'Attualmente positivi',
     positiveCasesAreaPercentage: 'Percentuale dei positivi attuali nell\'area selezionata rispetto al totale nazionale',
     swapTrend: 'Andamento del valore totale di tamponi eseguiti',

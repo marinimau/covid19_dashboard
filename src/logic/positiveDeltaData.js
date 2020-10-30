@@ -29,11 +29,13 @@ let dataToReturn = {
     criticalPercentage: 0,
     criticalVariation: 0,
     criticalVariationPercentage: 0,
+    criticalTrendAbsolute: [],
 };
 
 export function cleanData() {
     dataToReturn.deltaTrendAbsolute = [];
     dataToReturn.deltaTrendDayVariation = [];
+    dataToReturn.criticalTrendAbsolute = [];
 }
 
 const PositiveDeltaData = (data) => {
@@ -70,6 +72,7 @@ const PositiveDeltaData = (data) => {
             for (let i=1; i< data.length; i+=1){
                 dataToReturn.deltaTrendAbsolute.push(data[i]['totale_positivi']);
                 dataToReturn.deltaTrendDayVariation.push(data[i]['totale_positivi']-data[i-1]['totale_positivi']);
+                dataToReturn.criticalTrendAbsolute.push(data[i]['terapia_intensiva']);
             }
         }
 

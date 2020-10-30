@@ -65,6 +65,12 @@ class CurrentPositiveComponent extends Component {
 
                     <CardCritical />
 
+                    <LineChartCard
+                        title={chartTitles.criticalTrendAbsolute}
+                        color={this.state.color}
+                        data={this.state.data.criticalTrendAbsolute}
+                        description={dataDescription.criticalTrendAbsolute} />
+
                     <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
                         <Text style={styles.chartTitle}>{chartTitles.positiveRepartitionAbsolute}</Text>
                         <StackedAreaChart
