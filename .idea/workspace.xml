@@ -19,13 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="risolto bug cursore con dati mancanti">
+    <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="modificati 2 grafici">
       <change beforePath="$PROJECT_DIR$/.expo/packager-info.json" beforeDir="false" afterPath="$PROJECT_DIR$/.expo/packager-info.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/deathData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/deathData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/recoveredData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/recoveredData.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/contents/strings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/contents/strings.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-build/register-service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/web-build/register-service-worker.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +108,8 @@
       <workItem from="1602948909750" duration="1103000" />
       <workItem from="1603472173046" duration="3826000" />
       <workItem from="1604076725329" duration="1122000" />
-      <workItem from="1604252827230" duration="709000" />
+      <workItem from="1604252827230" duration="1078000" />
+      <workItem from="1604306378256" duration="479000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1595078622516</created>
@@ -386,7 +384,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604077243919</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="modificati 2 grafici">
+      <created>1604253550861</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1604253550861</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -405,7 +410,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="aggiunto il loader" />
     <MESSAGE value="iniziato a organizzare i grafici" />
     <MESSAGE value="sistemata UI" />
     <MESSAGE value="adattato il grafico e inserita stackedAreaChart.js anche per la ripartizione dei casi totali" />
@@ -430,7 +434,8 @@
     <MESSAGE value="sistemato bug etichette assenti su ios" />
     <MESSAGE value="risolto bug cursore sul web" />
     <MESSAGE value="risolto bug cursore con dati mancanti" />
-    <option name="LAST_COMMIT_MESSAGE" value="risolto bug cursore con dati mancanti" />
+    <MESSAGE value="modificati 2 grafici" />
+    <option name="LAST_COMMIT_MESSAGE" value="modificati 2 grafici" />
   </component>
   <component name="WindowStateProjectService">
     <state x="458" y="189" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1597228486721">
@@ -475,12 +480,12 @@
     </state>
     <state x="513" y="408" key="RollbackChangesDialog/0.23.2560.1352@0.23.2560.1352" timestamp="1596652988315" />
     <state x="289" y="257" key="RollbackChangesDialog/0.25.1440.814@0.25.1440.814" timestamp="1598353034384" />
-    <state x="320" y="175" key="Vcs.Push.Dialog.v2" timestamp="1604077247475">
+    <state x="320" y="175" key="Vcs.Push.Dialog.v2" timestamp="1604253552989">
       <screen x="0" y="25" width="1440" height="816" />
     </state>
     <state x="569" y="272" key="Vcs.Push.Dialog.v2/0.23.2560.1352@0.23.2560.1352" timestamp="1596659073623" />
     <state x="320" y="175" key="Vcs.Push.Dialog.v2/0.25.1440.814@0.25.1440.814" timestamp="1603214803764" />
-    <state x="320" y="175" key="Vcs.Push.Dialog.v2/0.25.1440.816@0.25.1440.816" timestamp="1604077247475" />
+    <state x="320" y="175" key="Vcs.Push.Dialog.v2/0.25.1440.816@0.25.1440.816" timestamp="1604253552989" />
     <state x="569" y="275" key="Vcs.Push.Dialog.v2/0.25.2560.1354@0.25.2560.1354" timestamp="1600341272830" />
     <state x="321" y="385" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604076747300">
       <screen x="0" y="25" width="1440" height="816" />

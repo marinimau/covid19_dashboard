@@ -111,16 +111,15 @@ export const dataDescription = {
     totalCasesPercentage: 'Percentuale dei casi nell\'area selezionata rispetto al totale nazionale',
     recoveredTotal: 'Andamento del valore totale dei guariti nel corso del tempo',
     recoveredVariation: 'Andamento della variazione giornaliera (incremento) dei guariti nel corso del tempo',
-    recoveredTrendProportional: 'Andamento della variazione giornaliera (incremento) dei guariti normalizzata sul numero dei ' +
-        'positivi correnti. ',
+    recoveredTrendProportional: 'Andamento della percentuale dei guariti (numero di guariti ogni cento casi)',
     diedTotal: 'Andamento del valore totale dei decessi nel corso del tempo',
     diedVariation: 'Andamento della variazione giornaliera (incremento) dei decessi nel corso del tempo',
-    diedTrendProportional: 'Andamento della variazione giornaliera (incremento) dei decessi normalizzata sul numero dei ' +
-        'positivi correnti. ',
+    diedTrendProportional: 'Andamento della mortalità (numero di decessi ogni 100 casi)',
     positiveTotal: 'Andamento del valore totale dei positivi attuali nel corso del tempo.',
     positiveVariation: 'Andamento della variazione giornaliera del numero di positivi correnti nel corso del tempo',
     positiveRepartitionAbsolute: 'Ripartizione dei positivi correnti nel corso del tempo in 3 categorie: isolamento domiciliare; '+
         'ricoverati con sintomi (esclusi i ricoverati in terapia intensiva); ricoverati in terapia intensiva (si riporta il valore assoluto).',
+    positiveRepartitionPercentage: 'Ripartizione dei positivi correnti nel corso del tempo in 3 categorie: isolamento domiciliare; ricoverati con sintomi (esclusi i ricoverati in terapia intensiva); ricoverati in terapia intensiva (si riporta il valore percentuale).',
     positiveRepartition: 'Ripartizione dei positivi correnti nel corso del tempo in 3 categorie: isolamento domiciliare; '+
         'ricoverati con sintomi (esclusi i ricoverati in terapia intensiva); ricoverati in terapia intensiva (si riportano i valori in percentuale al totale dei positivi).',
     criticalTrendAbsolute: 'Andamento del numero di ricoverati in terapia intensiva',
