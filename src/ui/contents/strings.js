@@ -8,7 +8,7 @@
 export const appInfo = {
     name: 'Covid19 Dashboard',
     version: '1.0.0 beta',
-    author: '@marinimau, @skambuilds',
+    author: '@marinimau',
     description: 'Covid-19 Italy è una dashboard realizzata dall\'Università degli Studi di Cagliari per il monitoraggio e la visualizzazione dei dati riguardanti la pandemia Covid-19 nel territorio italiano.'
 };
 
