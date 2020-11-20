@@ -44,7 +44,7 @@ After installing it's common to see:
 
 when you try to run expo-cli.
 
-To avoid this problem justvlaunch this command:
+To avoid this problem just launch this command:
 
 ```export PATH=$PATH:~/.npm-global/bin```
 
