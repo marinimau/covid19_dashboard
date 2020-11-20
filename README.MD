@@ -98,4 +98,3 @@ realtime updated.
 ## Authors
 
  * [Mauro Marini](https://github.com/marinimau)
- * [Alberto Pes](https://github.com/scambuilds)
