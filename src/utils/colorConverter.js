@@ -13,3 +13,8 @@ export function hexToRgb(hex) {
         b: parseInt(result[3], 16)
     } : null;
 }
+
+export function reduceOpacity(hex, points) {
+    let colorRGB = hexToRgb(hex)
+    return `rgba(${colorRGB.r}, ${colorRGB.g}, ${colorRGB.b}, ${1 - points * 0.1})`
+}

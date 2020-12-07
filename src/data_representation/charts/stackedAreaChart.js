@@ -69,7 +69,7 @@ class MyStackAreaChart extends React.PureComponent {
     render() {
 
         const colorRGB = hexToRgb(this.props.color);
-        const colors = [`rgba(${colorRGB.r}, ${colorRGB.g}, ${colorRGB.b}, 0.9)`, `rgba(${colorRGB.r}, ${colorRGB.g}, ${colorRGB.b}, 0.6)`, `rgba(${colorRGB.r}, ${colorRGB.g}, ${colorRGB.b}, 0.3)`]
+        const colors = this.props.colors === undefined ? [`rgba(${colorRGB.r}, ${colorRGB.g}, ${colorRGB.b}, 0.9)`, `rgba(${colorRGB.r}, ${colorRGB.g}, ${colorRGB.b}, 0.6)`, `rgba(${colorRGB.r}, ${colorRGB.g}, ${colorRGB.b}, 0.3)`] : this.props.colors
         const keys = this.props.keyValues
         const axesSvg = {fontSize: 12, fill: (darkMode() ? Colors.darkMode_basic : Colors.basic)};
         const gridSvg = {
@@ -151,16 +151,16 @@ class MyStackAreaChart extends React.PureComponent {
                 {/* Legend */}
                 <View style={styles.legendExternalContainer}>
                     <ChartColorLegend
-                        title={this.props.legend[0]}
-                        color={`rgba(${colorRGB.r}, ${colorRGB.g}, ${colorRGB.b}, 0.3)`}/>
+                        title={this.props.legend[2]}
+                        color={colors[0]}/>
 
                     <ChartColorLegend
                         title={this.props.legend[1]}
-                        color={`rgba(${colorRGB.r}, ${colorRGB.g}, ${colorRGB.b}, 0.6)`}/>
+                        color={colors[1]}/>
 
                     <ChartColorLegend
-                        title={this.props.legend[2]}
-                        color={`rgba(${colorRGB.r}, ${colorRGB.g}, ${colorRGB.b}, 0.9)`}/>
+                        title={this.props.legend[0]}
+                        color={colors[2]}/>
 
                 </View>
 

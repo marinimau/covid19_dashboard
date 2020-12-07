@@ -73,6 +73,7 @@ class NewCasesComponent extends Component {
                             <Text style={styles.chartTitle}>{chartTitles.totalCasesRepartionAbsolute}</Text>
                             <StackedAreaChart
                                 color={LegendColors.red}
+                                //colors={[LegendColors.grey, LegendColors.yellow, LegendColors.green]}
                                 keyValues={['death', 'current', 'recovered']}
                                 legend={[chartTitles.recovered, chartTitles.currentPositive, chartTitles.died]}
                                 data={TotalCasesRepartitionData().repartition}/>
@@ -83,6 +84,7 @@ class NewCasesComponent extends Component {
                             <Text style={styles.chartTitle}>{chartTitles.totalCasesRepartionPercentage}</Text>
                             <StackedAreaChart
                                 color={LegendColors.red}
+                                //colors={[LegendColors.grey, LegendColors.yellow, LegendColors.green]}
                                 keyValues={['death', 'current', 'recovered']}
                                 legend={[chartTitles.recovered, chartTitles.currentPositive, chartTitles.died]}
                                 data={TotalCasesRepartitionData().repartitionPercentage}/>
