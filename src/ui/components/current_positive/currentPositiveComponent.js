@@ -75,6 +75,7 @@ class CurrentPositiveComponent extends Component {
                         <Text style={styles.chartTitle}>{chartTitles.positiveRepartitionAbsolute}</Text>
                         <StackedAreaChart
                             color={LegendColors.yellow}
+                            colors={[LegendColors.purple, LegendColors.orange, LegendColors.teal]}
                             keyValues={['critical', 'hospitalized', 'homeQuarantine']}
                             legend={[chartTitles.positiveHomeQuarantine, chartTitles.hospitalizedWithSymptoms, chartTitles.critical]}
                             data={PositiveRepartitionData().repartitionAbsolute}/>
@@ -85,6 +86,7 @@ class CurrentPositiveComponent extends Component {
                         <Text style={styles.chartTitle}>{chartTitles.positiveRepartitionPercentage}</Text>
                         <StackedAreaChart
                             color={LegendColors.yellow}
+                            colors={[LegendColors.purple, LegendColors.orange, LegendColors.teal]}
                             keyValues={['critical', 'hospitalized', 'homeQuarantine']}
                             legend={[chartTitles.positiveHomeQuarantine, chartTitles.hospitalizedWithSymptoms, chartTitles.critical]}
                             data={PositiveRepartitionData().repartitionPercentage}/>

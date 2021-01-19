@@ -22,10 +22,9 @@
     <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="modificati 2 grafici">
       <change beforePath="$PROJECT_DIR$/.expo/packager-info.json" beforeDir="false" afterPath="$PROJECT_DIR$/.expo/packager-info.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data_representation/charts/stackedAreaChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_representation/charts/stackedAreaChart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/swabData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/swabData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/components/current_positive/currentPositiveComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/current_positive/currentPositiveComponent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/components/new_cases/newCasesComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/new_cases/newCasesComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/colorConverter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/colorConverter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/theme/legendColors.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/theme/legendColors.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web-build/register-service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/web-build/register-service-worker.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -114,7 +113,8 @@
       <workItem from="1604076725329" duration="1122000" />
       <workItem from="1604252827230" duration="1078000" />
       <workItem from="1604306378256" duration="479000" />
-      <workItem from="1607349494471" duration="818000" />
+      <workItem from="1607349494471" duration="1462000" />
+      <workItem from="1611048633161" duration="1021000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1595078622516</created>
@@ -396,7 +396,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604253550861</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="modificati 2 grafici">
+      <created>1607350439995</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1607350439995</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -443,60 +450,32 @@
     <option name="LAST_COMMIT_MESSAGE" value="modificati 2 grafici" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="458" y="189" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1597228486721">
-      <screen x="0" y="25" width="1440" height="814" />
-    </state>
-    <state x="814" y="295" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.2560.1352@0.23.2560.1352" timestamp="1596474192548" />
-    <state x="458" y="189" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.25.1440.814@0.25.1440.814" timestamp="1597228486721" />
     <state width="1419" height="208" key="GridCell.Tab.0.bottom" timestamp="1603446676155">
       <screen x="0" y="25" width="1440" height="814" />
     </state>
-    <state width="772" height="387" key="GridCell.Tab.0.bottom/0.23.2560.1352@0.23.2560.1352" timestamp="1596659298244" />
     <state width="1419" height="208" key="GridCell.Tab.0.bottom/0.25.1440.814@0.25.1440.814" timestamp="1603446676155" />
     <state width="1419" height="208" key="GridCell.Tab.0.center" timestamp="1603446676155">
       <screen x="0" y="25" width="1440" height="814" />
     </state>
-    <state width="772" height="387" key="GridCell.Tab.0.center/0.23.2560.1352@0.23.2560.1352" timestamp="1596659298241" />
     <state width="1419" height="208" key="GridCell.Tab.0.center/0.25.1440.814@0.25.1440.814" timestamp="1603446676155" />
     <state width="1419" height="208" key="GridCell.Tab.0.left" timestamp="1603446676154">
       <screen x="0" y="25" width="1440" height="814" />
     </state>
-    <state width="772" height="387" key="GridCell.Tab.0.left/0.23.2560.1352@0.23.2560.1352" timestamp="1596659298241" />
     <state width="1419" height="208" key="GridCell.Tab.0.left/0.25.1440.814@0.25.1440.814" timestamp="1603446676154" />
     <state width="1419" height="208" key="GridCell.Tab.0.right" timestamp="1603446676155">
       <screen x="0" y="25" width="1440" height="814" />
     </state>
-    <state width="772" height="387" key="GridCell.Tab.0.right/0.23.2560.1352@0.23.2560.1352" timestamp="1596659298241" />
     <state width="1419" height="208" key="GridCell.Tab.0.right/0.25.1440.814@0.25.1440.814" timestamp="1603446676155" />
-    <state x="308" y="179" key="IDE.errors.dialog" timestamp="1599567119457">
-      <screen x="0" y="25" width="1440" height="814" />
-    </state>
-    <state x="308" y="179" key="IDE.errors.dialog/0.25.1440.814@0.25.1440.814" timestamp="1599567119457" />
-    <state x="0" y="147" key="MergeDialog" timestamp="1596040223766">
+    <state x="569" y="272" key="Vcs.Push.Dialog.v2" timestamp="1607350450470">
       <screen x="0" y="23" width="2560" height="1352" />
     </state>
-    <state x="0" y="147" key="MergeDialog/0.23.2560.1352@0.23.2560.1352" timestamp="1596040223766" />
-    <state x="358" y="197" key="MultipleFileMergeDialog" timestamp="1598353137020">
-      <screen x="0" y="25" width="1440" height="814" />
-    </state>
-    <state x="358" y="197" key="MultipleFileMergeDialog/0.25.1440.814@0.25.1440.814" timestamp="1598353137020" />
-    <state x="289" y="257" key="RollbackChangesDialog" timestamp="1598353034384">
-      <screen x="0" y="25" width="1440" height="814" />
-    </state>
-    <state x="513" y="408" key="RollbackChangesDialog/0.23.2560.1352@0.23.2560.1352" timestamp="1596652988315" />
-    <state x="289" y="257" key="RollbackChangesDialog/0.25.1440.814@0.25.1440.814" timestamp="1598353034384" />
-    <state x="320" y="175" key="Vcs.Push.Dialog.v2" timestamp="1604253552989">
-      <screen x="0" y="25" width="1440" height="816" />
-    </state>
-    <state x="569" y="272" key="Vcs.Push.Dialog.v2/0.23.2560.1352@0.23.2560.1352" timestamp="1596659073623" />
+    <state x="569" y="272" key="Vcs.Push.Dialog.v2/0.23.2560.1352@0.23.2560.1352" timestamp="1607350450470" />
     <state x="320" y="175" key="Vcs.Push.Dialog.v2/0.25.1440.814@0.25.1440.814" timestamp="1603214803764" />
     <state x="320" y="175" key="Vcs.Push.Dialog.v2/0.25.1440.816@0.25.1440.816" timestamp="1604253552989" />
-    <state x="569" y="275" key="Vcs.Push.Dialog.v2/0.25.2560.1354@0.25.2560.1354" timestamp="1600341272830" />
-    <state x="321" y="385" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604076747300">
-      <screen x="0" y="25" width="1440" height="816" />
+    <state x="571" y="617" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1611048636766">
+      <screen x="0" y="25" width="2560" height="1341" />
     </state>
-    <state x="571" y="619" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.2560.1352@0.23.2560.1352" timestamp="1596787487282" />
-    <state x="321" y="384" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.25.1440.814@0.25.1440.814" timestamp="1598353043672" />
     <state x="321" y="385" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.25.1440.816@0.25.1440.816" timestamp="1604076747300" />
+    <state x="571" y="617" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.25.2560.1341@0.25.2560.1341" timestamp="1611048636766" />
   </component>
 </project>
