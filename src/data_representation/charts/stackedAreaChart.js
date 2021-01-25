@@ -66,10 +66,17 @@ class MyStackAreaChart extends React.PureComponent {
         }
     }
 
+    deOpacizeColors(colors, opacity = 0.7) {
+        let color1 = hexToRgb(colors[0]);
+        let color2 = hexToRgb(colors[1]);
+        let color3 = hexToRgb(colors[2]);
+        return [`rgba(${color1.r}, ${color1.g}, ${color1.b}, ${opacity})`, `rgba(${color2.r}, ${color2.g}, ${color2.b}, ${opacity})`, `rgba(${color3.r}, ${color3.g}, ${color3.b}, ${opacity})`]
+    }
+
     render() {
 
         const colorRGB = hexToRgb(this.props.color);
-        const colors = this.props.colors === undefined ? [`rgba(${colorRGB.r}, ${colorRGB.g}, ${colorRGB.b}, 0.9)`, `rgba(${colorRGB.r}, ${colorRGB.g}, ${colorRGB.b}, 0.6)`, `rgba(${colorRGB.r}, ${colorRGB.g}, ${colorRGB.b}, 0.3)`] : this.props.colors
+        const colors = this.props.colors === undefined ? [`rgba(${colorRGB.r}, ${colorRGB.g}, ${colorRGB.b}, 0.9)`, `rgba(${colorRGB.r}, ${colorRGB.g}, ${colorRGB.b}, 0.6)`, `rgba(${colorRGB.r}, ${colorRGB.g}, ${colorRGB.b}, 0.3)`] : this.deOpacizeColors(this.props.colors)
         const keys = this.props.keyValues
         const axesSvg = {fontSize: 12, fill: (darkMode() ? Colors.darkMode_basic : Colors.basic)};
         const gridSvg = {
@@ -114,6 +121,7 @@ class MyStackAreaChart extends React.PureComponent {
                             data={this.state.data}
                             keys={keys}
                             colors={colors}
+
                             curve={shape.curveLinear}
                             animationDuration={200}
                             numberOfTicks={5}

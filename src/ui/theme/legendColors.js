@@ -12,7 +12,7 @@ let LegendColors = {
     red: darkMode() ? '#ff453a' : '#ff3a30',
     grey: darkMode() ? '#767676' : '#616161',
     blue: darkMode() ? '#0a84ff' : '#007bff',
-    teal: darkMode() ? 'rgb(100, 210, 255)' : 'rgb(90,200,250)',
+    teal: darkMode() ? '#64d3ff' : '#5ac8fa',
     orange: darkMode() ?'#ff9f0a' :  '#ff9500',
     purple: darkMode() ? '#bf5af2' : '#af52de'
 }
