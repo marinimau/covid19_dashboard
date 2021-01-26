@@ -14,7 +14,8 @@ let LegendColors = {
     blue: darkMode() ? '#0a84ff' : '#007bff',
     teal: darkMode() ? '#64d3ff' : '#5ac8fa',
     orange: darkMode() ?'#ff9f0a' :  '#ff9500',
-    purple: darkMode() ? '#bf5af2' : '#af52de'
+    purple: darkMode() ? '#bf5af2' : '#af52de',
+    neutral: darkMode() ? '#505050' : '#000000',
 }
 
 export default LegendColors;

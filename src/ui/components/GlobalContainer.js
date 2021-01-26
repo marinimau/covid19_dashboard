@@ -19,6 +19,7 @@ import CurrentPositiveScreen from "../screens/currentPositiveScreen";
 import RecoveredScreen from "../screens/recoveredScreen";
 import SwabsResumeScreen from "../screens/swabsScreen";
 import DiedScreen from "../screens/diedScreen";
+import RepartitionScreen from "../screens/dataRepartitionScreen";
 import InfoScreen from "../screens/infoScreen";
 import {createDrawerNavigator} from "@react-navigation/drawer";
 import {Dimensions} from "react-native";
@@ -84,6 +85,7 @@ export default class GlobalContainer extends PureComponent {
                         <Drawer.Screen name={screenTitles.recovered} component={RecoveredScreen}/>
                         <Drawer.Screen name={screenTitles.swab} component={SwabsResumeScreen}/>
                         <Drawer.Screen name={screenTitles.died} component={DiedScreen}/>
+                        <Drawer.Screen name={screenTitles.repartition} component={RepartitionScreen} />
                         <Drawer.Screen name={screenTitles.info} component={InfoScreen}/>
 
                     </Drawer.Navigator>

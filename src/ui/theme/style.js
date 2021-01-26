@@ -162,6 +162,9 @@ export const styles = StyleSheet.create({
         marginTop: 20,
         color: darkMode() ? Colors.darkMode_basic : Colors.basic,
     },
+    chartManipulationDescription: {
+        color: darkMode() ? Colors.darkMode_basic : Colors.basic,
+    },
     infoDescription: {
         fontSize: 16,
         color: darkMode() ? Colors.darkMode_basic : Colors.basic,

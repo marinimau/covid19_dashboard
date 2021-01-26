@@ -13,8 +13,6 @@ import {chartTitles, dataDescription} from "../../contents/strings";
 import CardTotalCases from "../../../data_representation/resume_cards/cardTotalCases";
 import LegendColors from "../../theme/legendColors";
 import NewCasesData from "../../../logic/newCasesData";
-import StackedAreaChart from "../../../data_representation/charts/stackedAreaChart";
-import TotalCasesRepartitionData from "../../../logic/totalCasesRepartitionData";
 import LineChartCard from "../cards/lineChartCard";
 import {EventRegister} from "react-native-event-listeners";
 import MyProgressCircle from "../../../data_representation/charts/progressCircle";
@@ -67,29 +65,6 @@ class NewCasesComponent extends Component {
                             color={this.state.color}
                             data={this.state.data.newCasesTrendDayValue}
                             description={dataDescription.newCases} />
-
-
-                        <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
-                            <Text style={styles.chartTitle}>{chartTitles.totalCasesRepartionAbsolute}</Text>
-                            <StackedAreaChart
-                                color={LegendColors.red}
-                                colors={[LegendColors.grey, LegendColors.yellow, LegendColors.green]}
-                                keyValues={['death', 'current', 'recovered']}
-                                legend={[chartTitles.recovered, chartTitles.currentPositive, chartTitles.died]}
-                                data={TotalCasesRepartitionData().repartition}/>
-                            <Text style={styles.chartDescription}>{dataDescription.totalCasesRepartitionAbsolute}</Text>
-                        </View>
-
-                        <View style={[styles.cardGeneric, styles.cardShadow, styles.cardBig]}>
-                            <Text style={styles.chartTitle}>{chartTitles.totalCasesRepartionPercentage}</Text>
-                            <StackedAreaChart
-                                color={LegendColors.red}
-                                colors={[LegendColors.grey, LegendColors.yellow, LegendColors.green]}
-                                keyValues={['death', 'current', 'recovered']}
-                                legend={[chartTitles.recovered, chartTitles.currentPositive, chartTitles.died]}
-                                data={TotalCasesRepartitionData().repartitionPercentage}/>
-                            <Text style={styles.chartDescription}>{dataDescription.totalCasesRepartitionPercentage}</Text>
-                        </View>
                     </>
             </MainScrollableContents>
         )

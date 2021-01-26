@@ -30,6 +30,7 @@ export const screenTitles = {
     died: 'Deceduti',
     currentPositive: 'Positivi Attuali',
     swab: 'Tamponi',
+    repartition: 'Ripartizione',
     info: 'Informazioni'
 };
 
@@ -130,7 +131,8 @@ export const dataDescription = {
     testedCaseTrend: 'Andamento del valore totale di casi testati (diverso dai tamponi in quanto un singolo individuo' +
         'può essere sottoposto a più tamponi).',
     testedCasesTrendVariation: 'Andamento del numero di casi testati eseguiti nell\'arco della giornata',
-    percentagePositiveTrend: 'Andamento della percentuale di esito positivo sul totale dei casi testati nel corso del tempo'
+    percentagePositiveTrend: 'Andamento della percentuale di esito positivo sul totale dei casi testati nel corso del tempo',
+    showPercentage: 'Ripartizione in percentuale'
 }
 
 
