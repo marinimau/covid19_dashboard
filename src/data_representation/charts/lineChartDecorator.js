@@ -31,7 +31,9 @@ class LineChartDecorator extends Component{
                     <Circle
                         cx={this.props.x}
                         cy={this.props.y}
-                        r="5"
+                        r="10"
+                        strokeWidth="1"
+                        stroke={(darkMode() ? Colors.darkMode_basicElevation : Colors.basicElevation)}
                         fill={this.props.color}/>
                     <TextSVG
                         x={this.props.x}
