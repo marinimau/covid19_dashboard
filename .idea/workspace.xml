@@ -112,6 +112,9 @@
       <workItem from="1604306378256" duration="1250000" />
       <workItem from="1605728335909" duration="10000" />
       <workItem from="1605892522293" duration="105000" />
+      <workItem from="1612001810531" duration="235000" />
+      <workItem from="1612988054859" duration="16000" />
+      <workItem from="1612988074547" duration="177000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1595078622516</created>
@@ -400,7 +403,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604306894754</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="aggiornate due descrizioni di grafici">
+      <created>1611949016336</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1611949016336</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -447,44 +457,14 @@
     <option name="LAST_COMMIT_MESSAGE" value="aggiornate due descrizioni di grafici" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1419" height="208" key="GridCell.Tab.0.bottom" timestamp="1603446676155">
-      <screen x="0" y="25" width="1440" height="814" />
+    <state x="366" y="186" key="Vcs.Push.Dialog.v2" timestamp="1611949018126">
+      <screen x="59" y="25" width="1381" height="875" />
     </state>
-    <state width="1419" height="208" key="GridCell.Tab.0.bottom/0.25.1440.814@0.25.1440.814" timestamp="1603446676155" />
-    <state width="1419" height="208" key="GridCell.Tab.0.center" timestamp="1603446676155">
-      <screen x="0" y="25" width="1440" height="814" />
+    <state x="366" y="186" key="Vcs.Push.Dialog.v2/59.25.1381.875@59.25.1381.875" timestamp="1611949018126" />
+    <state x="321" y="384" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1612988057368">
+      <screen x="0" y="25" width="1440" height="813" />
     </state>
-    <state width="1419" height="208" key="GridCell.Tab.0.center/0.25.1440.814@0.25.1440.814" timestamp="1603446676155" />
-    <state width="1419" height="208" key="GridCell.Tab.0.left" timestamp="1603446676154">
-      <screen x="0" y="25" width="1440" height="814" />
-    </state>
-    <state width="1419" height="208" key="GridCell.Tab.0.left/0.25.1440.814@0.25.1440.814" timestamp="1603446676154" />
-    <state width="1419" height="208" key="GridCell.Tab.0.right" timestamp="1603446676155">
-      <screen x="0" y="25" width="1440" height="814" />
-    </state>
-    <state width="1419" height="208" key="GridCell.Tab.0.right/0.25.1440.814@0.25.1440.814" timestamp="1603446676155" />
-    <state x="308" y="179" key="IDE.errors.dialog" timestamp="1599567119457">
-      <screen x="0" y="25" width="1440" height="814" />
-    </state>
-    <state x="308" y="179" key="IDE.errors.dialog/0.25.1440.814@0.25.1440.814" timestamp="1599567119457" />
-    <state x="358" y="197" key="MultipleFileMergeDialog" timestamp="1598353137020">
-      <screen x="0" y="25" width="1440" height="814" />
-    </state>
-    <state x="358" y="197" key="MultipleFileMergeDialog/0.25.1440.814@0.25.1440.814" timestamp="1598353137020" />
-    <state x="289" y="257" key="RollbackChangesDialog" timestamp="1598353034384">
-      <screen x="0" y="25" width="1440" height="814" />
-    </state>
-    <state x="289" y="257" key="RollbackChangesDialog/0.25.1440.814@0.25.1440.814" timestamp="1598353034384" />
-    <state x="320" y="175" key="Vcs.Push.Dialog.v2" timestamp="1604307025554">
-      <screen x="0" y="25" width="1440" height="816" />
-    </state>
-    <state x="320" y="175" key="Vcs.Push.Dialog.v2/0.25.1440.814@0.25.1440.814" timestamp="1603214803764" />
-    <state x="320" y="175" key="Vcs.Push.Dialog.v2/0.25.1440.816@0.25.1440.816" timestamp="1604307025554" />
-    <state x="569" y="275" key="Vcs.Push.Dialog.v2/0.25.2560.1354@0.25.2560.1354" timestamp="1600341272830" />
-    <state x="321" y="385" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605892533345">
-      <screen x="0" y="25" width="1440" height="816" />
-    </state>
-    <state x="321" y="384" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.25.1440.814@0.25.1440.814" timestamp="1598353043672" />
+    <state x="321" y="384" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.25.1440.813@0.25.1440.813" timestamp="1612988057368" />
     <state x="321" y="385" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.25.1440.816@0.25.1440.816" timestamp="1605892533345" />
   </component>
 </project>
