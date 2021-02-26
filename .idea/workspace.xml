@@ -20,9 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="aggiornate due descrizioni di grafici">
-      <change beforePath="$PROJECT_DIR$/.expo/packager-info.json" beforeDir="false" afterPath="$PROJECT_DIR$/.expo/packager-info.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_representation/charts/lineChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_representation/charts/lineChart.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data_representation/charts/lineChartDecorator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_representation/charts/lineChartDecorator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/dataset.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/dataset.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/notesData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/notesData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/dateToString.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/dateToString.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -429,7 +432,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="sistemata UI" />
     <MESSAGE value="adattato il grafico e inserita stackedAreaChart.js anche per la ripartizione dei casi totali" />
     <MESSAGE value="aggiunte descrizioni dove mancavano" />
     <MESSAGE value="finito di aggiungere le tabelle con i dati regionali" />
@@ -454,7 +456,8 @@
     <MESSAGE value="risolto bug cursore con dati mancanti" />
     <MESSAGE value="modificati 2 grafici" />
     <MESSAGE value="aggiornate due descrizioni di grafici" />
-    <option name="LAST_COMMIT_MESSAGE" value="aggiornate due descrizioni di grafici" />
+    <MESSAGE value="aggiunto al menù il link alla dashboard dei vaccini" />
+    <option name="LAST_COMMIT_MESSAGE" value="aggiunto al menù il link alla dashboard dei vaccini" />
   </component>
   <component name="WindowStateProjectService">
     <state x="366" y="186" key="Vcs.Push.Dialog.v2" timestamp="1611949018126">

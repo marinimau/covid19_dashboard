@@ -20,9 +20,8 @@ class LineChartDecorator extends Component{
     }
 
     getXText = (x) => {
-        console.log(Dimensions.get('window').width);
         if(x > dynamicDimens.chartFullWidth - 150){
-            return x - 50;
+            return x - 70;
         }
         else {
             if(x < 100){

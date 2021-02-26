@@ -95,7 +95,6 @@ export default class MyLineChart extends PureComponent {
     }
 
     decorator = () => {
-        console.log('premuto un punto');
         return this.state.visible ?
             <LineChartDecorator color={this.props.color} x={this.state.x} y={this.state.y}
                                 selectedDate={this.state.selectedDate}
