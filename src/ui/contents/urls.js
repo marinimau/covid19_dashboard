@@ -6,6 +6,7 @@
  */
 
 const RemoteUrls = {
+    dashboard_covid_vaccine: 'https://marinimau.github.io/covid19_dashboard_vaccini',
     national: 'https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-json/dpc-covid19-ita-andamento-nazionale.json',
     regionsLatest: 'https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-json/dpc-covid19-ita-regioni-latest.json',
     regions: 'https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-json/dpc-covid19-ita-regioni.json',
