@@ -1,7 +1,7 @@
 {
   "files": {
-    "app.js": "/covid19_dashboard/static/js/app.cbfe9f1a.chunk.js",
-    "app.js.map": "/covid19_dashboard/static/js/app.cbfe9f1a.chunk.js.map",
+    "app.js": "/covid19_dashboard/static/js/app.3b05b3dd.chunk.js",
+    "app.js.map": "/covid19_dashboard/static/js/app.3b05b3dd.chunk.js.map",
     "runtime~app.js": "/covid19_dashboard/static/js/runtime~app.bd5d74b6.js",
     "runtime~app.js.map": "/covid19_dashboard/static/js/runtime~app.bd5d74b6.js.map",
     "static/js/2.ccd6ac77.chunk.js": "/covid19_dashboard/static/js/2.ccd6ac77.chunk.js",
@@ -29,6 +29,6 @@
   "entrypoints": [
     "static/js/runtime~app.bd5d74b6.js",
     "static/js/2.ccd6ac77.chunk.js",
-    "static/js/app.cbfe9f1a.chunk.js"
+    "static/js/app.3b05b3dd.chunk.js"
   ]
 }
