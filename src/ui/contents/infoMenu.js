@@ -9,6 +9,12 @@ import RemoteUrls from "./urls";
 
 export const menuLinks = [
     {
+        icon: 'chart-timeline-variant',
+        title: infoMenuTitles.dashboard_covid_vaccine,
+        description: infoMenuDescriptions.dashboard_covid_vaccine,
+        url: RemoteUrls.dashboard_covid_vaccine
+    },
+    {
         icon: 'gift-outline',
         title: infoMenuTitles.donate,
         description: infoMenuDescriptions.donate,

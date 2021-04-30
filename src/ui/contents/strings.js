@@ -137,6 +137,7 @@ export const dataDescription = {
 
 
 export const infoMenuTitles = {
+    dashboard_covid_vaccine: 'Dashboard vaccini',
     sectionLinks: 'Link utili',
     donate: 'Dona',
     contact: 'Contatti',
@@ -146,6 +147,7 @@ export const infoMenuTitles = {
 
 
 export const infoMenuDescriptions = {
+    dashboard_covid_vaccine: 'consegne e somministrazioni dei vaccini',
     donate: 'donazione libera',
     contact: 'ricevi assistenza',
     repository: 'codice sorgente',

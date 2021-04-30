@@ -15,7 +15,6 @@ let dataToReturn = {
 const NotesData = (data) => {
 
     data = Records.getRegionRecords();
-    console.log(data)
 
     if (data !== undefined) {
         if (dataToReturn.notes.length === 0) {
