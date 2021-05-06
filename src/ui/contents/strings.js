@@ -95,6 +95,8 @@ export const chartTitles = {
     hospitalizedWithSymptoms: 'Ricoverati con sintomi',
     critical: 'Terapia intensiva',
     regionHospitalSituation: 'Situazione ospedaliera regioni',
+    standardSwabs: 'Tamponi molecolari',
+    rapidSwabs: 'Tamponi antigenici'
 }
 
 

@@ -26,7 +26,12 @@ let dataToReturn = {
     swabVariationPercentage: 0,
     testedCases: 0,
     testedCasesVariation: 0,
-    testedCasesVariationPercentage: 0
+    testedCasesVariationPercentage: 0,
+    rapidTestCumulative: 0,
+    standardTestCumulative: 0,
+    rapidTestVariation: 0,
+    standardTestVariation: 0,
+
 };
 
 const latestUpdateData = (data) => {
@@ -67,6 +72,12 @@ const latestUpdateData = (data) => {
         dataToReturn.swab = (d['tamponi']).toLocaleString('it');
         dataToReturn.swabVariation = '+ ' + (Math.abs( d['tamponi'] - data[data.length - 2]['tamponi'])).toLocaleString('it');
         dataToReturn.swabVariationPercentage =  '+' +  Math.round(Math.abs( d['tamponi'] - data[data.length - 2]['tamponi']) /d['tamponi'] * 100  * 100 / 100).toFixed(2);
+        dataToReturn.standardTestCumulative = (d['tamponi_test_molecolare']).toLocaleString('it');
+        dataToReturn.rapidTestCumulative = (d['tamponi_test_antigenico_rapido']).toLocaleString('it');
+        dataToReturn.standardTestVariation = '+ ' + (Math.abs(d['tamponi_test_molecolare'] - data[data.length - 2]['tamponi_test_molecolare'])).toLocaleString('it');
+        dataToReturn.rapidTestVariation = '+ ' + (Math.abs(d['tamponi_test_antigenico_rapido'] - data[data.length - 2]['tamponi_test_antigenico_rapido'])).toLocaleString('it');
+        dataToReturn.standardTestVariationPercentage = '+' + Math.round(Math.abs( d['tamponi_test_molecolare'] - data[data.length - 2]['tamponi_test_molecolare']) /d['tamponi_test_molecolare'] * 100  * 100 / 100).toFixed(2);
+        dataToReturn.rapidTestVariationPercentage = '+' + Math.round(Math.abs( d['tamponi_test_antigenico_rapido'] - data[data.length - 2]['tamponi_test_antigenico_rapido']) /d['tamponi_test_antigenico_rapido'] * 100  * 100 / 100).toFixed(2);
 
         /* Tested Cases */
         dataToReturn.testedCases = (d['casi_testati']).toLocaleString('it');

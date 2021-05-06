@@ -16,6 +16,8 @@ import MyProgressCircle from "../../../data_representation/charts/progressCircle
 import LegendColors from "../../theme/legendColors";
 import SwabData from "../../../logic/swabData";
 import LineChartCard from "../cards/lineChartCard";
+import CardStandardSwabs from "../../../data_representation/resume_cards/cardStandardSwabs";
+import CardRapidSwabsSwabs from "../../../data_representation/resume_cards/cardRapidSwabs";
 
 class SwabsComponent extends Component {
 
@@ -46,6 +48,9 @@ class SwabsComponent extends Component {
                         <Text style={styles.chartDescription}>{dataDescription.screening}</Text>
                     </View>
 
+                    <CardStandardSwabs />
+
+                    <CardRapidSwabsSwabs />
 
                     <LineChartCard
                         title={chartTitles.swabTrend}

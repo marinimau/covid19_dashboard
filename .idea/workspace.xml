@@ -19,10 +19,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="aggiornate due descrizioni di grafici">
+    <list default="true" id="71d30709-e3e2-4122-af9d-74bdecd22ff1" name="Default Changelist" comment="alcune modifiche">
+      <change afterPath="$PROJECT_DIR$/src/data_representation/resume_cards/cardRapidSwabs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data_representation/resume_cards/cardStandardSwabs.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.expo/packager-info.json" beforeDir="false" afterPath="$PROJECT_DIR$/.expo/packager-info.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/components/GlobalContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/GlobalContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/latestUpdateData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/latestUpdateData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/components/swabs/swabsComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/swabs/swabsComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/contents/strings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/contents/strings.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web-build/register-service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/web-build/register-service-worker.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -115,9 +119,7 @@
       <workItem from="1605892522293" duration="105000" />
       <workItem from="1612001810531" duration="235000" />
       <workItem from="1612988054859" duration="16000" />
-      <workItem from="1612988074547" duration="340000" />
-      <workItem from="1619464509436" duration="14000" />
-      <workItem from="1619812451177" duration="105000" />
+      <workItem from="1612988074547" duration="177000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1595078622516</created>
@@ -413,14 +415,7 @@
       <option name="project" value="LOCAL" />
       <updated>1611949016336</updated>
     </task>
-    <task id="LOCAL-00043" summary="aggiornate due descrizioni di grafici">
-      <created>1612988309699</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1612988309699</updated>
-    </task>
-    <option name="localTasksCounter" value="44" />
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -439,7 +434,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="sistemata UI" />
     <MESSAGE value="adattato il grafico e inserita stackedAreaChart.js anche per la ripartizione dei casi totali" />
     <MESSAGE value="aggiunte descrizioni dove mancavano" />
     <MESSAGE value="finito di aggiungere le tabelle con i dati regionali" />
@@ -464,13 +458,13 @@
     <MESSAGE value="risolto bug cursore con dati mancanti" />
     <MESSAGE value="modificati 2 grafici" />
     <MESSAGE value="aggiornate due descrizioni di grafici" />
-    <option name="LAST_COMMIT_MESSAGE" value="aggiornate due descrizioni di grafici" />
+    <MESSAGE value="aggiunto al menù il link alla dashboard dei vaccini" />
+    <option name="LAST_COMMIT_MESSAGE" value="aggiunto al menù il link alla dashboard dei vaccini" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="320" y="175" key="Vcs.Push.Dialog.v2" timestamp="1612988311840">
-      <screen x="0" y="25" width="1440" height="813" />
+    <state x="366" y="186" key="Vcs.Push.Dialog.v2" timestamp="1611949018126">
+      <screen x="59" y="25" width="1381" height="875" />
     </state>
-    <state x="320" y="175" key="Vcs.Push.Dialog.v2/0.25.1440.813@0.25.1440.813" timestamp="1612988311840" />
     <state x="366" y="186" key="Vcs.Push.Dialog.v2/59.25.1381.875@59.25.1381.875" timestamp="1611949018126" />
     <state x="321" y="384" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1612988057368">
       <screen x="0" y="25" width="1440" height="813" />
