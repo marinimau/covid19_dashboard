@@ -21,7 +21,7 @@
     "expo": "~38.0.8",
     "expo-linear-gradient": "^8.2.1",
     "expo-status-bar": "^1.0.2",
-    "lodash": "^4.17.19",
+    "lodash": "^4.17.21",
     "react": "~16.11.0",
     "react-async": "^10.0.1",
     "react-dom": "~16.11.0",
